@@ -11,24 +11,25 @@ import {
   StyledImage,
   Text
 } from "./styled";
-import { Flex, FlexItem, FlexInline } from "../../components/Grid";
+import { Flex, FlexItem, FlexInline, Row, Col } from "../../components/Grid";
 import { Squircle } from "../../components/Squircle";
 import { OutlineButton } from "../../components/Button";
 
-import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom.png";
-import Cover from "../../assets/images/landingpage/cover.png";
-import Cover1 from "../../assets/images/landingpage/cover-1.png";
-import MaleRYK from "../../assets/images/landingpage/Male RYK.png";
-import FemaleRYK1 from "../../assets/images/landingpage/Female RYK 1.png";
-import UniqueCharacter from "../../assets/images/landingpage/unique-character.png";
-import UniqueWeapon from "../../assets/images/landingpage/unique-weapon.png";
-import UniqueArmor from "../../assets/images/landingpage/unique-armor.png";
-import FramingCover from "../../assets/images/landingpage/3rdCover.png";
-import PVECover from "../../assets/images/landingpage/pve-cover.png";
-import PVPCover from "../../assets/images/landingpage/PVP-cover.png";
-import Tokenomic from "../../assets/images/landingpage/tokenomic.png";
-import PieChart from "../../assets/images/landingpage/pie-chart.png";
-import Roadmap from "../../assets/images/landingpage/roadmap.png";
+import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom-min.webp";
+import Cover from "../../assets/images/landingpage/cover-min.webp";
+import Cover1 from "../../assets/images/landingpage/cover-1-min.webp";
+import MaleRYK from "../../assets/images/landingpage/Male RYK-min.webp";
+import FemaleRYK1 from "../../assets/images/landingpage/Female RYK 1-min.webp";
+import UniqueCharacter from "../../assets/images/landingpage/unique-character-min.webp";
+import UniqueWeapon from "../../assets/images/landingpage/unique-weapon-min.webp";
+import UniqueArmor from "../../assets/images/landingpage/unique-armor-min.webp";
+import FramingCover from "../../assets/images/landingpage/3rdCover-min.webp";
+import PVECover from "../../assets/images/landingpage/pve-cover-min.webp";
+import PVPCover from "../../assets/images/landingpage/PVP-cover-min.webp";
+import Tokenomic from "../../assets/images/landingpage/tokenomic-min.webp";
+import PieChart from "../../assets/images/landingpage/pie-chart-min.webp";
+import Roadmap from "../../assets/images/landingpage/roadmap-min.webp";
+import Ourteam from "../../assets/images/landingpage/ourteam-min.webp";
 
 const UniqueItem = ({
   img,
@@ -40,7 +41,7 @@ const UniqueItem = ({
   content: string;
 }) => {
   return (
-    <Flex justifyContent={"flex-start"}>
+    <Flex justifyContent={"flex-start"} alginItem={"center"}>
       <FlexItem>
         <StyledImage
           src={img}
@@ -49,12 +50,14 @@ const UniqueItem = ({
           alt="unique character"
         />
       </FlexItem>
-      <FlexInline flexDirection={"column"} justifyContent={"center"}>
-        <FlexItem>
-          <GoldenText fontSize={"24px"}>{title}</GoldenText>
-        </FlexItem>
-        <FlexItem>{content}</FlexItem>
-      </FlexInline>
+      <FlexItem>
+        <FlexInline flexDirection={"column"} justifyContent={"space-between"}>
+          <FlexItem>
+            <GoldenText fontSize={"24px"}>{title}</GoldenText>
+          </FlexItem>
+          <FlexItem>{content}</FlexItem>
+        </FlexInline>
+      </FlexItem>
     </Flex>
   );
 };
@@ -155,16 +158,16 @@ const Top = () => {
           <AbsoluteDiv right={"96px"} bottom={"192px"}>
             <Flex flexDirection="column">
               <FlexItem marginBottom={"2.5rem"}>
-                <Squircle size={"96px"} />
+                <Squircle size={96} />
               </FlexItem>
               <FlexItem marginBottom={"2.5rem"}>
-                <Squircle size={"96px"} />
+                <Squircle size={96} />
               </FlexItem>
               <FlexItem marginBottom={"2.5rem"}>
-                <Squircle size={"96px"} />
+                <Squircle size={96} />
               </FlexItem>
               <FlexItem marginBottom={"2.5rem"}>
-                <Squircle size={"96px"} />
+                <Squircle size={96} />
               </FlexItem>
             </Flex>
           </AbsoluteDiv>
@@ -246,28 +249,6 @@ const Top = () => {
             </Text>
           </AbsoluteDiv>
         </RelativeDiv>
-
-        {/* <RelativeDiv>
-          <AbsoluteDiv
-            width={"846px"}
-            transform={"translate(-50%)"}
-            left={"50%"}
-            align={"center"}
-          >
-            <h1>Tokenmetric</h1>
-            <Text
-              fontSize={"18px"}
-              lineHeight={"28px"}
-              justify={"center"}
-            >
-              When you design, you have to draw on your own fucking life
-              experiences. If it’s not something you would want to read/look
-              at/use then why fucking bother? Form follows fucking function.
-            </Text>
-          </AbsoluteDiv>
-
-          <AbsoluteDiv top={"8rem"}></AbsoluteDiv>
-        </RelativeDiv> */}
       </div>
       <div>
         <h1>
@@ -297,48 +278,50 @@ const Top = () => {
           </FlexItem>
           <FlexItem marginTop={"48px"} flex={"1"}>
             <table style={{ width: "100%" }}>
-              <tr>
-                <td>Play to earn</td>
-                <td>30%</td>
-                <td>60,000,000</td>
-              </tr>
-              <tr>
-                <td>Reserve funds</td>
-                <td>18%</td>
-                <td>36,000,000</td>
-              </tr>
-              <tr>
-                <td>Team, advisor</td>
-                <td>16%</td>
-                <td>32,000,000</td>
-              </tr>
-              <tr>
-                <td>Operation funds</td>
-                <td>16%</td>
-                <td>32,000,000</td>
-              </tr>
-              <tr>
-                <td>Private Sale</td>
-                <td>8%</td>
-                <td>16,000,000</td>
-              </tr>
-              <tr>
-                <td>IDO / IFO / ICO</td>
-                <td>7%</td>
-                <td>14,000,000</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>Play to earn</td>
+                  <td>30%</td>
+                  <td>60,000,000</td>
+                </tr>
+                <tr>
+                  <td>Reserve funds</td>
+                  <td>18%</td>
+                  <td>36,000,000</td>
+                </tr>
+                <tr>
+                  <td>Team, advisor</td>
+                  <td>16%</td>
+                  <td>32,000,000</td>
+                </tr>
+                <tr>
+                  <td>Operation funds</td>
+                  <td>16%</td>
+                  <td>32,000,000</td>
+                </tr>
+                <tr>
+                  <td>Private Sale</td>
+                  <td>8%</td>
+                  <td>16,000,000</td>
+                </tr>
+                <tr>
+                  <td>IDO / IFO / ICO</td>
+                  <td>7%</td>
+                  <td>14,000,000</td>
+                </tr>
 
-              <tr>
-                <td>Partner funds</td>
-                <td>4%</td>
-                <td>8,000,000</td>
-              </tr>
+                <tr>
+                  <td>Partner funds</td>
+                  <td>4%</td>
+                  <td>8,000,000</td>
+                </tr>
 
-              <tr>
-                <td>Airdrop</td>
-                <td>1%</td>
-                <td>2,000,000</td>
-              </tr>
+                <tr>
+                  <td>Airdrop</td>
+                  <td>1%</td>
+                  <td>2,000,000</td>
+                </tr>
+              </tbody>
             </table>
           </FlexItem>
         </Flex>
@@ -363,26 +346,69 @@ const Top = () => {
           <StyledImage src={Roadmap} alt="roadmap" />
         </CoverBackground>
       </div>
-      <div>
-        <h1>
-          <AlignCenter>Our team</AlignCenter>
-        </h1>
+      <RelativeDiv>
+        <div>
+          <h1>
+            <AlignCenter>Our team</AlignCenter>
+          </h1>
 
-        <Text
-          fontSize={"18px"}
-          lineHeight={"28px"}
-          justify={"center"}
-          width={"40vw"}
-          center={true}
-        >
-          When you design, you have to draw on your own fucking life
-          experiences. If it’s not something you would want to read/look at/use
-          then why fucking bother? Form follows fucking function.
-        </Text>
-        <CoverBackground>
-          <StyledImage src={Roadmap} alt="roadmap" />
-        </CoverBackground>
-      </div>
+          <Text
+            fontSize={"18px"}
+            lineHeight={"28px"}
+            justify={"center"}
+            width={"40vw"}
+            center={true}
+          >
+            When you design, you have to draw on your own fucking life
+            experiences. If it’s not something you would want to read/look
+            at/use then why fucking bother? Form follows fucking function.
+          </Text>
+        </div>
+
+        <AbsoluteDiv width={"100%"}>
+          <CoverBackground>
+            <StyledImage src={Ourteam} alt="our team" />
+          </CoverBackground>
+        </AbsoluteDiv>
+        <Row>
+          <Col span={4} push={2}>
+            <Flex
+              height="100%"
+              alginItem={"start"}
+              flexDirection={"column"}
+              justifyContent={"center"}
+            >
+              <FlexItem>
+                <h1>Leaders</h1>
+              </FlexItem>
+              <FlexItem>
+                <h1>Artist</h1>
+              </FlexItem>
+              <FlexItem>
+                <h1>Developers</h1>
+              </FlexItem>
+            </Flex>
+            {/* <h1>Leaders</h1>
+            <h1>Artist</h1>
+            <h1>Developers</h1> */}
+          </Col>
+
+          <Col span={4} push={14}>
+            <Row margin={"1rem 0"}>
+              <Squircle size={80} />
+            </Row>
+            <Row margin={"1rem 0"}>
+              <Squircle size={80} />
+            </Row>
+            <Row margin={"1rem 0"}>
+              <Squircle size={80} />
+            </Row>
+            <Row margin={"1rem 0"}>
+              <Squircle size={80} />
+            </Row>
+          </Col>
+        </Row>
+      </RelativeDiv>
     </>
   );
 };

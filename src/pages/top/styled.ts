@@ -50,7 +50,6 @@ export const CoverBackground = styled.div<{ height?: string; width?: string }>`
     object-fit: cover;
     overflow: hidden;
   }
-  max-height: max-content;
 `;
 
 export const CoverFlag = styled.div`

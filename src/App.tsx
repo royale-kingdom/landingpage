@@ -28,6 +28,17 @@ body {
   background: #1D1D1D;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  &:visited{
+    color: inherit;
+  }
+  &:active {
+    color: inherit;
+  }
+}
+
 `;
 
 const theme = {
