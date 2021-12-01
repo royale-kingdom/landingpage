@@ -19,8 +19,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${px2vw(16)};
   }
 }
+
 body {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   color: white;
   margin:0;
   padding:0;

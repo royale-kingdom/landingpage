@@ -21,6 +21,6 @@ export const BaseButton = styled.div<BaseButtonProps>`
 
 export const Button = styled(BaseButton)``;
 
-export const OutlineButton = styled(BaseButton)`
+export const ButtonOutline = styled(BaseButton)`
   border: 2px solid ${({ color }) => color || "white"};
 `;

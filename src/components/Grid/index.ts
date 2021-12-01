@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BasePadding, BasePaddingProps } from "./../Styles/Padding";
 import { BaseMargin, BaseMarginProps } from "./../Styles/Margin";
 
-export const Flex = styled.div<{
+interface FlexProps extends BasePaddingProps, BaseMarginProps {
   justifyContent?:
     | ""
     | "space-around"
@@ -15,12 +15,15 @@ export const Flex = styled.div<{
   alginItem?: string;
   flexDirection?: string;
   height?: string;
-}>`
+  width?: string;
+}
+
+export const Flex = styled.div<FlexProps>`
   ${BaseMargin};
   ${BasePadding};
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: ${({ width }) => width || "100%"};
   height: ${(props) => props.height || "inherit"};
   justify-content: ${(props) => props.justifyContent || "inherit"};
   align-items: ${(props) => props.alginItem || "inherit"};
@@ -42,12 +45,14 @@ export const FlexItem = styled.div<FlexItemProps>`
   flex: ${(props) => props.flex || "initial"};
 `;
 
-export const Box = styled.div<{ width?: string; margin?: string }>`
-  width: ${({ width }) => width || "initial"};
-  margin: ${({ margin }) => margin || "initial"};
+interface ContainerProps extends BaseMarginProps, BasePaddingProps {
+  width?: string;
+}
+export const Container = styled.div<ContainerProps>`
+  ${BaseMargin};
+  ${BasePadding};
+  width: ${({ width }) => width || "inherit"};
 `;
-
-export const Container = styled.div``;
 
 interface RowProps extends BaseMarginProps, BasePaddingProps {}
 export const Row = styled.div<RowProps>`
@@ -58,26 +63,30 @@ export const Row = styled.div<RowProps>`
   clear: both;
 `;
 
-/**
- * 24 cols system
- */
-export const Col = styled.div<{
+interface ColProps extends BaseMarginProps, BasePaddingProps {
   span: number;
   md?: number;
   push?: number;
   pull?: number;
   bg?: string;
-}>`
+}
+
+/**
+ * 24 cols system
+ */
+export const Col = styled.div<ColProps>`
   /* clear: both; */
   /* display: inline-block;
    */
+  ${BaseMargin}
+  ${BasePadding}
   background: ${({ bg }) => bg || "initial"};
   display: table-cell;
   vertical-align: top;
-  width: ${({ span }) => `${(100 / 24) * span}vw`};
-  margin-left: ${({ push }) => (push ? `${(100 / 24) * push}vw` : "initial")};
-  margin-right: ${({ pull }) => (pull ? `${(100 / 24) * pull}vw` : "initial")};
+  width: ${({ span }) => `${(100 / 24) * span}%`};
+  margin-left: ${({ push }) => (push ? `${(100 / 24) * push}%` : "initial")};
+  margin-right: ${({ pull }) => (pull ? `${(100 / 24) * pull}%` : "initial")};
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: ${({ md }) => (md ? `${(100 / 24) * md || 24}vw` : "24vw")};
+    width: ${({ md }) => (md ? `${(100 / 24) * md || 24}%` : "24%")};
   }
 `;
