@@ -5,10 +5,11 @@ import {
   StyledImage,
   AlignCenter,
   AbsoluteDiv,
-  Text,
-  GoldenText
+  GoldenText,
+  ContainerWithBG
 } from "./styled";
 import { Flex, FlexItem } from "../../components/Grid/index";
+import { Text } from "../../components/Typo/Text";
 
 import MaleRYK from "../../assets/images/landingpage/Male RYK-min.webp";
 import FemaleRYK1 from "../../assets/images/landingpage/Female-RK-1.webp";
@@ -17,7 +18,6 @@ import UniqueWeapon from "../../assets/images/landingpage/unique-weapon-min.webp
 import UniqueArmor from "../../assets/images/landingpage/unique-armor-min.webp";
 import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom-min.webp";
 
-// export const Character = styled.div<{ width: string; height: string; left?: string; right?: string; top?: string; bottom?: string }>`
 export const FemaleCharacter = styled.div`
   position: absolute;
   width: 1156px;
@@ -44,20 +44,6 @@ export const MaleCharacter = styled.div`
     width: 275px;
     height: 265px;
   } ;
-`;
-
-const Wrapper = styled.div`
-  background-image: url(${`'${BG2RoyaleKingdom}'`});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100vw;
-  height: 1273px;
-  position: relative;
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100vw;
-    height: 100vh;
-  }
 `;
 
 const UniqueItem = ({
@@ -99,7 +85,7 @@ const UniqueItem = ({
 };
 
 const UniqueAsset = () => (
-  <Wrapper>
+  <ContainerWithBG width={"100vw"} height={"1273px"} imgSrc={BG2RoyaleKingdom}>
     <AbsoluteDiv
       top={"160px"}
       height={"100%"}
@@ -164,8 +150,7 @@ const UniqueAsset = () => (
       width={"470px"}
       top={"560px"}
       right={"10px"}
-      zIndex={99}
-      sm={{ width: "80vw", top: "240px", left: "10vw", height: "400px" }}
+      sm={{ width: "80vw", top: "240px", left: "10vw" }}
     >
       <UniqueItem
         img={UniqueCharacter}
@@ -183,8 +168,7 @@ const UniqueAsset = () => (
         content={"Form follows fucking function. Paul Rand once said,"}
       />
     </AbsoluteDiv>
-    {/* </RelativeDiv> */}
-  </Wrapper>
+  </ContainerWithBG>
 );
 
 export default UniqueAsset;

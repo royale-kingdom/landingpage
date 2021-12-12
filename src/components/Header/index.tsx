@@ -1,18 +1,27 @@
 import { Link } from "react-router-dom";
-import { StyledBackground, StyledNavLink } from "./styled";
+
+import { StyledHeader, StyledNavLink } from "./styled";
+import { Text } from "../../components/Typo/Text";
+
 const Header = () => {
   return (
-    <StyledBackground>
+    <StyledHeader>
       <StyledNavLink>
-        <Link to="/">Kingdom</Link>
+        <Link to="/">
+          <Text>Kingdom</Text>
+        </Link>
       </StyledNavLink>
       <StyledNavLink>
-        <Link to="/market">Market</Link>
+        <Link to="/market">
+          <Text>Market</Text>
+        </Link>
       </StyledNavLink>
       <StyledNavLink>
-        <Link to="/community">Community</Link>
+        <Link to="/community">
+          <Text>Community</Text>
+        </Link>
       </StyledNavLink>
-    </StyledBackground>
+    </StyledHeader>
   );
 };
 

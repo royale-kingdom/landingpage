@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const StyledBackground = styled.div`
+export const StyledHeader = styled.div`
+  position: sticky;
   height: 48px;
   left: 0px;
   top: 0px;
+  z-index: 99;
   background: #1d1d1d;
   display: flex;
   justify-content: center;

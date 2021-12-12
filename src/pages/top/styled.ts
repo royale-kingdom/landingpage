@@ -1,11 +1,21 @@
 import styled from "styled-components";
 
-export const RelativeDiv = styled.div<{ height?: string }>`
+import { BaseMarginProps, BaseMargin } from "./../../components/Styles/Margin";
+import { BasePadding, BasePaddingProps } from "../../components/Styles/Padding";
+import { Text } from "../../components/Typo/Text";
+
+export const RelativeDiv = styled.div<{
+  height?: string;
+  sm?: { height?: string };
+}>`
   height: ${({ height }) => height || "auto"};
   position: relative;
   width: 100vw;
   &:after {
     clear: both;
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: ${({ sm }) => sm?.height || "auto"};
   }
 `;
 
@@ -39,16 +49,15 @@ export const AbsoluteDiv = styled.div<AbsoluteProps>`
   }
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: ${({ sm, width }) => sm?.width || width || "inherit"};
-    height: ${({ sm, height }) => sm?.height || height || "inherit"};
-    top: ${({ sm, top }) => sm?.top || top || "inherit"};
-    bottom: ${({ sm, bottom }) => sm?.bottom || bottom || "inherit"};
-    right: ${({ sm, right }) => sm?.right || right || "inherit"};
-    left: ${({ sm, left }) => sm?.left || left || "inherit"};
-    transform: ${({ sm, transform }) =>
-      sm?.transform || transform || "inherit"};
-    z-index: ${({ sm, zIndex }) => sm?.zIndex || zIndex || "inherit"};
-    text-align: ${({ sm, align }) => sm?.align || align || "inherit"};
+    width: ${({ sm, width }) => sm?.width || width || "unset"};
+    height: ${({ sm, height }) => sm?.height || height || "unset"};
+    top: ${({ sm, top }) => sm?.top || top || "unset"};
+    bottom: ${({ sm, bottom }) => sm?.bottom || bottom || "unset"};
+    right: ${({ sm, right }) => sm?.right || right || "unset"};
+    left: ${({ sm, left }) => sm?.left || left || "unset"};
+    transform: ${({ sm, transform }) => sm?.transform || transform || "unset"};
+    z-index: ${({ sm, zIndex }) => sm?.zIndex || zIndex || "unset"};
+    text-align: ${({ sm, align }) => sm?.align || align || "unset"};
   }
 `;
 
@@ -91,65 +100,18 @@ interface BoxBaseProps {
   width: string;
   height: string;
 }
-interface BoxProps extends BoxBaseProps {
+interface BoxProps extends BoxBaseProps, BaseMarginProps, BasePaddingProps {
   sm?: BoxBaseProps;
 }
 export const Box = styled.div<BoxProps>`
+  ${BaseMargin};
+  ${BasePadding};
   width: ${({ width }) => width};
   height: ${({ height }) => height};
+  box-sizing: border-box;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: ${({ sm }) => sm?.width};
     height: ${({ sm }) => sm?.height};
-  }
-`;
-
-interface TextBaseProps {
-  display?: string;
-  fontSize?: string;
-  lineHeight?: string;
-  fontWeight?: string;
-  justify?: string;
-  width?: string;
-  padding?: string;
-  margin?: string;
-}
-
-interface TextProps extends TextBaseProps {
-  sm?: TextBaseProps;
-}
-export const StyledText = styled.span<TextProps>`
-  font-size: ${(props) => props.fontSize || "2rem"};
-  line-height: ${(props) => props.lineHeight || "inherit"};
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    font-size: ${({ sm }) => sm?.fontSize || "2rem"};
-    line-height: ${({ sm }) => sm?.lineHeight || "inherit"};
-  }
-`;
-
-export const Text = styled.p<TextProps>`
-  padding: 0;
-  margin: 0;
-  font-size: ${({ fontSize }) => fontSize || "1rem"};
-  font-weight: ${({ fontWeight }) => fontWeight || "initial"};
-  line-height: ${({ lineHeight }) => lineHeight || "2rem"};
-  text-align: ${({ justify }) => justify || "initial"};
-  width: ${({ width }) => width || "initial"};
-  display: ${({ display }) => display || "inherit"};
-  margin: ${({ margin }) => margin || "initial"};
-  padding: ${({ padding }) => padding || "inherit"};
-  box-sizing: border-box;
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    font-size: ${({ sm, fontSize }) => sm?.fontSize || fontSize || "2rem"};
-    font-weight: ${({ sm, fontWeight }) =>
-      sm?.fontWeight || fontWeight || "initial"};
-    line-height: ${({ sm, lineHeight }) =>
-      sm?.lineHeight || lineHeight || "2rem"};
-    text-align: ${({ sm, justify }) => sm?.justify || justify || "initial"};
-    width: ${({ sm, width }) => sm?.width || width || "initial"};
-    display: ${({ sm, display }) => sm?.display || display || "inherit"};
-    margin: ${({ sm, margin }) => sm?.margin || margin || "initial"};
-    padding: ${({ sm, padding }) => sm?.padding || padding || "inherit"};
   }
 `;
 
@@ -160,4 +122,27 @@ export const GoldenText = styled(Text)`
   background: linear-gradient(to bottom, #fff9d7, #e5c87f, #ba8623, #8f8466);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+`;
+
+export const ContainerWithBG = styled.div<{
+  imgSrc: any;
+  height: string;
+  width: string;
+  sm?: {
+    backgroundPosition?: string;
+  };
+}>`
+  background-image: ${({ imgSrc }) => `url('${imgSrc}')`};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+  position: relative;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100vw;
+    height: 100vh;
+    background-position: ${({ sm }) =>
+      sm?.backgroundPosition || "center center"};
+  }
 `;

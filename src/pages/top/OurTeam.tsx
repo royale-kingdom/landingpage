@@ -7,14 +7,19 @@ import {
 } from "./styled";
 import { Heading } from "../../components/Typo/Heading";
 import { Container, Flex, FlexItem } from "../../components/Grid";
-import { Squircle } from "../../components/Squircle";
-import { Text } from "./styled";
+import Squircle from "../../components/Squircle";
+import { Text } from "../../components/Typo/Text";
 import Ourteam from "../../assets/images/landingpage/ourteam-min.webp";
 
 const OurTeam = () => (
   <RelativeDiv>
     <div>
-      <Heading font={"Judson"} size={"48px"} lineHeight={"78px"}>
+      <Heading
+        font={"Judson"}
+        size={"48px"}
+        lineHeight={"78px"}
+        sm={{ size: "24px", lineHeight: "36px" }}
+      >
         <AlignCenter>Our team</AlignCenter>
       </Heading>
       <Text
@@ -23,6 +28,7 @@ const OurTeam = () => (
         justify={"center"}
         width={"40vw"}
         margin={"0 auto"}
+        sm={{ fontSize: "14px", lineHeight: "20px", width: "80vw" }}
       >
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why
@@ -30,26 +36,29 @@ const OurTeam = () => (
       </Text>
     </div>
 
-    <Container width={"450px"} margin={"2rem auto"}>
-      <Flex justifyContent={"space-between"}>
+    <Container width={"450px"} margin={"2rem auto"} sm={{ width: "80vw" }}>
+      <Flex
+        justifyContent={"space-between"}
+        sm={{ justifyContent: "space-around" }}
+      >
         <FlexItem>
-          <Heading size={"32px"} font={"Judson"}>
+          <Heading size={"32px"} font={"Judson"} sm={{ size: "16px" }}>
             Leaders
           </Heading>
         </FlexItem>
         <FlexItem>
-          <Heading size={"32px"} font={"Judson"}>
+          <Heading size={"32px"} font={"Judson"} sm={{ size: "16px" }}>
             Artists
           </Heading>
         </FlexItem>
         <FlexItem>
-          <Heading size={"32px"} font={"Judson"}>
+          <Heading size={"32px"} font={"Judson"} sm={{ size: "16px" }}>
             Developers
           </Heading>
         </FlexItem>
       </Flex>
     </Container>
-    <Container width={"450px"} margin={"0 auto"}>
+    <Container width={"450px"} margin={"2rem auto"} sm={{ width: "80vw" }}>
       <Flex justifyContent={"space-between"}>
         <FlexItem>
           <Squircle size={80} />

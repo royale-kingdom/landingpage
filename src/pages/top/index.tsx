@@ -28,7 +28,7 @@ const Top = () => {
       <Farming />
       <PVE />
 
-      <PVP />
+      {/* <PVP /> */}
 
       <Tokenomic />
       <Tokenmetric />
