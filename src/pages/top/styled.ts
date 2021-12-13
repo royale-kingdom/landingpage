@@ -69,10 +69,12 @@ export const StyledImage = styled.img<{ width?: string }>`
 
 export const CoverBackground = styled.div<{ height?: string; width?: string }>`
   img {
+    display: inline-block;
     width: 100%;
     height: auto;
     object-fit: cover;
     overflow: hidden;
+    background-repeat: no-repeat;
   }
 `;
 

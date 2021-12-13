@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { PieChart } from "react-minimal-pie-chart";
 
 import { Flex, FlexItem, Row, Col, FlexInline } from "../../components/Grid";
 import { AlignCenter, Box, StyledImage } from "./styled";
-import { Text } from "../../components/Typo/Text";
+
 import { Heading } from "../../components/Typo/Heading";
-import PieChart from "../../assets/images/landingpage/pie-chart-min.webp";
+import { Text } from "../../components/Typo/Text";
+// import PieChart from "../../assets/images/landingpage/pie-chart-min.webp";
 
 const TokenmetricTable = styled.table`
   width: 100%;
@@ -34,6 +36,13 @@ const tableDump: any[] = [
   { label: "Airdrop", percent: "1%", price: "2,000,000" }
 ];
 
+const defaultLabelStyle = {
+  fontSize: "5px",
+  fontFamily: "sans-serif"
+};
+
+const shiftSize = 4;
+
 const Tokenmetric = () => (
   <div>
     <Heading
@@ -58,35 +67,26 @@ const Tokenmetric = () => (
       it’s not something you would want to read/look at/use then why fucking
       bother? Form follows fucking function.
     </Text>
-    {/* <Row>
-      <Col span={12}>
-        <StyledImage src={PieChart} alt="pie chart" width={"100%"} />
-      </Col>
-      <Col span={10} paddingTop={"6rem"}>
-        <TokenmetricTable>
-          <tbody>
-            {tableDump.map((item, index) => (
-              <tr key={index}>
-                <td>{item.label}</td>
-                <TDRightMiddle>{item.percent}</TDRightMiddle>
-                <TDRightAlign>{item.price}</TDRightAlign>
-              </tr>
-            ))}
-          </tbody>
-        </TokenmetricTable>
-        <Flex justifyContent={"space-between"}>
-          <FlexItem>
-            <Text>TOTAL</Text>
-          </FlexItem>
-          <FlexItem>
-            <Text>200.000.000</Text>
-          </FlexItem>
-        </Flex>
-      </Col>
-    </Row> */}
+
     <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
-      <FlexItem flex={"1"}>
-        <StyledImage src={PieChart} alt="pie chart" width={"100%"} />
+      <FlexItem flex={"1"} padding={"4rem"}>
+        {/* <StyledImage src={PieChart} alt="pie chart" width={"100%"} /> */}
+        <PieChart
+          data={[
+            { title: "One", value: 10, color: "#ffffff81" },
+            { title: "Two", value: 15, color: "#ffffff81" },
+            { title: "Three", value: 20, color: "#ffffff81" }
+          ]}
+          segmentsShift={(index) => (index === 1 ? shiftSize : 0.1)}
+          labelStyle={{
+            ...defaultLabelStyle
+          }}
+          lineWidth={40}
+          viewBoxSize={[150, 150]}
+          center={[75, 75]}
+          onMouseOver={(e, index) => console.log({ e, index })}
+          onClick={(e, index) => console.log({ e, index })}
+        />
       </FlexItem>
       <FlexItem flex={"1"}>
         <Box width={"100%"} height={"auto"} padding={"0 4rem"}>

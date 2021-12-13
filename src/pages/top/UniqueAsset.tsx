@@ -16,7 +16,9 @@ import FemaleRYK1 from "../../assets/images/landingpage/Female-RK-1.webp";
 import UniqueCharacter from "../../assets/images/landingpage/unique-character-min.webp";
 import UniqueWeapon from "../../assets/images/landingpage/unique-weapon-min.webp";
 import UniqueArmor from "../../assets/images/landingpage/unique-armor-min.webp";
-import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom-min.webp";
+// import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom-min.webp";
+import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom.jpg";
+// import MaleRYK from "../../assets/images/landingpage/Male RYK.png";
 
 export const FemaleCharacter = styled.div`
   position: absolute;
