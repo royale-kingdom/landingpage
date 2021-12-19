@@ -1,14 +1,23 @@
-import { AbsoluteDiv, ContainerWithBG } from "./styled";
-import { Text } from "../../components/Typo/Text";
-import { ButtonOutline } from "../../components/Button";
-import Squircle from "../../components/Squircle";
-import { Flex, FlexItem } from "../../components/Grid";
-import { Heading } from "../../components/Typo/Heading";
-import FramingCover from "../../assets/images/landingpage/3rdCover-min.webp";
+import { useRef, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Farming = () => (
+import { RelativeDiv, AbsoluteDiv, ContainerWithBG } from "./styled";
+import { Heading } from "../../components/Typo/Heading";
+import { Text } from "../../components/Typo/Text";
+import { Flex, FlexItem } from "../../components/Grid";
+import Squircle from "../../components/Squircle";
+import { ButtonOutline } from "../../components/Button";
+import FramingCover from "../../assets/images/landingpage/3rdCover-min.webp";
+import Mine1 from "../../assets/images/landingpage/mine 1.jpg";
+import Farming1 from "../../assets/images/landingpage/Farming 1.jpg";
+
+const dumpSlideImages = [Mine1, Farming1, FramingCover, Mine1];
+
+const DumpSlide = ({ imageSrc }: { imageSrc: any }) => (
   <ContainerWithBG
-    imgSrc={FramingCover}
+    imgSrc={imageSrc}
     width={"100vw"}
     height={"1440px"}
     sm={{ backgroundPosition: "75%" }}
@@ -52,36 +61,79 @@ const Farming = () => (
         View more
       </ButtonOutline>
     </AbsoluteDiv>
-
-    {/* Squircle Block */}
-    <AbsoluteDiv
-      right={"96px"}
-      bottom={"192px"}
-      sm={{ bottom: "4rem", width: "90vw", left: "5vw" }}
-    >
-      <Flex
-        flexDirection="column"
-        sm={{
-          flexDirection: "row",
-          justifyContent: "space-around",
-          alginItem: "center"
-        }}
-      >
-        <FlexItem marginBottom={"2.5rem"}>
-          <Squircle size={96} active={true} />
-        </FlexItem>
-        <FlexItem marginBottom={"2.5rem"}>
-          <Squircle size={96} />
-        </FlexItem>
-        <FlexItem marginBottom={"2.5rem"}>
-          <Squircle size={96} />
-        </FlexItem>
-        <FlexItem marginBottom={"2.5rem"}>
-          <Squircle size={96} />
-        </FlexItem>
-      </Flex>
-    </AbsoluteDiv>
   </ContainerWithBG>
 );
+
+const config = {
+  // autoplay: true,
+  fade: true,
+  speed: 1000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  adaptiveHeight: true
+};
+
+const Farming = () => {
+  const sliderRef = useRef<Slider>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const changeSlide = (index: number) => {
+    sliderRef.current?.slickGoTo(index);
+    setActiveSlide(index);
+  };
+  return (
+    <RelativeDiv>
+      {/* Squircle Block */}
+      <Slider {...config} ref={sliderRef}>
+        {dumpSlideImages.map((img, i) => (
+          <DumpSlide key={i} imageSrc={img} />
+        ))}
+      </Slider>
+      <AbsoluteDiv
+        right={"8vw"}
+        bottom={"9rem"}
+        sm={{ bottom: "4rem", width: "90vw", left: "5vw" }}
+      >
+        <Flex
+          flexDirection="column"
+          sm={{
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alginItem: "center"
+          }}
+        >
+          <FlexItem marginBottom={"2.5rem"}>
+            <Squircle
+              size={96}
+              active={activeSlide === 0}
+              onClick={() => changeSlide(0)}
+            />
+          </FlexItem>
+          <FlexItem marginBottom={"2.5rem"}>
+            <Squircle
+              size={96}
+              active={activeSlide === 1}
+              onClick={() => changeSlide(1)}
+            />
+          </FlexItem>
+          <FlexItem marginBottom={"2.5rem"}>
+            <Squircle
+              size={96}
+              active={activeSlide === 2}
+              onClick={() => changeSlide(2)}
+            />
+          </FlexItem>
+          <FlexItem marginBottom={"2.5rem"}>
+            <Squircle
+              size={96}
+              active={activeSlide === 3}
+              onClick={() => changeSlide(3)}
+            />
+          </FlexItem>
+        </Flex>
+      </AbsoluteDiv>
+    </RelativeDiv>
+  );
+};
 
 export default Farming;

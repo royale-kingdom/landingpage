@@ -54,7 +54,7 @@ interface FlexItemProps extends BasePaddingProps, BaseMarginProps {
 export const FlexItem = styled.div<FlexItemProps>`
   ${BaseMargin};
   ${BasePadding};
-  width: ${(props) => props.width || "initial"};
+  width: ${(props) => props.width || "auto"};
   flex: ${(props) => props.flex || "initial"};
 `;
 

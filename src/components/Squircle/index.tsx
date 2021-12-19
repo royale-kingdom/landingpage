@@ -1,13 +1,18 @@
 import styled from "styled-components";
 import image from "../../assets/images/landingpage/unique-character-min.webp";
-import squircle from "../../assets/images/shape/Squircle.png";
+// import squircle from "../../assets/images/shape/Squircle.png";
+import ActiveSquircleSVG from "../../assets/images/shape/active_squircle.svg";
+import SquircleSVG from "../../assets/images/shape/squircle.svg";
 
 const StyledSquircle = styled.div<{ size: number; active?: boolean }>`
   width: ${({ size }) => `${size}px`};
   height: ${({ size }) => `${size}px`};
-  background: url(${image});
+  /* background: url(${image}); */
   background-size: contain;
   position: relative;
+  &:hover {
+    cursor: pointer;
+  }
   &:after {
     content: "";
     width: 100%;
@@ -18,8 +23,8 @@ const StyledSquircle = styled.div<{ size: number; active?: boolean }>`
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: url(${squircle});
-    /* clip-path:  url(${squircle}) */
+    background-image: ${({ active }) =>
+      `url(${active ? ActiveSquircleSVG : SquircleSVG})`};
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -30,8 +35,14 @@ const StyledSquircle = styled.div<{ size: number; active?: boolean }>`
   }
 `;
 
-const Squircle = ({ size, active }: { size: number; active?: boolean }) => (
-  <StyledSquircle size={size} active={active} />
-);
+const Squircle = ({
+  size,
+  active,
+  onClick
+}: {
+  size: number;
+  active?: boolean;
+  onClick?: () => void;
+}) => <StyledSquircle size={size} active={active} onClick={onClick} />;
 
 export default Squircle;

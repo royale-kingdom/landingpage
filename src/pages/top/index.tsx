@@ -1,7 +1,7 @@
 import Tokenmetric from "./Tokenmetric";
 import UniqueAsset from "./UniqueAsset";
 import OurTeam from "./OurTeam";
-import PVP from "./PVP";
+// import PVP from "./PVP";
 import Tokenomic from "./Tokenomic";
 import Farming from "./Farming";
 import PVE from "./PVE";

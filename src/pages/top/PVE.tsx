@@ -1,11 +1,4 @@
-import {
-  RelativeDiv,
-  CoverBackground,
-  AbsoluteDiv,
-  StyledImage,
-  ContainerWithBG
-} from "./styled";
-import { ButtonOutline } from "../../components/Button";
+import { AbsoluteDiv, ContainerWithBG } from "./styled";
 import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
 

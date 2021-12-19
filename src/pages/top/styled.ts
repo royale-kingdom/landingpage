@@ -42,7 +42,7 @@ export const AbsoluteDiv = styled.div<AbsoluteProps>`
   right: ${(props) => props.right || "unset"};
   left: ${(props) => props.left || "unset"};
   transform: ${(props) => props.transform || "unset"};
-  z-index: ${(props) => props.zIndex || "inherit"};
+  z-index: ${(props) => props.zIndex || 0};
   text-align: ${(props) => props.align || "inherit"};
   &:after {
     clear: both;
@@ -99,8 +99,8 @@ export const AlignCenter = styled.div`
 `;
 
 interface BoxBaseProps {
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
 }
 interface BoxProps extends BoxBaseProps, BaseMarginProps, BasePaddingProps {
   sm?: BoxBaseProps;
