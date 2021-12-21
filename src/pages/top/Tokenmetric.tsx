@@ -33,19 +33,19 @@ const normalColor = "#ffffff81";
 
 const pieChartData = [
   {
-    value: 10,
+    value: 30,
     color: normalColor
   },
   {
-    value: 15,
+    value: 18,
     color: normalColor
   },
   {
-    value: 20,
+    value: 16,
     color: normalColor
   },
   {
-    value: 25,
+    value: 16,
     color: normalColor
   },
   {
@@ -53,11 +53,7 @@ const pieChartData = [
     color: normalColor
   },
   {
-    value: 5,
-    color: normalColor
-  },
-  {
-    value: 2,
+    value: 1,
     color: normalColor
   }
 ];
