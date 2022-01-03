@@ -29,41 +29,42 @@ const tableDump: any[] = [
 ];
 
 const shiftSize = 4;
-const normalColor = "#ffffff81";
+const defaultColor = "#ffffff81";
 
 const pieChartData = [
   {
+    title: "Play to earn",
     value: 30,
-    color: normalColor
+    color: defaultColor
   },
   {
+    title: "Reserve funds",
     value: 18,
-    color: normalColor
+    color: defaultColor
   },
   {
+    title: "Team, advisor",
     value: 16,
-    color: normalColor
+    color: defaultColor
   },
   {
+    title: "Operation funds",
     value: 16,
-    color: normalColor
+    color: defaultColor
   },
-  {
-    value: 8,
-    color: normalColor
-  },
-  {
-    value: 1,
-    color: normalColor
-  }
+  { title: "Private Sale", value: 8, color: defaultColor },
+  { title: "Airdrop", value: 1, color: defaultColor }
 ];
+
+const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };
 
 const CustomPieChart = () => {
   const [hovered, setHovered] = useState(0);
   const data = pieChartData.map((segment, index) => ({
     ...segment,
-    color: index === hovered ? "#FFFFFF" : normalColor
+    color: index === hovered ? "#FFFFFF" : defaultColor
   }));
+
   return (
     <PieChart
       data={data}
@@ -71,6 +72,26 @@ const CustomPieChart = () => {
       startAngle={270}
       animate={true}
       segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
+      label={({ x, y, dx, dy, dataEntry }) => {
+        console.log({ x, y, dx, dy });
+        return (
+          <text
+            x={"50%"}
+            y={"50%"}
+            dx={dx * 1.5}
+            dy={dy * 1.5}
+            dominant-baseline="middle"
+            text-anchor="middle"
+            style={{
+              fontSize: "4px",
+              fill: "#afafafb5"
+            }}
+          >
+            {dataEntry.title}
+          </text>
+        );
+      }}
+      labelStyle={{ ...defaultLabelStyle }}
       paddingAngle={0}
       lineWidth={40}
       viewBoxSize={[120, 120]}
