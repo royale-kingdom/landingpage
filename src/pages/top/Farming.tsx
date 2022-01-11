@@ -31,11 +31,13 @@ const DumpSlide = ({ imageSrc }: { imageSrc: any }) => (
     >
       <Heading
         font={"Judson"}
-        size={"48px"}
-        lineHeight={"78px"}
+        size={"40px"}
+        lineHeight={"64px"}
         sm={{ size: "24px", lineHeight: "36px" }}
+        fontWeight="700"
+        background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
       >
-        FARMING
+        Farming Mode
       </Heading>
       <Text
         fontSize={"18px"}

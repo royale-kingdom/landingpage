@@ -14,7 +14,13 @@ const PVP = () => (
       <StyledImage src={PVPCover} alt="PVE cover" />
     </CoverBackground>
     <AbsoluteDiv width="572px" top={"40%"} left={"96px"} align={"center"}>
-      <Heading font={"Judson"} size={"48px"} lineHeight={"78px"}>
+      <Heading 
+        font={"Judson"} 
+        size={"48px"} 
+        lineHeight={"78px"}
+        fontWeight="700"
+        background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
+      >
         PVP
       </Heading>
       <Text fontSize={"18px"} lineHeight={"28px"}>

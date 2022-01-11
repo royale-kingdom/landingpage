@@ -8,6 +8,9 @@ interface HeadingBaseProps {
   font?: string;
   lineHeight?: string;
   align?: string;
+  fontWeight?: string | number;
+  color?: string;
+  background?: string;
 }
 interface HeadingProps
   extends HeadingBaseProps,
@@ -22,6 +25,11 @@ export const Heading = styled.h1<HeadingProps>`
   font-family: ${({ font }) => font || "inherit"};
   line-height: ${({ lineHeight }) => lineHeight || "initial"};
   text-align: ${({ align }) => align || "unset"};
+  font-weight: ${({ fontWeight }) => fontWeight || "inherit"};
+  color: ${({ color }) => color || "inherit"};
+  background: ${({ background }) => background || "inherit"};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     font-size: ${({ sm }) => sm?.size || "initial"};
     line-height: ${({ sm }) => sm?.lineHeight || "initial"};

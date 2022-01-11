@@ -8,11 +8,15 @@ const Roadmap = () => (
   <Container margin={"8rem 0"}>
     <Heading
       font={"Judson"}
-      size={"48px"}
-      lineHeight={"78px"}
+      size={"40px"}
+      lineHeight={"64px"}
+      fontWeight="700"
       sm={{ size: "24px", lineHeight: "36px" }}
+      background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
     >
-      <AlignCenter>Roadmap</AlignCenter>
+      <AlignCenter>
+        Roadmap
+      </AlignCenter>
     </Heading>
     <Container margin={"2rem 0"}>
       <Text
