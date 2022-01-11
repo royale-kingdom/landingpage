@@ -7,6 +7,8 @@ import { Flex, FlexItem } from "../../components/Grid";
 import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
 
+import SeparatorImage from "../../assets/images/landingpage/separator.png"
+
 const TokenmetricTable = styled.table`
   width: 100%;
   tbody {
@@ -123,6 +125,7 @@ const Tokenmetric = () => {
         width={"40vw"}
         margin={"0 auto"}
         sm={{ fontSize: "14px", lineHeight: "20px", width: "90vw" }}
+        color="rgba(238, 226, 204, 0.82)"
       >
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why
@@ -141,24 +144,37 @@ const Tokenmetric = () => {
                 {tableDump.map((item, index) => (
                   <tr key={index}>
                     <td>
-                      <Text lineHeight={"1rem"}>{item.label}</Text>
+                      <Text 
+                        fontSize="18px"
+                        lineHeight={"28px"}
+                        fontWeight="700"
+                        color="rgba(238, 226, 204, 1)"
+                      >
+                        {item.label}
+                      </Text>
                     </td>
                     <td>
                       <Text
-                        lineHeight={"1rem"}
+                      fontSize="18px"
+                        lineHeight={"28px"}
                         width={"100%"}
                         display={"inline-block"}
                         justify={"center"}
+                        fontWeight="700"
+                        color="rgba(238, 226, 204, 0.52)"
                       >
                         {item.percent}
                       </Text>
                     </td>
                     <td>
                       <Text
-                        lineHeight={"1rem"}
+                        fontSize="18px"
+                        lineHeight={"28px"}
                         width={"100%"}
                         justify={"right"}
                         display={"inline-block"}
+                        fontWeight="700"
+                        color="rgba(238, 226, 204, 1)"
                       >
                         {item.price}
                       </Text>
@@ -167,17 +183,27 @@ const Tokenmetric = () => {
                 ))}
                 <tr>
                   <td>
-                    <Text lineHeight={"3rem"}>TOTAL</Text>
+                    <Text 
+                      font="Judson"
+                      fontSize="24px"
+                      lineHeight={"38px"}
+                      fontWeight="700"
+                      color="rgba(238, 226, 204, 1)"
+                    >
+                      TOTAL
+                    </Text>
                   </td>
                   <td colSpan={2}>
                     <Text
                       width={"100%"}
                       display={"inline-block"}
                       justify={"right"}
-                      fontSize={"32px"}
-                      lineHeight={"3rem"}
+                      fontSize={"40px"}
+                      lineHeight={"64px"}
                       fontWeight={"700"}
                       sm={{ fontSize: "24px" }}
+                      color="rgba(238, 226, 204, 1)"
+                      font="Judson"
                     >
                       200.000.000
                     </Text>
@@ -185,6 +211,14 @@ const Tokenmetric = () => {
                 </tr>
               </tbody>
             </TokenmetricTable>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: "center"
+              }}
+            >
+              <img style={{width: 400}} src={SeparatorImage} />
+            </div>
           </Box>
         </FlexItem>
       </Flex>

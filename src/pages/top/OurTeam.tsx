@@ -31,6 +31,7 @@ const OurTeam = () => (
         width={"40vw"}
         margin={"0 auto"}
         sm={{ fontSize: "14px", lineHeight: "20px", width: "80vw" }}
+        color="rgba(238, 226, 204, 0.82)"
       >
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why

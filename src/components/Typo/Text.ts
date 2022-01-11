@@ -9,6 +9,8 @@ interface TextBaseProps {
   width?: string;
   padding?: string;
   margin?: string;
+  color?: string;
+  font?: string;
 }
 
 interface TextProps extends TextBaseProps {
@@ -30,6 +32,8 @@ export const Text = styled.p<TextProps>`
   text-align: ${({ justify }) => justify || "initial"};
   width: ${({ width }) => width || "initial"};
   display: ${({ display }) => display || "inherit"};
+  font-family: ${({ font }) => font || "inherit"};
+  color: ${({ color }) => color || "inherit"};
   margin: ${({ margin }) => margin || "initial"};
   padding: ${({ padding }) => padding || "inherit"};
   box-sizing: border-box;

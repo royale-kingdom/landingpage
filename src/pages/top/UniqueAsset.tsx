@@ -80,7 +80,12 @@ const UniqueItem = ({
         >
           {title}
         </GoldenText>
-        <Text width={"90%"}>{content}</Text>
+        <Text 
+          width={"90%"}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          {content}
+        </Text>
       </FlexItem>
     </Flex>
   );
@@ -112,6 +117,7 @@ const UniqueAsset = () => (
             lineHeight={"28px"}
             justify={"center"}
             sm={{ fontSize: "16px", lineHeight: "24px" }}
+            color="rgba(238, 226, 204, 0.82)"
           >
             When you design, you have to draw on your own fucking life
           </Text>
@@ -122,6 +128,7 @@ const UniqueAsset = () => (
             lineHeight={"28px"}
             justify={"center"}
             sm={{ fontSize: "16px", lineHeight: "24px" }}
+            color="rgba(238, 226, 204, 0.82)"
           >
             experiences. If it’s not something you would want to read/look
             at/use
@@ -133,6 +140,7 @@ const UniqueAsset = () => (
             lineHeight={"28px"}
             justify={"center"}
             sm={{ fontSize: "16px", lineHeight: "24px" }}
+            color="rgba(238, 226, 204, 0.82)"
           >
             then why fucking bother? Form follows fucking function.
           </Text>

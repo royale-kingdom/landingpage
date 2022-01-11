@@ -43,6 +43,7 @@ const DumpSlide = ({ imageSrc }: { imageSrc: any }) => (
         fontSize={"18px"}
         lineHeight={"28px"}
         sm={{ fontSize: "14px", lineHeight: "20px" }}
+        color="rgba(238, 226, 204, 0.82)"
       >
         When you sit down to work, external critics aren’t the enemy. It’s you
         who you must to fight against to do great fucking work. You must
@@ -54,6 +55,7 @@ const DumpSlide = ({ imageSrc }: { imageSrc: any }) => (
         lineHeight={"28px"}
         margin={"2rem 0"}
         sm={{ fontSize: "14px", lineHeight: "20px" }}
+        color="rgba(238, 226, 204, 0.82)"
       >
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why
