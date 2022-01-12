@@ -4,6 +4,21 @@ import { BaseMarginProps, BaseMargin } from "./../../components/Styles/Margin";
 import { BasePadding, BasePaddingProps } from "../../components/Styles/Padding";
 import { Text } from "../../components/Typo/Text";
 
+export const MainLogo = styled.img`
+  position: absolute;
+  transform: translate(-50%, 50%);
+  width: 770px;
+  height: 416px;
+  bottom: 0;
+  left: 50%;
+  z-index: 10;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 270px;
+    height: 145px;
+    bottom: 10%;
+  }
+`;
+
 export const RelativeDiv = styled.div<{
   height?: string;
   sm?: { height?: string };

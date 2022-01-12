@@ -7,11 +7,19 @@ import Farming from "./Farming";
 import PVE from "./PVE";
 import Roadmap from "./Roadmap";
 
-import { RelativeDiv, CoverFlag, CoverBackground, StyledImage } from "./styled";
+import {
+  RelativeDiv,
+  CoverFlag,
+  CoverBackground,
+  StyledImage,
+  MainLogo
+} from "./styled";
 
 import Cover from "../../assets/images/landingpage/BG1 Royale Kingdom ff 1.jpg";
 // import Cover from "../../assets/images/landingpage/BG1-Royale-Kingdom-cl2-1.webp";
 import Cover1 from "../../assets/images/landingpage/cover-1-min.webp";
+import logoBanner from "../../assets/images/landingpage/logo_banner.png";
+import { Box } from "../../components/Box";
 
 const Top = () => {
   return (
@@ -23,19 +31,22 @@ const Top = () => {
         <CoverFlag>
           <img src={Cover1} alt="flag" />
         </CoverFlag>
+        <MainLogo src={logoBanner} />
       </RelativeDiv>
 
-      <UniqueAsset />
-      <Farming />
-      <PVE />
+      <Box>
+        <UniqueAsset />
+        <Farming />
+        <PVE />
 
-      {/* <PVP /> */}
+        {/* <PVP /> */}
 
-      <Tokenomic />
-      <Tokenmetric />
+        <Tokenomic />
+        <Tokenmetric />
 
-      <Roadmap />
-      <OurTeam />
+        <Roadmap />
+        <OurTeam />
+      </Box>
     </>
   );
 };

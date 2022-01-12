@@ -6,6 +6,8 @@ import Market from "./pages/market/";
 import Community from "./pages/community/";
 import Header from "./components/Header/";
 import { px2vw } from "./utils/px2vw";
+import { Footer } from "./components/Footer";
+import { Box } from "./components/Box";
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -50,11 +52,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <Routes>
-        <Route path="/" element={<Top />} />
-        <Route path="/market" element={<Market />} />
-        <Route path="/community" element={<Community />} />
-      </Routes>
+      <Box>
+        <Routes>
+          <Route path="/" element={<Top />} />
+          <Route path="/market" element={<Market />} />
+          <Route path="/community" element={<Community />} />
+        </Routes>
+      </Box>
+      <Footer />
       <GlobalStyle />
     </ThemeProvider>
   );

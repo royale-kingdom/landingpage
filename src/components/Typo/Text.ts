@@ -10,7 +10,7 @@ interface TextBaseProps {
   padding?: string;
   margin?: string;
   color?: string;
-  font?: string;
+  font?: "Judson" | "Lato";
 }
 
 interface TextProps extends TextBaseProps {
@@ -32,8 +32,8 @@ export const Text = styled.p<TextProps>`
   text-align: ${({ justify }) => justify || "initial"};
   width: ${({ width }) => width || "initial"};
   display: ${({ display }) => display || "inherit"};
-  font-family: ${({ font }) => font || "inherit"};
-  color: ${({ color }) => color || "inherit"};
+  font-family: ${({ font }) => font || "Judson"};
+  color: ${({ color }) => color || "rgba(238, 226, 204, 0.82)"};
   margin: ${({ margin }) => margin || "initial"};
   padding: ${({ padding }) => padding || "inherit"};
   box-sizing: border-box;

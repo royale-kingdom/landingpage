@@ -77,11 +77,11 @@ const OurTeam = () => (
         </FlexItem>
       </Flex>
     </Container>
-    <AbsoluteDiv width={"100%"}>
+    {/* <AbsoluteDiv width={"100%"}>
       <CoverBackground>
         <StyledImage src={Ourteam} alt="our team" />
       </CoverBackground>
-    </AbsoluteDiv>
+    </AbsoluteDiv> */}
   </RelativeDiv>
 );
 
