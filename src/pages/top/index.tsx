@@ -28,9 +28,9 @@ const Top = () => {
         <CoverBackground>
           <StyledImage width={"100%"} src={Cover} alt="cover" />
         </CoverBackground>
-        <CoverFlag>
+        {/* <CoverFlag>
           <img src={Cover1} alt="flag" />
-        </CoverFlag>
+        </CoverFlag> */}
         <MainLogo src={logoBanner} />
       </RelativeDiv>
 
