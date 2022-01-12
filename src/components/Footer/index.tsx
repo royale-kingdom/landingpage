@@ -124,5 +124,6 @@ const FooterContainer = styled.div`
   padding: 64px 80px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 32px 24px;
+    padding-top: 64px;
   }
 `;

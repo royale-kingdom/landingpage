@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 import { BaseMarginProps, BaseMargin } from "./../../components/Styles/Margin";
 import { BasePadding, BasePaddingProps } from "../../components/Styles/Padding";
-import { Text } from "../../components/Typo/Text";
 
 export const MainLogo = styled.img`
   position: absolute;
@@ -130,15 +129,6 @@ export const Box = styled.div<BoxProps>`
     width: ${({ sm }) => sm?.width};
     height: ${({ sm }) => sm?.height};
   }
-`;
-
-export const GoldenText = styled(Text)`
-  font-family: "Judson";
-  font-style: normal;
-  font-weight: bold;
-  background: linear-gradient(to bottom, #fff9d7, #e5c87f, #ba8623, #8f8466);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 `;
 
 export const ContainerWithBG = styled.div<{

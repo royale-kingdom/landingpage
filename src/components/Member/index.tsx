@@ -14,8 +14,8 @@ interface MemberProps {
 const Member = ({ avatar, fullName, title }: MemberProps) => {
   return (
     <Container>
-      <Box>
-        <Img src={memberSquircle} width="164px" height="164px" />
+      <Box width="164px" height="164px" sm={{ width: "96px", height: "96px" }}>
+        <Img src={memberSquircle} width="100%" height="100%" />
       </Box>
       <MemberBadge>
         <Text
@@ -23,6 +23,7 @@ const Member = ({ avatar, fullName, title }: MemberProps) => {
           lineHeight="28px"
           justify="center"
           fontWeight="500"
+          sm={{ fontSize: "14px", lineHeight: "20px" }}
         >
           {fullName}
         </Text>
@@ -32,6 +33,7 @@ const Member = ({ avatar, fullName, title }: MemberProps) => {
           lineHeight="20px"
           justify="center"
           color="rgba(238, 226, 204, 0.52)"
+          sm={{ fontSize: "10px", lineHeight: "16px" }}
         >
           {title}
         </Text>
@@ -58,6 +60,9 @@ const MemberBadge = styled.div`
   background: rgba(238, 226, 204, 0.24);
   backdrop-filter: blur(16px);
   transform: translate(0, -60%);
-`;
 
-// const Avatar = styled.
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 120px;
+    transform: translate(0, -60%);
+  }
+`;

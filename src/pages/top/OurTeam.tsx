@@ -7,11 +7,11 @@ import { Text } from "../../components/Typo/Text";
 import { Box } from "../../components/Box";
 import { Flex } from "../../components/Grid";
 import Member from "../../components/Member";
-// import Ourteam from "../../assets/images/landingpage/ourteam-min.webp";
 import background from "../../assets/images/landingpage/team_background.png";
+import { Img } from "../../components/Img";
 
 const OurTeam = () => (
-  <OurTeamContain>
+  <OurTeamContainer>
     <Box marginTop="175px">
       <Heading
         font={"Judson"}
@@ -38,7 +38,7 @@ const OurTeam = () => (
       </Text>
     </Box>
 
-    <Box>
+    <Box marginTop="64px" sm={{ margin: "32px 0 0 0" }}>
       <Flex justifyContent="center">
         <Member fullName="Long Nguyen" title="CHIEF OF OPERATION" />
         <Member fullName="Nhat Nguyen" title="CHIEF OF TECH" />
@@ -51,24 +51,31 @@ const OurTeam = () => (
         <Member fullName="Long Nguyen" title="SMC DEVELOPER" />
       </Flex>
     </Box>
-  </OurTeamContain>
+    <BottomImg>
+      <Img src={background} width="100%" height="100%" />
+    </BottomImg>
+  </OurTeamContainer>
 );
 
 export default OurTeam;
 
-const OurTeamContain = styled.div`
-  height: 1080px;
-  padding-bottom: 360px;
+const BottomImg = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-size: contain;
+  z-index: -1;
+  transform: translate(0, 74px);
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    transform: translate(0, 18px);
+  }
+`;
+
+const OurTeamContainer = styled.div`
+  height: 1000px;
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: url(${background}) no-repeat;
-    background-size: contain;
-    z-index: -1;
-    tranf
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: 850px;
   }
 `;

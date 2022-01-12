@@ -5,7 +5,6 @@ import {
   StyledImage,
   AlignCenter,
   AbsoluteDiv,
-  GoldenText,
   ContainerWithBG
 } from "./styled";
 import { Flex, FlexItem } from "../../components/Grid/index";
@@ -18,6 +17,7 @@ import UniqueWeapon from "../../assets/images/landingpage/unique-weapon-min.webp
 import UniqueArmor from "../../assets/images/landingpage/unique-armor-min.webp";
 // import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom-min.webp";
 import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom.jpg";
+import { GoldenText } from "../../components/GoldenText";
 // import MaleRYK from "../../assets/images/landingpage/Male RYK.png";
 
 export const FemaleCharacter = styled.div`
@@ -80,10 +80,7 @@ const UniqueItem = ({
         >
           {title}
         </GoldenText>
-        <Text 
-          width={"90%"}
-          color="rgba(238, 226, 204, 0.82)"
-        >
+        <Text width={"90%"} color="rgba(238, 226, 204, 0.82)">
           {content}
         </Text>
       </FlexItem>

@@ -32,7 +32,8 @@ const tableDump: any[] = [
 ];
 
 const shiftSize = 4;
-const defaultColor = "#ffffff81";
+const defaultColor = "#866527";
+const activeColor = "#f6c65c";
 
 const pieChartData = [
   {
@@ -65,7 +66,7 @@ const CustomPieChart = () => {
   const [hovered, setHovered] = useState(0);
   const data = pieChartData.map((segment, index) => ({
     ...segment,
-    color: index === hovered ? "#FFFFFF" : defaultColor
+    color: index === hovered ? activeColor : defaultColor
   }));
 
   return (
