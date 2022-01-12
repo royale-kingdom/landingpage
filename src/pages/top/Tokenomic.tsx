@@ -38,7 +38,8 @@ const Tokenomic = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        1. Global currency: Exchange people, equipment or even your lands
+        RYK is the main token that will be used on the marketplace. You can exchange characters, weapons, armors and lands too. 
+        Also, RYK can be used to ake part in adjusting the world through DAO.
       </Text>
       <Text
         fontSize={"18px"}
@@ -47,16 +48,7 @@ const Tokenomic = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        2. Play2earn: Make your own legacy and get rewards from Mother Nature
-      </Text>
-      <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        margin={"2rem 0"}
-        sm={{ fontSize: "14px", lineHeight: "20px" }}
-        color="rgba(238, 226, 204, 0.82)"
-      >
-        3. Government: Take part in adjust the world through DAO
+        Also, RYK will be used as your rewards for Play2earn features. That's right, only 1 token used for everything, no other token.
       </Text>
     </AbsoluteDiv>
   </RelativeDiv>
