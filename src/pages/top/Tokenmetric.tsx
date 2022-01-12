@@ -37,27 +37,35 @@ const activeColor = "#f6c65c";
 
 const pieChartData = [
   {
-    title: "Play to earn",
+    // title: "Play to earn",
     value: 30,
     color: defaultColor
   },
   {
-    title: "Reserve funds",
+    // title: "Reserve funds",
     value: 18,
     color: defaultColor
   },
   {
-    title: "Team, advisor",
+    // title: "Team, advisor",
     value: 16,
     color: defaultColor
   },
   {
-    title: "Operation funds",
+    // title: "Operation funds",
     value: 16,
     color: defaultColor
   },
-  { title: "Private Sale", value: 8, color: defaultColor },
-  { title: "Airdrop", value: 1, color: defaultColor }
+  { 
+    // title: "Private Sale", 
+    value: 8, 
+    color: defaultColor 
+  },
+  { 
+    // title: "Airdrop", 
+    value: 1, 
+    color: defaultColor 
+  }
 ];
 
 const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };

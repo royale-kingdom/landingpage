@@ -39,7 +39,7 @@ const Tokenomic = () => (
         color="rgba(238, 226, 204, 0.82)"
       >
         RYK is the main token that will be used on the marketplace. You can exchange characters, weapons, armors and lands too. 
-        Also, RYK can be used to ake part in adjusting the world through DAO.
+        RYK will also be used as your rewards for Play2earn features.
       </Text>
       <Text
         fontSize={"18px"}
@@ -48,7 +48,7 @@ const Tokenomic = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        Also, RYK will be used as your rewards for Play2earn features. That's right, only 1 token used for everything, no other token.
+        Player can use RYK to take part in adjusting the world through DAO.
       </Text>
     </AbsoluteDiv>
   </RelativeDiv>

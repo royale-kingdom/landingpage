@@ -26,7 +26,7 @@ const PVE = () => (
         fontWeight="700"
         background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
       >
-        PVE
+        War Mode
       </Heading>
 
       <Text
@@ -35,10 +35,7 @@ const PVE = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        When you sit down to work, external critics aren’t the enemy. It’s you
-        who you must to fight against to do great fucking work. You must
-        overcome yourself. Design as if your fucking life depended on it. Never
-        let your guard down by thinking you’re fucking good enough.
+        War and conquest were considered to be the divine mission of the kings, whose duty it was to allocate more resources and people into their domain. 
       </Text>
       <Text
         fontSize={"18px"}
@@ -47,9 +44,7 @@ const PVE = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        When you design, you have to draw on your own fucking life experiences.
-        If it’s not something you would want to read/look at/use then why
-        fucking bother? Form follows fucking function.
+        In order to protect kingdoms, you would need to expand and conquer areas of perceived threat. War was also the primary means of economic gain also.
       </Text>
       {/* <ButtonOutline padding={"12px 24px"} fontSize={"18px"}>
         View more

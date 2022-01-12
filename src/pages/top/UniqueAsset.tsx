@@ -161,17 +161,17 @@ const UniqueAsset = () => (
       <UniqueItem
         img={UniqueCharacter}
         title={"Unique Characters"}
-        content={"From a street fighter to a mighty general, all at your service."}
+        content={"Build kingdom from scratch with unique character under your command."}
       />
       <UniqueItem
         img={UniqueWeapon}
-        title={"Unique Weapons"}
-        content={"Various type of weapons. Choose one and make yoru own story."}
+        title={"Unique Equipment"}
+        content={"Forge equipment with talent blacksmiths and explore your kingdom."}
       />
       <UniqueItem
         img={UniqueArmor}
-        title={"Unique Armors"}
-        content={"Protect your character with both heavy and light armor."}
+        title={"Unique War"}
+        content={"Lead kingdom to victory by tactic decision every turn."}
       />
     </AbsoluteDiv>
   </ContainerWithBG>

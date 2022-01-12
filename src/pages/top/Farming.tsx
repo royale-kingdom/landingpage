@@ -8,7 +8,7 @@ import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
 import { Flex, FlexItem } from "../../components/Grid";
 import Squircle from "../../components/Squircle";
-import { ButtonOutline } from "../../components/Button";
+// import { ButtonOutline } from "../../components/Button";
 import FramingCover from "../../assets/images/landingpage/3rdCover-min.webp";
 import Mine1 from "../../assets/images/landingpage/mine 1.jpg";
 import Farming1 from "../../assets/images/landingpage/Farming 1.jpg";
@@ -45,10 +45,8 @@ const DumpSlide = ({ imageSrc }: { imageSrc: any }) => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        When you sit down to work, external critics aren’t the enemy. It’s you
-        who you must to fight against to do great fucking work. You must
-        overcome yourself. Design as if your fucking life depended on it. Never
-        let your guard down by thinking you’re fucking good enough.
+        A new king had to swear an oath to fulfill the responsibilities of a monarch. 
+        The details of this oath varied from one land to another, but included the responsibility to keep the peace, to administer justice and to uphold the law.
       </Text>
       <Text
         fontSize={"18px"}
@@ -57,13 +55,11 @@ const DumpSlide = ({ imageSrc }: { imageSrc: any }) => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        When you design, you have to draw on your own fucking life experiences.
-        If it’s not something you would want to read/look at/use then why
-        fucking bother? Form follows fucking function.
+        Build kingdom economy with 4 unique in-game resources 
       </Text>
-      <ButtonOutline padding={"12px 24px"} fontSize={"18px"}>
+      {/* <ButtonOutline padding={"12px 24px"} fontSize={"18px"}>
         View more
-      </ButtonOutline>
+      </ButtonOutline> */}
     </AbsoluteDiv>
   </ContainerWithBG>
 );
