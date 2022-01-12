@@ -12,15 +12,16 @@ import {
   // CoverFlag,
   CoverBackground,
   StyledImage,
-  MainLogo
+  MainLogo,
+  LogoBadge
 } from "./styled";
+import { Box } from "../../components/Box";
 
 import Cover from "../../assets/images/landingpage/BG1 Royale Kingdom ff 1.jpg";
 // import Cover from "../../assets/images/landingpage/BG1-Royale-Kingdom-cl2-1.webp";
 // import Cover1 from "../../assets/images/landingpage/cover-1-min.webp";
 import logoBanner from "../../assets/images/landingpage/logo_banner.png";
-import { Box } from "../../components/Box";
-
+import logoBadge from "../../assets/images/landingpage/logo_badgepng.png";
 const Top = () => {
   return (
     <>
@@ -32,6 +33,7 @@ const Top = () => {
           <img src={Cover1} alt="flag" />
         </CoverFlag> */}
         <MainLogo src={logoBanner} />
+        <LogoBadge src={logoBadge} />
       </RelativeDiv>
 
       <Box>

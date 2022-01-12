@@ -124,7 +124,7 @@ const RoadMap = () => (
       <Box>
         <Flex justifyContent="space-around">
           <Box>
-            <Box>
+            <Box marginTop="64px" marginBottom="32px">
               <GoldenText fontSize="24px" lineHeight="38px" justify="center">
                 {"STARTED"}
               </GoldenText>
