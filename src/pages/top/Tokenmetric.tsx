@@ -217,7 +217,7 @@ const Tokenmetric = () => {
                 justifyContent: "center"
               }}
             >
-              <img style={{width: 400}} src={SeparatorImage} />
+              <img style={{maxWidth: 400, height: 'auto', width: 'auto'}} src={SeparatorImage} alt="Royale Kingdom" />
             </div>
           </Box>
         </FlexItem>
