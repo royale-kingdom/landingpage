@@ -61,7 +61,7 @@ const UniqueItem = ({
     <Flex
       justifyContent={"flex-start"}
       alginItem={"center"}
-      margin={"2rem 0"}
+      padding={"2rem 0"}
       height={"100px"}
     >
       <FlexItem>
