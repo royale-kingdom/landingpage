@@ -30,7 +30,7 @@ const Tokenomic = () => (
         fontWeight="700"
         background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
       >
-        Tokenomic
+        Token Utilities
       </Heading>
       <Text
         fontSize={"18px"}
@@ -38,10 +38,7 @@ const Tokenomic = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        When you sit down to work, external critics aren’t the enemy. It’s you
-        who you must to fight against to do great fucking work. You must
-        overcome yourself. Design as if your fucking life depended on it. Never
-        let your guard down by thinking you’re fucking good enough.
+        1. Global currency: Exchange people, equipment or even your lands
       </Text>
       <Text
         fontSize={"18px"}
@@ -50,9 +47,16 @@ const Tokenomic = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        When you design, you have to draw on your own fucking life experiences.
-        If it’s not something you would want to read/look at/use then why
-        fucking bother? Form follows fucking function.
+        2. Play2earn: Make your own legacy and get rewards from Mother Nature
+      </Text>
+      <Text
+        fontSize={"18px"}
+        lineHeight={"28px"}
+        margin={"2rem 0"}
+        sm={{ fontSize: "14px", lineHeight: "20px" }}
+        color="rgba(238, 226, 204, 0.82)"
+      >
+        3. Government: Take part in adjust the world through DAO
       </Text>
     </AbsoluteDiv>
   </RelativeDiv>
