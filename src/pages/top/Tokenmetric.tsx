@@ -7,7 +7,8 @@ import { Flex, FlexItem } from "../../components/Grid";
 import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
 
-import SeparatorImage from "../../assets/images/landingpage/separator.png"
+import SeparatorImage from "../../assets/images/landingpage/separator.png";
+import { Img } from "../../components/Img";
 
 const TokenmetricTable = styled.table`
   width: 100%;
@@ -75,7 +76,6 @@ const CustomPieChart = () => {
       animate={true}
       segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
       label={({ x, y, dx, dy, dataEntry }) => {
-        console.log({ x, y, dx, dy });
         return (
           <text
             x={"50%"}
@@ -144,7 +144,7 @@ const Tokenmetric = () => {
                 {tableDump.map((item, index) => (
                   <tr key={index}>
                     <td>
-                      <Text 
+                      <Text
                         fontSize="18px"
                         lineHeight={"28px"}
                         fontWeight="700"
@@ -155,7 +155,7 @@ const Tokenmetric = () => {
                     </td>
                     <td>
                       <Text
-                      fontSize="18px"
+                        fontSize="18px"
                         lineHeight={"28px"}
                         width={"100%"}
                         display={"inline-block"}
@@ -183,7 +183,7 @@ const Tokenmetric = () => {
                 ))}
                 <tr>
                   <td>
-                    <Text 
+                    <Text
                       font="Judson"
                       fontSize="24px"
                       lineHeight={"38px"}
@@ -213,11 +213,11 @@ const Tokenmetric = () => {
             </TokenmetricTable>
             <div
               style={{
-                display: 'flex',
+                display: "flex",
                 justifyContent: "center"
               }}
             >
-              <img style={{width: 400}} src={SeparatorImage} />
+              <Img width="400px" height="auto" src={SeparatorImage} />
             </div>
           </Box>
         </FlexItem>

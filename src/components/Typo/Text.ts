@@ -35,7 +35,7 @@ export const Text = styled.p<TextProps>`
   font-family: ${({ font }) => font || "Judson"};
   color: ${({ color }) => color || "rgba(238, 226, 204, 0.82)"};
   margin: ${({ margin }) => margin || "initial"};
-  padding: ${({ padding }) => padding || "inherit"};
+  padding: ${({ padding }) => padding || "initial"};
   box-sizing: border-box;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -48,6 +48,6 @@ export const Text = styled.p<TextProps>`
     width: ${({ sm, width }) => sm?.width || width || "initial"};
     display: ${({ sm, display }) => sm?.display || display || "inherit"};
     margin: ${({ sm, margin }) => sm?.margin || margin || "initial"};
-    padding: ${({ sm, padding }) => sm?.padding || padding || "inherit"};
+    padding: ${({ sm, padding }) => sm?.padding || padding || "initial"};
   }
 `;
