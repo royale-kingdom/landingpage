@@ -9,7 +9,7 @@ export const MainLogo = styled.img`
   transform: translate(-50%, 50%);
   width: 770px;
   height: 416px;
-  bottom: 0;
+  top: 20px;
   left: 50%;
   z-index: 10;
   @media (max-width: ${({ theme }) => theme.mobile}) {
