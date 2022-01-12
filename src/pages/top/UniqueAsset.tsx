@@ -119,7 +119,7 @@ const UniqueAsset = () => (
             sm={{ fontSize: "16px", lineHeight: "24px" }}
             color="rgba(238, 226, 204, 0.82)"
           >
-            When you design, you have to draw on your own fucking life
+            Truely own your game.
           </Text>
         </div>
         <div>
@@ -130,8 +130,7 @@ const UniqueAsset = () => (
             sm={{ fontSize: "16px", lineHeight: "24px" }}
             color="rgba(238, 226, 204, 0.82)"
           >
-            experiences. If it’s not something you would want to read/look
-            at/use
+            Your characters, your armors, your weapons
           </Text>
         </div>
         <div>
@@ -142,7 +141,7 @@ const UniqueAsset = () => (
             sm={{ fontSize: "16px", lineHeight: "24px" }}
             color="rgba(238, 226, 204, 0.82)"
           >
-            then why fucking bother? Form follows fucking function.
+            even your land, everything will be NFT.
           </Text>
         </div>
       </AlignCenter>
@@ -165,17 +164,17 @@ const UniqueAsset = () => (
       <UniqueItem
         img={UniqueCharacter}
         title={"Unique Characters"}
-        content={"Form follows fucking function. Paul Rand once said,"}
+        content={"From a street fighter to a mighty general, all at your service."}
       />
       <UniqueItem
         img={UniqueWeapon}
         title={"Unique Weapons"}
-        content={"Form follows fucking function. Paul Rand once said,"}
+        content={"Various type of weapons. Choose one and make yoru own story."}
       />
       <UniqueItem
         img={UniqueArmor}
         title={"Unique Armors"}
-        content={"Form follows fucking function. Paul Rand once said,"}
+        content={"Protect your character with both heavy and light armor."}
       />
     </AbsoluteDiv>
   </ContainerWithBG>

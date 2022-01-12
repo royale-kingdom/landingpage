@@ -118,7 +118,7 @@ const Tokenmetric = () => {
         Tokenmetric
       </Heading>
 
-      <Text
+      {/* <Text
         fontSize={"18px"}
         lineHeight={"28px"}
         justify={"center"}
@@ -130,7 +130,7 @@ const Tokenmetric = () => {
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why
         fucking bother? Form follows fucking function.
-      </Text>
+      </Text> */}
 
       <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
         <FlexItem flex={"1"} padding={"4rem"}>

@@ -26,9 +26,7 @@ const Roadmap = () => (
         font="Lato"
         sm={{ fontSize: "14px", lineHeight: "20px", width: "80vw" }}
       >
-        When you design, you have to draw on your own fucking life experiences.
-        If it’s not something you would want to read/look at/use then why
-        fucking bother? Form follows fucking function.
+        Awaiting for new world mysteries
       </Text>
     </Container>
     {/* <CoverBackground>

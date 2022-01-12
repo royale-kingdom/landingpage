@@ -37,7 +37,7 @@ const DumpSlide = ({ imageSrc }: { imageSrc: any }) => (
         fontWeight="700"
         background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
       >
-        Farming Mode
+        Explorer Mode
       </Heading>
       <Text
         fontSize={"18px"}

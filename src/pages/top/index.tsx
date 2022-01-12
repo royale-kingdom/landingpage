@@ -9,7 +9,7 @@ import Roadmap from "./Roadmap";
 
 import {
   RelativeDiv,
-  CoverFlag,
+  // CoverFlag,
   CoverBackground,
   StyledImage,
   MainLogo
@@ -17,7 +17,7 @@ import {
 
 import Cover from "../../assets/images/landingpage/BG1 Royale Kingdom ff 1.jpg";
 // import Cover from "../../assets/images/landingpage/BG1-Royale-Kingdom-cl2-1.webp";
-import Cover1 from "../../assets/images/landingpage/cover-1-min.webp";
+// import Cover1 from "../../assets/images/landingpage/cover-1-min.webp";
 import logoBanner from "../../assets/images/landingpage/logo_banner.png";
 import { Box } from "../../components/Box";
 
@@ -28,9 +28,9 @@ const Top = () => {
         <CoverBackground>
           <StyledImage width={"100%"} src={Cover} alt="cover" />
         </CoverBackground>
-        <CoverFlag>
+        {/* <CoverFlag>
           <img src={Cover1} alt="flag" />
-        </CoverFlag>
+        </CoverFlag> */}
         <MainLogo src={logoBanner} />
       </RelativeDiv>
 
