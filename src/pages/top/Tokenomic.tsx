@@ -1,20 +1,20 @@
 import { RelativeDiv, AbsoluteDiv, StyledImage } from "./styled";
+import styled from "styled-components";
+
 import { Text } from "../../components/Typo/Text";
 import { Heading } from "../../components/Typo/Heading";
 import TokenomicCover from "../../assets/images/landingpage/token-util.png";
+import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
+import TokenomicBackground from "../../assets/images/landingpage/tokenomic_background.png";
 
 const Tokenomic = () => (
-  <RelativeDiv 
-    // height={"1000px"} 
-    height="100vh"
-    sm={{ height: "100vh" }}
-  >
+  <TokenomicContainer>
     <AbsoluteDiv
       width={"540px"}
       transform={"translate(0%, -50%)"}
       top="50%"
       right={"96px"}
-      sm={{ width: "80vw", bottom: "2rem", left: "10vw", transform: "unset" }}
+      sm={{ width: "80vw", top: "12rem", left: "10vw", transform: "unset" }}
     >
       <StyledImage src={TokenomicCover} width={"100%"} alt="tokenomic" />
     </AbsoluteDiv>
@@ -24,7 +24,7 @@ const Tokenomic = () => (
       left={"96px"}
       align={"center"}
       transform={"translate(0%, -50%)"}
-      sm={{ width: "90vw", top: "2rem", left: "5vw", transform: "unset" }}
+      sm={{ width: "90vw", bottom: "2rem", left: "5vw", transform: "unset" }}
     >
       <Heading
         font={"Judson"}
@@ -39,11 +39,12 @@ const Tokenomic = () => (
       <Text
         fontSize={"18px"}
         lineHeight={"28px"}
-        sm={{ fontSize: "14px", lineHeight: "20px" }}
+        sm={{ fontSize: "14px", lineHeight: "20px", justify: "justify" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        RYK is the main token that will be used on the marketplace. You can exchange characters, weapons, armors and lands too. 
-        RYK will also be used as your rewards for Play2earn features.
+        RYK is the main token that will be used on the marketplace. You can
+        exchange characters, weapons, armors and lands too. RYK will also be
+        used as your rewards for Play2earn features.
       </Text>
       <Text
         fontSize={"18px"}
@@ -55,6 +56,42 @@ const Tokenomic = () => (
         Player can use RYK to take part in adjusting the world through DAO.
       </Text>
     </AbsoluteDiv>
-  </RelativeDiv>
+  </TokenomicContainer>
 );
 export default Tokenomic;
+
+const TokenomicContainer = styled.div`
+  position: relative;
+  height: 100vh;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    /* display: none; */
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    top: 22%;
+    left: 0;
+    z-index: 0;
+    background: url(${TokenomicBackground}) no-repeat;
+    background-size: contain;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(${StarBackground}) no-repeat;
+    background-size: cover;
+    opacity: 0.08;
+    /* mix-blend-mode: hard-light; */
+    z-index: -1;
+  }
+`;

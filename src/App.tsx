@@ -32,7 +32,7 @@ body {
   box-sizing: border-box;
   position: relative;
   background: #1d1d1d;
-  &::after {
+  /* &::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -43,7 +43,7 @@ body {
     opacity: 0.08;
     /* mix-blend-mode: hard-light; */
     z-index: -2;
-  }
+  } */
 }
 
 a {

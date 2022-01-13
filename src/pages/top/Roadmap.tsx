@@ -19,12 +19,7 @@ import goldenColumn from "../../assets/images/landingpage/golden_column.png";
 const nextPlan = [
   {
     quarter: "Q1/2022",
-    events: [
-      "Landing Page",
-      "IDO Event",
-      "MarketPlace",
-      "Simulation Mode"
-    ]
+    events: ["Landing Page", "IDO Event", "MarketPlace", "Simulation Mode"]
   },
 
   {
@@ -117,7 +112,7 @@ const OtherMileStoneMobile = () => {
             </Box>
             <Box margin="30px 0 0 16px">
               {events.map((event, idx) => (
-                <Text key={idx} font="Lato" fontSize="16px" lineHeight="26px">
+                <Text key={idx} font="Lato" fontSize="14px" lineHeight="26px">
                   {event}
                 </Text>
               ))}
@@ -246,7 +241,6 @@ const RoadMap = () => {
           <Box>
             <Flex flexDirection="column" justifyContent="flex-start">
               <StartedMileStoneMobile />
-              {/* <OtherMileStonePC /> */}
               <OtherMileStoneMobile />
             </Flex>
           </Box>
