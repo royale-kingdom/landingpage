@@ -4,6 +4,7 @@ import OurTeam from "./OurTeam";
 // import PVP from "./PVP";
 import Tokenomic from "./Tokenomic";
 import Farming from "./Farming";
+import ExplorerMode from "./ExplorerMode";
 import PVE from "./PVE";
 import Roadmap from "./Roadmap";
 
@@ -39,6 +40,7 @@ const Top = () => {
       <Box>
         <UniqueAsset />
         <Farming />
+        <ExplorerMode />
         <PVE />
 
         {/* <PVP /> */}

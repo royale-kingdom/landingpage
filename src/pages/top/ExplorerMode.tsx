@@ -10,14 +10,16 @@ import { Flex, FlexItem } from "../../components/Grid";
 import Squircle from "../../components/Squircle";
 // import { ButtonOutline } from "../../components/Button";
 import FramingCover from "../../assets/images/landingpage/3rdCover-min.webp";
+import ExplorerModeBG from "../../assets/images/landingpage/explorer_mode.jpeg";
 import Mine1 from "../../assets/images/landingpage/mine 1.jpg";
 import Farming1 from "../../assets/images/landingpage/Farming 1.jpg";
 import Iron from "../../assets/images/landingpage/iron.png";
 import Paddy from "../../assets/images/landingpage/paddy.png";
 import Wood from "../../assets/images/landingpage/wood.png";
 import HolyWater from "../../assets/images/landingpage/holy-water.png";
+import { Img } from "../../components/Img";
 
-const dumpSlideImages = [Mine1, Farming1, FramingCover, Mine1];
+const dumpSlideImages = [ExplorerModeBG, Farming1, FramingCover, Mine1];
 
 const DumpSlide = ({
   imageSrc,
@@ -99,11 +101,14 @@ const DumpSlide = ({
                 height: "100%"
               }}
             >
-              <img
+              <Img
+                width="120px"
+                height="110px"
+                sm={{ width: "48px", height: "48px" }}
                 src={Iron}
                 style={{
-                  width: 120,
-                  height: 110,
+                  // width: 120,
+                  // height: 110,
                   zIndex: 10
                 }}
                 alt="Iron"
@@ -126,11 +131,14 @@ const DumpSlide = ({
                 height: "100%"
               }}
             >
-              <img
+              <Img
+                width="90px"
+                height="90px"
+                sm={{ width: "45px", height: "45px" }}
                 src={Paddy}
                 style={{
-                  width: 110,
-                  height: 100,
+                  // width: 110,
+                  // height: 100,
                   zIndex: 10
                 }}
                 alt="Food"
@@ -153,11 +161,14 @@ const DumpSlide = ({
                 height: "100%"
               }}
             >
-              <img
+              <Img
+                width="100px"
+                height="90px"
+                sm={{ width: "48px", height: "48px" }}
                 src={Wood}
                 style={{
-                  width: 100,
-                  height: 90,
+                  // width: 100,
+                  // height: 90,
                   zIndex: 10
                 }}
                 alt="Wood"
@@ -180,11 +191,14 @@ const DumpSlide = ({
                 height: "100%"
               }}
             >
-              <img
+              <Img
+                width="80px"
+                height="90px"
+                sm={{ width: "45px", height: "45px" }}
                 src={HolyWater}
                 style={{
-                  width: 80,
-                  height: 90,
+                  // width: 80,
+                  // height: 90,
                   zIndex: 10
                 }}
                 alt="Holy Water"
@@ -207,7 +221,7 @@ const config = {
   adaptiveHeight: true
 };
 
-const Farming = () => {
+const ExplorerMode = () => {
   const sliderRef = useRef<Slider>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const changeSlide = (index: number) => {
@@ -227,15 +241,8 @@ const Farming = () => {
           />
         ))}
       </Slider>
-      {/* <AbsoluteDiv
-        right={"8vw"}
-        bottom={"9rem"}
-        sm={{ bottom: "4rem", width: "90vw", left: "5vw" }}
-      >
-        
-      </AbsoluteDiv> */}
     </RelativeDiv>
   );
 };
 
-export default Farming;
+export default ExplorerMode;
