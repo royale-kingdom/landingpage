@@ -47,7 +47,7 @@ const OurTeam = () => (
       <Flex justifyContent="center">
         <Member fullName="Hang Nguyen" title="2D ARTIST" />
         <Member fullName="Phuong Lou" title="2D ARTIST" />
-        <Member fullName="Long Nguyen" title="F.E DEVELOPER" />
+        <Member fullName="Hang Ung" title="F.E DEVELOPER" />
         <Member fullName="Louis Do" title="SMC DEVELOPER" />
       </Flex>
     </Box>
