@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { PieChart } from "react-minimal-pie-chart";
+import ReactTooltip from 'react-tooltip';
 
 import { Box } from "./styled";
 import { Flex, FlexItem } from "../../components/Grid";
@@ -23,12 +24,12 @@ const TokenmetricTable = styled.table`
 `;
 
 const tableDump: any[] = [
-  { label: "Play to earn", percent: "30%", price: "60,000,000" },
-  { label: "Reserve funds", percent: "18%", price: "36,000,000" },
-  { label: "Team, advisor", percent: "16%", price: "32,000,000" },
-  { label: "Operation funds", percent: "16%", price: "32,000,000" },
-  { label: "Private Sale", percent: "8%", price: "16,000,000" },
-  { label: "Airdrop", percent: "1%", price: "2,000,000" }
+  { label: "Play to earn", percent: "30%", amount: "60,000,000" },
+  { label: "Reserve funds", percent: "18%", amount: "36,000,000" },
+  { label: "Team, advisor", percent: "16%", amount: "32,000,000" },
+  { label: "Operation funds", percent: "16%", amount: "32,000,000" },
+  { label: "Private Sale", percent: "8%", amount: "16,000,000" },
+  { label: "Airdrop", percent: "1%", amount: "2,000,000" }
 ];
 
 const shiftSize = 4;
@@ -37,78 +38,124 @@ const activeColor = "#f6c65c";
 
 const pieChartData = [
   {
-    // title: "Play to earn",
+    title: "Play to earn",
     value: 30,
-    color: defaultColor
+    color: defaultColor,
+    amount: "60,000,000"
   },
   {
-    // title: "Reserve funds",
+    title: "Reserve funds",
     value: 18,
-    color: defaultColor
+    color: defaultColor,
+    amount: "36,000,000"
   },
   {
-    // title: "Team, advisor",
+    title: "Team, advisor",
     value: 16,
-    color: defaultColor
+    color: defaultColor,
+    amount: "32,000,000"
   },
   {
-    // title: "Operation funds",
+    title: "Operation funds",
     value: 16,
-    color: defaultColor
+    color: defaultColor,
+    amount: "32,000,000"
   },
   { 
-    // title: "Private Sale", 
+    title: "Private Sale", 
     value: 8, 
-    color: defaultColor 
+    color: defaultColor,
+    amount: "16,000,000" 
   },
   { 
-    // title: "Airdrop", 
+    title: "Airdrop", 
     value: 1, 
-    color: defaultColor 
+    color: defaultColor,
+    amount: "2,000,000" 
   }
 ];
 
-const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };
+// const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };
 
 const CustomPieChart = () => {
-  const [hovered, setHovered] = useState(0);
+  const [hovered, setHovered] = useState(-1);
   const data = pieChartData.map((segment, index) => ({
     ...segment,
     color: index === hovered ? activeColor : defaultColor
   }));
 
+  const makeTooltipContent = (data: any) => {
+    return (
+      <div>
+        <Heading
+          font={"Judson"}
+          size={"16px"}
+          lineHeight={"26px"}
+          align={"center"}
+          // sm={{ size: "24px", lineHeight: "36px" }}
+          fontWeight="700"
+          background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
+        >
+          {data.title.toUpperCase()}
+        </Heading>
+        <Text
+          fontSize="16px"
+          lineHeight={"26px"}
+          width={"100%"}
+          // justify={"right"}
+          display={"inline-block"}
+          fontWeight="700"
+          color="rgba(238, 226, 204, 1)"
+        >
+          {data.amount}
+        </Text>
+      </div>
+    )
+  }
+
   return (
-    <PieChart
-      data={data}
-      segmentsShift={(index) => (index === hovered ? shiftSize : 0.4)}
-      startAngle={270}
-      animate={true}
-      segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
-      label={({ x, y, dx, dy, dataEntry }) => {
-        return (
-          <text
-            x={"50%"}
-            y={"50%"}
-            dx={dx * 1.5}
-            dy={dy * 1.5}
-            dominant-baseline="middle"
-            text-anchor="middle"
-            style={{
-              fontSize: "4px",
-              fill: "#afafafb5"
-            }}
-          >
-            {dataEntry.title}
-          </text>
-        );
-      }}
-      labelStyle={{ ...defaultLabelStyle }}
-      paddingAngle={0}
-      lineWidth={40}
-      viewBoxSize={[120, 120]}
-      center={[60, 60]}
-      onMouseOver={(e, index) => setHovered(index)}
-    />
+    <div data-tip="" data-for="chart">
+      <PieChart
+        data={data}
+        segmentsShift={(index) => (index === hovered ? shiftSize : 0.4)}
+        startAngle={270}
+        animate={true}
+        segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
+        // label={({ x, y, dx, dy, dataEntry }) => {
+        //   return (
+        //     <text
+        //       x={"50%"}
+        //       y={"50%"}
+        //       dx={dx * 1.5}
+        //       dy={dy * 1.5}
+        //       dominant-baseline="middle"
+        //       text-anchor="middle"
+        //       style={{
+        //         fontSize: "4px",
+        //         fill: "#afafafb5"
+        //       }}
+        //     >
+        //       {dataEntry.title}
+        //     </text>
+        //   );
+        // }}
+        // labelStyle={{ ...defaultLabelStyle }}
+        paddingAngle={0}
+        lineWidth={40}
+        viewBoxSize={[120, 120]}
+        center={[60, 60]}
+        onMouseOver={(e, index) => setHovered(index)}
+        onMouseOut={() => {
+          setHovered(-1);
+        }}
+      />
+      <ReactTooltip
+        id="chart"
+        getContent={() =>
+          hovered >= 0 ? makeTooltipContent(data[hovered]) : null
+        }
+      />
+    </div>
   );
 };
 
@@ -185,7 +232,7 @@ const Tokenmetric = () => {
                         fontWeight="700"
                         color="rgba(238, 226, 204, 1)"
                       >
-                        {item.price}
+                        {item.amount}
                       </Text>
                     </td>
                   </tr>
