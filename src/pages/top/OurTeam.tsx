@@ -3,7 +3,7 @@ import { Heading } from "../../components/Typo/Heading";
 // import { Container, Flex, FlexItem } from "../../components/Grid";
 // import Squircle from "../../components/Squircle";
 import styled from "styled-components";
-import { Text } from "../../components/Typo/Text";
+// import { Text } from "../../components/Typo/Text";
 import { Box } from "../../components/Box";
 import { Flex } from "../../components/Grid";
 import Member from "../../components/Member";
@@ -23,7 +23,7 @@ const OurTeam = () => (
       >
         <AlignCenter>Our team</AlignCenter>
       </Heading>
-      <Text
+      {/* <Text
         fontSize={"18px"}
         lineHeight={"28px"}
         justify={"center"}
@@ -35,7 +35,7 @@ const OurTeam = () => (
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why
         fucking bother? Form follows fucking function.
-      </Text>
+      </Text> */}
     </Box>
 
     <Box marginTop="64px" sm={{ margin: "32px 0 0 0" }}>
@@ -73,7 +73,7 @@ const BottomImg = styled.div`
 `;
 
 const OurTeamContainer = styled.div`
-  height: 1000px;
+  height: 100vh;
   position: relative;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 850px;

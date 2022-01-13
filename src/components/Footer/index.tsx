@@ -34,8 +34,7 @@ export function Footer() {
       >
         <Box width="340px">
           <Text margin="20px 0" fontSize="13px" lineHeight="21px" font="Lato">
-            Design as if your fucking life depended on it. Whatever can be
-            captured in words can be conquered with understanding.
+            My Kingdom - My Legacy.
           </Text>
           <Text
             margin="40px 0 0 0"
