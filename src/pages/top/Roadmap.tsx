@@ -23,8 +23,7 @@ const nextPlan = [
       "Landing Page",
       "IDO Event",
       "MarketPlace",
-      "Farm Mode",
-      "Explorer Mode"
+      "Simulation Mode"
     ]
   },
 
@@ -32,15 +31,14 @@ const nextPlan = [
     quarter: "Q2/2022",
     events: [
       "Nation Feature",
-      "PVE Mode",
-      "Explorer Mode (v2)",
-      "Farm Mode (v2)",
+      "War Mode (v1)",
+      "Simulation Mode (v2)",
       "Event Feature"
     ]
   },
   {
     quarter: "Q3/2022",
-    events: ["PVP Mode", "Ranking System"]
+    events: ["War Mode (v2)", "Ranking System"]
   },
   {
     quarter: "Q4/2022",
