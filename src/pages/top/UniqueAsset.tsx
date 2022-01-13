@@ -105,7 +105,7 @@ const UniqueAsset = () => (
             justify={"center"}
             sm={{ fontSize: "32px", lineHeight: "48px" }}
           >
-            Unique NFT Asset
+            Build unique world
           </GoldenText>
         </div>
         <div>
@@ -116,7 +116,7 @@ const UniqueAsset = () => (
             sm={{ fontSize: "16px", lineHeight: "24px" }}
             color="rgba(238, 226, 204, 0.82)"
           >
-            Truely own your game.
+            An immersive, intense turn based strategy game with player driven choices.
           </Text>
         </div>
         <div>
@@ -127,10 +127,10 @@ const UniqueAsset = () => (
             sm={{ fontSize: "16px", lineHeight: "24px" }}
             color="rgba(238, 226, 204, 0.82)"
           >
-            Your characters, your armors, your weapons
+            Empower by blockchain and NFT technology.
           </Text>
         </div>
-        <div>
+        {/* <div>
           <Text
             fontSize={"18px"}
             lineHeight={"28px"}
@@ -140,7 +140,7 @@ const UniqueAsset = () => (
           >
             even your land, everything will be NFT.
           </Text>
-        </div>
+        </div> */}
       </AlignCenter>
     </AbsoluteDiv>
 
