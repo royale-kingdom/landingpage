@@ -35,7 +35,7 @@ const PVE = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        War and conquest were considered to be the divine mission of the kings, whose duty it was to allocate more resources and people into their domain. 
+        War and conquest were considered to be the divine mission of the kings, whose duty was to allocate more resources and people into their domain. 
       </Text>
       <Text
         fontSize={"18px"}
@@ -44,7 +44,7 @@ const PVE = () => (
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
-        In order to protect kingdoms, you would need to expand and conquer areas of perceived threat. War was also the primary means of economic gain also.
+        In order to protect kingdoms, you would need to expand and conquer areas of perceived threat. War was also the primary means of economic gain.
       </Text>
       {/* <ButtonOutline padding={"12px 24px"} fontSize={"18px"}>
         View more

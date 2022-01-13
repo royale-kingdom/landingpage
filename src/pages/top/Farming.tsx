@@ -12,6 +12,10 @@ import Squircle from "../../components/Squircle";
 import FramingCover from "../../assets/images/landingpage/3rdCover-min.webp";
 import Mine1 from "../../assets/images/landingpage/mine 1.jpg";
 import Farming1 from "../../assets/images/landingpage/Farming 1.jpg";
+import Iron from "../../assets/images/landingpage/iron.png";
+import Paddy from "../../assets/images/landingpage/paddy.png";
+import Wood from "../../assets/images/landingpage/wood.png";
+import HolyWater from "../../assets/images/landingpage/holy-water.png";
 
 const dumpSlideImages = [Mine1, Farming1, FramingCover, Mine1];
 
@@ -107,28 +111,108 @@ const Farming = () => {
               size={96}
               active={activeSlide === 0}
               onClick={() => changeSlide(0)}
-            />
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  height: '100%'
+                }}
+              >
+                <img 
+                  src={Iron}
+                  style={{
+                    width: 120,
+                    height: 110,
+                    zIndex: 10
+                  }}
+                  alt="Iron"
+                />
+              </div>
+            </Squircle>
           </FlexItem>
           <FlexItem marginBottom={"2.5rem"}>
             <Squircle
               size={96}
               active={activeSlide === 1}
               onClick={() => changeSlide(1)}
-            />
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  height: '100%'
+                }}
+              >
+                <img 
+                  src={Paddy}
+                  style={{
+                    width: 110,
+                    height: 100,
+                    zIndex: 10
+                  }}
+                  alt="Food"
+                />
+              </div>
+            </Squircle>
           </FlexItem>
           <FlexItem marginBottom={"2.5rem"}>
             <Squircle
               size={96}
               active={activeSlide === 2}
               onClick={() => changeSlide(2)}
-            />
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  height: '100%'
+                }}
+              >
+                <img 
+                  src={Wood}
+                  style={{
+                    width: 100,
+                    height: 90,
+                    zIndex: 10
+                  }}
+                  alt="Wood"
+                />
+              </div>
+            </Squircle>
           </FlexItem>
           <FlexItem marginBottom={"2.5rem"}>
             <Squircle
               size={96}
               active={activeSlide === 3}
               onClick={() => changeSlide(3)}
-            />
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  height: '100%'
+                }}
+              >
+                <img 
+                  src={HolyWater}
+                  style={{
+                    width: 80,
+                    height: 90,
+                    zIndex: 10
+                  }}
+                  alt="Holy Water"
+                />
+              </div>
+            </Squircle>
           </FlexItem>
         </Flex>
       </AbsoluteDiv>

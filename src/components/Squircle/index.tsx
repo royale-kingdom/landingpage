@@ -38,11 +38,13 @@ const StyledSquircle = styled.div<{ size: number; active?: boolean }>`
 const Squircle = ({
   size,
   active,
-  onClick
+  onClick,
+  children
 }: {
   size: number;
   active?: boolean;
   onClick?: () => void;
-}) => <StyledSquircle size={size} active={active} onClick={onClick} />;
+  children?: JSX.Element
+}) => <StyledSquircle size={size} active={active} onClick={onClick} children={children} />;
 
 export default Squircle;
