@@ -1,10 +1,14 @@
 import { RelativeDiv, AbsoluteDiv, StyledImage } from "./styled";
 import { Text } from "../../components/Typo/Text";
 import { Heading } from "../../components/Typo/Heading";
-import TokenomicCover from "../../assets/images/landingpage/tokenomic-min.webp";
+import TokenomicCover from "../../assets/images/landingpage/token-util.png";
 
 const Tokenomic = () => (
-  <RelativeDiv height={"1000px"} sm={{ height: "100vh" }}>
+  <RelativeDiv 
+    // height={"1000px"} 
+    height="100vh"
+    sm={{ height: "100vh" }}
+  >
     <AbsoluteDiv
       width={"540px"}
       transform={"translate(0%, -50%)"}

@@ -9,7 +9,8 @@ const PVE = () => (
   <ContainerWithBG
     imgSrc={PVECover}
     width={"100vw"}
-    height={"1094px"}
+    // height={"1094px"}
+    height={"100vh"}
     sm={{ backgroundPosition: "75%" }}
   >
     <AbsoluteDiv
