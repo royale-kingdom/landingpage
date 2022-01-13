@@ -1,4 +1,4 @@
-import { RelativeDiv, AbsoluteDiv, StyledImage } from "./styled";
+import { AbsoluteDiv, StyledImage } from "./styled";
 import styled from "styled-components";
 
 import { Text } from "../../components/Typo/Text";

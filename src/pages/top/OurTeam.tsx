@@ -7,15 +7,17 @@ import styled from "styled-components";
 import { Box } from "../../components/Box";
 import { Flex } from "../../components/Grid";
 import Member from "../../components/Member";
-import background from "../../assets/images/landingpage/team_background.png";
 import { Img } from "../../components/Img";
+import background from "../../assets/images/landingpage/team_background.png";
+import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
 const OurTeam = () => (
   <OurTeamContainer>
-    <Box marginTop="175px">
+    <Box paddingTop="250px">
       <Heading
         font={"Judson"}
         size={"40px"}
+        margin={"0"}
         lineHeight={"64px"}
         fontWeight="700"
         sm={{ size: "24px", lineHeight: "36px" }}
@@ -77,5 +79,18 @@ const OurTeamContainer = styled.div`
   position: relative;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 850px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(${StarBackground}) no-repeat;
+    background-size: cover;
+    opacity: 0.08;
+    z-index: -2;
   }
 `;

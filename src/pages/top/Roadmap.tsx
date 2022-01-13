@@ -15,6 +15,7 @@ import openedTreasure from "../../assets/images/landingpage/treasure_open.svg";
 import closedTreasure from "../../assets/images/landingpage/treasure_close.svg";
 import xSword from "../../assets/images/landingpage/sword_x.png";
 import goldenColumn from "../../assets/images/landingpage/golden_column.png";
+import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
 const nextPlan = [
   {
@@ -178,19 +179,22 @@ const RoadMap = () => {
   const { innerWidth } = window;
 
   return (
-    <Container margin={"8rem 0"}>
-      <Heading
-        font={"Judson"}
-        size={"40px"}
-        lineHeight={"64px"}
-        fontWeight="700"
-        sm={{ size: "24px", lineHeight: "36px" }}
-        background={
-          "linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-        }
-      >
-        <AlignCenter>Roadmap</AlignCenter>
-      </Heading>
+    <RoadmapContainer>
+      <Box>
+        <Heading
+          font={"Judson"}
+          margin={"0"}
+          size={"40px"}
+          lineHeight={"64px"}
+          fontWeight="700"
+          sm={{ size: "24px", lineHeight: "36px" }}
+          background={
+            "linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
+          }
+        >
+          <AlignCenter>Roadmap</AlignCenter>
+        </Heading>
+      </Box>
       <Container margin={"2rem 0"}>
         <Text
           fontSize={"18px"}
@@ -246,11 +250,30 @@ const RoadMap = () => {
           </Box>
         </Box>
       )}
-    </Container>
+    </RoadmapContainer>
   );
 };
 
 export default RoadMap;
+
+const RoadmapContainer = styled.div`
+  height: 100vh;
+  padding: 12rem 0 8rem 0;
+  box-sizing: border-box;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(${StarBackground}) no-repeat;
+    background-size: cover;
+    opacity: 0.08;
+    z-index: -1;
+  }
+`;
 
 const OpenedTreasure = styled.div`
   display: inline-block;

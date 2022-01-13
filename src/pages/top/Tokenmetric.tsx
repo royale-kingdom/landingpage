@@ -3,13 +3,14 @@ import styled from "styled-components";
 import { PieChart } from "react-minimal-pie-chart";
 import ReactTooltip from "react-tooltip";
 
-import { Box } from "./styled";
+import { Box } from "../../components/Box";
 import { Flex, FlexItem } from "../../components/Grid";
 import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
+import { Img } from "../../components/Img";
 
 import SeparatorImage from "../../assets/images/landingpage/separator.png";
-import { Img } from "../../components/Img";
+import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
 const TokenmetricTable = styled.table`
   width: 100%;
@@ -161,18 +162,21 @@ const CustomPieChart = () => {
 
 const Tokenmetric = () => {
   return (
-    <div>
-      <Heading
-        font={"Judson"}
-        size={"40px"}
-        lineHeight={"64px"}
-        align={"center"}
-        sm={{ size: "24px", lineHeight: "36px" }}
-        fontWeight="700"
-        background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-      >
-        Tokenmetric
-      </Heading>
+    <TokenmetricContainer>
+      <Box padding="24px 0">
+        <Heading
+          margin="0"
+          font={"Judson"}
+          size={"40px"}
+          lineHeight={"64px"}
+          align={"center"}
+          sm={{ size: "24px", lineHeight: "36px" }}
+          fontWeight="700"
+          background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
+        >
+          Tokenmetric
+        </Heading>
+      </Box>
 
       {/* <Text
         fontSize={"18px"}
@@ -283,7 +287,24 @@ const Tokenmetric = () => {
           </Box>
         </FlexItem>
       </Flex>
-    </div>
+    </TokenmetricContainer>
   );
 };
 export default Tokenmetric;
+
+const TokenmetricContainer = styled.div`
+  box-sizing: border-box;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(${StarBackground}) no-repeat;
+    background-size: cover;
+    opacity: 0.08;
+    z-index: -1;
+  }
+`;
