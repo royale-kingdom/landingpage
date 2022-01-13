@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { PieChart } from "react-minimal-pie-chart";
-import ReactTooltip from 'react-tooltip';
+import ReactTooltip from "react-tooltip";
 
 import { Box } from "./styled";
 import { Flex, FlexItem } from "../../components/Grid";
@@ -61,17 +61,17 @@ const pieChartData = [
     color: defaultColor,
     amount: "32,000,000"
   },
-  { 
-    title: "Private Sale", 
-    value: 8, 
+  {
+    title: "Private Sale",
+    value: 8,
     color: defaultColor,
-    amount: "16,000,000" 
+    amount: "16,000,000"
   },
-  { 
-    title: "Airdrop", 
-    value: 1, 
+  {
+    title: "Airdrop",
+    value: 1,
     color: defaultColor,
-    amount: "2,000,000" 
+    amount: "2,000,000"
   }
 ];
 
@@ -110,8 +110,8 @@ const CustomPieChart = () => {
           {data.amount}
         </Text>
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <div data-tip="" data-for="chart">

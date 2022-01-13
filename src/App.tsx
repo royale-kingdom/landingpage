@@ -41,7 +41,7 @@ body {
     left: 0;
     background: url(${bodyBackground}) repeat-y;
     opacity: 0.08;
-    mix-blend-mode: hard-light;
+    /* mix-blend-mode: hard-light; */
     z-index: -2;
   }
 }

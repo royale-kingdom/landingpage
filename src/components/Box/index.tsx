@@ -18,6 +18,7 @@ interface BaseStyled extends BasePaddingProps, BaseMarginProps {
   right?: string;
   bottom?: string;
   left?: string;
+  transform?: string;
 }
 
 interface Styled extends BaseStyled {
@@ -45,10 +46,12 @@ const Div = styled.div<Styled>`
   right: ${({ right }) => right || "unset"};
   bottom: ${({ bottom }) => bottom || "unset"};
   left: ${({ left }) => left || "unset"};
+  transform: ${({ transform }) => transform || "unset"};
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: ${({ sm, width }) => sm?.width || width || "initial"};
     height: ${({ sm, height }) => sm?.height || height || "initial"};
     margin: ${({ sm, margin }) => sm?.margin || margin || "initial"};
+    transform: ${({ sm, transform }) => sm?.transform || transform || "unset"};
   }
 `;
