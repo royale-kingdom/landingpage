@@ -78,7 +78,7 @@ const pieChartData = [
 // const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };
 
 const CustomPieChart = () => {
-  const [hovered, setHovered] = useState(-1);
+  const [hovered, setHovered] = useState(0);
   const data = pieChartData.map((segment, index) => ({
     ...segment,
     color: index === hovered ? activeColor : defaultColor
