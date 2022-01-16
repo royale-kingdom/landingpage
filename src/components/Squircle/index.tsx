@@ -1,13 +1,12 @@
 import styled from "styled-components";
-import image from "../../assets/images/landingpage/unique-character-min.webp";
-// import squircle from "../../assets/images/shape/Squircle.png";
+
 import ActiveSquircleSVG from "../../assets/images/shape/active_squircle.svg";
 import SquircleSVG from "../../assets/images/shape/squircle.svg";
 
 const StyledSquircle = styled.div<{ size: number; active?: boolean }>`
   width: ${({ size }) => `${size}px`};
   height: ${({ size }) => `${size}px`};
-  /* background: url(${image}); */
+
   background-size: contain;
   position: relative;
   &:hover {
@@ -44,7 +43,14 @@ const Squircle = ({
   size: number;
   active?: boolean;
   onClick?: () => void;
-  children?: JSX.Element
-}) => <StyledSquircle size={size} active={active} onClick={onClick} children={children} />;
+  children?: JSX.Element;
+}) => (
+  <StyledSquircle
+    size={size}
+    active={active}
+    onClick={onClick}
+    children={children}
+  />
+);
 
 export default Squircle;

@@ -4,49 +4,18 @@ import {
   Box,
   StyledImage,
   AlignCenter,
-  AbsoluteDiv,
-  ContainerWithBG
+  AbsoluteDiv
+  // ContainerWithBG
 } from "./styled";
-import { Flex, FlexItem } from "../../components/Grid/index";
+import { Flex, FlexItem } from "../../components/Grid";
 import { Text } from "../../components/Typo/Text";
-
-import MaleRYK from "../../assets/images/landingpage/Male RYK-min.webp";
-import FemaleRYK1 from "../../assets/images/landingpage/Female-RK-1.webp";
-import UniqueCharacter from "../../assets/images/landingpage/unique-character-min.webp";
-import UniqueWeapon from "../../assets/images/landingpage/unique-weapon-min.webp";
-import UniqueArmor from "../../assets/images/landingpage/unique-armor-min.webp";
-// import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom-min.webp";
-import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom.jpg";
 import { GoldenText } from "../../components/GoldenText";
-// import MaleRYK from "../../assets/images/landingpage/Male RYK.png";
 
-export const FemaleCharacter = styled.div`
-  position: absolute;
-  width: 1156px;
-  height: 1085.29px;
-  left: 240px;
-  bottom: 0;
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    // 1/4 size on mobile
-    width: 289px;
-    height: 271px;
-    right: 0;
-    left: unset;
-  } ;
-`;
-
-export const MaleCharacter = styled.div`
-  position: absolute;
-  width: 1101px;
-  height: 1060px;
-  left: 0;
-  bottom: 0;
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    // 1/4 size on mobile
-    width: 275px;
-    height: 265px;
-  } ;
-`;
+import MaleRYK from "../../assets/images/landingpage/Male RYK.png";
+import UniqueWar from "../../assets/images/landingpage/unique-war.png";
+import UniqueProperty from "../../assets/images/landingpage/unique-property.png";
+import UniqueEquipment from "../../assets/images/landingpage/unique-equipment.png";
+import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom.png";
 
 const UniqueItem = ({
   img,
@@ -89,7 +58,7 @@ const UniqueItem = ({
 };
 
 const UniqueAsset = () => (
-  <ContainerWithBG width={"100vw"} height={"1273px"} imgSrc={BG2RoyaleKingdom}>
+  <UniqueAssetContainer>
     <AbsoluteDiv
       top={"160px"}
       height={"100%"}
@@ -116,7 +85,8 @@ const UniqueAsset = () => (
             sm={{ fontSize: "16px", lineHeight: "24px" }}
             color="rgba(238, 226, 204, 0.82)"
           >
-            An immersive, intense turn based strategy game with player driven choices.
+            An immersive, intense turn based strategy game with player driven
+            choices.
           </Text>
         </div>
         <div>
@@ -148,9 +118,9 @@ const UniqueAsset = () => (
       <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
     </MaleCharacter>
 
-    <FemaleCharacter>
+    {/* <FemaleCharacter>
       <StyledImage width={"100%"} src={FemaleRYK1} alt="Female RYK" />
-    </FemaleCharacter>
+    </FemaleCharacter> */}
 
     <AbsoluteDiv
       width={"470px"}
@@ -159,22 +129,91 @@ const UniqueAsset = () => (
       sm={{ width: "80vw", top: "240px", left: "10vw" }}
     >
       <UniqueItem
-        img={UniqueCharacter}
+        img={UniqueProperty}
         title={"Unique Characters"}
-        content={"Build kingdom from scratch with unique character under your command."}
+        content={
+          "Build kingdom from scratch with unique character under your command."
+        }
       />
       <UniqueItem
-        img={UniqueWeapon}
+        img={UniqueWar}
         title={"Unique Equipment"}
-        content={"Forge equipment with talent blacksmiths and explore your kingdom."}
+        content={
+          "Forge equipment with talent blacksmiths and explore your kingdom."
+        }
       />
       <UniqueItem
-        img={UniqueArmor}
+        img={UniqueEquipment}
         title={"Unique War"}
         content={"Lead kingdom to victory by tactic decision every turn."}
       />
     </AbsoluteDiv>
-  </ContainerWithBG>
+  </UniqueAssetContainer>
 );
 
 export default UniqueAsset;
+
+const UniqueAssetContainer = styled.div`
+  width: 100vw;
+  height: 1439px;
+  position: relative;
+  /* z-index: 0; */
+  /* overflow: hidden; */
+  &::before {
+    content: "";
+    /* max-width: 1440px; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    transform: translate(0, -38%);
+    top: 0;
+    left: 0;
+    background-image: url("${BG2RoyaleKingdom}");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  // TODO:
+  &::after {
+    content: "";
+    /* max-width: 1440px; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    transform: translate(0, -38%);
+    top: 0;
+    left: 0;
+    mask-image: url("${BG2RoyaleKingdom}");
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+  }
+`;
+
+export const FemaleCharacter = styled.div`
+  position: absolute;
+  width: 1156px;
+  height: 1085.29px;
+  left: 240px;
+  bottom: 0;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    // 1/4 size on mobile
+    width: 289px;
+    height: 271px;
+    right: 0;
+    left: unset;
+  } ;
+`;
+
+export const MaleCharacter = styled.div`
+  position: absolute;
+  width: 1067px;
+  height: 1013px;
+  right: -16px;
+  top: -250px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    // 1/4 size on mobile
+    width: 275px;
+    height: 265px;
+  } ;
+`;
