@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import styled from "styled-components";
-import { PieChart } from "react-minimal-pie-chart";
-import ReactTooltip from "react-tooltip";
+// import { PieChart } from "react-minimal-pie-chart";
+// import ReactTooltip from "react-tooltip";
 
 import { Box } from "../../components/Box";
 import { Flex, FlexItem } from "../../components/Grid";
@@ -58,9 +58,9 @@ const tableDump: any[] = [
   { label: "Airdrop", percent: "1%", amount: "2,000,000" }
 ];
 
-const shiftSize = 4;
+// const shiftSize = 4;
 const defaultColor = "#866527";
-const activeColor = "#f6c65c";
+// const activeColor = "#f6c65c";
 
 const pieChartData = [
   {
@@ -103,82 +103,82 @@ const pieChartData = [
 
 // const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };
 
-const CustomPieChart = (props: any) => {
-  const [hovered, setHovered] = useState<number>(-1);
-  const data = pieChartData.map((segment, index) => ({
-    ...segment,
-    color: index === hovered ? activeColor : defaultColor
-  }));
-  useEffect(() => {
-    setHovered(props.index);
-  },[props]);
+// const CustomPieChart = (props: any) => {
+//   const [hovered, setHovered] = useState<number>(-1);
+//   const data = pieChartData.map((segment, index) => ({
+//     ...segment,
+//     color: index === hovered ? activeColor : defaultColor
+//   }));
+//   useEffect(() => {
+//     setHovered(props.index);
+//   },[props]);
 
-  const makeTooltipContent = (data: any) => {
-    return (
-      <div>
-        <Heading
-          font={"Judson"}
-          size={"16px"}
-          lineHeight={"26px"}
-          align={"center"}
-          // sm={{ size: "24px", lineHeight: "36px" }}
-          fontWeight="700"
-          background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-        >
-          {data.title.toUpperCase()}
-        </Heading>
-        <Text
-          fontSize="16px"
-          lineHeight={"26px"}
-          width={"100%"}
-          // justify={"right"}
-          display={"inline-block"}
-          fontWeight="700"
-          color="rgba(238, 226, 204, 1)"
-        >
-          {data.amount}
-        </Text>
-      </div>
-    );
-  };
+//   const makeTooltipContent = (data: any) => {
+//     return (
+//       <div>
+//         <Heading
+//           font={"Judson"}
+//           size={"16px"}
+//           lineHeight={"26px"}
+//           align={"center"}
+//           // sm={{ size: "24px", lineHeight: "36px" }}
+//           fontWeight="700"
+//           background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
+//         >
+//           {data.title.toUpperCase()}
+//         </Heading>
+//         <Text
+//           fontSize="16px"
+//           lineHeight={"26px"}
+//           width={"100%"}
+//           // justify={"right"}
+//           display={"inline-block"}
+//           fontWeight="700"
+//           color="rgba(238, 226, 204, 1)"
+//         >
+//           {data.amount}
+//         </Text>
+//       </div>
+//     );
+//   };
 
-  return (
-    <div data-tip="" data-for="chart">
-      <PieChart
-        data={data}
-        segmentsShift={(index) => (index === hovered ? shiftSize : 0.4)}
-        startAngle={270}
-        animate={true}
-        segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
-        label={({ x, y, dx, dy, dataIndex, dataEntry }) =>  {
-          return <div key={dataIndex}>
-          {dataEntry.title}</div>
-        }}
-        // labelStyle={{ ...defaultLabelStyle }}
-        paddingAngle={0}
-        lineWidth={40}
-        viewBoxSize={[120, 120]}
-        center={[60, 60]}
-        onMouseOver={(e, index) => {
-          props.setIndex(index);
-        }}
-        onMouseOut={() => {
-          props.setIndex(-1);
-        }}
-      />
-      <ReactTooltip
-      offset={ {
-        left: 60,
-        right: 60
-      }}
-        id="chart"
-        getContent={() =>
-          hovered >= 0 ? makeTooltipContent(data[hovered]) : null
-        }
-      />
-    </div>
-  );
-};
+//   return (
+//     <div data-tip="" data-for="chart">
+//       <PieChart
+//         data={data}
+//         segmentsShift={(index) => (index === hovered ? shiftSize : 0.4)}
+//         startAngle={270}
+//         animate={true}
+//         segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
+//         label={({ x, y, dx, dy, dataIndex, dataEntry }) =>  {
+//           return <div key={dataIndex}>
+//           {dataEntry.title}</div>
+//         }}
+//         // labelStyle={{ ...defaultLabelStyle }}
+//         paddingAngle={0}
+//         lineWidth={40}
+//         viewBoxSize={[120, 120]}
+//         center={[60, 60]}
+//         onMouseOver={(e, index) => {
+//           props.setIndex(index);
+//         }}
+//         onMouseOut={() => {
+//           props.setIndex(-1);
+//         }}
+//       />
+//       <ReactTooltip
+//       offset={ {
+//         left: 60,
+//         right: 60
+//       }}
+//         id="chart"
+//         getContent={() =>
+//           hovered >= 0 ? makeTooltipContent(data[hovered]) : null
+//         }
+//       />
+//     </div>
+//   );
+// };
 
 const PieChart2 = (props: any) => {
   const {index } = props;
