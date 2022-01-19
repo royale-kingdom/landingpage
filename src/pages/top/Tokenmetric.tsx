@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 // import { PieChart } from "react-minimal-pie-chart";
 // import ReactTooltip from "react-tooltip";
@@ -275,7 +275,7 @@ const PieChart2 = (props: any) => {
       }
     ],
   };
-  useMemo(() => {
+  useEffect(() => {
     if (chart && chart.current) {
       triggerHover(chart.current, index);
       triggerTooltip(chart.current, index);
@@ -334,7 +334,7 @@ const PieChart2 = (props: any) => {
 }
 
 const Tokenmetric = () => {
-  const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   return (
     <TokenmetricContainer>
       <Box padding="24px 0">
