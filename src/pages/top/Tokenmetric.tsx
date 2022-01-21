@@ -371,7 +371,7 @@ const Tokenmetric = () => {
       </Text> */}
 
       <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
-        <FlexItem flex={"1"} padding={"0 4rem"}>
+        <FlexItem flex={"1"} padding={"0 4rem"} width="calc(100% - 8rem)">
           {/* <StyledImage src={PieChart} alt="pie chart" width={"100%"} /> */}
           <Flex sm={{
             width: "95%"
@@ -381,7 +381,6 @@ const Tokenmetric = () => {
           {/* <CustomPieChart index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)} /> */}
           <Flex justifyContent="center">
             <BaseButton 
-              padding="10px" 
               style={{
                 backgroundImage: `url(${Button2})`,
                 backgroundRepeat: "no-repeat",
@@ -390,10 +389,12 @@ const Tokenmetric = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 backgroundPosition: "center center",
-                padding: "25px 40px",
+                backgroundSize: "contain",
                 margin: "0 0 20px 0"
-              }} 
-              fontSize="24px" 
+              }}
+              padding="25px 40px" 
+              fontSize="24px"
+              sm={{fontSize: "1.8rem", padding: "2rem 3rem"}} 
               color="rgba(245, 237, 222, 1)"
             >Download Whitepaper</BaseButton>
           </Flex>

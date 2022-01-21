@@ -6,14 +6,24 @@ import { BasePadding, BasePaddingProps } from "../Styles/Padding";
 interface BaseButtonProps extends BaseMarginProps, BasePaddingProps {
   color?: string;
   fontSize?: string;
+  padding?: string;
 }
 
-export const BaseButton = styled.div<BaseButtonProps>`
+interface ButtonProps extends BaseButtonProps {
+  sm?: BaseButtonProps;
+}
+
+export const BaseButton = styled.div<ButtonProps>`
   ${BaseMargin};
   ${BasePadding};
   color: ${({ color }) => color || "white"};
   font-size: ${({ fontSize }) => fontSize || "1rem"};
   display: inline-block;
+  padding: ${({ padding }) => padding || null};
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    font-size: ${({ sm }) => sm?.fontSize || "1rem"};
+    padding: ${({ sm }) => sm?.padding || null};
+  };
   &:hover {
     cursor: pointer;
   }

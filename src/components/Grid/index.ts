@@ -17,6 +17,7 @@ interface FlexBaseProps {
   flexDirection?: string;
   height?: string;
   width?: string;
+  top?: string;
 }
 interface FlexProps extends FlexBaseProps, BasePaddingProps, BaseMarginProps {
   sm?: FlexBaseProps;
@@ -32,9 +33,11 @@ export const Flex = styled.div<FlexProps>`
   justify-content: ${(props) => props.justifyContent || "inherit"};
   align-items: ${(props) => props.alginItem || "inherit"};
   flex-direction: ${(props) => props.flexDirection || "row"};
+  top: ${({ top }) => top || null};
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: ${({ sm }) => sm?.width || "100%"};
     height: ${({ sm }) => sm?.height || "inherit"};
+    top: ${({ sm }) => sm?.top || null};
     justify-content: ${({ sm, justifyContent }) =>
       sm?.justifyContent || justifyContent || "initial"};
     align-items: ${({ sm, alginItem }) =>
