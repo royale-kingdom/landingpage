@@ -18,6 +18,7 @@ interface FlexBaseProps {
   height?: string;
   width?: string;
   top?: string;
+  padding?: string;
 }
 interface FlexProps extends FlexBaseProps, BasePaddingProps, BaseMarginProps {
   sm?: FlexBaseProps;
@@ -53,12 +54,21 @@ export const FlexInline = styled.div<FlexProps>`
 interface FlexItemProps extends BasePaddingProps, BaseMarginProps {
   width?: string;
   flex?: string;
+  textAlign?: string;
 }
-export const FlexItem = styled.div<FlexItemProps>`
+
+interface FlexItemWithSmProps extends FlexItemProps {
+  sm?: FlexItemProps;
+}
+export const FlexItem = styled.div<FlexItemWithSmProps>`
   ${BaseMargin};
   ${BasePadding};
   width: ${(props) => props.width || "auto"};
   flex: ${(props) => props.flex || "initial"};
+  text-align: ${(props) => props.textAlign || null};
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: ${({ sm }) => sm?.padding || null};
+  }
 `;
 
 interface ContainerProps extends BaseMarginProps, BasePaddingProps {

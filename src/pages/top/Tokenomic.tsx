@@ -1,86 +1,58 @@
-import { AbsoluteDiv, StyledImage } from "./styled";
+import { StyledImage } from "./styled";
 import styled from "styled-components";
 
 import { Text } from "../../components/Typo/Text";
 import { Heading } from "../../components/Typo/Heading";
 import TokenomicCover from "../../assets/images/landingpage/token-util.png";
-import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
-import TokenomicBackground from "../../assets/images/landingpage/tokenomic_background.png";
+import Image77 from "../../assets/images/landingpage/image_77.svg";
+import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
+import { Flex, FlexItem } from "../../components/Grid";
 
 const Tokenomic = () => (
   <TokenomicContainer>
-    <AbsoluteDiv
-      width={"540px"}
-      transform={"translate(0%, -50%)"}
-      top="50%"
-      right={"96px"}
-      sm={{ width: "80vw", top: "12rem", left: "10vw", transform: "unset" }}
-    >
-      <StyledImage src={TokenomicCover} width={"100%"} alt="tokenomic" />
-    </AbsoluteDiv>
-    <AbsoluteDiv
-      width={"572px"}
-      top={"50%"}
-      left={"96px"}
-      align={"center"}
-      transform={"translate(0%, -50%)"}
-      sm={{ width: "90vw", bottom: "2rem", left: "5vw", transform: "unset" }}
-    >
-      <Heading
-        font={"Judson"}
-        size={"40px"}
-        lineHeight={"64px"}
-        sm={{ size: "24px", lineHeight: "36px" }}
-        fontWeight="700"
-        background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-      >
-        Token Utilities
-      </Heading>
-      <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        sm={{ fontSize: "14px", lineHeight: "20px", justify: "justify" }}
-        color="rgba(238, 226, 204, 0.82)"
-      >
-        RYK is the main token that will be used on the marketplace. You can
-        exchange characters, weapons, armors and lands too. RYK will also be
-        used as your rewards for Play2earn features.
-      </Text>
-      <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        margin={"2rem 0"}
-        sm={{ fontSize: "14px", lineHeight: "20px" }}
-        color="rgba(238, 226, 204, 0.82)"
-      >
-        Player can use RYK to take part in adjusting the world through DAO.
-      </Text>
-    </AbsoluteDiv>
+    <Flex alginItem="center" flexDirection="column" justifyContent="center">
+      <FlexItem sm={{padding: "0 20%"}}>
+        <StyledImage style={{maxWidth: "540px"}} src={TokenomicCover} width={"100%"} alt="tokenomic" />
+      </FlexItem>
+      <FlexItem textAlign="center">
+        <Heading
+            font={"Judson"}
+            size={"40px"}
+            lineHeight={"64px"}
+            sm={{ size: "24px", lineHeight: "36px" }}
+            fontWeight="700"
+            background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
+          >
+            Token Utilities
+          </Heading>
+          <Text 
+                font="Lato"
+                fontWeight="500"
+                fontSize={"18px"}
+                lineHeight={"28px"}
+                sm={{ fontSize: "14px", lineHeight: "20px", justify: "justify", padding: "0 20px" }}
+                color="rgba(238, 226, 204, 0.82)" style={{textAlign: "center", maxWidth: "600px"}}>
+            When you sit down to work, external critics aren’t the enemy. It’s you who you must to fight against to do great fucking work. You must overcome yourself. 
+            Design as if your fucking life depended on it. Never let your guard down by thinking you’re fucking good enough.<br/><br/>
+            When you design, you have to draw on your own fucking life experiences. If it’s not something you would want to read/look at/use then why fucking bother? Form follows fucking function.
+          </Text>
+      </FlexItem>
+    </Flex>
+    <Flex style={{zIndex: -1, position: "absolute", left: 0, bottom: "10px"}}>
+      <StyledImage src = {CloudImage} width="100%" alt = "tokenomic cloud"></StyledImage>
+    </Flex>
   </TokenomicContainer>
 );
 export default Tokenomic;
 
 const TokenomicContainer = styled.div`
   position: relative;
-  height: 100vh;
+  padding-bottom: 50%;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     /* display: none; */
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 55%;
-    top: 22%;
-    left: 0;
-    z-index: 0;
-    background: url(${TokenomicBackground}) no-repeat;
-    background-size: contain;
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      display: none;
-    }
-  }
+
   &::after {
     content: "";
     position: absolute;
@@ -88,7 +60,7 @@ const TokenomicContainer = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    background: url(${StarBackground}) no-repeat;
+    background: url(${Image77}) no-repeat;
     background-size: cover;
     opacity: 0.08;
     /* mix-blend-mode: hard-light; */
