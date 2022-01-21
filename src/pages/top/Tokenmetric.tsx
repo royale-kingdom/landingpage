@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+<<<<<<< Updated upstream
 // import { PieChart } from "react-minimal-pie-chart";
 // import ReactTooltip from "react-tooltip";
+=======
+import { PieChart } from "react-minimal-pie-chart";
+import ReactTooltip from "react-tooltip";
+import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+>>>>>>> Stashed changes
 
 import { Box } from "../../components/Box";
 import { Flex, FlexItem } from "../../components/Grid";
@@ -10,17 +17,22 @@ import { Text } from "../../components/Typo/Text";
 import { Img } from "../../components/Img";
 import classNames from "classnames";
 import SeparatorImage from "../../assets/images/landingpage/separator.png";
+<<<<<<< Updated upstream
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { BaseButton } from "../../components/Button";
 import Button2 from "../../assets/images/landingpage/Button2.svg";
 import TokenmetricBackground from "../../assets/images/landingpage/tokenmetric_background.svg";
+=======
+import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
+
+>>>>>>> Stashed changes
 ChartJS.register(ArcElement, Tooltip);
 
 const TokenmetricTable = styled.table`
   width: 100%;
   border-spacing: 0;
-  border-collapse:separate;
+  border-collapse: separate;
   tbody {
     tr {
       border-radius: 8px;
@@ -104,6 +116,7 @@ const pieChartData = [
 
 // const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };
 
+<<<<<<< Updated upstream
 // const CustomPieChart = (props: any) => {
 //   const [hovered, setHovered] = useState<number>(-1);
 //   const data = pieChartData.map((segment, index) => ({
@@ -113,6 +126,17 @@ const pieChartData = [
 //   useEffect(() => {
 //     setHovered(props.index);
 //   },[props]);
+=======
+const CustomPieChart = (props: any) => {
+  const [hovered, setHovered] = useState<number>(-1);
+  const data = pieChartData.map((segment, index) => ({
+    ...segment,
+    color: index === hovered ? activeColor : defaultColor
+  }));
+  useEffect(() => {
+    setHovered(props.index);
+  }, [props]);
+>>>>>>> Stashed changes
 
 //   const makeTooltipContent = (data: any) => {
 //     return (
@@ -143,6 +167,7 @@ const pieChartData = [
 //     );
 //   };
 
+<<<<<<< Updated upstream
 //   return (
 //     <div data-tip="" data-for="chart">
 //       <PieChart
@@ -180,40 +205,80 @@ const pieChartData = [
 //     </div>
 //   );
 // };
+=======
+  return (
+    <div data-tip="" data-for="chart">
+      <PieChart
+        data={data}
+        segmentsShift={(index) => (index === hovered ? shiftSize : 0.4)}
+        startAngle={270}
+        animate={true}
+        segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
+        label={({ x, y, dx, dy, dataIndex, dataEntry }) => {
+          return <div key={dataIndex}>{dataEntry.title}</div>;
+        }}
+        // labelStyle={{ ...defaultLabelStyle }}
+        paddingAngle={0}
+        lineWidth={40}
+        viewBoxSize={[120, 120]}
+        center={[60, 60]}
+        onMouseOver={(e, index) => {
+          props.setIndex(index);
+        }}
+        onMouseOut={() => {
+          props.setIndex(-1);
+        }}
+      />
+      <ReactTooltip
+        offset={{
+          left: 60,
+          right: 60
+        }}
+        id="chart"
+        getContent={() =>
+          hovered >= 0 ? makeTooltipContent(data[hovered]) : null
+        }
+      />
+    </div>
+  );
+};
+>>>>>>> Stashed changes
 
 const PieChart2 = (props: any) => {
-  const {index } = props;
+  const { index } = props;
   const chart = useRef();
   function triggerHover(chart: any, index: number) {
     if (index >= 0) {
       chart.setActiveElements([
         {
           datasetIndex: 0,
-          index: index,
+          index: index
         }
       ]);
     } else {
       chart.setActiveElements([]);
     }
-    chart.update(); 
+    chart.update();
   }
   function triggerTooltip(chart: any, index: number) {
     const tooltip = chart.tooltip;
     if (tooltip) {
       if (index >= 0) {
         const chartArea = chart.chartArea;
-        tooltip.setActiveElements([
+        tooltip.setActiveElements(
+          [
+            {
+              datasetIndex: 0,
+              index: index
+            }
+          ],
           {
-            datasetIndex: 0,
-            index: index,
+            x: (chartArea.left + chartArea.right) / 2,
+            y: (chartArea.top + chartArea.bottom) / 2
           }
-        ],
-        {
-          x: (chartArea.left + chartArea.right) / 2,
-          y: (chartArea.top + chartArea.bottom) / 2,
-        });
+        );
       } else {
-        tooltip.setActiveElements([], {x: 0, y: 0});
+        tooltip.setActiveElements([], { x: 0, y: 0 });
       }
     }
   }
@@ -227,54 +292,56 @@ const PieChart2 = (props: any) => {
       let x2 = height * Math.cos(27.48);
       let y2 = height * Math.sin(27.48);
       gradient = ctx.createLinearGradient(0, 0, x2, y2);
-      gradient.addColorStop(4.87/100, '#8F6B2D');
-      gradient.addColorStop(32.49/100, '#F6C65C');
-      gradient.addColorStop(47.27/100, '#C2933A');
-      gradient.addColorStop(62.04/100, '#FDCC5F');
+      gradient.addColorStop(4.87 / 100, "#8F6B2D");
+      gradient.addColorStop(32.49 / 100, "#F6C65C");
+      gradient.addColorStop(47.27 / 100, "#C2933A");
+      gradient.addColorStop(62.04 / 100, "#FDCC5F");
     }
     return gradient;
   }
   const data = {
-    datasets: [{
-      data: pieChartData.map(item => item.value),
-      backgroundColor: [
-        'rgba(134, 101, 39, 0.64)',
-        'rgba(134, 101, 39, 0.64)',
-        'rgba(134, 101, 39, 0.64)',
-        'rgba(134, 101, 39, 0.64)',
-        'rgba(134, 101, 39, 0.64)',
-        'rgba(134, 101, 39, 0.64)'
-      ],
-      borderColor: [
-        'rgba(0, 0, 0, 0.12)',
-        'rgba(0, 0, 0, 0.12)',
-        'rgba(0, 0, 0, 0.12)',
-        'rgba(0, 0, 0, 0.12)',
-        'rgba(0, 0, 0, 0.12)',
-        'rgba(0, 0, 0, 0.12)'
-      ],
-      borderRadius: 4,
-      hoverOffset: 50,
-      hoverBackgroundColor: function(context: any) {
-        const chart = context.chart;
-        const {ctx, chartArea} = chart;
-        if (!chartArea) {
-          return null;
-        }
-        return getGradient(ctx, chartArea);
-      },
-      hoverBorderRadius: 12
-    }],
+    datasets: [
+      {
+        data: pieChartData.map((item) => item.value),
+        backgroundColor: [
+          "rgba(134, 101, 39, 0.64)",
+          "rgba(134, 101, 39, 0.64)",
+          "rgba(134, 101, 39, 0.64)",
+          "rgba(134, 101, 39, 0.64)",
+          "rgba(134, 101, 39, 0.64)",
+          "rgba(134, 101, 39, 0.64)"
+        ],
+        borderColor: [
+          "rgba(0, 0, 0, 0.12)",
+          "rgba(0, 0, 0, 0.12)",
+          "rgba(0, 0, 0, 0.12)",
+          "rgba(0, 0, 0, 0.12)",
+          "rgba(0, 0, 0, 0.12)",
+          "rgba(0, 0, 0, 0.12)"
+        ],
+        borderRadius: 4,
+        hoverOffset: 50,
+        hoverBackgroundColor: function (context: any) {
+          const chart = context.chart;
+          const { ctx, chartArea } = chart;
+          if (!chartArea) {
+            return null;
+          }
+          return getGradient(ctx, chartArea);
+        },
+        hoverBorderRadius: 12
+      }
+    ],
     actions: [
       {
-        name: 'Trigger Hover',
+        name: "Trigger Hover",
         handler: triggerHover
       },
       {
-        name: 'Trigger Tooltip',
+        name: "Trigger Tooltip",
         handler: triggerTooltip
       }
-    ],
+    ]
   };
   useEffect(() => {
     if (chart && chart.current) {
@@ -282,6 +349,7 @@ const PieChart2 = (props: any) => {
       triggerTooltip(chart.current, index);
     }
   }, [index]);
+<<<<<<< Updated upstream
   return <Doughnut ref={chart} data={data} onMouseOut={() => props.setIndex(-1)} options={{        
     cutout: "60%",
     onHover: function(e, item) {
@@ -312,29 +380,66 @@ const PieChart2 = (props: any) => {
         footerFont: {
           size: 16,
           weight: "normal"
+=======
+  return (
+    <Doughnut
+      ref={chart}
+      data={data}
+      onMouseOut={() => props.setIndex(-1)}
+      options={{
+        cutout: "60%",
+        onHover: function (e, item) {
+          if (item.length > 0) {
+            const { index } = item[0];
+            props.setIndex(index);
+          } else {
+            props.setIndex(-1);
+          }
+>>>>>>> Stashed changes
         },
-        cornerRadius: 4,
-        padding: {
-          top: 12,
-          bottom: 12,
-          left: 20,
-          right: 20
+        layout: {
+          padding: function ({ chart }) {
+            const padding = 0.15 * chart.width;
+            return padding <= 50 ? 50 : padding;
+          }
         },
-        backgroundColor: "rgba(42, 46, 57, 1)",
-        
-        callbacks: {
-          label: function({dataIndex}) {
-            return pieChartData[dataIndex].title
-          },
-          footer: function(dataItems) {
-            const { dataIndex} = dataItems[0];
-            return pieChartData[dataIndex].amount
+        plugins: {
+          tooltip: {
+            displayColors: false,
+            bodyColor: "rgba(238, 226, 204, 1)",
+            footerColor: "rgba(238, 226, 204, 1)",
+            bodyFont: {
+              size: 16,
+              weight: "bold"
+            },
+            footerFont: {
+              size: 16,
+              weight: "normal"
+            },
+            cornerRadius: 4,
+            padding: {
+              top: 12,
+              bottom: 12,
+              left: 20,
+              right: 20
+            },
+            backgroundColor: "rgba(42, 46, 57, 1)",
+
+            callbacks: {
+              label: function ({ dataIndex }) {
+                return pieChartData[dataIndex].title;
+              },
+              footer: function (dataItems) {
+                const { dataIndex } = dataItems[0];
+                return pieChartData[dataIndex].amount;
+              }
+            }
           }
         }
-      }
-    }
-  }} />;
-}
+      }}
+    />
+  );
+};
 
 const Tokenmetric = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
@@ -372,11 +477,18 @@ const Tokenmetric = () => {
       <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
         <FlexItem flex={"1"} padding={"0 4rem"} width="calc(100% - 8rem)">
           {/* <StyledImage src={PieChart} alt="pie chart" width={"100%"} /> */}
+<<<<<<< Updated upstream
           <Flex sm={{
             width: "95%"
           }} width= "70%" alginItem="center" justifyContent="center" margin="0 auto">
             <PieChart2 index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)}/>
           </Flex>
+=======
+          <PieChart2
+            index={selectedIndex}
+            setIndex={(index: number) => setSelectedIndex(index)}
+          />
+>>>>>>> Stashed changes
           {/* <CustomPieChart index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)} /> */}
           <Flex justifyContent="center">
             <BaseButton 
@@ -403,7 +515,12 @@ const Tokenmetric = () => {
             <TokenmetricTable>
               <tbody>
                 {tableDump.map((item, index) => (
-                  <tr key={index} className={classNames({"active": selectedIndex === index})} onMouseOver={() => setSelectedIndex(index)} onMouseLeave={() => setSelectedIndex(-1)}>
+                  <tr
+                    key={index}
+                    className={classNames({ active: selectedIndex === index })}
+                    onMouseOver={() => setSelectedIndex(index)}
+                    onMouseLeave={() => setSelectedIndex(-1)}
+                  >
                     <td>
                       <Text
                         fontSize="18px"
