@@ -13,6 +13,8 @@ import SeparatorImage from "../../assets/images/landingpage/separator.png";
 import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import { BaseButton } from "../../components/Button";
+import Button2 from "../../assets/images/landingpage/Button2.svg";
 
 ChartJS.register(ArcElement, Tooltip);
 
@@ -293,8 +295,10 @@ const PieChart2 = (props: any) => {
     },
     layout: {
       padding: function({chart}) {
-        const padding = 0.15 * chart.width;
-        return padding <= 50 ? 50: padding;
+        // const percent = chart.width > 700 ? 0.2: 0.15;
+        // const padding = percent * chart.width;
+        // return padding <= 50 ? 50: padding;
+        return 30
       },
     },
     plugins: {
@@ -369,8 +373,30 @@ const Tokenmetric = () => {
       <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
         <FlexItem flex={"1"} padding={"0 4rem"}>
           {/* <StyledImage src={PieChart} alt="pie chart" width={"100%"} /> */}
-          <PieChart2 index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)}/>
+          <Flex sm={{
+            width: "95%"
+          }} width= "70%" alginItem="center" justifyContent="center" margin="0 auto">
+            <PieChart2 index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)}/>
+          </Flex>
           {/* <CustomPieChart index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)} /> */}
+          <Flex justifyContent="center">
+            <BaseButton 
+              padding="10px" 
+              style={{
+                backgroundImage: `url(${Button2})`,
+                backgroundRepeat: "no-repeat",
+                fontWeight: "bold",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundPosition: "center center",
+                padding: "25px 40px",
+                margin: "0 0 20px 0"
+              }} 
+              fontSize="24px" 
+              color="rgba(245, 237, 222, 1)"
+            >Download Whitepaper</BaseButton>
+          </Flex>
         </FlexItem>
         <FlexItem flex={"1"} width={"100%"}>
           <Box width={"100%"} height={"auto"} padding={"0 4rem"}>
