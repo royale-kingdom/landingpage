@@ -15,8 +15,7 @@ import openedTreasure from "../../assets/images/landingpage/treasure_open.svg";
 import closedTreasure from "../../assets/images/landingpage/treasure_close.svg";
 import xSword from "../../assets/images/landingpage/sword_x.png";
 import goldenColumn from "../../assets/images/landingpage/golden_column.png";
-import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
-
+import RoadMapBackground from "../../assets/images/landingpage/road_map_background.svg";
 const nextPlan = [
   {
     quarter: "Q1/2022",
@@ -268,9 +267,11 @@ const RoadmapContainer = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    background: url(${StarBackground}) no-repeat;
+    background: url(${RoadMapBackground}) no-repeat;
     background-size: cover;
+    background-position: center center;
     opacity: 0.08;
+    mix-blend-mode: hard-light;
     z-index: -1;
   }
 `;

@@ -10,12 +10,11 @@ import { Text } from "../../components/Typo/Text";
 import { Img } from "../../components/Img";
 import classNames from "classnames";
 import SeparatorImage from "../../assets/images/landingpage/separator.png";
-import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { BaseButton } from "../../components/Button";
 import Button2 from "../../assets/images/landingpage/Button2.svg";
-
+import TokenmetricBackground from "../../assets/images/landingpage/tokenmetric_background.svg";
 ChartJS.register(ArcElement, Tooltip);
 
 const TokenmetricTable = styled.table`
@@ -504,9 +503,11 @@ const TokenmetricContainer = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    background: url(${StarBackground}) no-repeat;
+    background: url(${TokenmetricBackground}) no-repeat;
     background-size: cover;
+    background-position: center center;
     opacity: 0.08;
+    mix-blend-mode: hard-light;
     z-index: -1;
   }
 `;
