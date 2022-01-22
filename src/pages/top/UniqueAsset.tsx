@@ -59,44 +59,44 @@ const UniqueItem = ({
 
 const UniqueAsset = () => (
   <UniqueAssetContainer>
-    <MaskLayer>
-      <AbsoluteDiv
-        height={"100%"}
-        width={"100%"}
-        left={"12%"}
-        top={"-5%"}
-        sm={{ top: "50px", width: "80vw", left: "10vw" }}
+    {/* <MaskLayer> */}
+    <AbsoluteDiv
+      height={"100%"}
+      width={"100%"}
+      left={"12%"}
+      top={"-5%"}
+      sm={{ top: "50px", width: "80vw", left: "10vw" }}
+    >
+      <GoldenText
+        fontSize={"40px"}
+        lineHeight={"64px"}
+        sm={{ fontSize: "32px", lineHeight: "48px" }}
       >
-        <GoldenText
-          fontSize={"40px"}
-          lineHeight={"64px"}
-          sm={{ fontSize: "32px", lineHeight: "48px" }}
-        >
-          Build unique world
-        </GoldenText>
-        <Text
-          fontSize={"18px"}
-          lineHeight={"28px"}
-          sm={{ fontSize: "16px", lineHeight: "24px" }}
-          color="rgba(238, 226, 204, 0.82)"
-        >
-          An immersive, intense turn based strategy game with player driven
-          choices.
-        </Text>
-        <Text
-          fontSize={"18px"}
-          lineHeight={"28px"}
-          sm={{ fontSize: "16px", lineHeight: "24px" }}
-          color="rgba(238, 226, 204, 0.82)"
-        >
-          Empower by blockchain and NFT technology.
-        </Text>
-      </AbsoluteDiv>
+        Build unique world
+      </GoldenText>
+      <Text
+        fontSize={"18px"}
+        lineHeight={"28px"}
+        sm={{ fontSize: "16px", lineHeight: "24px" }}
+        color="rgba(238, 226, 204, 0.82)"
+      >
+        An immersive, intense turn based strategy game with player driven
+        choices.
+      </Text>
+      <Text
+        fontSize={"18px"}
+        lineHeight={"28px"}
+        sm={{ fontSize: "16px", lineHeight: "24px" }}
+        color="rgba(238, 226, 204, 0.82)"
+      >
+        Empower by blockchain and NFT technology.
+      </Text>
+    </AbsoluteDiv>
 
-      <MaleCharacter>
-        <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
-      </MaleCharacter>
-    </MaskLayer>
+    <MaleCharacter>
+      <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
+    </MaleCharacter>
+    {/* </MaskLayer> */}
     {/* <AbsoluteDiv
       height={"100%"}
       width={"100%"}
@@ -169,42 +169,47 @@ const UniqueAsset = () => (
 
 export default UniqueAsset;
 
-const MaskLayer = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  /* background: #5151a1bc; */
+// const MaskLayer = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   position: relative;
+//   /* background: #5151a1bc; */
 
-  z-index: 10;
-  &::before {
-    content: "";
-    width: 100%;
-    height: 1439px;
-    overflow: hidden;
-    position: absolute;
-    z-index: -10;
-    transform: translate(0, -38%);
-    top: 0;
-    left: 0;
-    /* background: red; */
-    mask-image: url("${BG2RoyaleKingdom}");
-    mask-repeat: no-repeat;
-    mask-size: cover;
-  }
-`;
+//   z-index: 10;
+//   &::before {
+//     content: "";
+//     width: 100%;
+//     height: 1439px;
+//     overflow: hidden;
+//     position: absolute;
+//     z-index: -10;
+//     transform: translate(0, -38%);
+//     top: 0;
+//     left: 0;
+//     /* background: red; */
+//     mask-image: url("${BG2RoyaleKingdom}");
+//     mask-repeat: no-repeat;
+//     mask-size: cover;
+//   }
+// `;
 
 const UniqueAssetContainer = styled.div`
   width: 100vw;
-  height: 200px;
+  height: 893px;
   position: relative;
-  z-index: 1;
+  mask-image: url("${BG2RoyaleKingdom}");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  /* transform: translate(0, -38%); */
+  z-index: 0;
+
   &::before {
     content: "";
     width: 100%;
     height: 1439px;
     position: absolute;
     z-index: -10;
-    transform: translate(0, -38%);
+    /* transform: translate(0, -38%); */
     top: 0;
     left: 0;
     background-image: url("${BG2RoyaleKingdom}");
@@ -248,7 +253,7 @@ const MaleCharacter = styled.div`
   width: 1067px;
   height: 1013px;
   right: -16px;
-  top: -250px;
+  top: 23%;
   z-index: -3;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     // 1/4 size on mobile
