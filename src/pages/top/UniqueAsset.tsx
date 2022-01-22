@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 import {
-  Box,
   StyledImage,
   // AlignCenter,
   AbsoluteDiv
   // ContainerWithBG
 } from "./styled";
 import { Flex, FlexItem } from "../../components/Grid";
+import { Box } from "../../components/Box";
 import { Text } from "../../components/Typo/Text";
 import { GoldenText } from "../../components/GoldenText";
 
@@ -60,11 +60,13 @@ const UniqueItem = ({
 const UniqueAsset = () => (
   <UniqueAssetContainer>
     {/* <MaskLayer> */}
-    <AbsoluteDiv
+    <Box
+      position={"absolute"}
+      zIndex={2}
       height={"100%"}
       width={"100%"}
       left={"12%"}
-      top={"-5%"}
+      top={"45%"}
       sm={{ top: "50px", width: "80vw", left: "10vw" }}
     >
       <GoldenText
@@ -91,7 +93,7 @@ const UniqueAsset = () => (
       >
         Empower by blockchain and NFT technology.
       </Text>
-    </AbsoluteDiv>
+    </Box>
 
     <MaleCharacter>
       <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
@@ -169,37 +171,14 @@ const UniqueAsset = () => (
 
 export default UniqueAsset;
 
-// const MaskLayer = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   position: relative;
-//   /* background: #5151a1bc; */
-
-//   z-index: 10;
-//   &::before {
-//     content: "";
-//     width: 100%;
-//     height: 1439px;
-//     overflow: hidden;
-//     position: absolute;
-//     z-index: -10;
-//     transform: translate(0, -38%);
-//     top: 0;
-//     left: 0;
-//     /* background: red; */
-//     mask-image: url("${BG2RoyaleKingdom}");
-//     mask-repeat: no-repeat;
-//     mask-size: cover;
-//   }
-// `;
-
 const UniqueAssetContainer = styled.div`
   width: 100vw;
-  height: 893px;
+  height: 1140px;
   position: relative;
   mask-image: url("${BG2RoyaleKingdom}");
   mask-repeat: no-repeat;
   mask-size: cover;
+  /* overflow: hidden; */
   /* transform: translate(0, -38%); */
   z-index: 0;
 
@@ -208,7 +187,7 @@ const UniqueAssetContainer = styled.div`
     width: 100%;
     height: 1439px;
     position: absolute;
-    z-index: -10;
+    z-index: 1;
     /* transform: translate(0, -38%); */
     top: 0;
     left: 0;
@@ -250,11 +229,12 @@ const UniqueAssetContainer = styled.div`
 
 const MaleCharacter = styled.div`
   position: absolute;
+  padding: 40px;
   width: 1067px;
   height: 1013px;
   right: -16px;
   top: 23%;
-  z-index: -3;
+  z-index: 2;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     // 1/4 size on mobile
     width: 275px;

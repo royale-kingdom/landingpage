@@ -19,6 +19,8 @@ interface BaseStyled extends BasePaddingProps, BaseMarginProps {
   bottom?: string;
   left?: string;
   transform?: string;
+  zIndex?: number;
+  overflow?: string;
 }
 
 interface Styled extends BaseStyled {
@@ -41,12 +43,14 @@ const Div = styled.div<Styled>`
   float: ${({ float }) => float || "unset"};
   width: ${({ width }) => width || "initial"};
   height: ${({ height }) => height || "initial"};
-  position: ${({ position }) => position || "unset"};
+  position: ${({ position }) => position || "static"};
   top: ${({ top }) => top || "unset"};
   right: ${({ right }) => right || "unset"};
   bottom: ${({ bottom }) => bottom || "unset"};
   left: ${({ left }) => left || "unset"};
   transform: ${({ transform }) => transform || "unset"};
+  z-index: ${({ zIndex }) => zIndex || "unset"};
+  overflow: ${({ overflow }) => overflow || "initial"};
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: ${({ sm, width }) => sm?.width || width || "initial"};
