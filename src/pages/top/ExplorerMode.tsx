@@ -250,4 +250,5 @@ const Container = styled.div`
   width: 100vw;
   height: 1440px;
   z-index: -10;
+  top: -600px;
 `;

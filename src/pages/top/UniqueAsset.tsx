@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 import {
-  StyledImage,
+  StyledImage
   // AlignCenter,
-  AbsoluteDiv
+  // AbsoluteDiv
   // ContainerWithBG
 } from "./styled";
 import { Flex, FlexItem } from "../../components/Grid";
@@ -35,8 +35,8 @@ const UniqueItem = ({
     >
       <FlexItem>
         <Box
-          width={"120px"}
-          height={"120px"}
+          width={"160px"}
+          height={"160px"}
           sm={{ height: "80px", width: "80px" }}
         >
           <StyledImage width={"100%"} src={img} />
@@ -58,128 +58,111 @@ const UniqueItem = ({
 };
 
 const UniqueAsset = () => (
-  <UniqueAssetContainer>
-    {/* <MaskLayer> */}
-    <Box
-      position={"absolute"}
-      zIndex={2}
-      height={"100%"}
-      width={"100%"}
-      left={"12%"}
-      top={"45%"}
-      sm={{ top: "50px", width: "80vw", left: "10vw" }}
-    >
-      <GoldenText
-        fontSize={"40px"}
-        lineHeight={"64px"}
-        sm={{ fontSize: "32px", lineHeight: "48px" }}
+  <>
+    <UniqueAssetContainer>
+      {/* <MaskLayer> */}
+      <Box
+        position={"absolute"}
+        zIndex={2}
+        height={"100%"}
+        width={"100%"}
+        left={"12%"}
+        top={"35%"}
+        sm={{ top: "50px", width: "80vw", left: "10vw" }}
       >
-        Build unique world
-      </GoldenText>
-      <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        sm={{ fontSize: "16px", lineHeight: "24px" }}
-        color="rgba(238, 226, 204, 0.82)"
+        <GoldenText
+          fontSize={"40px"}
+          lineHeight={"64px"}
+          sm={{ fontSize: "32px", lineHeight: "48px" }}
+        >
+          Build unique world
+        </GoldenText>
+        <Text
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          sm={{ fontSize: "16px", lineHeight: "24px" }}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          An immersive, intense turn based strategy game with player driven
+          choices.
+        </Text>
+        <Text
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          sm={{ fontSize: "16px", lineHeight: "24px" }}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          Empower by blockchain and NFT technology.
+        </Text>
+      </Box>
+
+      <MaleCharacter>
+        <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
+      </MaleCharacter>
+    </UniqueAssetContainer>
+    <Box position="relative" height="1px" width="100vw" zIndex={2}>
+      <Box
+        position="absolute"
+        zIndex={2}
+        width={"470px"}
+        top={"-740px"}
+        left={"18%"}
+        sm={{ width: "80vw", top: "240px", left: "10vw" }}
       >
-        An immersive, intense turn based strategy game with player driven
-        choices.
-      </Text>
-      <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        sm={{ fontSize: "16px", lineHeight: "24px" }}
-        color="rgba(238, 226, 204, 0.82)"
+        <UniqueItem
+          img={UniqueProperty}
+          title={"Unique Characters"}
+          content={
+            "Build kingdom from scratch with unique character under your command."
+          }
+        />
+      </Box>
+      <Box
+        position="absolute"
+        zIndex={2}
+        width={"470px"}
+        top={"-480px"}
+        left={"45%"}
+        sm={{ width: "80vw", top: "240px", left: "10vw" }}
       >
-        Empower by blockchain and NFT technology.
-      </Text>
+        <UniqueItem
+          img={UniqueEquipment}
+          title={"Unique War"}
+          content={"Lead kingdom to victory by tactic decision every turn."}
+        />
+      </Box>
+      <Box
+        position="absolute"
+        zIndex={3}
+        width={"470px"}
+        top={"-270px"}
+        left={"78%"}
+        sm={{ width: "80vw", top: "240px", left: "10vw" }}
+      >
+        <UniqueItem
+          img={UniqueWar}
+          title={"Unique Equipment"}
+          content={
+            "Forge equipment with talent blacksmiths and explore your kingdom."
+          }
+        />
+      </Box>
     </Box>
-
-    <MaleCharacter>
-      <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
-    </MaleCharacter>
-    {/* </MaskLayer> */}
-    {/* <AbsoluteDiv
-      height={"100%"}
-      width={"100%"}
-      left={"12%"}
-      top={"-5%"}
-      sm={{ top: "50px", width: "80vw", left: "10vw" }}
-    >
-      <GoldenText
-        fontSize={"40px"}
-        lineHeight={"64px"}
-        sm={{ fontSize: "32px", lineHeight: "48px" }}
-      >
-        Build unique world
-      </GoldenText>
-      <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        sm={{ fontSize: "16px", lineHeight: "24px" }}
-        color="rgba(238, 226, 204, 0.82)"
-      >
-        An immersive, intense turn based strategy game with player driven
-        choices.
-      </Text>
-      <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        sm={{ fontSize: "16px", lineHeight: "24px" }}
-        color="rgba(238, 226, 204, 0.82)"
-      >
-        Empower by blockchain and NFT technology.
-      </Text>
-    </AbsoluteDiv>
-
-    <MaleCharacter>
-      <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
-    </MaleCharacter> */}
-
-    {/* <FemaleCharacter>
-      <StyledImage width={"100%"} src={FemaleRYK1} alt="Female RYK" />
-    </FemaleCharacter> */}
-
-    <AbsoluteDiv
-      width={"470px"}
-      top={"560px"}
-      right={"10px"}
-      sm={{ width: "80vw", top: "240px", left: "10vw" }}
-    >
-      <UniqueItem
-        img={UniqueProperty}
-        title={"Unique Characters"}
-        content={
-          "Build kingdom from scratch with unique character under your command."
-        }
-      />
-      <UniqueItem
-        img={UniqueWar}
-        title={"Unique Equipment"}
-        content={
-          "Forge equipment with talent blacksmiths and explore your kingdom."
-        }
-      />
-      <UniqueItem
-        img={UniqueEquipment}
-        title={"Unique War"}
-        content={"Lead kingdom to victory by tactic decision every turn."}
-      />
-    </AbsoluteDiv>
-  </UniqueAssetContainer>
+  </>
 );
 
 export default UniqueAsset;
 
 const UniqueAssetContainer = styled.div`
   width: 100vw;
-  height: 1140px;
+  height: 1440px;
   position: relative;
   mask-image: url("${BG2RoyaleKingdom}");
   mask-repeat: no-repeat;
   mask-size: cover;
+  /* mask-position: 0% -50%; */
   /* overflow: hidden; */
-  /* transform: translate(0, -38%); */
+  /* transform: translate(0, -8%); */
   z-index: 0;
 
   &::before {
@@ -229,11 +212,10 @@ const UniqueAssetContainer = styled.div`
 
 const MaleCharacter = styled.div`
   position: absolute;
-  padding: 40px;
-  width: 1067px;
-  height: 1013px;
-  right: -16px;
-  top: 23%;
+  height: 911px;
+  width: 960px;
+  right: 2%;
+  top: 27%;
   z-index: 2;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     // 1/4 size on mobile

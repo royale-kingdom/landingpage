@@ -85,7 +85,7 @@ const WarModeContainer = styled.div`
   width: 100vw;
   height: 63vw;
   position: relative;
-  /* overflow: hidden; */
+  top: -600px;
   &::before {
     content: "";
     position: absolute;
