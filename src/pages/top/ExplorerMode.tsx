@@ -239,44 +239,6 @@ const ExplorerMode = () => {
         ))}
       </Slider>
       {/* </Box> */}
-      <Box
-        position="absolute"
-        left={"96px"}
-        top={"512px"}
-        width={"572px"}
-        sm={{ left: "5vw", top: "2rem", width: "90vw", height: "auto" }}
-      >
-        <Heading
-          font={"Judson"}
-          size={"40px"}
-          lineHeight={"64px"}
-          sm={{ size: "24px", lineHeight: "36px" }}
-          fontWeight="700"
-          background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-        >
-          Simulation Mode
-        </Heading>
-        <Text
-          fontSize={"18px"}
-          lineHeight={"28px"}
-          sm={{ fontSize: "14px", lineHeight: "20px" }}
-          color="rgba(238, 226, 204, 0.82)"
-        >
-          A new king had to swear an oath to fulfill the responsibilities of a
-          monarch. The details of this oath varied from one land to another, but
-          included the responsibility to keep the peace, to administer justice
-          and to uphold the law.
-        </Text>
-        <Text
-          fontSize={"18px"}
-          lineHeight={"28px"}
-          margin={"2rem 0"}
-          sm={{ fontSize: "14px", lineHeight: "20px" }}
-          color="rgba(238, 226, 204, 0.82)"
-        >
-          Build kingdom economy with 4 unique in-game resources
-        </Text>
-      </Box>
     </Container>
   );
 };
