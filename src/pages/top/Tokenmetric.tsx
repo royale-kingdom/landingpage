@@ -1,14 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-<<<<<<< Updated upstream
 // import { PieChart } from "react-minimal-pie-chart";
 // import ReactTooltip from "react-tooltip";
-=======
-import { PieChart } from "react-minimal-pie-chart";
-import ReactTooltip from "react-tooltip";
-import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
->>>>>>> Stashed changes
 
 import { Box } from "../../components/Box";
 import { Flex, FlexItem } from "../../components/Grid";
@@ -17,16 +10,13 @@ import { Text } from "../../components/Typo/Text";
 import { Img } from "../../components/Img";
 import classNames from "classnames";
 import SeparatorImage from "../../assets/images/landingpage/separator.png";
-<<<<<<< Updated upstream
-import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
-import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
 import { BaseButton } from "../../components/Button";
 import Button2 from "../../assets/images/landingpage/Button2.svg";
 import TokenmetricBackground from "../../assets/images/landingpage/tokenmetric_background.svg";
-=======
 import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
->>>>>>> Stashed changes
 ChartJS.register(ArcElement, Tooltip);
 
 const TokenmetricTable = styled.table`
@@ -116,7 +106,6 @@ const pieChartData = [
 
 // const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };
 
-<<<<<<< Updated upstream
 // const CustomPieChart = (props: any) => {
 //   const [hovered, setHovered] = useState<number>(-1);
 //   const data = pieChartData.map((segment, index) => ({
@@ -126,17 +115,6 @@ const pieChartData = [
 //   useEffect(() => {
 //     setHovered(props.index);
 //   },[props]);
-=======
-const CustomPieChart = (props: any) => {
-  const [hovered, setHovered] = useState<number>(-1);
-  const data = pieChartData.map((segment, index) => ({
-    ...segment,
-    color: index === hovered ? activeColor : defaultColor
-  }));
-  useEffect(() => {
-    setHovered(props.index);
-  }, [props]);
->>>>>>> Stashed changes
 
 //   const makeTooltipContent = (data: any) => {
 //     return (
@@ -167,7 +145,6 @@ const CustomPieChart = (props: any) => {
 //     );
 //   };
 
-<<<<<<< Updated upstream
 //   return (
 //     <div data-tip="" data-for="chart">
 //       <PieChart
@@ -205,44 +182,6 @@ const CustomPieChart = (props: any) => {
 //     </div>
 //   );
 // };
-=======
-  return (
-    <div data-tip="" data-for="chart">
-      <PieChart
-        data={data}
-        segmentsShift={(index) => (index === hovered ? shiftSize : 0.4)}
-        startAngle={270}
-        animate={true}
-        segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
-        label={({ x, y, dx, dy, dataIndex, dataEntry }) => {
-          return <div key={dataIndex}>{dataEntry.title}</div>;
-        }}
-        // labelStyle={{ ...defaultLabelStyle }}
-        paddingAngle={0}
-        lineWidth={40}
-        viewBoxSize={[120, 120]}
-        center={[60, 60]}
-        onMouseOver={(e, index) => {
-          props.setIndex(index);
-        }}
-        onMouseOut={() => {
-          props.setIndex(-1);
-        }}
-      />
-      <ReactTooltip
-        offset={{
-          left: 60,
-          right: 60
-        }}
-        id="chart"
-        getContent={() =>
-          hovered >= 0 ? makeTooltipContent(data[hovered]) : null
-        }
-      />
-    </div>
-  );
-};
->>>>>>> Stashed changes
 
 const PieChart2 = (props: any) => {
   const { index } = props;
@@ -349,38 +288,6 @@ const PieChart2 = (props: any) => {
       triggerTooltip(chart.current, index);
     }
   }, [index]);
-<<<<<<< Updated upstream
-  return <Doughnut ref={chart} data={data} onMouseOut={() => props.setIndex(-1)} options={{        
-    cutout: "60%",
-    onHover: function(e, item) {
-      if (item.length > 0) {
-        const {index} = item[0];
-        props.setIndex(index);
-      } else {
-        props.setIndex(-1);
-      }
-    },
-    layout: {
-      padding: function({chart}) {
-        // const percent = chart.width > 700 ? 0.2: 0.15;
-        // const padding = percent * chart.width;
-        // return padding <= 50 ? 50: padding;
-        return 30
-      },
-    },
-    plugins: {
-      tooltip: {
-        displayColors: false,
-        bodyColor: "rgba(238, 226, 204, 1)",
-        footerColor: "rgba(238, 226, 204, 1)",
-        bodyFont: {
-          size: 16,
-          weight: "bold"
-        },
-        footerFont: {
-          size: 16,
-          weight: "normal"
-=======
   return (
     <Doughnut
       ref={chart}
@@ -395,14 +302,16 @@ const PieChart2 = (props: any) => {
           } else {
             props.setIndex(-1);
           }
->>>>>>> Stashed changes
         },
         layout: {
           padding: function ({ chart }) {
-            const padding = 0.15 * chart.width;
-            return padding <= 50 ? 50 : padding;
+            // const percent = chart.width > 700 ? 0.2: 0.15;
+            // const padding = percent * chart.width;
+            // return padding <= 50 ? 50: padding;
+            return 30;
           }
         },
+
         plugins: {
           tooltip: {
             displayColors: false,
@@ -477,21 +386,23 @@ const Tokenmetric = () => {
       <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
         <FlexItem flex={"1"} padding={"0 4rem"} width="calc(100% - 8rem)">
           {/* <StyledImage src={PieChart} alt="pie chart" width={"100%"} /> */}
-<<<<<<< Updated upstream
-          <Flex sm={{
-            width: "95%"
-          }} width= "70%" alginItem="center" justifyContent="center" margin="0 auto">
-            <PieChart2 index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)}/>
+          <Flex
+            sm={{
+              width: "95%"
+            }}
+            width="70%"
+            alginItem="center"
+            justifyContent="center"
+            margin="0 auto"
+          >
+            <PieChart2
+              index={selectedIndex}
+              setIndex={(index: number) => setSelectedIndex(index)}
+            />
           </Flex>
-=======
-          <PieChart2
-            index={selectedIndex}
-            setIndex={(index: number) => setSelectedIndex(index)}
-          />
->>>>>>> Stashed changes
           {/* <CustomPieChart index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)} /> */}
           <Flex justifyContent="center">
-            <BaseButton 
+            <BaseButton
               style={{
                 backgroundImage: `url(${Button2})`,
                 backgroundRepeat: "no-repeat",
@@ -503,11 +414,13 @@ const Tokenmetric = () => {
                 backgroundSize: "contain",
                 margin: "0 0 20px 0"
               }}
-              padding="25px 40px" 
+              padding="25px 40px"
               fontSize="24px"
-              sm={{fontSize: "1.8rem", padding: "2rem 3rem"}} 
+              sm={{ fontSize: "1.8rem", padding: "2rem 3rem" }}
               color="rgba(245, 237, 222, 1)"
-            >Download Whitepaper</BaseButton>
+            >
+              Download Whitepaper
+            </BaseButton>
           </Flex>
         </FlexItem>
         <FlexItem flex={"1"} width={"100%"}>
