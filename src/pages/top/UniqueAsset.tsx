@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {
   Box,
   StyledImage,
-  AlignCenter,
+  // AlignCenter,
   AbsoluteDiv
   // ContainerWithBG
 } from "./styled";
@@ -59,64 +59,80 @@ const UniqueItem = ({
 
 const UniqueAsset = () => (
   <UniqueAssetContainer>
-    <AbsoluteDiv
-      top={"160px"}
+    <MaskLayer>
+      <AbsoluteDiv
+        height={"100%"}
+        width={"100%"}
+        left={"12%"}
+        top={"-5%"}
+        sm={{ top: "50px", width: "80vw", left: "10vw" }}
+      >
+        <GoldenText
+          fontSize={"40px"}
+          lineHeight={"64px"}
+          sm={{ fontSize: "32px", lineHeight: "48px" }}
+        >
+          Build unique world
+        </GoldenText>
+        <Text
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          sm={{ fontSize: "16px", lineHeight: "24px" }}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          An immersive, intense turn based strategy game with player driven
+          choices.
+        </Text>
+        <Text
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          sm={{ fontSize: "16px", lineHeight: "24px" }}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          Empower by blockchain and NFT technology.
+        </Text>
+      </AbsoluteDiv>
+
+      <MaleCharacter>
+        <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
+      </MaleCharacter>
+    </MaskLayer>
+    {/* <AbsoluteDiv
       height={"100%"}
       width={"100%"}
-      left={"0"}
+      left={"12%"}
+      top={"-5%"}
       sm={{ top: "50px", width: "80vw", left: "10vw" }}
     >
-      <AlignCenter>
-        <div>
-          <GoldenText
-            fontSize={"48px"}
-            lineHeight={"78px"}
-            justify={"center"}
-            sm={{ fontSize: "32px", lineHeight: "48px" }}
-          >
-            Build unique world
-          </GoldenText>
-        </div>
-        <div>
-          <Text
-            fontSize={"18px"}
-            lineHeight={"28px"}
-            justify={"center"}
-            sm={{ fontSize: "16px", lineHeight: "24px" }}
-            color="rgba(238, 226, 204, 0.82)"
-          >
-            An immersive, intense turn based strategy game with player driven
-            choices.
-          </Text>
-        </div>
-        <div>
-          <Text
-            fontSize={"18px"}
-            lineHeight={"28px"}
-            justify={"center"}
-            sm={{ fontSize: "16px", lineHeight: "24px" }}
-            color="rgba(238, 226, 204, 0.82)"
-          >
-            Empower by blockchain and NFT technology.
-          </Text>
-        </div>
-        {/* <div>
-          <Text
-            fontSize={"18px"}
-            lineHeight={"28px"}
-            justify={"center"}
-            sm={{ fontSize: "16px", lineHeight: "24px" }}
-            color="rgba(238, 226, 204, 0.82)"
-          >
-            even your land, everything will be NFT.
-          </Text>
-        </div> */}
-      </AlignCenter>
+      <GoldenText
+        fontSize={"40px"}
+        lineHeight={"64px"}
+        sm={{ fontSize: "32px", lineHeight: "48px" }}
+      >
+        Build unique world
+      </GoldenText>
+      <Text
+        fontSize={"18px"}
+        lineHeight={"28px"}
+        sm={{ fontSize: "16px", lineHeight: "24px" }}
+        color="rgba(238, 226, 204, 0.82)"
+      >
+        An immersive, intense turn based strategy game with player driven
+        choices.
+      </Text>
+      <Text
+        fontSize={"18px"}
+        lineHeight={"28px"}
+        sm={{ fontSize: "16px", lineHeight: "24px" }}
+        color="rgba(238, 226, 204, 0.82)"
+      >
+        Empower by blockchain and NFT technology.
+      </Text>
     </AbsoluteDiv>
 
     <MaleCharacter>
       <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
-    </MaleCharacter>
+    </MaleCharacter> */}
 
     {/* <FemaleCharacter>
       <StyledImage width={"100%"} src={FemaleRYK1} alt="Female RYK" />
@@ -153,17 +169,39 @@ const UniqueAsset = () => (
 
 export default UniqueAsset;
 
-const UniqueAssetContainer = styled.div`
-  width: 100vw;
-  height: 1439px;
+const MaskLayer = styled.div`
+  width: 100%;
+  height: 100%;
   position: relative;
-  /* z-index: 0; */
-  /* overflow: hidden; */
+  /* background: #5151a1bc; */
+
+  z-index: 10;
   &::before {
     content: "";
-    /* max-width: 1440px; */
     width: 100%;
-    height: 100%;
+    height: 1439px;
+    overflow: hidden;
+    position: absolute;
+    z-index: -10;
+    transform: translate(0, -38%);
+    top: 0;
+    left: 0;
+    /* background: red; */
+    mask-image: url("${BG2RoyaleKingdom}");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+  }
+`;
+
+const UniqueAssetContainer = styled.div`
+  width: 100vw;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1439px;
     position: absolute;
     z-index: -10;
     transform: translate(0, -38%);
@@ -174,9 +212,9 @@ const UniqueAssetContainer = styled.div`
     background-size: cover;
   }
   // TODO:
-  &::after {
+  /* &::after {
     content: "";
-    /* max-width: 1440px; */
+    max-width: 1440px;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -185,32 +223,33 @@ const UniqueAssetContainer = styled.div`
     top: 0;
     left: 0;
     mask-image: url("${BG2RoyaleKingdom}");
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-  }
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
 `;
 
-export const FemaleCharacter = styled.div`
-  position: absolute;
-  width: 1156px;
-  height: 1085.29px;
-  left: 240px;
-  bottom: 0;
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    // 1/4 size on mobile
-    width: 289px;
-    height: 271px;
-    right: 0;
-    left: unset;
-  } ;
-`;
+// const FemaleCharacter = styled.div`
+//   position: absolute;
+//   width: 1156px;
+//   height: 1085.29px;
+//   left: 240px;
+//   bottom: 0;
+//   @media (max-width: ${({ theme }) => theme.mobile}) {
+//     // 1/4 size on mobile
+//     width: 289px;
+//     height: 271px;
+//     right: 0;
+//     left: unset;
+//   } ;
+// `;
 
-export const MaleCharacter = styled.div`
+const MaleCharacter = styled.div`
   position: absolute;
   width: 1067px;
   height: 1013px;
   right: -16px;
   top: -250px;
+  z-index: -3;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     // 1/4 size on mobile
     width: 275px;

@@ -15,7 +15,7 @@ import { Doughnut } from "react-chartjs-2";
 import { BaseButton } from "../../components/Button";
 import Button2 from "../../assets/images/landingpage/Button2.svg";
 import TokenmetricBackground from "../../assets/images/landingpage/tokenmetric_background.svg";
-import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
+// import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
 ChartJS.register(ArcElement, Tooltip);
 

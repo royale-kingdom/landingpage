@@ -37,11 +37,13 @@ export const LogoBadge = styled.img`
 
 export const RelativeDiv = styled.div<{
   height?: string;
-  sm?: { height?: string };
+  zIndex?: string;
+  sm?: { height?: string; zIndex?: string };
 }>`
   height: ${({ height }) => height || "auto"};
   position: relative;
   width: 100vw;
+  z-index: ${({ zIndex }) => zIndex || 0};
   &:after {
     clear: both;
   }
