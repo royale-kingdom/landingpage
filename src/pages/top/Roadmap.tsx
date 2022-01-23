@@ -260,6 +260,8 @@ const RoadmapContainer = styled.div`
   padding: 12rem 0 8rem 0;
   box-sizing: border-box;
   position: relative;
+  background: black;
+  z-index: -2;
   &::after {
     content: "";
     position: absolute;
@@ -271,7 +273,7 @@ const RoadmapContainer = styled.div`
     background-size: cover;
     background-position: center center;
     opacity: 0.08;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
     z-index: -1;
   }
 `;

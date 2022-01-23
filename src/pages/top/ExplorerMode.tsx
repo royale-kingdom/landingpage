@@ -10,7 +10,6 @@ import { Text } from "../../components/Typo/Text";
 import { Flex, FlexItem } from "../../components/Grid";
 import Squircle from "../../components/Squircle";
 
-// import { ButtonOutline } from "../../components/Button";
 import FramingCover from "../../assets/images/landingpage/3rdCover-min.webp";
 import ExplorerModeBG from "../../assets/images/landingpage/explorer_mode.jpeg";
 import Mine1 from "../../assets/images/landingpage/mine 1.jpg";
@@ -39,15 +38,14 @@ const DumpSlide = ({
     height={"1440px"}
     sm={{ backgroundPosition: "75%" }}
   >
-    {/* Description */}
-    <Box
+    {/* <Box
       position="absolute"
       left={"96px"}
       top={"512px"}
       width={"572px"}
       sm={{ left: "5vw", top: "2rem", width: "90vw", height: "auto" }}
-    >
-      <Heading
+    /> */}
+    {/* <Heading
         font={"Judson"}
         size={"40px"}
         lineHeight={"64px"}
@@ -76,11 +74,8 @@ const DumpSlide = ({
         color="rgba(238, 226, 204, 0.82)"
       >
         Build kingdom economy with 4 unique in-game resources
-      </Text>
-      {/* <ButtonOutline padding={"12px 24px"} fontSize={"18px"}>
-        View more
-      </ButtonOutline> */}
-      <Flex
+      </Text> */}
+    {/* <Flex
         flexDirection="row"
         justifyContent="space-around"
         alginItem="center"
@@ -203,7 +198,7 @@ const DumpSlide = ({
           </Squircle>
         </FlexItem>
       </Flex>
-    </Box>
+    </Box> */}
   </ContainerWithBG>
 );
 
@@ -226,6 +221,172 @@ const ExplorerMode = () => {
   };
   return (
     <Container>
+      <Box
+        position="absolute"
+        left={"96px"}
+        top={"512px"}
+        width={"572px"}
+        zIndex={2}
+        sm={{ left: "5vw", top: "2rem", width: "90vw", height: "auto" }}
+      >
+        <Heading
+          font={"Judson"}
+          size={"40px"}
+          lineHeight={"64px"}
+          sm={{ size: "24px", lineHeight: "36px", margin: "15vh 0 0 0" }}
+          fontWeight="700"
+          background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
+        >
+          Simulation Mode
+        </Heading>
+        <Text
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          sm={{ fontSize: "14px", lineHeight: "20px" }}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          A new king had to swear an oath to fulfill the responsibilities of a
+          monarch. The details of this oath varied from one land to another, but
+          included the responsibility to keep the peace, to administer justice
+          and to uphold the law.
+        </Text>
+        <Text
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          margin={"2rem 0"}
+          sm={{ fontSize: "14px", lineHeight: "20px" }}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          Build kingdom economy with 4 unique in-game resources
+        </Text>
+        <Box sm={{ margin: "40vh 0 0 0" }}>
+          <Flex
+            flexDirection="row"
+            justifyContent="space-around"
+            alginItem="center"
+            sm={{
+              flexDirection: "row",
+              justifyContent: "space-around",
+              alginItem: "center"
+            }}
+          >
+            <FlexItem marginBottom={"2.5rem"}>
+              <Squircle
+                size={96}
+                active={activeSlide === 0}
+                onClick={() => changeSlide(0)}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%"
+                  }}
+                >
+                  <Img
+                    width="120px"
+                    height="110px"
+                    sm={{ width: "48px", height: "48px" }}
+                    src={Iron}
+                    style={{
+                      zIndex: 10
+                    }}
+                    alt="Iron"
+                  />
+                </div>
+              </Squircle>
+            </FlexItem>
+            <FlexItem marginBottom={"2.5rem"}>
+              <Squircle
+                size={96}
+                active={activeSlide === 1}
+                onClick={() => changeSlide(1)}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%"
+                  }}
+                >
+                  <Img
+                    width="90px"
+                    height="90px"
+                    sm={{ width: "45px", height: "45px" }}
+                    src={Paddy}
+                    style={{
+                      zIndex: 10
+                    }}
+                    alt="Food"
+                  />
+                </div>
+              </Squircle>
+            </FlexItem>
+            <FlexItem marginBottom={"2.5rem"}>
+              <Squircle
+                size={96}
+                active={activeSlide === 2}
+                onClick={() => changeSlide(2)}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%"
+                  }}
+                >
+                  <Img
+                    width="100px"
+                    height="90px"
+                    sm={{ width: "48px", height: "48px" }}
+                    src={Wood}
+                    style={{
+                      zIndex: 10
+                    }}
+                    alt="Wood"
+                  />
+                </div>
+              </Squircle>
+            </FlexItem>
+            <FlexItem marginBottom={"2.5rem"}>
+              <Squircle
+                size={96}
+                active={activeSlide === 3}
+                onClick={() => changeSlide(3)}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%"
+                  }}
+                >
+                  <Img
+                    width="80px"
+                    height="90px"
+                    sm={{ width: "45px", height: "45px" }}
+                    src={HolyWater}
+                    style={{
+                      zIndex: 10
+                    }}
+                    alt="Holy Water"
+                  />
+                </div>
+              </Squircle>
+            </FlexItem>
+          </Flex>
+        </Box>
+      </Box>
+      <Box position="absolute" left="0" top="0"></Box>
+
       <Slider {...config} ref={sliderRef}>
         {dumpSlideImages.map((img, i) => (
           <DumpSlide

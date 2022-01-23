@@ -85,6 +85,9 @@ const GoldCloud = styled.div`
   position: relative;
   width: 100vw;
   height: 800px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: 300px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -95,29 +98,38 @@ const GoldCloud = styled.div`
     left: 0;
     background: url(${CloudImage}) no-repeat;
     background-size: cover;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      top: -35%;
+      background-size: contain;
+    }
   }
 `;
 
 const TokenomicContainer = styled.div`
   position: relative;
-  /* padding-bottom: 50%; */
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    /* display: none; */
-  }
-
-  &::after {
+  z-index: 0;
+  &::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
+    min-height: 800px;
     top: 0;
-    left: 0;
+    z-index: -1;
     background: url(${StarBackground}) no-repeat;
-    background-size: contain;
-    /* mix-blend-mode: lighten; */
-    mix-blend-mode: hard-light;
-    opacity: 1;
+    background-size: cover;
+    mix-blend-mode: difference;
+    opacity: 0.08;
+  }
+  &::after {
+    content: "";
+    background: black;
+    width: 100%;
+    height: 100%;
     z-index: -2;
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    /* display: none; */
+    /* top: -200px; */
   }
 `;

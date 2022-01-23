@@ -9,11 +9,12 @@ import { Flex } from "../../components/Grid";
 import Member from "../../components/Member";
 import { Img } from "../../components/Img";
 import background from "../../assets/images/landingpage/team_background.png";
+import shootingStar from "../../assets/images/landingpage/our_team_shooting_star.png";
 import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
 const OurTeam = () => (
   <OurTeamContainer>
-    <Box paddingTop="250px">
+    <Box paddingTop="250px" sm={{ padding: "80px 0 40px 0" }}>
       <Heading
         font={"Judson"}
         size={"40px"}
@@ -53,6 +54,21 @@ const OurTeam = () => (
         <Member fullName="Louis Do" title="SMC DEVELOPER" />
       </Flex>
     </Box>
+    <Box
+      position="absolute"
+      width="500px"
+      height="420px"
+      right="-10%"
+      bottom="40%"
+      sm={{ width: "50vw", height: "auto", bottom: "5%" }}
+    >
+      <Img
+        src={shootingStar}
+        width={"100%"}
+        height={"100%"}
+        style={{ mixBlendMode: "difference" }}
+      />
+    </Box>
     <BottomImg>
       <Img src={background} width="100%" height="100%" />
     </BottomImg>
@@ -75,10 +91,11 @@ const BottomImg = styled.div`
 `;
 
 const OurTeamContainer = styled.div`
-  height: 100vh;
+  height: 120vh;
   position: relative;
+  overflow: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    height: 850px;
+    height: 110vh;
   }
 
   &::before {
@@ -99,8 +116,10 @@ const OurTeamContainer = styled.div`
     top: 0;
     left: 0;
     background: url(${StarBackground}) no-repeat;
+    background-position: center;
     background-size: cover;
-    opacity: 0.08;
+    mix-blend-mode: difference;
+    opacity: 0.1;
     z-index: -5;
   }
 `;

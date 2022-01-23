@@ -27,22 +27,12 @@ const Top = () => {
         </CoverBackground>
 
         <MainLogo src={logoBanner} />
-        {/* <Flex
-          justifyContent="center"
-          style={{
-            position: "absolute",
-            left: "50%",
-            zIndex: 10,
-            transform: "translate(-50%, 50%)"
-          }}
-          top="580px"
-          sm={{ top: "158px" }}
-        > */}
         <Box
           position={"absolute"}
           transform="translate(-50%, 50%)"
           left="50%"
           top="110%"
+          sm={{ top: "90%" }}
         >
           <BaseButton
             style={{
@@ -57,10 +47,10 @@ const Top = () => {
             }}
             fontSize="24px"
             padding="25px 40px"
-            sm={{ fontSize: "1.8rem", padding: "2rem 3rem" }}
+            sm={{ fontSize: "1.8rem", padding: "2rem 1rem" }}
             color="rgba(245, 237, 222, 1)"
           >
-            <Text fontWeight="bold" padding="0 16px">
+            <Text fontWeight="bold" padding="0 16px" sm={{ fontSize: "10px" }}>
               ENTER MY KINGDOM
             </Text>
           </BaseButton>
@@ -99,6 +89,6 @@ const MainLogo = styled.img`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 270px;
     height: 145px;
-    top: -10px;
+    top: -60px;
   }
 `;

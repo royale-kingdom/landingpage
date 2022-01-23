@@ -513,6 +513,7 @@ const Tokenmetric = () => {
                 height="auto"
                 src={SeparatorImage}
                 alt="Royale Kingdom"
+                sm={{ width: "90vw", height: "auto" }}
               />
             </div>
           </Box>
@@ -526,6 +527,8 @@ export default Tokenmetric;
 const TokenmetricContainer = styled.div`
   box-sizing: border-box;
   position: relative;
+  background: black;
+  z-index: -2;
   &::after {
     content: "";
     position: absolute;
@@ -537,7 +540,7 @@ const TokenmetricContainer = styled.div`
     background-size: cover;
     background-position: center center;
     opacity: 0.08;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
     z-index: -1;
   }
 `;

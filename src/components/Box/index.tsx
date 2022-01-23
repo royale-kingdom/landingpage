@@ -28,11 +28,11 @@ interface Styled extends BaseStyled {
 }
 
 interface Props extends Styled {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export function Box(props: Props) {
-  return <Div {...props}>{props.children}</Div>;
+  return <Div {...props}>{props.children || ""}</Div>;
 }
 
 const Div = styled.div<Styled>`
@@ -56,6 +56,7 @@ const Div = styled.div<Styled>`
     width: ${({ sm, width }) => sm?.width || width || "initial"};
     height: ${({ sm, height }) => sm?.height || height || "initial"};
     margin: ${({ sm, margin }) => sm?.margin || margin || "initial"};
+    padding: ${({ sm, padding }) => sm?.padding || padding || "initial"};
     transform: ${({ sm, transform }) => sm?.transform || transform || "unset"};
     top: ${({ sm, top }) => sm?.top || top || "unset"};
     right: ${({ sm, right }) => sm?.right || right || "unset"};
