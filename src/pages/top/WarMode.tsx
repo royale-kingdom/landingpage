@@ -27,13 +27,19 @@ const WarMode = () => (
       </Box>
 
       <Box position="absolute" width="100vw" bottom="-50vw">
-        <Img src={WarModeStone} width="100%" height="100%" />
+        <Img
+          src={WarModeStone}
+          width="100%"
+          height="100%"
+          style={{ overflow: "hidden" }}
+        />
       </Box>
       <Box
         position="absolute"
         width="100vw"
         bottom="-50vw"
-        transform="rotate(-25deg)"
+        transform="rotate(-25deg)" // xoay 25 độ là bị dư nền bên phải
+        overflow="hidden"
       >
         <Img src={WarModeFire} width="100%" height="100%" />
       </Box>

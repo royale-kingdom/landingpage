@@ -6,7 +6,8 @@ import { Heading } from "../../components/Typo/Heading";
 import { Flex, FlexItem } from "../../components/Grid";
 
 import TokenomicCover from "../../assets/images/landingpage/token-util.png";
-import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
+// import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
+import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
 import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
 
 const Tokenomic = () => (
@@ -83,6 +84,7 @@ const GoldCloud = styled.div`
     left: 0;
     background: url(${CloudImage}) no-repeat;
     background-size: cover;
+    mix-blend-mode: hard-light;
   }
 `;
 
@@ -101,10 +103,10 @@ const TokenomicContainer = styled.div`
     top: 0;
     left: 0;
     background: url(${StarBackground}) no-repeat;
-    background-size: cover;
+    background-size: contain;
     /* mix-blend-mode: lighten; */
     mix-blend-mode: hard-light;
-    /* opacity: 0.08; */
-    z-index: -1;
+    opacity: 1;
+    z-index: -2;
   }
 `;

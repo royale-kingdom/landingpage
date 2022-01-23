@@ -81,6 +81,16 @@ const OurTeamContainer = styled.div`
     height: 850px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: -6;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -91,6 +101,6 @@ const OurTeamContainer = styled.div`
     background: url(${StarBackground}) no-repeat;
     background-size: cover;
     opacity: 0.08;
-    z-index: -2;
+    z-index: -5;
   }
 `;
