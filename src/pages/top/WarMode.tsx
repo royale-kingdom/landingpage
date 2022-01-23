@@ -26,10 +26,15 @@ const WarMode = () => (
         <Img src={WarModeDragon} width="100%" height="100%" />
       </Box>
 
-      <Box position="absolute" width="100vw" bottom="-60vw">
+      <Box position="absolute" width="100vw" bottom="-50vw">
         <Img src={WarModeStone} width="100%" height="100%" />
       </Box>
-      <Box position="absolute" width="100vw" transform="rotate(-25deg)">
+      <Box
+        position="absolute"
+        width="100vw"
+        bottom="-50vw"
+        transform="rotate(-25deg)"
+      >
         <Img src={WarModeFire} width="100%" height="100%" />
       </Box>
       <Box

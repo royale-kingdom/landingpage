@@ -65,7 +65,7 @@ const UniqueAsset = () => (
         position={"absolute"}
         zIndex={2}
         height={"100%"}
-        width={"100%"}
+        width={"50%"}
         left={"12%"}
         top={"35%"}
         sm={{ top: "50px", width: "80vw", left: "10vw" }}
@@ -121,8 +121,8 @@ const UniqueAsset = () => (
         position="absolute"
         zIndex={2}
         width={"470px"}
-        top={"-480px"}
-        left={"45%"}
+        top={"-520px"}
+        left={"38%"}
         sm={{ width: "80vw", top: "240px", left: "10vw" }}
       >
         <UniqueItem
@@ -133,10 +133,10 @@ const UniqueAsset = () => (
       </Box>
       <Box
         position="absolute"
-        zIndex={3}
+        zIndex={2}
         width={"470px"}
-        top={"-270px"}
-        left={"78%"}
+        top={"-360px"}
+        left={"60%"}
         sm={{ width: "80vw", top: "240px", left: "10vw" }}
       >
         <UniqueItem
@@ -159,7 +159,7 @@ const UniqueAssetContainer = styled.div`
   position: relative;
   mask-image: url("${BG2RoyaleKingdom}");
   mask-repeat: no-repeat;
-  mask-size: cover;
+  mask-size: fit;
   /* mask-position: 0% -50%; */
   /* overflow: hidden; */
   /* transform: translate(0, -8%); */
@@ -169,30 +169,16 @@ const UniqueAssetContainer = styled.div`
     content: "";
     width: 100%;
     height: 1439px;
+    max-width: 1440px;
     position: absolute;
+    overflow: hidden;
     z-index: 1;
-    /* transform: translate(0, -38%); */
     top: 0;
     left: 0;
     background-image: url("${BG2RoyaleKingdom}");
     background-repeat: no-repeat;
     background-size: cover;
   }
-  // TODO:
-  /* &::after {
-    content: "";
-    max-width: 1440px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -10;
-    transform: translate(0, -38%);
-    top: 0;
-    left: 0;
-    mask-image: url("${BG2RoyaleKingdom}");
-    background-repeat: no-repeat;
-    background-size: cover;
-  } */
 `;
 
 // const FemaleCharacter = styled.div`

@@ -1,12 +1,13 @@
-import { StyledImage } from "./styled";
 import styled from "styled-components";
 
+import { StyledImage } from "./styled";
 import { Text } from "../../components/Typo/Text";
 import { Heading } from "../../components/Typo/Heading";
-import TokenomicCover from "../../assets/images/landingpage/token-util.png";
-import Image77 from "../../assets/images/landingpage/image_77.svg";
-import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
 import { Flex, FlexItem } from "../../components/Grid";
+
+import TokenomicCover from "../../assets/images/landingpage/token-util.png";
+import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
+import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
 
 const Tokenomic = () => (
   <TokenomicContainer>
@@ -55,21 +56,39 @@ const Tokenomic = () => (
           then why fucking bother? Form follows fucking function.
         </Text>
       </FlexItem>
+      {/* <Flex style={{ zIndex: -1, position: "absolute", left: 0, bottom: "10px" }}>
+<StyledImage
+  src={CloudImage}
+  width="100%"
+  alt="tokenomic cloud"
+></StyledImage>
+</Flex> */}
     </Flex>
-    <Flex style={{ zIndex: -1, position: "absolute", left: 0, bottom: "10px" }}>
-      <StyledImage
-        src={CloudImage}
-        width="100%"
-        alt="tokenomic cloud"
-      ></StyledImage>
-    </Flex>
+    <GoldCloud />
   </TokenomicContainer>
 );
 export default Tokenomic;
 
+const GoldCloud = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 800px;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1000px;
+    width: 100%;
+    top: -55%;
+    z-index: -1;
+    left: 0;
+    background: url(${CloudImage}) no-repeat;
+    background-size: cover;
+  }
+`;
+
 const TokenomicContainer = styled.div`
   position: relative;
-  padding-bottom: 50%;
+  /* padding-bottom: 50%; */
   @media (max-width: ${({ theme }) => theme.mobile}) {
     /* display: none; */
   }
@@ -81,10 +100,11 @@ const TokenomicContainer = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    background: url(${Image77}) no-repeat;
+    background: url(${StarBackground}) no-repeat;
     background-size: cover;
-    opacity: 0.08;
-    /* mix-blend-mode: hard-light; */
+    /* mix-blend-mode: lighten; */
+    mix-blend-mode: hard-light;
+    /* opacity: 0.08; */
     z-index: -1;
   }
 `;

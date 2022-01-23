@@ -70,7 +70,6 @@ const Top = () => {
 
       <Box>
         <UniqueAsset />
-        {/* <Farming /> */}
         <ExplorerMode />
         <WarMode />
 
