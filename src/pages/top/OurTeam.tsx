@@ -60,13 +60,14 @@ const OurTeam = () => (
       height="420px"
       right="-10%"
       bottom="40%"
+      zIndex={-2}
       sm={{ width: "50vw", height: "auto", bottom: "5%" }}
     >
       <Img
         src={shootingStar}
         width={"100%"}
         height={"100%"}
-        style={{ mixBlendMode: "difference" }}
+        style={{ mixBlendMode: "screen" }}
       />
     </Box>
     <BottomImg>
