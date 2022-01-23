@@ -260,7 +260,7 @@ const ExplorerMode = () => {
         >
           Build kingdom economy with 4 unique in-game resources
         </Text>
-        <Box sm={{ margin: "40vh 0 0 0" }}>
+        <Box sm={{ margin: "30vh 0 0 0" }}>
           <Flex
             flexDirection="row"
             justifyContent="space-around"
@@ -386,7 +386,6 @@ const ExplorerMode = () => {
           </Flex>
         </Box>
       </Box>
-      <Box position="absolute" left="0" top="0"></Box>
 
       <Slider {...config} ref={sliderRef}>
         {dumpSlideImages.map((img, i) => (
