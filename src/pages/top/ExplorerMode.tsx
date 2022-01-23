@@ -37,6 +37,7 @@ const DumpSlide = ({
     width={"100vw"}
     height={"1440px"}
     sm={{ backgroundPosition: "75%" }}
+    style={{ maxWidth: "1440px" }}
   >
     {/* <Box
       position="absolute"
@@ -406,6 +407,7 @@ export default ExplorerMode;
 const Container = styled.div`
   position: relative;
   width: 100vw;
+  max-width: 1440px;
   height: 1440px;
   z-index: -10;
   top: -600px;
