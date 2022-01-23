@@ -83,7 +83,7 @@ export default Tokenomic;
 
 const GoldCloud = styled.div`
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 800px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 300px;

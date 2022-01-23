@@ -14,8 +14,8 @@ const WarMode = () => (
   <WarModeContainer>
     <Box
       position="absolute"
-      width="100vw"
-      height="88vw"
+      width="100%"
+      height="auto"
       bottom="-4vw"
       overflow="hidden"
       sm={{ bottom: "-40vh" }}
@@ -25,7 +25,7 @@ const WarMode = () => (
 
     <Box
       position="absolute"
-      width="100vw"
+      width="100%"
       bottom="-50vw"
       sm={{ bottom: "-70vh" }}
     >
@@ -38,7 +38,7 @@ const WarMode = () => (
     </Box>
     <Box
       position="absolute"
-      width="100vw"
+      width="100%"
       bottom="-30vw"
       overflow="hidden"
       sm={{ bottom: "-50vh" }}
@@ -94,6 +94,8 @@ export default WarMode;
 const WarModeContainer = styled.div`
   width: 100vw;
   height: 63vw;
+  max-width: 1440px;
+  max-height: 900px;
   position: relative;
   top: -600px;
   background: black;
@@ -102,7 +104,7 @@ const WarModeContainer = styled.div`
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     height: 1440px;
     background: url("${WarModeBG}");
     @media (max-width: ${({ theme }) => theme.mobile}) {

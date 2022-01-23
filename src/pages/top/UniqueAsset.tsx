@@ -59,7 +59,7 @@ const UniqueItem = ({
 
 const UniqueAsset = () => (
   <>
-    <Box position="relative" height="1px" width="100vw" zIndex={2}>
+    <Box position="relative" height="1px" width="100%" zIndex={2}>
       <Box
         position="absolute"
         zIndex={2}
@@ -154,6 +154,7 @@ export default UniqueAsset;
 
 const UniqueAssetContainer = styled.div`
   width: 100vw;
+  max-width: 1440px;
   height: 1440px;
   position: relative;
   mask-image: url("${BG2RoyaleKingdom}");

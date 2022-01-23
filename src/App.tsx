@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 body {
   font-family: 'Lato', sans-serif;
   color: white;
-  margin:0;
+  margin:0 auto;
   padding:0;
   box-sizing: border-box;
   position: relative;
