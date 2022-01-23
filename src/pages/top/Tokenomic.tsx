@@ -46,15 +46,26 @@ const Tokenomic = () => (
           color="rgba(238, 226, 204, 0.82)"
           style={{ textAlign: "center", maxWidth: "600px" }}
         >
-          When you sit down to work, external critics aren’t the enemy. It’s you
-          who you must to fight against to do great fucking work. You must
-          overcome yourself. Design as if your fucking life depended on it.
-          Never let your guard down by thinking you’re fucking good enough.
-          <br />
-          <br />
-          When you design, you have to draw on your own fucking life
-          experiences. If it’s not something you would want to read/look at/use
-          then why fucking bother? Form follows fucking function.
+          RYK is the main token that will be used on the marketplace. You can
+          exchange characters, weapons, armors and lands too. Also, RYK can be
+          used to ake part in adjusting the world through DAO.
+        </Text>
+        <Text
+          font="Lato"
+          fontWeight="500"
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          sm={{
+            fontSize: "14px",
+            lineHeight: "20px",
+            justify: "justify",
+            padding: "0 20px"
+          }}
+          color="rgba(238, 226, 204, 0.82)"
+          style={{ textAlign: "center", maxWidth: "600px" }}
+        >
+          Also, RYK will be used as your rewards for Play2earn features. That's
+          right, only 1 token used for everything, no other token.
         </Text>
       </FlexItem>
       {/* <Flex style={{ zIndex: -1, position: "absolute", left: 0, bottom: "10px" }}>
