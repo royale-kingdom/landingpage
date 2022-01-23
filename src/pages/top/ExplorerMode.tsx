@@ -51,7 +51,7 @@ const DumpSlide = ({
         font={"Judson"}
         size={"40px"}
         lineHeight={"64px"}
-        sm={{ size: "24px", lineHeight: "36px" }}
+        sm={{ size: "24px", lineHeight: "36px", margin: "15vh 0 0 0" }}
         fontWeight="700"
         background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
       >
@@ -226,8 +226,6 @@ const ExplorerMode = () => {
   };
   return (
     <Container>
-      {/* <Box position="relative" zIndex={-100} width="100%"> */}
-      {/* Squircle Block */}
       <Slider {...config} ref={sliderRef}>
         {dumpSlideImages.map((img, i) => (
           <DumpSlide
@@ -238,7 +236,6 @@ const ExplorerMode = () => {
           />
         ))}
       </Slider>
-      {/* </Box> */}
     </Container>
   );
 };
@@ -251,4 +248,9 @@ const Container = styled.div`
   height: 1440px;
   z-index: -10;
   top: -600px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    top: -700px;
+    height: 90vh;
+    margin-bottom: 0px;
+  }
 `;

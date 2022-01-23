@@ -57,5 +57,9 @@ const Div = styled.div<Styled>`
     height: ${({ sm, height }) => sm?.height || height || "initial"};
     margin: ${({ sm, margin }) => sm?.margin || margin || "initial"};
     transform: ${({ sm, transform }) => sm?.transform || transform || "unset"};
+    top: ${({ sm, top }) => sm?.top || top || "unset"};
+    right: ${({ sm, right }) => sm?.right || right || "unset"};
+    bottom: ${({ sm, bottom }) => sm?.bottom || bottom || "unset"};
+    left: ${({ sm, left }) => sm?.left || left || "unset"};
   }
 `;

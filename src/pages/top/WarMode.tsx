@@ -1,13 +1,10 @@
 import styled from "styled-components";
 
-// import { AbsoluteDiv, ContainerWithBG } from "./styled";
 import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
 import { Box } from "../../components/Box";
 import { Img } from "../../components/Img";
 
-// import PVECover from "../../assets/images/landingpage/pve-cover-min.webp";
-// import PVECover from "../../assets/images/landingpage/RK_pve 3 1.jpg";
 import WarModeBG from "../../assets/images/landingpage/war_mode_bg.png";
 import WarModeDragon from "../../assets/images/landingpage/war_mode_dragon.png";
 import WarModeStone from "../../assets/images/landingpage/war_mode_stone.png";
@@ -22,11 +19,17 @@ const WarMode = () => (
         height="88vw"
         bottom="-4vw"
         overflow="hidden"
+        sm={{ bottom: "-40vh" }}
       >
         <Img src={WarModeDragon} width="100%" height="100%" />
       </Box>
 
-      <Box position="absolute" width="100vw" bottom="-50vw">
+      <Box
+        position="absolute"
+        width="100vw"
+        bottom="-50vw"
+        sm={{ bottom: "-70vh" }}
+      >
         <Img
           src={WarModeStone}
           width="100%"
@@ -37,9 +40,9 @@ const WarMode = () => (
       <Box
         position="absolute"
         width="100vw"
-        bottom="-50vw"
-        transform="rotate(-25deg)" // xoay 25 độ là bị dư nền bên phải
+        bottom="-30vw"
         overflow="hidden"
+        sm={{ bottom: "-50vh" }}
       >
         <Img src={WarModeFire} width="100%" height="100%" />
       </Box>
@@ -48,7 +51,7 @@ const WarMode = () => (
         width="572px"
         top={"40%"}
         left={"96px"}
-        sm={{ width: "90vw", left: "5vw", top: "2rem" }}
+        sm={{ width: "90vw", left: "5vw", top: "1rem" }}
       >
         <Heading
           font={"Judson"}
@@ -105,5 +108,12 @@ const WarModeContainer = styled.div`
     width: 100vw;
     height: 1440px;
     background: url("${WarModeBG}");
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      height: 100vh;
+      top: -200px;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    /* top: 0; */
   }
 `;

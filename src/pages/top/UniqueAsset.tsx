@@ -37,7 +37,7 @@ const UniqueItem = ({
         <Box
           width={"160px"}
           height={"160px"}
-          sm={{ height: "80px", width: "80px" }}
+          sm={{ height: "64px", width: "64px" }}
         >
           <StyledImage width={"100%"} src={img} />
         </Box>
@@ -59,55 +59,14 @@ const UniqueItem = ({
 
 const UniqueAsset = () => (
   <>
-    <UniqueAssetContainer>
-      {/* <MaskLayer> */}
-      <Box
-        position={"absolute"}
-        zIndex={2}
-        height={"100%"}
-        width={"50%"}
-        left={"12%"}
-        top={"35%"}
-        sm={{ top: "50px", width: "80vw", left: "10vw" }}
-      >
-        <GoldenText
-          fontSize={"40px"}
-          lineHeight={"64px"}
-          sm={{ fontSize: "32px", lineHeight: "48px" }}
-        >
-          Build unique world
-        </GoldenText>
-        <Text
-          fontSize={"18px"}
-          lineHeight={"28px"}
-          sm={{ fontSize: "16px", lineHeight: "24px" }}
-          color="rgba(238, 226, 204, 0.82)"
-        >
-          An immersive, intense turn based strategy game with player driven
-          choices.
-        </Text>
-        <Text
-          fontSize={"18px"}
-          lineHeight={"28px"}
-          sm={{ fontSize: "16px", lineHeight: "24px" }}
-          color="rgba(238, 226, 204, 0.82)"
-        >
-          Empower by blockchain and NFT technology.
-        </Text>
-      </Box>
-
-      <MaleCharacter>
-        <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
-      </MaleCharacter>
-    </UniqueAssetContainer>
     <Box position="relative" height="1px" width="100vw" zIndex={2}>
       <Box
         position="absolute"
         zIndex={2}
-        width={"470px"}
-        top={"-740px"}
+        width={"33vw"} // 740
+        top={"740px"}
         left={"18%"}
-        sm={{ width: "80vw", top: "240px", left: "10vw" }}
+        sm={{ width: "85vw", top: "40vh", left: "12.5vw" }}
       >
         <UniqueItem
           img={UniqueProperty}
@@ -120,10 +79,10 @@ const UniqueAsset = () => (
       <Box
         position="absolute"
         zIndex={2}
-        width={"470px"}
-        top={"-520px"}
+        width={"33vw"}
+        top={"900px"}
         left={"38%"}
-        sm={{ width: "80vw", top: "240px", left: "10vw" }}
+        sm={{ width: "85vw", top: "50vh", left: "12.5vw" }}
       >
         <UniqueItem
           img={UniqueEquipment}
@@ -134,10 +93,10 @@ const UniqueAsset = () => (
       <Box
         position="absolute"
         zIndex={2}
-        width={"470px"}
-        top={"-360px"}
+        width={"33vw"}
+        top={"1080px"}
         left={"60%"}
-        sm={{ width: "80vw", top: "240px", left: "10vw" }}
+        sm={{ width: "85vw", top: "60vh", left: "12.5vw" }}
       >
         <UniqueItem
           img={UniqueWar}
@@ -148,6 +107,46 @@ const UniqueAsset = () => (
         />
       </Box>
     </Box>
+    <UniqueAssetContainer>
+      <Box
+        position={"absolute"}
+        zIndex={2}
+        height={"100%"}
+        width={"50%"}
+        left={"12%"}
+        top={"35%"}
+        sm={{ width: "80vw", height: "25vh", top: "13%", left: "10vw" }}
+      >
+        <GoldenText
+          fontSize={"40px"}
+          lineHeight={"64px"}
+          sm={{ fontSize: "28px", lineHeight: "48px", justify: "center" }}
+        >
+          Build unique world
+        </GoldenText>
+        <Text
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          sm={{ fontSize: "16px", lineHeight: "24px", justify: "center" }}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          An immersive, intense turn based strategy game with player driven
+          choices.
+        </Text>
+        <Text
+          fontSize={"18px"}
+          lineHeight={"28px"}
+          sm={{ fontSize: "16px", lineHeight: "24px", justify: "center" }}
+          color="rgba(238, 226, 204, 0.82)"
+        >
+          Empower by blockchain and NFT technology.
+        </Text>
+      </Box>
+
+      <MaleCharacter>
+        <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
+      </MaleCharacter>
+    </UniqueAssetContainer>
   </>
 );
 
@@ -159,12 +158,8 @@ const UniqueAssetContainer = styled.div`
   position: relative;
   mask-image: url("${BG2RoyaleKingdom}");
   mask-repeat: no-repeat;
-  mask-size: fit;
-  /* mask-position: 0% -50%; */
-  /* overflow: hidden; */
-  /* transform: translate(0, -8%); */
+  mask-size: cover;
   z-index: 0;
-
   &::before {
     content: "";
     width: 100%;
@@ -178,6 +173,16 @@ const UniqueAssetContainer = styled.div`
     background-image: url("${BG2RoyaleKingdom}");
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      width: 100vw;
+      height: 180vh;
+      background: object-fit;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100vw;
+    height: 180vh;
   }
 `;
 
@@ -204,8 +209,10 @@ const MaleCharacter = styled.div`
   top: 27%;
   z-index: 2;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    // 1/4 size on mobile
-    width: 275px;
-    height: 265px;
+    // 1/3 size on mobile
+    width: 80vw;
+    height: auto;
+    left: 20%;
+    top: 35%;
   } ;
 `;

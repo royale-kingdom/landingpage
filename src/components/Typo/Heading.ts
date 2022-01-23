@@ -11,6 +11,7 @@ interface HeadingBaseProps {
   fontWeight?: string | number;
   color?: string;
   background?: string;
+  margin?: string;
 }
 interface HeadingProps
   extends HeadingBaseProps,
@@ -33,5 +34,6 @@ export const Heading = styled.h1<HeadingProps>`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     font-size: ${({ sm }) => sm?.size || "initial"};
     line-height: ${({ sm }) => sm?.lineHeight || "initial"};
+    margin: ${({ sm, margin }) => sm?.margin || margin || "initial"};
   }
 `;
