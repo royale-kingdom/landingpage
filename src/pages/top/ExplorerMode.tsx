@@ -221,14 +221,14 @@ const ExplorerMode = () => {
     setActiveSlide(index);
   };
   return (
-    <Container>
+    <>
       <Box
         position="absolute"
         left={"96px"}
-        top={"512px"}
+        top={"23%"}
         width={"572px"}
         zIndex={2}
-        sm={{ left: "5vw", top: "2rem", width: "90vw", height: "auto" }}
+        sm={{ left: "5vw", top: "15%", width: "90vw", height: "auto" }}
       >
         <Heading
           font={"Judson"}
@@ -242,6 +242,7 @@ const ExplorerMode = () => {
         </Heading>
         <Text
           fontSize={"18px"}
+          font="Lato"
           lineHeight={"28px"}
           sm={{ fontSize: "14px", lineHeight: "20px" }}
           color="rgba(238, 226, 204, 0.82)"
@@ -252,6 +253,7 @@ const ExplorerMode = () => {
           and to uphold the law.
         </Text>
         <Text
+          font = "Lato"
           fontSize={"18px"}
           lineHeight={"28px"}
           margin={"2rem 0"}
@@ -260,7 +262,7 @@ const ExplorerMode = () => {
         >
           Build kingdom economy with 4 unique in-game resources
         </Text>
-        <Box sm={{ margin: "30vh 0 0 0" }}>
+        <Box sm={{ margin: "15vh 0 0 0" }}>
           <Flex
             flexDirection="row"
             justifyContent="space-around"
@@ -387,17 +389,20 @@ const ExplorerMode = () => {
         </Box>
       </Box>
 
+      
+    <Container>
       <Slider {...config} ref={sliderRef}>
-        {dumpSlideImages.map((img, i) => (
-          <DumpSlide
-            key={i}
-            imageSrc={img}
-            activeSlide={activeSlide}
-            changeSlide={changeSlide}
-          />
-        ))}
-      </Slider>
+          {dumpSlideImages.map((img, i) => (
+            <DumpSlide
+              key={i}
+              imageSrc={img}
+              activeSlide={activeSlide}
+              changeSlide={changeSlide}
+            />
+          ))}
+        </Slider>             
     </Container>
+    </>
   );
 };
 
@@ -408,7 +413,7 @@ const Container = styled.div`
   width: 100vw;
   max-width: 1440px;
   height: 1440px;
-  z-index: -10;
+  z-index: 0;
   top: -600px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     top: -700px;

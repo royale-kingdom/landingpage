@@ -412,10 +412,12 @@ const Tokenmetric = () => {
                 alignItems: "center",
                 backgroundPosition: "center center",
                 backgroundSize: "contain",
-                margin: "0 0 20px 0"
+                margin: "0 0 20px 0",
+                fontFamily: "Judson"
               }}
               padding="25px 40px"
               fontSize="24px"
+              
               sm={{ fontSize: "1.8rem", padding: "2rem 3rem" }}
               color="rgba(245, 237, 222, 1)"
             >
@@ -436,6 +438,7 @@ const Tokenmetric = () => {
                   >
                     <td>
                       <Text
+                        font="Lato"
                         fontSize="18px"
                         lineHeight={"28px"}
                         fontWeight="700"
@@ -446,6 +449,7 @@ const Tokenmetric = () => {
                     </td>
                     <td>
                       <Text
+                        font="Lato"
                         fontSize="18px"
                         lineHeight={"28px"}
                         width={"100%"}
@@ -459,6 +463,7 @@ const Tokenmetric = () => {
                     </td>
                     <td>
                       <Text
+                        font="Lato"
                         fontSize="18px"
                         lineHeight={"28px"}
                         width={"100%"}
@@ -528,7 +533,7 @@ const TokenmetricContainer = styled.div`
   box-sizing: border-box;
   position: relative;
   background: black;
-  z-index: -2;
+  z-index: 0;
   &::after {
     content: "";
     position: absolute;

@@ -26,18 +26,23 @@ const nextPlan = [
     quarter: "Q2/2022",
     events: [
       "Nation Feature",
-      "War Mode (v1)",
+      "PVE Mode",
       "Simulation Mode (v2)",
+      "Farm Mode (v2)",
       "Event Feature"
     ]
   },
   {
     quarter: "Q3/2022",
-    events: ["War Mode (v2)", "Ranking System"]
+    events: ["Farm Mode (v2)", "Ranking System"]
   },
   {
     quarter: "Q4/2022",
     events: ["Tournament", "Nation War"]
+  },
+  {
+    quarter: "Q1/2023",
+    events: ["New Races"]
   }
 ];
 
@@ -261,7 +266,7 @@ const RoadmapContainer = styled.div`
   box-sizing: border-box;
   position: relative;
   background: black;
-  z-index: -2;
+  z-index: 0;
   &::after {
     content: "";
     position: absolute;

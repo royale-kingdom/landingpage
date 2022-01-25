@@ -49,7 +49,7 @@ const UniqueItem = ({
         >
           {title}
         </GoldenText>
-        <Text width={"90%"} color="rgba(238, 226, 204, 0.82)">
+        <Text font="Lato" width={"90%"} fontSize="16px" lineHeight="1.5rem" color="rgba(238, 226, 204, 0.82)" sm={{lineHeight: "2.5rem"}}>
           {content}
         </Text>
       </FlexItem>
@@ -70,9 +70,9 @@ const UniqueAsset = () => (
       >
         <UniqueItem
           img={UniqueProperty}
-          title={"Unique Characters"}
+          title={"Unique Properties"}
           content={
-            "Build kingdom from scratch with unique character under your command."
+            "Build kingdom from scratch with unique\n people under your command"
           }
         />
       </Box>
@@ -86,8 +86,8 @@ const UniqueAsset = () => (
       >
         <UniqueItem
           img={UniqueEquipment}
-          title={"Unique War"}
-          content={"Lead kingdom to victory by tactic decision every turn."}
+          title={"Unique Equipment"}
+          content={"Forge equipment with talent\n blacksmiths and explore your kingdom"}
         />
       </Box>
       <Box
@@ -100,9 +100,9 @@ const UniqueAsset = () => (
       >
         <UniqueItem
           img={UniqueWar}
-          title={"Unique Equipment"}
+          title={"Unique War"}
           content={
-            "Forge equipment with talent blacksmiths and explore your kingdom."
+            "Lead kingdom to victory by tactic\n decision every turn"
           }
         />
       </Box>
@@ -127,6 +127,7 @@ const UniqueAsset = () => (
         <Text
           fontSize={"18px"}
           lineHeight={"28px"}
+          font="Lato"
           sm={{ fontSize: "16px", lineHeight: "24px", justify: "center" }}
           color="rgba(238, 226, 204, 0.82)"
         >
@@ -160,7 +161,7 @@ const UniqueAssetContainer = styled.div`
   mask-image: url("${BG2RoyaleKingdom}");
   mask-repeat: no-repeat;
   mask-size: cover;
-  z-index: 0;
+  z-index: 1;
   &::before {
     content: "";
     width: 100%;

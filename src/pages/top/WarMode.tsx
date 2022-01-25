@@ -48,8 +48,8 @@ const WarMode = () => (
     <Box
       position="absolute"
       width="572px"
-      top={"40%"}
-      left={"96px"}
+      top={"30%"}
+      right={"90px"}
       sm={{ width: "90vw", left: "5vw", top: "1rem" }}
     >
       <Heading
@@ -66,6 +66,7 @@ const WarMode = () => (
       <Text
         fontSize={"18px"}
         lineHeight={"28px"}
+        font="Lato"
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
@@ -76,6 +77,7 @@ const WarMode = () => (
         fontSize={"18px"}
         lineHeight={"28px"}
         margin={"2rem 0"}
+        font="Lato"
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
@@ -103,13 +105,13 @@ const WarModeContainer = styled.div`
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -50px;
     width: 100%;
     height: 1440px;
     background: url("${WarModeBG}");
     @media (max-width: ${({ theme }) => theme.mobile}) {
       height: 100vh;
-      top: -200px;
+      top: -150px;
     }
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {

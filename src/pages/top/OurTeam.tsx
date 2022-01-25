@@ -3,7 +3,7 @@ import { Heading } from "../../components/Typo/Heading";
 // import { Container, Flex, FlexItem } from "../../components/Grid";
 // import Squircle from "../../components/Squircle";
 import styled from "styled-components";
-// import { Text } from "../../components/Typo/Text";
+import { Text } from "../../components/Typo/Text";
 import { Box } from "../../components/Box";
 import { Flex } from "../../components/Grid";
 import Member from "../../components/Member";
@@ -14,7 +14,7 @@ import StarBackground from "../../assets/images/landingpage/stars_background_1.j
 
 const OurTeam = () => (
   <OurTeamContainer>
-    <Box paddingTop="250px" sm={{ padding: "80px 0 40px 0" }}>
+    <Box paddingTop="250px" sm={{ padding: "120px 0 40px 0" }}>
       <Heading
         font={"Judson"}
         size={"40px"}
@@ -26,7 +26,7 @@ const OurTeam = () => (
       >
         <AlignCenter>Our team</AlignCenter>
       </Heading>
-      {/* <Text
+      <Text
         fontSize={"18px"}
         lineHeight={"28px"}
         justify={"center"}
@@ -38,7 +38,7 @@ const OurTeam = () => (
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why
         fucking bother? Form follows fucking function.
-      </Text> */}
+      </Text>
     </Box>
 
     <Box marginTop="64px" sm={{ margin: "32px 0 0 0" }}>
@@ -58,10 +58,10 @@ const OurTeam = () => (
       position="absolute"
       width="500px"
       height="420px"
-      right="-10%"
-      bottom="40%"
+      right="5%"
+      bottom="10%"
       zIndex={-2}
-      sm={{ width: "50vw", height: "auto", bottom: "5%" }}
+      sm={{ width: "50vw", height: "auto", bottom: "5%", right: "0" }}
     >
       <Img
         src={shootingStar}
@@ -92,11 +92,11 @@ const BottomImg = styled.div`
 `;
 
 const OurTeamContainer = styled.div`
-  height: 120vh;
+  height: 130vh;
   position: relative;
   overflow: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    height: 110vh;
+    height: 115vh;
   }
 
   &::before {
