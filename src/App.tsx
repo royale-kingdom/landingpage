@@ -33,7 +33,7 @@ body {
   position: relative;
   /* background: #1d1d1d;  */
   background: black; 
-  max-width: 1440px;
+  /* max-width: 1440px; */
   overflow-x: hidden;
   /* &::after {
     content: '';
