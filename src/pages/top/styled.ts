@@ -140,6 +140,8 @@ export const ContainerWithBG = styled.div<{
   height: string;
   width: string;
   sm?: {
+    height?: string;
+    width?: string;
     backgroundPosition?: string;
   };
 }>`
@@ -151,8 +153,10 @@ export const ContainerWithBG = styled.div<{
   height: ${({ height }) => height};
   position: relative;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
+    width: ${({ sm, width }) => sm?.width || width || "100%"};
+    height: ${({ sm, height }) => sm?.height || height || "100%"};
     background-position: ${({ sm }) =>
       sm?.backgroundPosition || "center center"};
   }

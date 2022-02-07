@@ -5,10 +5,10 @@ import { Text } from "../../components/Typo/Text";
 import { Box } from "../../components/Box";
 import { Img } from "../../components/Img";
 
-import WarModeBG from "../../assets/images/landingpage/war_mode_bg.png";
 import WarModeDragon from "../../assets/images/landingpage/war_mode_dragon.png";
 import WarModeStone from "../../assets/images/landingpage/war_mode_stone.png";
 import WarModeFire from "../../assets/images/landingpage/war_mode_fire.png";
+import WarModeBG from "../../assets/images/landingpage/war_mode_bg.png";
 
 const WarMode = () => (
   <WarModeContainer>
@@ -16,11 +16,10 @@ const WarMode = () => (
       position="absolute"
       width="100%"
       height="auto"
-      bottom="-4vw"
-      overflow="hidden"
+      bottom="0"
       sm={{ bottom: "-40vh" }}
     >
-      <Img src={WarModeDragon} width="100%" height="100%" />
+      <Img src={WarModeDragon} width="100%" height="auto" />
     </Box>
 
     <Box
@@ -95,23 +94,27 @@ export default WarMode;
 
 const WarModeContainer = styled.div`
   width: 100vw;
-  height: 63vw;
-  max-width: 1440px;
-  max-height: 900px;
+  height: 100vw;
+  /* height: 100vw; */
+  /* max-width: 1440px; */
+  /* max-height: 900px; */
   position: relative;
-  top: -600px;
-  background: black;
+  /* display: block; */
+  /* top: -600px; */
+  /* background: black; */
   &::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -50px;
+    top: 0;
     width: 100%;
-    height: 1440px;
-    background: url("${WarModeBG}");
+    height: 100%;
+    background: url("${WarModeBG}") no-repeat;
+    background-size: cover;
+    background-position: center center;
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      height: 100vh;
-      top: -150px;
+      /* height: 100vh; */
+      /* top: -150px; */
     }
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {

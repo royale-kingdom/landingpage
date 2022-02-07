@@ -49,7 +49,14 @@ const UniqueItem = ({
         >
           {title}
         </GoldenText>
-        <Text font="Lato" width={"90%"} fontSize="16px" lineHeight="1.5rem" color="rgba(238, 226, 204, 0.82)" sm={{lineHeight: "2.5rem"}}>
+        <Text
+          font="Lato"
+          width={"90%"}
+          fontSize="16px"
+          lineHeight="26px"
+          color="rgba(238, 226, 204, 0.82)"
+          sm={{ lineHeight: "2.5rem" }}
+        >
           {content}
         </Text>
       </FlexItem>
@@ -58,64 +65,17 @@ const UniqueItem = ({
 };
 
 const UniqueAsset = () => (
-  <>
-    <Box position="relative" height="1px" width="100%" zIndex={2}>
-      <Box
-        position="absolute"
-        zIndex={2}
-        width={"33vw"} // 740
-        top={"740px"}
-        left={"18%"}
-        sm={{ width: "85vw", top: "40vh", left: "12.5vw" }}
-      >
-        <UniqueItem
-          img={UniqueProperty}
-          title={"Unique Properties"}
-          content={
-            "Build kingdom from scratch with unique\n people under your command"
-          }
-        />
-      </Box>
-      <Box
-        position="absolute"
-        zIndex={2}
-        width={"33vw"}
-        top={"900px"}
-        left={"38%"}
-        sm={{ width: "85vw", top: "50vh", left: "12.5vw" }}
-      >
-        <UniqueItem
-          img={UniqueEquipment}
-          title={"Unique Equipment"}
-          content={"Forge equipment with talent\n blacksmiths and explore your kingdom"}
-        />
-      </Box>
-      <Box
-        position="absolute"
-        zIndex={2}
-        width={"33vw"}
-        top={"1080px"}
-        left={"60%"}
-        sm={{ width: "85vw", top: "60vh", left: "12.5vw" }}
-      >
-        <UniqueItem
-          img={UniqueWar}
-          title={"Unique War"}
-          content={
-            "Lead kingdom to victory by tactic\n decision every turn"
-          }
-        />
-      </Box>
-    </Box>
-    <UniqueAssetContainer>
+  <UniqueAssetContainer>
+    {/* relate to 1440px width screen, height:width ratio = 490 : 1440px */}
+    <MaskedBox>
       <Box
         position={"absolute"}
         zIndex={2}
-        height={"100%"}
+        height={"150px"}
         width={"50%"}
         left={"12%"}
-        top={"35%"}
-        sm={{ width: "80vw", height: "25vh", top: "13%", left: "10vw" }}
+        top={"36%"}
+        sm={{ width: "80vw", height: "25vh", top: "18%", left: "10vw" }}
       >
         <GoldenText
           fontSize={"40px"}
@@ -137,6 +97,7 @@ const UniqueAsset = () => (
         <Text
           fontSize={"18px"}
           lineHeight={"28px"}
+          font="Lato"
           sm={{ fontSize: "16px", lineHeight: "24px", justify: "center" }}
           color="rgba(238, 226, 204, 0.82)"
         >
@@ -147,26 +108,105 @@ const UniqueAsset = () => (
       <MaleCharacter>
         <StyledImage width={"100%"} src={MaleRYK} alt="Male RYK" />
       </MaleCharacter>
-    </UniqueAssetContainer>
-  </>
+    </MaskedBox>
+
+    {/* height = 815px, on 1440px width screen */}
+    <Box
+      position="absolute"
+      width="100vw"
+      height="56.5vw"
+      bottom={"0"}
+      zIndex={2}
+      sm={{ top: "35%", height: "70%" }}
+    >
+      <Box position="relative" height="100%" width="100%">
+        <Box
+          position="absolute"
+          zIndex={2}
+          width={"33vw"}
+          top={"12.8%"}
+          left={"13.3%"}
+          sm={{ width: "85vw", top: "0", left: "12.5vw" }}
+        >
+          <UniqueItem
+            img={UniqueProperty}
+            title={"Unique Properties"}
+            content={
+              "Build kingdom from scratch with unique\n people under your command"
+            }
+          />
+        </Box>
+        <Box
+          position="absolute"
+          zIndex={2}
+          width={"33vw"}
+          top={"38.65%"}
+          left={"35.76%"}
+          sm={{ width: "85vw", top: "15%", left: "12.5vw" }}
+        >
+          <UniqueItem
+            img={UniqueEquipment}
+            title={"Unique Equipment"}
+            content={
+              "Forge equipment with talent\n blacksmiths and explore your kingdom"
+            }
+          />
+        </Box>
+        <Box
+          position="absolute"
+          zIndex={2}
+          width={"33vw"}
+          top={"59.38%"}
+          left={"58.54%"}
+          sm={{ width: "85vw", top: "30%", left: "12.5vw" }}
+        >
+          <UniqueItem
+            img={UniqueWar}
+            title={"Unique War"}
+            content={"Lead kingdom to victory by tactic\n decision every turn"}
+          />
+        </Box>
+      </Box>
+    </Box>
+  </UniqueAssetContainer>
 );
 
 export default UniqueAsset;
 
 const UniqueAssetContainer = styled.div`
+  position: relative;
   width: 100vw;
-  max-width: 1440px;
-  height: 1440px;
+  height: 97.857vw; // ratio on 1440px width screen
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100vw;
+    height: 250vw;
+  }
+`;
+const MaskedBox = styled.div`
+  /* max-width: 1440px; */
+  /* height: 1440px; */
+  width: 100%;
+  height: 100%;
+  /* width: 100vw;
+  height: 100vw; */
   position: relative;
   mask-image: url("${BG2RoyaleKingdom}");
   mask-repeat: no-repeat;
   mask-size: cover;
   z-index: 1;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    /* width: 100vw;
+    height: 250vw; */
+    /* mask-size: auto; */
+    mask-position: 100% 0;
+  }
+
   &::before {
     content: "";
     width: 100%;
-    height: 1439px;
-    max-width: 1440px;
+    height: 100%;
+    /* max-width: 1440px; */
     position: absolute;
     overflow: hidden;
     z-index: 1;
@@ -176,45 +216,36 @@ const UniqueAssetContainer = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      width: 100vw;
-      height: 180vh;
-      background: object-fit;
+      background-position: 100% 0;
+      /* width: 100vw;
+      height: 100; */
+
+      /* background-size: cover; */
+      /* background-position: 50%; */
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  /* @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100vw;
     height: 180vh;
-  }
+  } */
 `;
-
-// const FemaleCharacter = styled.div`
-//   position: absolute;
-//   width: 1156px;
-//   height: 1085.29px;
-//   left: 240px;
-//   bottom: 0;
-//   @media (max-width: ${({ theme }) => theme.mobile}) {
-//     // 1/4 size on mobile
-//     width: 289px;
-//     height: 271px;
-//     right: 0;
-//     left: unset;
-//   } ;
-// `;
 
 const MaleCharacter = styled.div`
   position: absolute;
-  height: 911px;
-  width: 960px;
+  height: 65vw; // size base on origin design for 1440px width screen
+  width: 66.67vw; // size base on origin design for 1440px width screen
+  /* right: 2%; */
+  /* top: 27%; */
+  /* transform-origin: 50% 50%; */
+  bottom: 8%;
   right: 2%;
-  top: 27%;
   z-index: 2;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     // 1/3 size on mobile
-    width: 80vw;
-    height: auto;
-    left: 20%;
-    top: 35%;
+    /* width: 80vw;
+    height: 77.7vw; */
+    bottom: 4%;
+    /* right: 2%; */
   } ;
 `;
