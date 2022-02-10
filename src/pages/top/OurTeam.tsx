@@ -10,7 +10,7 @@ import Member from "../../components/Member";
 import { Img } from "../../components/Img";
 import background from "../../assets/images/landingpage/team_background.png";
 import shootingStar from "../../assets/images/landingpage/our_team_shooting_star.png";
-import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
+import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
 
 const OurTeam = () => (
   <OurTeamContainer>

@@ -12,21 +12,17 @@ import WarModeBG from "../../assets/images/landingpage/war_mode_bg.png";
 
 const WarMode = () => (
   <WarModeContainer>
-    <Box
-      position="absolute"
-      width="100%"
-      height="auto"
-      bottom="0"
-      sm={{ bottom: "-40vh" }}
-    >
+    {/* dragon */}
+    <Box position="absolute" width="100%" height="auto" bottom="0%">
       <Img src={WarModeDragon} width="100%" height="auto" />
     </Box>
 
+    {/* stone */}
     <Box
       position="absolute"
+      transform="translate(0%, 50%)"
       width="100%"
-      bottom="-50vw"
-      sm={{ bottom: "-70vh" }}
+      bottom="0%"
     >
       <Img
         src={WarModeStone}
@@ -35,21 +31,25 @@ const WarMode = () => (
         style={{ overflow: "hidden" }}
       />
     </Box>
+
+    {/* Fire */}
     <Box
       position="absolute"
       width="100%"
-      bottom="-30vw"
+      bottom="-40vw"
       overflow="hidden"
-      sm={{ bottom: "-50vh" }}
+      sm={{ bottom: "-50vw" }}
     >
       <Img src={WarModeFire} width="100%" height="100%" />
     </Box>
+
+    {/* Description */}
     <Box
       position="absolute"
       width="572px"
-      top={"30%"}
+      top={"50%"}
       right={"90px"}
-      sm={{ width: "90vw", left: "5vw", top: "1rem" }}
+      sm={{ width: "90vw", left: "5vw", top: "25%" }}
     >
       <Heading
         font={"Judson"}
@@ -93,15 +93,11 @@ const WarMode = () => (
 export default WarMode;
 
 const WarModeContainer = styled.div`
-  width: 100vw;
+  width: 100vw; // 1440px
   height: 100vw;
-  /* height: 100vw; */
-  /* max-width: 1440px; */
-  /* max-height: 900px; */
+  z-index: 1;
   position: relative;
-  /* display: block; */
-  /* top: -600px; */
-  /* background: black; */
+
   &::before {
     content: "";
     position: absolute;
@@ -113,11 +109,13 @@ const WarModeContainer = styled.div`
     background-size: cover;
     background-position: center center;
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      /* height: 100vh; */
-      /* top: -150px; */
+      height: 100vh;
+      background-size: cover;
+      background-position: 0% 0%;
     }
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    /* top: 0; */
+    width: 100vw;
+    height: 100vh;
   }
 `;

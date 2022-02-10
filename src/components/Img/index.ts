@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 interface Base {
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
+  backgroundPosition?: string;
+  backgroundSize?: string;
 }
 
 interface ImgStyled extends Base {
@@ -15,5 +17,9 @@ export const Img = styled.img<ImgStyled>`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: ${({ sm, width }) => sm?.width || width};
     height: ${({ sm, height }) => sm?.height || height};
+    background-position: ${({ sm, backgroundPosition }) =>
+      sm?.backgroundPosition || backgroundPosition};
+    background-size: ${({ sm, backgroundSize }) =>
+      sm?.backgroundSize || backgroundSize};
   }
 `;

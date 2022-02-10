@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+  .slick-slider,
+  .slick-list,
+  .slick-track {
+    height: 150vw !important;
+  }
+}
