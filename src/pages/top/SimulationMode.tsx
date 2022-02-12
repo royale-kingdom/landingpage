@@ -224,7 +224,7 @@ const SimulationMode = () => {
 
       <Box
         position="absolute"
-        width="100%"
+        width="100vw"
         height="100vw"
         transform="translate(0, -50%)"
         top="50%"
@@ -232,7 +232,7 @@ const SimulationMode = () => {
         zIndex={2}
         sm={{
           height: SLIDE_HEIGHT_SM,
-          top: "60%"
+          top: "65%"
         }}
       >
         <Slider {...config} ref={sliderRef}>
@@ -251,9 +251,7 @@ const SimulationMode = () => {
                 height="100%"
                 objectFit="cover"
                 sm={{
-                  width: "auto",
-                  objectPosition: "80% 100%",
-                  objectFit: "contain"
+                  objectPosition: "80% 100%"
                 }}
               />
             </Box>
