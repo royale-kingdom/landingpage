@@ -10,7 +10,7 @@ import StarBackground from "../../assets/images/landingpage/stars_background_1.p
 // import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
 import CloudImage from "../../assets/images/landingpage/cloud_image.png";
 
-const Tokenomic = () => (
+const TokenUtilities = () => (
   <TokenomicContainer>
     <Box paddingTop="24vw" sm={{ padding: "50vw 0 0 0" }}>
       <Box
@@ -65,7 +65,8 @@ const Tokenomic = () => (
     <GoldCloud />
   </TokenomicContainer>
 );
-export default Tokenomic;
+
+export default TokenUtilities;
 
 const GoldCloud = styled.div`
   position: absolute;

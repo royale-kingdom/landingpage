@@ -46,7 +46,7 @@ const config = {
   adaptiveHeight: true
 };
 
-const ExplorerMode = () => {
+const SimulationMode = () => {
   const sliderRef = useRef<Slider>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const changeSlide = (index: number) => {
@@ -262,7 +262,7 @@ const ExplorerMode = () => {
   );
 };
 
-export default ExplorerMode;
+export default SimulationMode;
 
 const ExplorerModeContainer = styled.div`
   position: relative;

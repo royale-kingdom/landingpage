@@ -1,10 +1,10 @@
 import Tokenmetric from "./Tokenmetric";
-import UniqueAsset from "./UniqueAsset";
+import BuildUniqueWorld from "./BuildUniqueWorld";
 import OurTeam from "./OurTeam";
 // import PVP from "./PVP";
-import Tokenomic from "./Tokenomic";
+import TokenUtilities from "./TokenUtilities";
 // import Farming from "./Farming";
-import ExplorerMode from "./ExplorerMode";
+import SimulationMode from "./SimulationMode";
 import WarMode from "./WarMode";
 import Roadmap from "./Roadmap";
 import Banner from "./Banner";
@@ -17,13 +17,13 @@ const Top = () => {
   return (
     <Box position={"relative"}>
       <Banner />
-      <UniqueAsset />
-      <ExplorerMode />
+      <BuildUniqueWorld />
+      <SimulationMode />
       <WarMode />
 
       {/* <PVP /> */}
 
-      <Tokenomic />
+      <TokenUtilities />
       <Tokenmetric />
 
       <Roadmap />

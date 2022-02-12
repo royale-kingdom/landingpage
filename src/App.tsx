@@ -23,7 +23,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${px2vw(16)};
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Lato', sans-serif;
   color: white;

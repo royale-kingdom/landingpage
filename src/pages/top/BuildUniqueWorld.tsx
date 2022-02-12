@@ -64,7 +64,7 @@ const UniqueItem = ({
   );
 };
 
-const UniqueAsset = () => (
+const BuildUniqueWorld = () => (
   <UniqueAssetContainer>
     {/* relate to 1440px width screen, height:width ratio = 490 : 1440px */}
     <MaskedBox>
@@ -171,7 +171,7 @@ const UniqueAsset = () => (
   </UniqueAssetContainer>
 );
 
-export default UniqueAsset;
+export default BuildUniqueWorld;
 
 const UniqueAssetContainer = styled.div`
   position: relative;

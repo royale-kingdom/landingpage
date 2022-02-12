@@ -403,6 +403,12 @@ const Tokenmetric = () => {
           {/* <CustomPieChart index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)} /> */}
           <Flex justifyContent="center">
             <BaseButton
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1oLBnWD184lKu09WpFsPwN2XgNh87ytZw/view",
+                  "_blank"
+                )
+              }
               style={{
                 backgroundImage: `url(${Button2})`,
                 backgroundRepeat: "no-repeat",
@@ -417,7 +423,6 @@ const Tokenmetric = () => {
               }}
               padding="25px 40px"
               fontSize="24px"
-              
               sm={{ fontSize: "1.8rem", padding: "2rem 3rem" }}
               color="rgba(245, 237, 222, 1)"
             >
