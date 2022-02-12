@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
-import {
-  StyledImage
-  // AlignCenter,
-  // AbsoluteDiv
-  // ContainerWithBG
-} from "./styled";
+import { StyledImage } from "./styled";
 import { Flex, FlexItem } from "../../components/Grid";
 import { Box } from "../../components/Box";
 import { Text } from "../../components/Typo/Text";
@@ -16,6 +11,8 @@ import UniqueWar from "../../assets/images/landingpage/unique-war.png";
 import UniqueProperty from "../../assets/images/landingpage/unique-property.png";
 import UniqueEquipment from "../../assets/images/landingpage/unique-equipment.png";
 import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom.png";
+
+import { BUILD_UNIQUE_WORLD } from "../../constant/landingPageSection";
 
 const UniqueItem = ({
   img,
@@ -65,7 +62,7 @@ const UniqueItem = ({
 };
 
 const BuildUniqueWorld = () => (
-  <UniqueAssetContainer>
+  <UniqueAssetContainer id={BUILD_UNIQUE_WORLD}>
     {/* relate to 1440px width screen, height:width ratio = 490 : 1440px */}
     <MaskedBox>
       <Box

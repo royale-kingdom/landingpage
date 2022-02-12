@@ -29,6 +29,7 @@ interface Styled extends BaseStyled {
 
 interface Props extends Styled {
   children?: React.ReactNode;
+  id?: string;
 }
 
 export function Box(props: Props) {

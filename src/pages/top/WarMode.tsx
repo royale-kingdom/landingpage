@@ -10,10 +10,18 @@ import WarModeStone from "../../assets/images/landingpage/war_mode_stone.png";
 import WarModeFire from "../../assets/images/landingpage/war_mode_fire.png";
 import WarModeBG from "../../assets/images/landingpage/war_mode_bg.png";
 
+import { WAR_MODE } from "../../constant/landingPageSection";
+
 const WarMode = () => (
   <WarModeContainer>
     {/* dragon */}
-    <Box position="absolute" width="100%" height="auto" bottom="0%">
+    <Box
+      id={WAR_MODE}
+      position="absolute"
+      width="100%"
+      height="auto"
+      bottom="0%"
+    >
       <Img src={WarModeDragon} width="100%" height="auto" />
     </Box>
 

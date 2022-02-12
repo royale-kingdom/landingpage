@@ -17,6 +17,8 @@ import Button2 from "../../assets/images/landingpage/Button2.svg";
 import TokenmetricBackground from "../../assets/images/landingpage/tokenmetric_background.svg";
 // import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
+import { TOKENMETRIC } from "../../constant/landingPageSection";
+
 ChartJS.register(ArcElement, Tooltip);
 
 const TokenmetricTable = styled.table`
@@ -103,85 +105,6 @@ const pieChartData = [
     amount: "2,000,000"
   }
 ];
-
-// const defaultLabelStyle = { fill: "#E38627", fontSize: "48px" };
-
-// const CustomPieChart = (props: any) => {
-//   const [hovered, setHovered] = useState<number>(-1);
-//   const data = pieChartData.map((segment, index) => ({
-//     ...segment,
-//     color: index === hovered ? activeColor : defaultColor
-//   }));
-//   useEffect(() => {
-//     setHovered(props.index);
-//   },[props]);
-
-//   const makeTooltipContent = (data: any) => {
-//     return (
-//       <div>
-//         <Heading
-//           font={"Judson"}
-//           size={"16px"}
-//           lineHeight={"26px"}
-//           align={"center"}
-//           // sm={{ size: "24px", lineHeight: "36px" }}
-//           fontWeight="700"
-//           background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-//         >
-//           {data.title.toUpperCase()}
-//         </Heading>
-//         <Text
-//           fontSize="16px"
-//           lineHeight={"26px"}
-//           width={"100%"}
-//           // justify={"right"}
-//           display={"inline-block"}
-//           fontWeight="700"
-//           color="rgba(238, 226, 204, 1)"
-//         >
-//           {data.amount}
-//         </Text>
-//       </div>
-//     );
-//   };
-
-//   return (
-//     <div data-tip="" data-for="chart">
-//       <PieChart
-//         data={data}
-//         segmentsShift={(index) => (index === hovered ? shiftSize : 0.4)}
-//         startAngle={270}
-//         animate={true}
-//         segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
-//         label={({ x, y, dx, dy, dataIndex, dataEntry }) =>  {
-//           return <div key={dataIndex}>
-//           {dataEntry.title}</div>
-//         }}
-//         // labelStyle={{ ...defaultLabelStyle }}
-//         paddingAngle={0}
-//         lineWidth={40}
-//         viewBoxSize={[120, 120]}
-//         center={[60, 60]}
-//         onMouseOver={(e, index) => {
-//           props.setIndex(index);
-//         }}
-//         onMouseOut={() => {
-//           props.setIndex(-1);
-//         }}
-//       />
-//       <ReactTooltip
-//       offset={ {
-//         left: 60,
-//         right: 60
-//       }}
-//         id="chart"
-//         getContent={() =>
-//           hovered >= 0 ? makeTooltipContent(data[hovered]) : null
-//         }
-//       />
-//     </div>
-//   );
-// };
 
 const PieChart2 = (props: any) => {
   const { index } = props;
@@ -353,188 +276,180 @@ const PieChart2 = (props: any) => {
 const Tokenmetric = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   return (
-    <TokenmetricContainer>
-      <Box padding="24px 0">
-        <Heading
-          margin="0"
-          font={"Judson"}
-          size={"40px"}
-          lineHeight={"64px"}
-          align={"center"}
-          sm={{ size: "24px", lineHeight: "36px" }}
-          fontWeight="700"
-          background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-        >
-          Tokenmetric
-        </Heading>
-      </Box>
-
-      {/* <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        justify={"center"}
-        width={"40vw"}
-        margin={"0 auto"}
-        sm={{ fontSize: "14px", lineHeight: "20px", width: "90vw" }}
-        color="rgba(238, 226, 204, 0.82)"
-      >
-        When you design, you have to draw on your own fucking life experiences.
-        If it’s not something you would want to read/look at/use then why
-        fucking bother? Form follows fucking function.
-      </Text> */}
-
-      <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
-        <FlexItem flex={"1"} padding={"0 4rem"} width="calc(100% - 8rem)">
-          {/* <StyledImage src={PieChart} alt="pie chart" width={"100%"} /> */}
-          <Flex
-            sm={{
-              width: "95%"
-            }}
-            width="70%"
-            alginItem="center"
-            justifyContent="center"
-            margin="0 auto"
+    <>
+      <div id={TOKENMETRIC} />
+      <TokenmetricContainer>
+        <Box padding="24px 0">
+          <Heading
+            margin="0"
+            font={"Judson"}
+            size={"40px"}
+            lineHeight={"64px"}
+            align={"center"}
+            sm={{ size: "24px", lineHeight: "36px" }}
+            fontWeight="700"
+            background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
           >
-            <PieChart2
-              index={selectedIndex}
-              setIndex={(index: number) => setSelectedIndex(index)}
-            />
-          </Flex>
-          {/* <CustomPieChart index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)} /> */}
-          <Flex justifyContent="center">
-            <BaseButton
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1oLBnWD184lKu09WpFsPwN2XgNh87ytZw/view",
-                  "_blank"
-                )
-              }
-              style={{
-                backgroundImage: `url(${Button2})`,
-                backgroundRepeat: "no-repeat",
-                fontWeight: "bold",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundPosition: "center center",
-                backgroundSize: "contain",
-                margin: "0 0 20px 0",
-                fontFamily: "Judson"
+            Tokenmetric
+          </Heading>
+        </Box>
+
+        <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
+          <FlexItem flex={"1"} padding={"0 4rem"} width="calc(100% - 8rem)">
+            {/* <StyledImage src={PieChart} alt="pie chart" width={"100%"} /> */}
+            <Flex
+              sm={{
+                width: "95%"
               }}
-              padding="25px 40px"
-              fontSize="24px"
-              sm={{ fontSize: "1.8rem", padding: "2rem 3rem" }}
-              color="rgba(245, 237, 222, 1)"
+              width="70%"
+              alginItem="center"
+              justifyContent="center"
+              margin="0 auto"
             >
-              Download Whitepaper
-            </BaseButton>
-          </Flex>
-        </FlexItem>
-        <FlexItem flex={"1"} width={"100%"}>
-          <Box width={"100%"} height={"auto"} padding={"0 4rem"}>
-            <TokenmetricTable>
-              <tbody>
-                {tableDump.map((item, index) => (
-                  <tr
-                    key={index}
-                    className={classNames({ active: selectedIndex === index })}
-                    onMouseOver={() => setSelectedIndex(index)}
-                    onMouseLeave={() => setSelectedIndex(-1)}
-                  >
+              <PieChart2
+                index={selectedIndex}
+                setIndex={(index: number) => setSelectedIndex(index)}
+              />
+            </Flex>
+            {/* <CustomPieChart index = {selectedIndex} setIndex = {(index: number) => setSelectedIndex(index)} /> */}
+            <Flex justifyContent="center">
+              <BaseButton
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1oLBnWD184lKu09WpFsPwN2XgNh87ytZw/view",
+                    "_blank"
+                  )
+                }
+                style={{
+                  backgroundImage: `url(${Button2})`,
+                  backgroundRepeat: "no-repeat",
+                  fontWeight: "bold",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundPosition: "center center",
+                  backgroundSize: "contain",
+                  margin: "0 0 20px 0",
+                  fontFamily: "Judson"
+                }}
+                padding="25px 40px"
+                fontSize="24px"
+                sm={{ fontSize: "1.8rem", padding: "2rem 3rem" }}
+                color="rgba(245, 237, 222, 1)"
+              >
+                Download Whitepaper
+              </BaseButton>
+            </Flex>
+          </FlexItem>
+          <FlexItem flex={"1"} width={"100%"}>
+            <Box width={"100%"} height={"auto"} padding={"0 4rem"}>
+              <TokenmetricTable>
+                <tbody>
+                  {tableDump.map((item, index) => (
+                    <tr
+                      key={index}
+                      className={classNames({
+                        active: selectedIndex === index
+                      })}
+                      onMouseOver={() => setSelectedIndex(index)}
+                      onMouseLeave={() => setSelectedIndex(-1)}
+                    >
+                      <td>
+                        <Text
+                          font="Lato"
+                          fontSize="18px"
+                          lineHeight={"28px"}
+                          fontWeight="700"
+                          color="rgba(238, 226, 204, 1)"
+                        >
+                          {item.label}
+                        </Text>
+                      </td>
+                      <td>
+                        <Text
+                          font="Lato"
+                          fontSize="18px"
+                          lineHeight={"28px"}
+                          width={"100%"}
+                          display={"inline-block"}
+                          justify={"center"}
+                          fontWeight="700"
+                          color="rgba(238, 226, 204, 0.52)"
+                        >
+                          {item.percent}
+                        </Text>
+                      </td>
+                      <td>
+                        <Text
+                          font="Lato"
+                          fontSize="18px"
+                          lineHeight={"28px"}
+                          width={"100%"}
+                          justify={"right"}
+                          display={"inline-block"}
+                          fontWeight="700"
+                          color="rgba(238, 226, 204, 1)"
+                        >
+                          {item.amount}
+                        </Text>
+                      </td>
+                    </tr>
+                  ))}
+                  <tr>
                     <td>
                       <Text
-                        font="Lato"
-                        fontSize="18px"
-                        lineHeight={"28px"}
+                        font="Judson"
+                        fontSize="24px"
+                        lineHeight={"38px"}
                         fontWeight="700"
                         color="rgba(238, 226, 204, 1)"
                       >
-                        {item.label}
+                        TOTAL
                       </Text>
                     </td>
-                    <td>
+                    <td colSpan={2}>
                       <Text
-                        font="Lato"
-                        fontSize="18px"
-                        lineHeight={"28px"}
                         width={"100%"}
                         display={"inline-block"}
-                        justify={"center"}
-                        fontWeight="700"
-                        color="rgba(238, 226, 204, 0.52)"
-                      >
-                        {item.percent}
-                      </Text>
-                    </td>
-                    <td>
-                      <Text
-                        font="Lato"
-                        fontSize="18px"
-                        lineHeight={"28px"}
-                        width={"100%"}
                         justify={"right"}
-                        display={"inline-block"}
-                        fontWeight="700"
+                        fontSize={"40px"}
+                        lineHeight={"64px"}
+                        fontWeight={"700"}
+                        sm={{ fontSize: "24px" }}
                         color="rgba(238, 226, 204, 1)"
+                        font="Judson"
                       >
-                        {item.amount}
+                        200.000.000
                       </Text>
                     </td>
                   </tr>
-                ))}
-                <tr>
-                  <td>
-                    <Text
-                      font="Judson"
-                      fontSize="24px"
-                      lineHeight={"38px"}
-                      fontWeight="700"
-                      color="rgba(238, 226, 204, 1)"
-                    >
-                      TOTAL
-                    </Text>
-                  </td>
-                  <td colSpan={2}>
-                    <Text
-                      width={"100%"}
-                      display={"inline-block"}
-                      justify={"right"}
-                      fontSize={"40px"}
-                      lineHeight={"64px"}
-                      fontWeight={"700"}
-                      sm={{ fontSize: "24px" }}
-                      color="rgba(238, 226, 204, 1)"
-                      font="Judson"
-                    >
-                      200.000.000
-                    </Text>
-                  </td>
-                </tr>
-              </tbody>
-            </TokenmetricTable>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center"
-              }}
-            >
-              <Img
-                width="400px"
-                height="auto"
-                src={SeparatorImage}
-                alt="Royale Kingdom"
-                sm={{ width: "90vw", height: "auto" }}
-              />
-            </div>
-          </Box>
-        </FlexItem>
-      </Flex>
-    </TokenmetricContainer>
+                </tbody>
+              </TokenmetricTable>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center"
+                }}
+              >
+                <Img
+                  width="400px"
+                  height="auto"
+                  src={SeparatorImage}
+                  alt="Royale Kingdom"
+                  sm={{ width: "90vw", height: "auto" }}
+                />
+              </div>
+            </Box>
+          </FlexItem>
+        </Flex>
+      </TokenmetricContainer>
+    </>
   );
 };
 export default Tokenmetric;
 
 const TokenmetricContainer = styled.div`
+  padding: 4rem 0;
   box-sizing: border-box;
   position: relative;
   background: black;

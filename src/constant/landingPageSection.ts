@@ -1,7 +1,7 @@
-export const BUILD_UNIQUE_WORLD = "BUILD_UNIQUE_WORLD";
-export const SIMULATION_MODE = "SIMULATION_MODE";
-export const WAR_MODE = "WAR_MODE";
-export const TOKEN_UTILITIES = "TOKEN_UTILITIES";
-export const TOKENMETRIC = "TOKENMETRIC";
-export const ROADMAP = "ROADMAP";
-export const OUR_TEAM = "OUR_TEAM";
+export const BUILD_UNIQUE_WORLD = "build-unique-world";
+export const SIMULATION_MODE = "simulation-mode";
+export const WAR_MODE = "war-mode";
+export const TOKEN_UTILITIES = "token-utilities";
+export const TOKENMETRIC = "tokenmetric";
+export const ROADMAP = "road-map";
+export const OUR_TEAM = "our-team";

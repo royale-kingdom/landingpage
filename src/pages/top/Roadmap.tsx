@@ -16,6 +16,9 @@ import closedTreasure from "../../assets/images/landingpage/treasure_close.svg";
 import xSword from "../../assets/images/landingpage/sword_x.png";
 import goldenColumn from "../../assets/images/landingpage/golden_column.png";
 import RoadMapBackground from "../../assets/images/landingpage/road_map_background.svg";
+
+import { ROADMAP } from "../../constant/landingPageSection";
+
 const nextPlan = [
   {
     quarter: "Q1/2022",
@@ -183,7 +186,7 @@ const RoadMap = () => {
   const { innerWidth } = window;
 
   return (
-    <RoadmapContainer>
+    <RoadmapContainer id={ROADMAP}>
       <Box>
         <Heading
           font={"Judson"}

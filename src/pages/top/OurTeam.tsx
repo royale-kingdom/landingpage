@@ -11,9 +11,10 @@ import { Img } from "../../components/Img";
 import background from "../../assets/images/landingpage/team_background.png";
 import shootingStar from "../../assets/images/landingpage/our_team_shooting_star.png";
 import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
+import { OUR_TEAM } from "../../constant/landingPageSection";
 
 const OurTeam = () => (
-  <OurTeamContainer>
+  <OurTeamContainer id={OUR_TEAM}>
     <Box paddingTop="250px" sm={{ padding: "120px 0 40px 0" }}>
       <Heading
         font={"Judson"}

@@ -10,8 +10,10 @@ import StarBackground from "../../assets/images/landingpage/stars_background_1.p
 // import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
 import CloudImage from "../../assets/images/landingpage/cloud_image.png";
 
+import { TOKEN_UTILITIES } from "../../constant/landingPageSection";
+
 const TokenUtilities = () => (
-  <TokenomicContainer>
+  <TokenomicContainer id={TOKEN_UTILITIES}>
     <Box paddingTop="24vw" sm={{ padding: "50vw 0 0 0" }}>
       <Box
         height="23vw"

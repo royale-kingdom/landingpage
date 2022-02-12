@@ -24,17 +24,10 @@ import HolyWater from "../../assets/images/landingpage/holy-water.png";
 
 import "../../styles/slick-slide.css"; // <= custom height of slick slider on mobile
 
+import { SIMULATION_MODE } from "../../constant/landingPageSection";
+
 const dumpSlideImages = [ExplorerModeBG, Farming1, FramingCover, Mine1];
 const SLIDE_HEIGHT_SM = "180vw";
-
-// const DumpSlide = ({ imageSrc }: { imageSrc: any }) => (
-//   <ContainerWithBG
-//     imgSrc={imageSrc}
-//     width={"100vw"}
-//     height={"100vw"}
-//     sm={{ backgroundPosition: "75%", height: "200vw" }}
-//   />
-// );
 
 const config = {
   // autoplay: true,
@@ -55,7 +48,13 @@ const SimulationMode = () => {
   };
   return (
     <ExplorerModeContainer>
-      {/** Container size: width = 100vw; height = 113.47vw */}
+      <Box
+        id={SIMULATION_MODE}
+        width="100%"
+        height="10vw"
+        position="absolute"
+        top="-10vw"
+      />
       <Box
         position="absolute"
         left={"96px"}
@@ -227,7 +226,6 @@ const SimulationMode = () => {
         position="absolute"
         width="100%"
         height="100vw"
-        // bottom="-100%"
         transform="translate(0, -50%)"
         top="50%"
         left="0"
@@ -251,8 +249,12 @@ const SimulationMode = () => {
                 src={img}
                 width="100%"
                 height="100%"
-                backgroundSize="cover"
-                sm={{ width: "auto", backgroundPosition: "-50% 100%" }}
+                objectFit="cover"
+                sm={{
+                  width: "auto",
+                  objectPosition: "80% 100%",
+                  objectFit: "contain"
+                }}
               />
             </Box>
           ))}
@@ -267,29 +269,9 @@ export default SimulationMode;
 const ExplorerModeContainer = styled.div`
   position: relative;
   width: 100vw;
-  /* margin-top: 13.68vw; */
-  /* max-width: 1440px; */
   height: 29.65vw;
   z-index: 0;
-  /* top: -39.458vw; // height ratio on 1440px width screen */
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 100vw;
-    /* top: -700px;
-    height: 90vh; */
-    /* margin-bottom: 0px; */
   }
 `;
-
-// const Container = styled.div`
-//   position: relative;
-//   width: 100vw;
-//   /* max-width: 1440px; */
-//   height: 113.47vw;
-//   z-index: 0;
-//   top: -32.45vw; // height ratio on 1440px width screen
-//   @media (max-width: ${({ theme }) => theme.mobile}) {
-//     top: -700px;
-//     height: 90vh;
-//     margin-bottom: 0px;
-//   }
-// `;

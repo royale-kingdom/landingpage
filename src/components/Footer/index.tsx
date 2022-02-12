@@ -64,20 +64,21 @@ export function Footer() {
           }}
         >
           <Text fontWeight="bold" font="Lato" lineHeight="2rem">
-            RoyaleKingdom
+            Royale Kingdom
           </Text>
           <Box width={"100%"} sm={{ width: "240px" }}>
             <Flex justifyContent="space-between">
               {royaleKingdom.map((item, idx) => (
-                <Text
-                  key={idx}
-                  font="Lato"
-                  width="120px"
-                  fontSize="13px"
-                  lineHeight="32px"
-                >
-                  <a href={item.href}>{item.label}</a>
-                </Text>
+                <a href={item.href} key={idx}>
+                  <Text
+                    font="Lato"
+                    width="120px"
+                    fontSize="13px"
+                    lineHeight="32px"
+                  >
+                    {item.label}
+                  </Text>
+                </a>
               ))}
             </Flex>
           </Box>
