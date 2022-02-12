@@ -53,7 +53,7 @@ export function Footer() {
             font="Lato"
             color="#EEE2CC85"
           >
-            © 2022 RoyaleKingdom. All Rights Reserved.
+            © 2022 Royale Kingdom. All Rights Reserved.
           </Text>
         </Box>
         <Box
