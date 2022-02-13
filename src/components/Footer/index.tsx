@@ -134,8 +134,22 @@ export function Footer() {
 const FooterContainer = styled.div`
   background: #0b0808;
   padding: 64px 80px;
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  padding-top: 300px;
+  position: relative;
+  z-index: 0;
+   @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 32px 24px;
-    padding-top: 64px;
+    padding-top: 164px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    top: -160px;
+    left: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0) black rgba(0,0,0,0))
+    z-index: 1;
   }
 `;
