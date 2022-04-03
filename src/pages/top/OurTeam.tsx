@@ -11,6 +11,9 @@ import { Img } from "../../components/Img";
 import background from "../../assets/images/landingpage/team_background.png";
 import shootingStar from "../../assets/images/landingpage/our_team_shooting_star.png";
 import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
+import LongNguyen from "../../assets/images/team/Long-Nguyen.png";
+import NhatNguyen from "../../assets/images/team/Nhat-Nguyen.png";
+import AnNguyen from "../../assets/images/team/An-Nguyen.png";
 import { OUR_TEAM } from "../../constant/landingPageSection";
 
 const OurTeam = () => (
@@ -44,9 +47,21 @@ const OurTeam = () => (
 
     <Box marginTop="64px" sm={{ margin: "32px 0 0 0" }}>
       <Flex justifyContent="center">
-        <Member fullName="Long Nguyen" title="CHIEF OF OPERATION" />
-        <Member fullName="Nhat Nguyen" title="CHIEF OF TECH" />
-        <Member fullName="An Nguyen" title="ART DIRECTOR" />
+        <Member
+          fullName="Long Nguyen"
+          title="CHIEF OF OPERATION"
+          avatar={LongNguyen}
+        />
+        <Member
+          fullName="Nhat Nguyen"
+          title="CHIEF OF TECH"
+          avatar={NhatNguyen}
+        />
+        <Member
+          fullName="An Nguyen"
+          title="ART DIRECTOR"
+          avatar={AnNguyen}
+        />
       </Flex>
       <Flex justifyContent="center">
         <Member fullName="Hang Nguyen" title="2D ARTIST" />

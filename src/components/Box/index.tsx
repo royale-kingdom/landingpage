@@ -21,6 +21,7 @@ interface BaseStyled extends BasePaddingProps, BaseMarginProps {
   transform?: string;
   zIndex?: number;
   overflow?: string;
+  backgroundColor?: string;
 }
 
 interface Styled extends BaseStyled {
@@ -52,6 +53,7 @@ const Div = styled.div<Styled>`
   transform: ${({ transform }) => transform || "unset"};
   z-index: ${({ zIndex }) => zIndex || "unset"};
   overflow: ${({ overflow }) => overflow || "initial"};
+  background-color: ${({ backgroundColor }) => backgroundColor || "unset"};
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: ${({ sm, width }) => sm?.width || width || "initial"};

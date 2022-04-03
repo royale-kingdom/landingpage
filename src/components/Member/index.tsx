@@ -1,21 +1,38 @@
-import { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { Img } from "../Img";
 import { Text } from "../Typo/Text";
 import { Box } from "../Box";
-import memberSquircle from "../../assets/images/landingpage/member_squircle.svg";
+import memberSquircle from "../../assets/images/landingpage/member_squircle.png";
 
 interface MemberProps {
-  avatar?: ReactNode;
+  avatar?: string;
   fullName?: string;
   title?: string;
 }
 const Member = ({ avatar, fullName, title }: MemberProps) => {
   return (
     <Container>
-      <Box width="164px" height="164px" sm={{ width: "96px", height: "96px" }}>
-        <Img src={memberSquircle} width="100%" height="100%" />
+      <Box
+        overflow="hidden"
+        transform="rotate(45deg)"
+        width="174px"
+        height="174px"
+        sm={{ width: "96px", height: "96px" }}
+      >
+        <Box
+          // overflow="hidden"
+          transform="rotate(-45deg)"
+          position="relative"
+          width="100%"
+          height="100%"
+        >
+          <Box transform="rotate(-45deg)" position="absolute" width="100%" height="100%">
+            <Img src={memberSquircle} width="100%" height="100%" />
+          </Box>
+          <Img src={avatar} width="100%" height="100%" objectFit="cover" />
+        </Box>
       </Box>
       <MemberBadge>
         <Text
