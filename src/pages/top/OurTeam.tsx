@@ -63,12 +63,12 @@ const OurTeam = () => (
           avatar={AnNguyen}
         />
       </Flex>
-      <Flex justifyContent="center">
+      {/* <Flex justifyContent="center">
         <Member fullName="Hang Nguyen" title="2D ARTIST" />
         <Member fullName="Phuong Lou" title="2D ARTIST" />
         <Member fullName="Hang Ung" title="F.E DEVELOPER" />
         <Member fullName="Louis Do" title="SMC DEVELOPER" />
-      </Flex>
+      </Flex> */}
     </Box>
     <Box
       position="absolute"
