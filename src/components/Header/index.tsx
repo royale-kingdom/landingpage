@@ -32,16 +32,16 @@ const Header = () => {
         </Link>
       </StyledNavLink>
       <StyledNavLink>
-        <Link to="/#">
+        <a href="https://marketplace-dev.royalekingdom.com/marketplace">
           <Text
             fontSize="18px"
             lineHeight="28px"
             sm={{ fontSize: "14px", padding: "0 4px" }}
-            onClick={() => alert('Coming soon')}
+            // onClick={() => alert('Coming soon')}
           >
             Market
           </Text>
-        </Link>
+        </a>
       </StyledNavLink>
       <StyledNavLink>
         <Link to="/#">
