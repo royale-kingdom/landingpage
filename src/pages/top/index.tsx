@@ -10,7 +10,7 @@ import Roadmap from "./Roadmap";
 import Banner from "./Banner";
 
 import { Box } from "../../components/Box";
-import Intro from "./Intro";
+import Hero from "./Hero";
 import Prologue from "./Prologue";
 
 // import logoBanner from "../../assets/images/landingpage/logo_banner.png";
@@ -19,7 +19,7 @@ const Top = () => {
   return (
     <Box position={"relative"}>
       {/* <Banner /> */}
-      <Intro />
+      <Hero />
       <Prologue />
       {/* <BuildUniqueWorld /> */}
       {/* <SimulationMode /> */}

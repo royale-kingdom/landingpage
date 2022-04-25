@@ -1,13 +1,22 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-const GoldenHeader = ({ children }: { children: ReactNode }) => {
-  return <H1>{children}</H1>;
+interface Props extends BaseStyleProps {
+  children: ReactNode;
+}
+
+const GoldenHeader = ({ children, align }: Props) => {
+  return <H1 align={align || "center"}>{children}</H1>;
 };
 
 export default GoldenHeader;
 
-const H1 = styled.h1`
+interface BaseStyleProps {
+  align?: "center" | "left" | "right" | "justify";
+}
+
+const H1 = styled.h1<BaseStyleProps>`
+  text-align: ${({ align }) => align};
   font-size: 40px;
   font-weight: 700;
   line-height: 64px;
