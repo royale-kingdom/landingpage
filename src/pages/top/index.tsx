@@ -10,15 +10,19 @@ import Roadmap from "./Roadmap";
 import Banner from "./Banner";
 
 import { Box } from "../../components/Box";
+import Intro from "./Intro";
+import Prologue from "./Prologue";
 
 // import logoBanner from "../../assets/images/landingpage/logo_banner.png";
 
 const Top = () => {
   return (
     <Box position={"relative"}>
-      <Banner />
-      <BuildUniqueWorld />
-      <SimulationMode />
+      {/* <Banner /> */}
+      <Intro />
+      <Prologue />
+      {/* <BuildUniqueWorld /> */}
+      {/* <SimulationMode /> */}
       <WarMode />
 
       {/* <PVP /> */}
