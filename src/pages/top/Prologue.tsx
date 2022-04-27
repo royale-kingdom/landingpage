@@ -3,7 +3,7 @@ import GoldenHeader from "../../components/GoldenHeader";
 import { Text } from "../../components/Typo/Text";
 
 import SparkImg from "../../assets/images/landingpage/prologue_spark.png";
-import GoldenLinekImg from "../../assets/images/landingpage/prologue_goldenline.png";
+// import GoldenLinekImg from "../../assets/images/landingpage/prologue_goldenline.png";
 import { Box } from "../../components/Box";
 
 const Prologue = () => {

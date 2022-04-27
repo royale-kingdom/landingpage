@@ -12,14 +12,15 @@ interface Styled extends BasePaddingProps, BaseMarginProps {
   width?: string;
   height?: string;
   display?: "block" | "inline-block" | "flex";
-  float?: "left" | "right";
+  alignItem?: string;
+  justifyContent?: string;
 }
 
 interface Props extends Styled {
   children: React.ReactNode;
 }
 
-export function Box(props: Props) {
+export function Flex(props: Props) {
   return <Div {...props}>{props.children}</Div>;
 }
 
@@ -27,8 +28,9 @@ const Div = styled.div<Styled>`
   ${BaseMargin};
   ${BasePadding};
   box-sizing: border-box;
-  display: ${({ display }) => display || "block"};
-  float: ${({ float }) => float || "unset"};
+  display: flex;
+  align-items: ${({ alignItem }) => alignItem || "flex-start"};
+  justify-content: ${({ justifyContent }) => justifyContent || "flex-start"};
   width: ${({ width }) => width || "initial"};
   height: ${({ height }) => height || "initial"};
 `;

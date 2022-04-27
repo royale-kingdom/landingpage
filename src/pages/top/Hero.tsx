@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-import GoldenHeader from "../../components/GoldenHeader";
+// import GoldenHeader from "../../components/GoldenHeader";
 import { BaseButton } from "../../components/Button";
 import { Box } from "../../components/Box";
 import { Text } from "../../components/Typo/Text";
 
-import MaleImg from "../../assets/images/landingpage/hero_male.png";
+// import MaleImg from "../../assets/images/landingpage/hero_male.png";
 import HeroDesktopLogo from "../../assets/images/landingpage/hero_logo_desktop.png";
 // import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop.png";
 import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop_final.png";
-import DragonImg from "../../assets/images/landingpage/hero_dragon.png";
-import PyramidImg from "../../assets/images/landingpage/hero_pyramid.png";
-import SparkImg from "../../assets/images/landingpage/hero_male.png";
+// import DragonImg from "../../assets/images/landingpage/hero_dragon.png";
+// import PyramidImg from "../../assets/images/landingpage/hero_pyramid.png";
+// import SparkImg from "../../assets/images/landingpage/hero_male.png";
 import Button2 from "../../assets/images/landingpage/Button2.svg";
 // import MaleImg from "../../assets/images/intro_male.png";
 
@@ -82,54 +82,54 @@ const Container = styled.div`
   background-position: 0 20%;
 `;
 
-const Background = styled.div`
-  background: green;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-`;
+// const Background = styled.div`
+//   background: green;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+// `;
 
-const Male = styled.div`
-  position: absolute;
-  z-index: 1;
-  background-image: url("${MaleImg}");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 45vw;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-`;
+// const Male = styled.div`
+//   position: absolute;
+//   z-index: 1;
+//   background-image: url("${MaleImg}");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   width: 45vw;
+//   height: 100%;
+//   bottom: 0;
+//   left: 0;
+// `;
 
-const Dragon = styled.div`
-  position: absolute;
-  z-index: 1;
-  background-image: url("${DragonImg}");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 45vw;
-  height: 100%;
-  bottom: 0;
-  right: 0;
-`;
+// const Dragon = styled.div`
+//   position: absolute;
+//   z-index: 1;
+//   background-image: url("${DragonImg}");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   width: 45vw;
+//   height: 100%;
+//   bottom: 0;
+//   right: 0;
+// `;
 
-const Pyramid = styled.div`
-  position: absolute;
-  transform: translate(-50%, 0);
-  z-index: 2;
-  width: 62.5vw;
-  height: 100%;
-  bottom: 0;
-  left: 50%;
-  background-image: url("${PyramidImg}");
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
+// const Pyramid = styled.div`
+//   position: absolute;
+//   transform: translate(-50%, 0);
+//   z-index: 2;
+//   width: 62.5vw;
+//   height: 100%;
+//   bottom: 0;
+//   left: 50%;
+//   background-image: url("${PyramidImg}");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// `;
 
-const Spark = styled.div`
-  position: absolute;
-`;
+// const Spark = styled.div`
+//   position: absolute;
+// `;
 
 const Logo = styled.div`
   position: absolute;
