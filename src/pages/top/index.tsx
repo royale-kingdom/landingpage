@@ -12,6 +12,7 @@ import Banner from "./Banner";
 import { Box } from "../../components/Box";
 import Hero from "./Hero";
 import Prologue from "./Prologue";
+import UniqueNFTAssets from "./UniqueNFTAssets";
 
 // import logoBanner from "../../assets/images/landingpage/logo_banner.png";
 
@@ -21,6 +22,8 @@ const Top = () => {
       {/* <Banner /> */}
       <Hero />
       <Prologue />
+
+      <UniqueNFTAssets />
       {/* <BuildUniqueWorld /> */}
       {/* <SimulationMode /> */}
       <WarMode />

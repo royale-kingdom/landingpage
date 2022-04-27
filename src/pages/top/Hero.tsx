@@ -72,13 +72,14 @@ export default Hero;
 // Ratio height: 900px; width: 1440px
 const Container = styled.div`
   width: 100vw;
-  height: 55.5vw;
+  height: 48vw;
   position: relative;
   z-index: 0;
   /* background: green; */
   background-image: url("${HeroDesktopImg}");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0 20%;
 `;
 
 const Background = styled.div`
