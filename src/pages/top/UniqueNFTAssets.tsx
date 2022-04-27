@@ -4,44 +4,49 @@ import { Flex } from "../../components/Flex";
 import GoldenHeader from "../../components/GoldenHeader";
 import { Text } from "../../components/Typo/Text";
 import { GoldenText } from "../../components/GoldenText";
-import UniquePropertiesPC from '../../assets/images/unique-nft-assets/unique-properties.svg'
-import UniquePropertiesMobile from '../../assets/images/unique-nft-assets/unique-properties-mobile.svg'
-import UniqueEquipmentPC from '../../assets/images/unique-nft-assets/unique-equipment.svg'
-import UniqueEquipmentMobile from '../../assets/images/unique-nft-assets/unique-equipment-mobile.svg'
-import UniqueWarPC from '../../assets/images/unique-nft-assets/unique-war.svg'
-import UniqueWarMobile from '../../assets/images/unique-nft-assets/unique-war-mobile.svg'
+import UniquePropertiesPC from "../../assets/images/unique-nft-assets/unique-properties.svg";
+import UniquePropertiesMobile from "../../assets/images/unique-nft-assets/unique-properties-mobile.svg";
+import UniqueEquipmentPC from "../../assets/images/unique-nft-assets/unique-equipment.svg";
+import UniqueEquipmentMobile from "../../assets/images/unique-nft-assets/unique-equipment-mobile.svg";
+import UniqueWarPC from "../../assets/images/unique-nft-assets/unique-war.svg";
+import UniqueWarMobile from "../../assets/images/unique-nft-assets/unique-war-mobile.svg";
+
+import background from "../../assets/images/landingpage/unique-nft-assets_background.jpeg";
 
 const UniqueNFTAssets = () => {
   return (
     <Container>
-      <GoldenHeader>Unique NFT Assets</GoldenHeader>
-      <Flex justifyContent="center">
-        <Box width="524px" paddingBottom="100px">
-          <Text justify="center">
-            An immersive, intense turn based strategy game with player driven choices. Empower by blockchain and NFT technology.
-          </Text>
-        </Box>
-      </Flex>
-      <Flex justifyContent="center">
-        <UniqueProperties>
-          <GoldenText>Unique Properties</GoldenText>
-          <Text justify="center" margin="0 24px">
-            Build kingdoms from scratch with unique people under your command
-          </Text>
-        </UniqueProperties>
-        <UniqueEquipment>
-          <GoldenText>Unique Equipment</GoldenText>
-          <Text justify="center" margin="0 24px">
-            Forge equipment with talent blacksmiths and explore your kingdom
-          </Text>
-        </UniqueEquipment>
-        <UniqueWar>
-          <GoldenText>Unique War</GoldenText>
-          <Text justify="center" margin="0 24px">
-            Lead kingdom to victory by tactical decisions in every turn
-          </Text>
-        </UniqueWar>
-      </Flex>
+      <Box paddingTop="272px">
+        <GoldenHeader>Unique NFT Assets</GoldenHeader>
+        <Flex justifyContent="center">
+          <Box width="524px" paddingBottom="100px">
+            <Text justify="center">
+              An immersive, intense turn based strategy game with player driven
+              choices. Empower by blockchain and NFT technology.
+            </Text>
+          </Box>
+        </Flex>
+        <Flex justifyContent="center">
+          <UniqueProperties>
+            <GoldenText>Unique Properties</GoldenText>
+            <Text justify="center" margin="0 24px">
+              Build kingdoms from scratch with unique people under your command
+            </Text>
+          </UniqueProperties>
+          <UniqueEquipment>
+            <GoldenText>Unique Equipment</GoldenText>
+            <Text justify="center" margin="0 24px">
+              Forge equipment with talent blacksmiths and explore your kingdom
+            </Text>
+          </UniqueEquipment>
+          <UniqueWar>
+            <GoldenText>Unique War</GoldenText>
+            <Text justify="center" margin="0 24px">
+              Lead kingdom to victory by tactical decisions in every turn
+            </Text>
+          </UniqueWar>
+        </Flex>
+      </Box>
     </Container>
   );
 };
@@ -49,9 +54,26 @@ const UniqueNFTAssets = () => {
 export default UniqueNFTAssets;
 
 const Container = styled.div`
+  position: relative;
   width: 100vw;
-  height: 55vw;
-  background: green;
+  height: 87vw;
+  background: url("${background}") no-repeat;
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 15vw;
+    transform: translate(0, -30%);
+    background: linear-gradient(
+      to bottom,
+      black 0%,
+      black 30%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
 `;
 
 const UniqueProperties = styled(Flex)`
