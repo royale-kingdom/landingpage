@@ -13,10 +13,12 @@ export default GoldenHeader;
 
 interface BaseStyleProps {
   align?: "center" | "left" | "right" | "justify";
+  margin?: string;
 }
 
 const H1 = styled.h1<BaseStyleProps>`
   text-align: ${({ align }) => align};
+  margin: ${({ margin }) => margin};
   font-size: 40px;
   font-weight: 700;
   line-height: 64px;

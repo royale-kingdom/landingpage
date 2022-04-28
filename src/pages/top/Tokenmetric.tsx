@@ -281,8 +281,10 @@ const Tokenmetric = () => {
     <>
       <div id={TOKENMETRIC} />
       <TokenmetricContainer>
-        <Box padding="24px 0">
-          <GoldenHeader align="center">Tokenmetric</GoldenHeader>
+        <Box>
+          <GoldenHeader margin="0" align="center">
+            Tokenmetric
+          </GoldenHeader>
         </Box>
 
         <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
@@ -445,7 +447,7 @@ const Tokenmetric = () => {
 export default Tokenmetric;
 
 const TokenmetricContainer = styled.div`
-  padding: 4rem 0;
+  padding: 0;
   box-sizing: border-box;
   position: relative;
   z-index: 0;

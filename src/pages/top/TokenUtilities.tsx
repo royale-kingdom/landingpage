@@ -64,7 +64,7 @@ const GoldCloud = styled.div`
   position: absolute;
   width: 100vw;
   height: 50vw;
-  bottom: 0%;
+  bottom: -10%;
   left: 0;
   z-index: -1;
   background: url(${CloudImage}) no-repeat;
@@ -74,7 +74,7 @@ const GoldCloud = styled.div`
 
 const TokenomicContainer = styled.div`
   width: 100vw; // 1440px
-  height: 85vw;
+  height: 80vw;
   position: relative;
   z-index: 1;
   @media (max-width: ${({ theme }) => theme.mobile}) {

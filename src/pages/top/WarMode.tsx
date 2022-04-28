@@ -56,7 +56,7 @@ const WarMode = () => (
     <Box
       position="absolute"
       width="572px"
-      top={"50%"}
+      top={"45%"}
       right={"90px"}
       sm={{ width: "90vw", left: "5vw", top: "25%" }}
     >
@@ -93,6 +93,7 @@ export default WarMode;
 const WarModeContainer = styled.div`
   width: 100vw; // 1440px
   height: 85vw;
+  /* height: 900px; */
   z-index: 1;
   position: relative;
   background: rgb(20, 20, 25);
