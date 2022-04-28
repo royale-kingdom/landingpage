@@ -26,12 +26,12 @@ import GoldenHeader from "../../components/GoldenHeader";
 
 const nextPlan = [
   {
-    quarter: "Q1/2022",
+    quarter: "Q2/2022",
     events: ["Landing Page", "IDO Event", "MarketPlace", "Simulation Mode"]
   },
 
   {
-    quarter: "Q2/2022",
+    quarter: "Q3/2022",
     events: [
       "Nation Feature",
       "PVE Mode",
@@ -41,15 +41,15 @@ const nextPlan = [
     ]
   },
   {
-    quarter: "Q3/2022",
+    quarter: "Q4/2022",
     events: ["PVP Mode", "Ranking System"]
   },
   {
-    quarter: "Q4/2022",
+    quarter: "Q1/2023",
     events: ["Tournament", "Nation War"]
   },
   {
-    quarter: "Q1/2023",
+    quarter: "Q2/2023",
     events: ["New Races"]
   }
 ];
@@ -160,7 +160,7 @@ const StartedMileStonePC = () => (
     </Box>
     <Box>
       <GoldenText fontSize="24px" lineHeight="38px" justify="center">
-        Q4/2021
+        Q1/2022
       </GoldenText>
     </Box>
     <Box>
