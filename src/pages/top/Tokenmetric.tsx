@@ -5,19 +5,21 @@ import styled from "styled-components";
 
 import { Box } from "../../components/Box";
 import { Flex, FlexItem } from "../../components/Grid";
-import { Heading } from "../../components/Typo/Heading";
+// import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
-import { Img } from "../../components/Img";
+// import { Img } from "../../components/Img";
 import classNames from "classnames";
-import SeparatorImage from "../../assets/images/landingpage/separator.png";
+// import SeparatorImage from "../../assets/images/landingpage/separator.png";
 import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { BaseButton } from "../../components/Button";
-import Button2 from "../../assets/images/landingpage/Button2.svg";
+import buttonImg from "../../assets/images/landingpage/tokenmetric_button.png";
 import TokenmetricBackground from "../../assets/images/landingpage/tokenmetric_background.svg";
 // import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
 import { TOKENMETRIC } from "../../constant/landingPageSection";
+import { GoldenLine } from "../../components/GoldlenLine";
+import GoldenHeader from "../../components/GoldenHeader";
 
 ChartJS.register(ArcElement, Tooltip);
 
@@ -280,18 +282,7 @@ const Tokenmetric = () => {
       <div id={TOKENMETRIC} />
       <TokenmetricContainer>
         <Box padding="24px 0">
-          <Heading
-            margin="0"
-            font={"Judson"}
-            size={"40px"}
-            lineHeight={"64px"}
-            align={"center"}
-            sm={{ size: "24px", lineHeight: "36px" }}
-            fontWeight="700"
-            background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-          >
-            Tokenmetric
-          </Heading>
+          <GoldenHeader align="center">Tokenmetric</GoldenHeader>
         </Box>
 
         <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
@@ -321,7 +312,7 @@ const Tokenmetric = () => {
                   )
                 }
                 style={{
-                  backgroundImage: `url(${Button2})`,
+                  backgroundImage: `url(${buttonImg})`,
                   backgroundRepeat: "no-repeat",
                   fontWeight: "bold",
                   display: "flex",
@@ -356,7 +347,7 @@ const Tokenmetric = () => {
                     >
                       <td>
                         <Text
-                          font="Lato"
+                          font="Red rose"
                           fontSize="18px"
                           lineHeight={"28px"}
                           fontWeight="700"
@@ -367,7 +358,7 @@ const Tokenmetric = () => {
                       </td>
                       <td>
                         <Text
-                          font="Lato"
+                          font="Titillium Web"
                           fontSize="18px"
                           lineHeight={"28px"}
                           width={"100%"}
@@ -381,7 +372,7 @@ const Tokenmetric = () => {
                       </td>
                       <td>
                         <Text
-                          font="Lato"
+                          font="Titillium Web"
                           fontSize="18px"
                           lineHeight={"28px"}
                           width={"100%"}
@@ -396,9 +387,14 @@ const Tokenmetric = () => {
                     </tr>
                   ))}
                   <tr>
+                    <td colSpan={3}>
+                      <GoldenLine />
+                    </td>
+                  </tr>
+                  <tr>
                     <td>
                       <Text
-                        font="Judson"
+                        font="Red rose"
                         fontSize="24px"
                         lineHeight={"38px"}
                         fontWeight="700"
@@ -417,7 +413,7 @@ const Tokenmetric = () => {
                         fontWeight={"700"}
                         sm={{ fontSize: "24px" }}
                         color="rgba(238, 226, 204, 1)"
-                        font="Judson"
+                        font="Red rose"
                       >
                         200.000.000
                       </Text>
@@ -425,7 +421,7 @@ const Tokenmetric = () => {
                   </tr>
                 </tbody>
               </TokenmetricTable>
-              <div
+              {/* <div
                 style={{
                   display: "flex",
                   justifyContent: "center"
@@ -438,7 +434,7 @@ const Tokenmetric = () => {
                   alt="Royale Kingdom"
                   sm={{ width: "90vw", height: "auto" }}
                 />
-              </div>
+              </div> */}
             </Box>
           </FlexItem>
         </Flex>
@@ -452,9 +448,8 @@ const TokenmetricContainer = styled.div`
   padding: 4rem 0;
   box-sizing: border-box;
   position: relative;
-  background: black;
   z-index: 0;
-  &::after {
+  /* &::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -467,5 +462,5 @@ const TokenmetricContainer = styled.div`
     opacity: 0.08;
     mix-blend-mode: difference;
     z-index: -1;
-  }
+  } */
 `;

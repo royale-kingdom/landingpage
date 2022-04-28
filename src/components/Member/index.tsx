@@ -28,7 +28,12 @@ const Member = ({ avatar, fullName, title }: MemberProps) => {
           width="100%"
           height="100%"
         >
-          <Box transform="rotate(-45deg)" position="absolute" width="100%" height="100%">
+          <Box
+            transform="rotate(-45deg)"
+            position="absolute"
+            width="100%"
+            height="100%"
+          >
             <Img src={memberSquircle} width="100%" height="100%" />
           </Box>
           <Img src={avatar} width="100%" height="100%" objectFit="cover" />
@@ -45,7 +50,7 @@ const Member = ({ avatar, fullName, title }: MemberProps) => {
           {fullName}
         </Text>
         <Text
-          font="Lato"
+          font="Titillium Web"
           fontSize="13px"
           lineHeight="20px"
           justify="center"

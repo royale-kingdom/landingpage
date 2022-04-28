@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Heading } from "../../components/Typo/Heading";
+// import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
 import { Box } from "../../components/Box";
 import { Img } from "../../components/Img";
@@ -11,6 +11,7 @@ import WarModeFire from "../../assets/images/landingpage/war_mode_fire.png";
 import WarModeBG from "../../assets/images/landingpage/war_mode_bg.png";
 
 import { WAR_MODE } from "../../constant/landingPageSection";
+import GoldenHeader from "../../components/GoldenHeader";
 
 const WarMode = () => (
   <WarModeContainer>
@@ -59,21 +60,11 @@ const WarMode = () => (
       right={"90px"}
       sm={{ width: "90vw", left: "5vw", top: "25%" }}
     >
-      <Heading
-        font={"Judson"}
-        size={"40px"}
-        lineHeight={"64px"}
-        sm={{ size: "24px", lineHeight: "36px" }}
-        fontWeight="700"
-        background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-      >
-        War Mode
-      </Heading>
+      <GoldenHeader align="left">War Mode</GoldenHeader>
 
       <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
-        font="Lato"
+        fontSize={"20px"}
+        lineHeight={"32px"}
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
@@ -81,10 +72,9 @@ const WarMode = () => (
         whose duty was to allocate more resources and people into their domain.
       </Text>
       <Text
-        fontSize={"18px"}
-        lineHeight={"28px"}
+        fontSize={"20px"}
+        lineHeight={"32px"}
         margin={"2rem 0"}
-        font="Lato"
         sm={{ fontSize: "14px", lineHeight: "20px" }}
         color="rgba(238, 226, 204, 0.82)"
       >
@@ -102,10 +92,10 @@ export default WarMode;
 
 const WarModeContainer = styled.div`
   width: 100vw; // 1440px
-  height: 100vw;
+  height: 85vw;
   z-index: 1;
   position: relative;
-
+  background: rgb(20, 20, 25);
   &::before {
     content: "";
     position: absolute;

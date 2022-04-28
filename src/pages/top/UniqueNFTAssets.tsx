@@ -28,20 +28,37 @@ const UniqueNFTAssets = () => {
         </Flex>
         <Flex justifyContent="center">
           <UniqueProperties>
-            <GoldenText>Unique Properties</GoldenText>
-            <Text justify="center" margin="0 24px">
+            <GoldenText fontSize="20px">Unique Properties</GoldenText>
+            <Text
+              justify="center"
+              fontSize="16px"
+              lineHeight="26px"
+              margin="0 12px"
+            >
               Build kingdoms from scratch with unique people under your command
             </Text>
           </UniqueProperties>
           <UniqueEquipment>
-            <GoldenText>Unique Equipment</GoldenText>
-            <Text justify="center" margin="0 24px">
+            <GoldenText fontSize="20px">Unique Equipment</GoldenText>
+            <Text
+              justify="center"
+              fontSize="16px"
+              lineHeight="26px"
+              margin="0 12px"
+            >
               Forge equipment with talent blacksmiths and explore your kingdom
             </Text>
           </UniqueEquipment>
           <UniqueWar>
-            <GoldenText>Unique War</GoldenText>
-            <Text justify="center" margin="0 24px">
+            <GoldenText fontSize="20px" font="Titillium Web">
+              Unique War
+            </GoldenText>
+            <Text
+              justify="center"
+              fontSize="16px"
+              lineHeight="26px"
+              margin="0 12px"
+            >
               Lead kingdom to victory by tactical decisions in every turn
             </Text>
           </UniqueWar>

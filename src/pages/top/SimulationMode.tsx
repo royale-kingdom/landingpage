@@ -75,7 +75,6 @@ const SimulationMode = () => {
         </Heading>
         <Text
           fontSize={"18px"}
-          font="Lato"
           lineHeight={"28px"}
           sm={{ fontSize: "14px", lineHeight: "20px" }}
           color="rgba(238, 226, 204, 0.82)"
@@ -86,7 +85,6 @@ const SimulationMode = () => {
           and to uphold the law.
         </Text>
         <Text
-          font="Lato"
           fontSize={"18px"}
           lineHeight={"28px"}
           margin={"2rem 0"}

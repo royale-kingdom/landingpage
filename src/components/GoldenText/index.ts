@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Text } from "../Typo/Text";
 
 export const GoldenText = styled(Text)`
-  font-family: "Judson";
+  /* font-family: "Judson"; */
   font-style: normal;
   font-weight: bold;
   /* background: linear-gradient(to bottom, #fff9d7, #e5c87f, #ba8623, #8f8466); */

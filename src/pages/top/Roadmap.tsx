@@ -1,23 +1,28 @@
 import styled from "styled-components";
 
-import { AlignCenter } from "./styled";
+// import { AlignCenter } from "./styled";
 import { Img } from "../../components/Img";
 import { Box } from "../../components/Box";
 import { Text } from "../../components/Typo/Text";
-import { Heading } from "../../components/Typo/Heading";
+// import { Heading } from "../../components/Typo/Heading";
 import { Container, Flex } from "../../components/Grid";
 import { RoadMapLine } from "../../components/RoadMapLine";
 import { GoldenText } from "../../components/GoldenText";
 
-import activeSquircle from "../../assets/images/landingpage/active_Squircle.svg";
-import squircle from "../../assets/images/landingpage/squircle.svg";
-import openedTreasure from "../../assets/images/landingpage/treasure_open.svg";
-import closedTreasure from "../../assets/images/landingpage/treasure_close.svg";
+// import activeSquircle from "../../assets/images/landingpage/active_Squircle.svg";
+// import squircle from "../../assets/images/landingpage/squircle.svg";
+import squircle from "../../assets/images/landingpage/roadmap_frame.svg";
+// import openedTreasure from "../../assets/images/landingpage/treasure_open.svg";
+// import closedTreasure from "../../assets/images/landingpage/treasure_close.svg";
+import openedTreasure from "../../assets/images/landingpage/roadmap_open.png";
+import closedTreasure from "../../assets/images/landingpage/roadmap_close.png";
+import start from "../../assets/images/landingpage/roadmap_start.png";
 import xSword from "../../assets/images/landingpage/sword_x.png";
-import goldenColumn from "../../assets/images/landingpage/golden_column.png";
+// import goldenColumn from "../../assets/images/landingpage/golden_column.png";
 import RoadMapBackground from "../../assets/images/landingpage/road_map_background.svg";
 
 import { ROADMAP } from "../../constant/landingPageSection";
+import GoldenHeader from "../../components/GoldenHeader";
 
 const nextPlan = [
   {
@@ -53,22 +58,22 @@ const nextPlan = [
  * display on PC
  * @returns
  */
-const OtherMileStonePC = () => {
+const MileStonePC = () => {
   return (
     <>
       {nextPlan.map(({ quarter, events }, idx) => (
         <Box key={idx}>
           <Box>
-            <Box height="94px" width="94px" margin="auto">
+            <Box height="112px" width="112px" margin="auto">
               {idx === 0 ? <OpenedTreasure /> : <ClosedTreasure />}
             </Box>
           </Box>
-          <Box marginBottom="32px">
+          {/* <Box marginBottom="32px">
             <Box height="12px" width="4px" margin="auto">
               <Img src={goldenColumn} height="100%" width="100%" />
             </Box>
-          </Box>
-          <Box>
+          </Box> */}
+          <Box marginTop="24px">
             <Box height="24px" width="24px" margin="auto">
               <Img src={xSword} height="100%" width="100%" />
             </Box>
@@ -82,7 +87,7 @@ const OtherMileStonePC = () => {
             {events.map((event, idx) => (
               <Text
                 key={idx}
-                font="Lato"
+                font="Titillium Web"
                 justify="center"
                 fontSize="16px"
                 lineHeight="26px"
@@ -120,7 +125,12 @@ const OtherMileStoneMobile = () => {
             </Box>
             <Box margin="30px 0 0 16px">
               {events.map((event, idx) => (
-                <Text key={idx} font="Lato" fontSize="14px" lineHeight="26px">
+                <Text
+                  key={idx}
+                  font="Titillium Web"
+                  fontSize="14px"
+                  lineHeight="26px"
+                >
                   {event}
                 </Text>
               ))}
@@ -136,12 +146,12 @@ const OtherMileStoneMobile = () => {
  * display on PC
  * @returns
  */
-const StartedOtherMileStonePC = () => (
+const StartedMileStonePC = () => (
   <Box>
-    <Box marginTop="64px" marginBottom="32px">
-      <GoldenText fontSize="24px" lineHeight="38px" justify="center">
-        {"STARTED"}
-      </GoldenText>
+    <Box marginBottom="24px">
+      <Box height="112px" width="112px" margin="auto">
+        <img src={start} alt="start" width="112px" height="112px" />
+      </Box>
     </Box>
     <Box>
       <Box height="24px" width="24px" margin="auto">
@@ -150,8 +160,13 @@ const StartedOtherMileStonePC = () => (
     </Box>
     <Box>
       <GoldenText fontSize="24px" lineHeight="38px" justify="center">
-        {"Q1/2022"}
+        Q4/2021
       </GoldenText>
+    </Box>
+    <Box>
+      <Text font="Red rose" justify="center" fontSize="20px" lineHeight="26px">
+        STARTED
+      </Text>
     </Box>
   </Box>
 );
@@ -188,19 +203,7 @@ const RoadMap = () => {
   return (
     <RoadmapContainer id={ROADMAP}>
       <Box>
-        <Heading
-          font={"Judson"}
-          margin={"0"}
-          size={"40px"}
-          lineHeight={"64px"}
-          fontWeight="700"
-          sm={{ size: "24px", lineHeight: "36px" }}
-          background={
-            "linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-          }
-        >
-          <AlignCenter>Roadmap</AlignCenter>
-        </Heading>
+        <GoldenHeader>Roadmap</GoldenHeader>
       </Box>
       <Container margin={"2rem 0"}>
         <Text
@@ -209,7 +212,7 @@ const RoadMap = () => {
           justify={"center"}
           width={"40vw"}
           margin={"0 auto"}
-          font="Lato"
+          font="Titillium Web"
           sm={{ fontSize: "14px", lineHeight: "20px", width: "80vw" }}
         >
           Awaiting for new world mysteries
@@ -221,17 +224,18 @@ const RoadMap = () => {
         <Box margin="64px 80px" position="relative">
           <Box
             height="8px"
-            width="100%"
+            width="85%"
             position="absolute"
-            top="108px"
-            left="0"
+            top="15%"
+            left="7.5%"
+            zIndex={-1}
           >
             <RoadMapLine />
           </Box>
           <Box>
             <Flex justifyContent="space-around">
-              <StartedOtherMileStonePC />
-              <OtherMileStonePC />
+              <StartedMileStonePC />
+              <MileStonePC />
             </Flex>
           </Box>
         </Box>
@@ -268,9 +272,9 @@ const RoadmapContainer = styled.div`
   padding: 12rem 0 8rem 0;
   box-sizing: border-box;
   position: relative;
-  background: black;
+  /* background: black; */
   z-index: 0;
-  &::after {
+  /* &::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -283,23 +287,24 @@ const RoadmapContainer = styled.div`
     opacity: 0.08;
     mix-blend-mode: difference;
     z-index: -1;
-  }
+  } */
 `;
 
 const OpenedTreasure = styled.div`
   display: inline-block;
-  width: 94px;
-  height: 94px;
-  background: url(${activeSquircle}) no-repeat;
+  width: 110px;
+  height: 110px;
+  background: url(${squircle}) no-repeat;
   background-size: contain;
   position: relative;
   &::after {
     content: "";
-    width: 108px;
-    height: 108px;
+    width: 112px;
+    height: 112px;
     position: absolute;
-    top: -9px;
-    left: -14px;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
     background: url(${openedTreasure}) no-repeat;
     background-size: contain;
     @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -318,17 +323,17 @@ const OpenedTreasure = styled.div`
 `;
 const ClosedTreasure = styled.div`
   display: inline-block;
-  width: 94px;
-  height: 94px;
+  width: 110px;
+  height: 110px;
   background: url(${squircle}) no-repeat;
   background-size: contain;
   position: relative;
   &::after {
     content: "";
-    width: 94px;
-    height: 94px;
+    width: 110px;
+    height: 110px;
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url(${closedTreasure}) no-repeat;

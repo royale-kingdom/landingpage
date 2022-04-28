@@ -22,13 +22,13 @@ import {
 
 const royaleKingdom = [
   { label: "Home", href: "/" },
-  { label: "Build Unique World", href: `#${BUILD_UNIQUE_WORLD}` },
-  { label: "Simulatioin Mode", href: `#${SIMULATION_MODE}` },
-  { label: "War Mode", href: `#${WAR_MODE}` },
-  { label: "Token Utilities", href: `#${TOKEN_UTILITIES}` },
+  { label: "NFT Assets", href: `#${BUILD_UNIQUE_WORLD}` },
+  { label: "Farming", href: `#${SIMULATION_MODE}` },
+  { label: "PVE", href: `#${WAR_MODE}` },
+  { label: "Tokenomic", href: `#${TOKEN_UTILITIES}` },
   { label: "Tokenmetric", href: `#${TOKENMETRIC}` },
   { label: "Roadmap", href: `#${ROADMAP}` },
-  { label: "Our Team", href: `#${OUR_TEAM}` }
+  { label: "Team", href: `#${OUR_TEAM}` }
 ];
 
 export function Footer() {
@@ -43,14 +43,19 @@ export function Footer() {
       >
         <Box width="340px">
           <Img src={footerLogo} height="32px" width="106px" />
-          <Text margin="0" fontSize="13px" lineHeight="21px" font="Lato">
+          <Text
+            margin="0"
+            fontSize="13px"
+            lineHeight="21px"
+            font="Titillium Web"
+          >
             My Kingdom - My Legacy.
           </Text>
           <Text
             margin="40px 0 0 0"
             fontSize="16px"
             lineHeight="26px"
-            font="Lato"
+            font="Titillium Web"
             color="#EEE2CC85"
           >
             © 2022 Royale Kingdom. All Rights Reserved.
@@ -63,7 +68,7 @@ export function Footer() {
             margin: "24px 0"
           }}
         >
-          <Text fontWeight="bold" font="Lato" lineHeight="2rem">
+          <Text fontWeight="bold" font="Titillium Web" lineHeight="2rem">
             Royale Kingdom
           </Text>
           <Box width={"100%"} sm={{ width: "240px" }}>
@@ -71,7 +76,7 @@ export function Footer() {
               {royaleKingdom.map((item, idx) => (
                 <a href={item.href} key={idx}>
                   <Text
-                    font="Lato"
+                    font="Titillium Web"
                     width="120px"
                     fontSize="13px"
                     lineHeight="32px"
@@ -90,14 +95,24 @@ export function Footer() {
             margin: "24px 0"
           }}
         >
-          <Text fontWeight="bold" font="Lato">
+          <Text fontWeight="bold" font="Titillium Web">
             Legal
           </Text>
           <Box>
-            <Text font="Lato" width="75px" fontSize="13px" lineHeight="32px">
+            <Text
+              font="Titillium Web"
+              width="75px"
+              fontSize="13px"
+              lineHeight="32px"
+            >
               Terms
             </Text>
-            <Text font="Lato" width="75px" fontSize="13px" lineHeight="32px">
+            <Text
+              font="Titillium Web"
+              width="75px"
+              fontSize="13px"
+              lineHeight="32px"
+            >
               Privacy
             </Text>
           </Box>
@@ -110,7 +125,7 @@ export function Footer() {
           }}
         >
           <Box margin={"0 0 16px 0"}>
-            <Text fontWeight="bold" font="Lato" lineHeight="2rem">
+            <Text fontWeight="bold" font="Titillium Web" lineHeight="2rem">
               Follow
             </Text>
           </Box>
@@ -132,17 +147,17 @@ export function Footer() {
 }
 
 const FooterContainer = styled.div`
-  background: #0b0808;
+  background: rgb(11, 8, 8);
   padding: 64px 80px;
-  padding-top: 300px;
+  padding-top: 100px;
   position: relative;
   z-index: 0;
-   @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 32px 24px;
     padding-top: 164px;
   }
 
-  &::before {
+  /* &::before {
     content: "";
     position: absolute;
     height: 400px;
@@ -150,6 +165,23 @@ const FooterContainer = styled.div`
     top: -160px;
     left: 0;
     background: linear-gradient(to top, rgba(0,0,0,0) black rgba(0,0,0,0))
+    z-index: 1;
+  } */
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    transform: translate(0, -50%);
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      black 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
     z-index: 1;
   }
 `;

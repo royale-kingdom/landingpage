@@ -47,7 +47,6 @@ const UniqueItem = ({
           {title}
         </GoldenText>
         <Text
-          font="Lato"
           width={"90%"}
           fontSize="16px"
           lineHeight="26px"
@@ -84,7 +83,6 @@ const BuildUniqueWorld = () => (
         <Text
           fontSize={"18px"}
           lineHeight={"28px"}
-          font="Lato"
           sm={{ fontSize: "16px", lineHeight: "24px", justify: "center" }}
           color="rgba(238, 226, 204, 0.82)"
         >
@@ -94,7 +92,6 @@ const BuildUniqueWorld = () => (
         <Text
           fontSize={"18px"}
           lineHeight={"28px"}
-          font="Lato"
           sm={{ fontSize: "16px", lineHeight: "24px", justify: "center" }}
           color="rgba(238, 226, 204, 0.82)"
         >

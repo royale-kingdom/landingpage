@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { StyledImage } from "./styled";
 import { Text } from "../../components/Typo/Text";
-import { Heading } from "../../components/Typo/Heading";
+// import { Heading } from "../../components/Typo/Heading";
 import { Box } from "../../components/Box";
 
 import TokenomicCover from "../../assets/images/landingpage/token-util.png";
@@ -11,10 +11,11 @@ import StarBackground from "../../assets/images/landingpage/stars_background_1.p
 import CloudImage from "../../assets/images/landingpage/cloud_image.png";
 
 import { TOKEN_UTILITIES } from "../../constant/landingPageSection";
+import GoldenHeader from "../../components/GoldenHeader";
 
 const TokenUtilities = () => (
   <TokenomicContainer id={TOKEN_UTILITIES}>
-    <Box paddingTop="24vw" sm={{ padding: "50vw 0 0 0" }}>
+    <Box sm={{ padding: "50vw 0 0 0" }} zIndex={2}>
       <Box
         height="23vw"
         width="23vw"
@@ -29,20 +30,9 @@ const TokenUtilities = () => (
         />
       </Box>
       <Box width="70vw" margin="0 auto" sm={{ width: "100vw" }}>
-        <Heading
-          font={"Judson"}
-          size={"40px"}
-          lineHeight={"64px"}
-          fontWeight="700"
-          align="center"
-          background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-          sm={{ size: "24px", lineHeight: "36px" }}
-        >
-          Token Utilities
-        </Heading>
+        <GoldenHeader>Token Utilities</GoldenHeader>
         <Text
           margin="auto"
-          font="Lato"
           fontWeight="500"
           fontSize={"18px"}
           lineHeight={"28px"}
@@ -84,9 +74,9 @@ const GoldCloud = styled.div`
 
 const TokenomicContainer = styled.div`
   width: 100vw; // 1440px
-  height: 117vw; // 1694px
+  height: 85vw;
   position: relative;
-  z-index: 0;
+  z-index: 1;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 210vw;
   }
@@ -97,9 +87,10 @@ const TokenomicContainer = styled.div`
     height: 100%;
     top: 0;
     z-index: -1;
-    background: url(${StarBackground}) no-repeat;
-    background-size: contain;
-    mix-blend-mode: difference;
+    background: rgb(20, 20, 25);
+    /* background: url(${StarBackground}) no-repeat; */
+    /* background-size: contain; */
+    /* mix-blend-mode: difference; */
     opacity: 0.08;
   }
   &::after {

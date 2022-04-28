@@ -34,7 +34,7 @@ body {
   box-sizing: border-box;
   position: relative;
   /* background: #1d1d1d;  */
-  background: black; 
+  background: rgb(20, 20, 25); 
   /* max-width: 1440px; */
   overflow-x: hidden;
   /* &::after {

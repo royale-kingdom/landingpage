@@ -1,35 +1,26 @@
-import { AlignCenter } from "./styled";
-import { Heading } from "../../components/Typo/Heading";
+// import { AlignCenter } from "./styled";
+// import { Heading } from "../../components/Typo/Heading";
 // import { Container, Flex, FlexItem } from "../../components/Grid";
 // import Squircle from "../../components/Squircle";
 import styled from "styled-components";
 import { Text } from "../../components/Typo/Text";
 import { Box } from "../../components/Box";
 import { Flex } from "../../components/Grid";
-import Member from "../../components/Member";
+// import Member from "../../components/Member";
 import { Img } from "../../components/Img";
 import background from "../../assets/images/landingpage/team_background.png";
-import shootingStar from "../../assets/images/landingpage/our_team_shooting_star.png";
+// import shootingStar from "../../assets/images/landingpage/our_team_shooting_star.png";
 import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
-import LongNguyen from "../../assets/images/team/Long-Nguyen.png";
-import NhatNguyen from "../../assets/images/team/Nhat-Nguyen.png";
-import AnNguyen from "../../assets/images/team/An-Nguyen.png";
+import LongNguyen from "../../assets/images/landingpage/our-team_longnguyen.png";
+import NhatNguyen from "../../assets/images/landingpage/our-team_nhatnguyen.png";
+import AnNguyen from "../../assets/images/landingpage/our-team_annguyen.png";
 import { OUR_TEAM } from "../../constant/landingPageSection";
+import GoldenHeader from "../../components/GoldenHeader";
 
 const OurTeam = () => (
   <OurTeamContainer id={OUR_TEAM}>
     <Box paddingTop="250px" sm={{ padding: "120px 0 40px 0" }}>
-      <Heading
-        font={"Judson"}
-        size={"40px"}
-        margin={"0"}
-        lineHeight={"64px"}
-        fontWeight="700"
-        sm={{ size: "24px", lineHeight: "36px" }}
-        background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-      >
-        <AlignCenter>Our team</AlignCenter>
-      </Heading>
+      <GoldenHeader>Our Team</GoldenHeader>
       <Text
         fontSize={"18px"}
         lineHeight={"28px"}
@@ -37,7 +28,6 @@ const OurTeam = () => (
         width={"572px"}
         margin={"0 auto"}
         sm={{ fontSize: "14px", lineHeight: "20px", width: "80vw" }}
-        font={"Lato"}
       >
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why
@@ -47,7 +37,82 @@ const OurTeam = () => (
 
     <Box marginTop="64px" sm={{ margin: "32px 0 0 0" }}>
       <Flex justifyContent="center">
-        <Member
+        <Box margin="0 32px">
+          <Box>
+            <img src={LongNguyen} alt="Long Nguyen" />
+          </Box>
+          <Box>
+            <Text
+              justify="center"
+              color="rgba(250, 250, 252, 0.52)"
+              fontSize="20px"
+              lineHeight="32px"
+            >
+              Chief of Operation
+            </Text>
+            <Text
+              font="Red rose"
+              fontWeight="400"
+              justify="center"
+              color="white"
+              fontSize="20px"
+              lineHeight="32px"
+            >
+              Long Nguyen
+            </Text>
+          </Box>
+        </Box>
+        <Box margin="0 32px">
+          <Box>
+            <img src={NhatNguyen} alt="Nhat Nguyen" />
+          </Box>
+          <Box>
+            <Text
+              justify="center"
+              color="rgba(250, 250, 252, 0.52)"
+              fontSize="20px"
+              lineHeight="32px"
+            >
+              Chief of Tech
+            </Text>
+            <Text
+              font="Red rose"
+              fontWeight="400"
+              justify="center"
+              color="white"
+              fontSize="20px"
+              lineHeight="32px"
+            >
+              Nhat Nguyen
+            </Text>
+          </Box>
+        </Box>
+        <Box margin="0 32px">
+          <Box>
+            <img src={AnNguyen} alt="An Nguyen" />
+          </Box>
+          <Box>
+            <Text
+              justify="center"
+              color="rgba(250, 250, 252, 0.52)"
+              fontSize="20px"
+              lineHeight="32px"
+            >
+              Art Director
+            </Text>
+            <Text
+              font="Red rose"
+              fontWeight="400"
+              justify="center"
+              color="white"
+              fontSize="20px"
+              lineHeight="32px"
+            >
+              An Nguyen
+            </Text>
+          </Box>
+        </Box>
+        {/* <Member
           fullName="Long Nguyen"
           title="CHIEF OF OPERATION"
           avatar={LongNguyen}
@@ -57,11 +122,7 @@ const OurTeam = () => (
           title="CHIEF OF TECH"
           avatar={NhatNguyen}
         />
-        <Member
-          fullName="An Nguyen"
-          title="ART DIRECTOR"
-          avatar={AnNguyen}
-        />
+        <Member fullName="An Nguyen" title="ART DIRECTOR" avatar={AnNguyen} /> */}
       </Flex>
       {/* <Flex justifyContent="center">
         <Member fullName="Hang Nguyen" title="2D ARTIST" />
@@ -70,7 +131,7 @@ const OurTeam = () => (
         <Member fullName="Louis Do" title="SMC DEVELOPER" />
       </Flex> */}
     </Box>
-    <Box
+    {/* <Box
       position="absolute"
       width="500px"
       height="420px"
@@ -85,7 +146,7 @@ const OurTeam = () => (
         height={"100%"}
         style={{ mixBlendMode: "screen" }}
       />
-    </Box>
+    </Box> */}
     <BottomImg>
       <Img src={background} width="100%" height="100%" />
     </BottomImg>
@@ -108,24 +169,14 @@ const BottomImg = styled.div`
 `;
 
 const OurTeamContainer = styled.div`
-  height: 130vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 115vh;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: black;
-    z-index: -6;
-  }
-  &::after {
+  /*  &::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -138,5 +189,5 @@ const OurTeamContainer = styled.div`
     mix-blend-mode: difference;
     opacity: 0.1;
     z-index: -5;
-  }
+  } */
 `;

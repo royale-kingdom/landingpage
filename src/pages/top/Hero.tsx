@@ -30,7 +30,7 @@ const Hero = () => {
         position={"absolute"}
         transform="translate(-50%, 50%)"
         left="50%"
-        bottom="15%"
+        bottom="20%"
       >
         <BaseButton
           style={{
@@ -72,7 +72,7 @@ export default Hero;
 // Ratio height: 900px; width: 1440px
 const Container = styled.div`
   width: 100vw;
-  height: 48vw;
+  height: 55vw;
   position: relative;
   z-index: 0;
   /* background: green; */
@@ -82,61 +82,12 @@ const Container = styled.div`
   background-position: 0 20%;
 `;
 
-// const Background = styled.div`
-//   background: green;
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 1;
-// `;
-
-// const Male = styled.div`
-//   position: absolute;
-//   z-index: 1;
-//   background-image: url("${MaleImg}");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   width: 45vw;
-//   height: 100%;
-//   bottom: 0;
-//   left: 0;
-// `;
-
-// const Dragon = styled.div`
-//   position: absolute;
-//   z-index: 1;
-//   background-image: url("${DragonImg}");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   width: 45vw;
-//   height: 100%;
-//   bottom: 0;
-//   right: 0;
-// `;
-
-// const Pyramid = styled.div`
-//   position: absolute;
-//   transform: translate(-50%, 0);
-//   z-index: 2;
-//   width: 62.5vw;
-//   height: 100%;
-//   bottom: 0;
-//   left: 50%;
-//   background-image: url("${PyramidImg}");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// `;
-
-// const Spark = styled.div`
-//   position: absolute;
-// `;
-
 const Logo = styled.div`
   position: absolute;
   z-index: 2;
   width: 43.8vw;
   height: 19.6vw;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, 0);
   background-image: url("${HeroDesktopLogo}");
