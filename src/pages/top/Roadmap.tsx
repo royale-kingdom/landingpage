@@ -26,12 +26,12 @@ import GoldenHeader from "../../components/GoldenHeader";
 
 const nextPlan = [
   {
-    quarter: "Q2/2022",
+    quarter: "Q1/2022",
     events: ["Landing Page", "IDO Event", "MarketPlace", "Simulation Mode"]
   },
 
   {
-    quarter: "Q3/2022",
+    quarter: "Q2/2022",
     events: [
       "Nation Feature",
       "PVE Mode",
@@ -41,15 +41,15 @@ const nextPlan = [
     ]
   },
   {
-    quarter: "Q4/2022",
-    events: ["Farm Mode (v2)", "Ranking System"]
+    quarter: "Q3/2022",
+    events: ["PVP Mode", "Ranking System"]
   },
   {
-    quarter: "Q1/2023",
+    quarter: "Q4/2022",
     events: ["Tournament", "Nation War"]
   },
   {
-    quarter: "Q2/2023",
+    quarter: "Q1/2023",
     events: ["New Races"]
   }
 ];

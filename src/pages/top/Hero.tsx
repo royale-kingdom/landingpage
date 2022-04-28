@@ -59,7 +59,9 @@ const Hero = () => {
             justify="center"
             sm={{ fontSize: "10px" }}
           >
-            Go to MarketPlace
+            <a href="https://marketplace-dev.royalekingdom.com/marketplace">
+              Go to Marketplace
+            </a>
           </Text>
         </Box>
       </Box>
@@ -72,7 +74,7 @@ export default Hero;
 // Ratio height: 900px; width: 1440px
 const Container = styled.div`
   width: 100vw;
-  height: 55vw;
+  height: 48vw;
   position: relative;
   z-index: 0;
   /* background: green; */

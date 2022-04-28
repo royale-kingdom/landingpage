@@ -19,9 +19,9 @@ import GoldenHeader from "../../components/GoldenHeader";
 
 const OurTeam = () => (
   <OurTeamContainer id={OUR_TEAM}>
-    <Box paddingTop="250px" sm={{ padding: "120px 0 40px 0" }}>
+    <Box paddingTop="100px" sm={{ padding: "120px 0 40px 0" }}>
       <GoldenHeader>Our Team</GoldenHeader>
-      <Text
+      {/* <Text
         fontSize={"18px"}
         lineHeight={"28px"}
         justify={"center"}
@@ -32,7 +32,7 @@ const OurTeam = () => (
         When you design, you have to draw on your own fucking life experiences.
         If it’s not something you would want to read/look at/use then why
         fucking bother? Form follows fucking function.
-      </Text>
+      </Text> */}
     </Box>
 
     <Box marginTop="64px" sm={{ margin: "32px 0 0 0" }}>

@@ -19,7 +19,7 @@ const UniqueNFTAssets = () => {
       <Box paddingTop="272px">
         <GoldenHeader>Unique NFT Assets</GoldenHeader>
         <Flex justifyContent="center">
-          <Box width="524px" paddingBottom="100px">
+          <Box width="524px" paddingBottom="80px">
             <Text justify="center">
               An immersive, intense turn based strategy game with player driven
               choices. Empower by blockchain and NFT technology.
@@ -73,7 +73,7 @@ export default UniqueNFTAssets;
 const Container = styled.div`
   position: relative;
   width: 100vw;
-  height: 87vw;
+  height: 70vw;
   background: url("${background}") no-repeat;
   background-size: cover;
   &::after {
@@ -82,7 +82,7 @@ const Container = styled.div`
     top: 0;
     left: 0;
     width: 100vw;
-    height: 15vw;
+    height: 200px;
     transform: translate(0, -30%);
     background: linear-gradient(
       to bottom,
@@ -103,6 +103,7 @@ const UniqueProperties = styled(Flex)`
   justify-content: flex-end;
   flex-direction: column;
   padding-bottom: 45px;
+  z-index: 1;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     background-image: url(${UniquePropertiesMobile});
@@ -124,7 +125,7 @@ const UniqueEquipment = styled(Flex)`
   justify-content: flex-end;
   flex-direction: column;
   padding-bottom: 45px;
-
+  z-index: 1;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     background-image: url(${UniqueEquipmentMobile});
     width: 366px;
@@ -145,7 +146,7 @@ const UniqueWar = styled(Flex)`
   justify-content: flex-end;
   flex-direction: column;
   padding-bottom: 45px;
-
+  z-index: 1;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     background-image: url(${UniqueWarMobile});
     width: 366px;
