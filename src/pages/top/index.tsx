@@ -20,23 +20,15 @@ import Simulation from "./Simulation";
 const Top = () => {
   return (
     <Box position={"relative"}>
-      {/* <Banner /> */}
       <Hero />
       <Prologue />
-
       <UniqueNFTAssets />
-      {/* <BuildUniqueWorld /> */}
-      {/* <SimulationMode /> */}
-      <Simulation />
-      <WarMode />
-
-      {/* <PVP /> */}
-
-      <TokenUtilities />
-      <Tokenmetric />
-
-      <Roadmap />
-      <OurTeam />
+      {/* <Simulation /> */}
+      {/* <WarMode /> */}
+      {/* <TokenUtilities /> */}
+      {/* <Tokenmetric /> */}
+      {/* <Roadmap /> */}
+      {/* <OurTeam /> */}
     </Box>
   );
 };

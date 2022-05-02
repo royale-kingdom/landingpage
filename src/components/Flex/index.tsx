@@ -14,6 +14,7 @@ interface Styled extends BasePaddingProps, BaseMarginProps {
   display?: "block" | "inline-block" | "flex";
   alignItem?: string;
   justifyContent?: string;
+  direction?: "column" | "row";
 }
 
 interface Props extends Styled {
@@ -29,6 +30,7 @@ const Div = styled.div<Styled>`
   ${BasePadding};
   box-sizing: border-box;
   display: flex;
+  flex-direction: ${({ direction }) => direction};
   align-items: ${({ alignItem }) => alignItem || "flex-start"};
   justify-content: ${({ justifyContent }) => justifyContent || "flex-start"};
   width: ${({ width }) => width || "initial"};

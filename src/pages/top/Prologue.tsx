@@ -3,7 +3,7 @@ import GoldenHeader from "../../components/GoldenHeader";
 import { Text } from "../../components/Typo/Text";
 
 import SparkImg from "../../assets/images/landingpage/prologue_spark.png";
-// import GoldenLinekImg from "../../assets/images/landingpage/prologue_goldenline.png";
+import SparkMobile from "../../assets/images/landingpage/prologue_spark-mobile.png";
 import { Box } from "../../components/Box";
 import { GoldenLine } from "../../components/GoldlenLine";
 
@@ -15,7 +15,7 @@ const Prologue = () => {
         <Box>
           <GoldenHeader align="center">Prologue</GoldenHeader>
         </Box>
-        <Box marginBottom="32px">
+        <Box marginBottom="32px" sm={{ margin: "0 0 32px 0" }}>
           <GoldenLine />
         </Box>
         <Box>
@@ -24,6 +24,7 @@ const Prologue = () => {
             lineHeight="32px"
             justify="center"
             margin="0 0 32px 0"
+            sm={{ fontSize: "16px", lineHeight: "26px" }}
           >
             A new king had to swear an oath to fulfill the responsibilities of a
             monarch.
@@ -33,13 +34,19 @@ const Prologue = () => {
             lineHeight="32px"
             justify="center"
             margin="0 0 32px 0"
+            sm={{ fontSize: "16px", lineHeight: "26px" }}
           >
             Set in Europe during the Middle Ages, with traditions of monsters,
             dragons, and witches. Players will take on the role of the ruler to
             control their realm, defending it from natural calamities and
             creatures.
           </Text>
-          <Text fontSize="20px" lineHeight="32px" justify="center">
+          <Text
+            fontSize="20px"
+            lineHeight="32px"
+            justify="center"
+            sm={{ fontSize: "16px", lineHeight: "26px" }}
+          >
             During gameplay, all game elements may be manufactured in accordance
             to players decisions pondering the destiny of unique equipments,
             kingdoms, and wars
@@ -76,12 +83,22 @@ const Container = styled.div`
   position: relative;
   z-index: 0;
   background: black;
+  @media (max-width: 768px) {
+    height: 95vh;
+    padding-top: 32px;
+  }
 `;
 
 const Content = styled.div`
   padding: 10% 0%;
   margin: 0 20%;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    padding: 0 24px;
+    margin: 0;
+    padding-top: 10%;
+  }
 `;
 
 const Spark = styled.div`
@@ -93,4 +110,12 @@ const Spark = styled.div`
   background: url("${SparkImg}") no-repeat;
   background-size: cover;
   z-index: 1;
+  @media (max-width: 768px) {
+    background: url("${SparkMobile}") no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    top: -11%;
+    z-index: 3;
+  }
 `;

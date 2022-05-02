@@ -7,6 +7,8 @@ interface BaseButtonProps extends BaseMarginProps, BasePaddingProps {
   color?: string;
   fontSize?: string;
   padding?: string;
+  width?: string;
+  height?: string;
 }
 
 interface ButtonProps extends BaseButtonProps {
@@ -23,7 +25,9 @@ export const BaseButton = styled.div<ButtonProps>`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     font-size: ${({ sm }) => sm?.fontSize || "1rem"};
     padding: ${({ sm }) => sm?.padding || null};
-  };
+    width: ${({ sm }) => sm?.width};
+    height: ${({ sm }) => sm?.height};
+  }
   &:hover {
     cursor: pointer;
   }

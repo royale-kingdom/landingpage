@@ -33,6 +33,10 @@ const H1 = styled.h1<BaseStyleProps>`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-
   text-shadow: 0px 0px 24.8863px rgba(255, 221, 64, 0.25);
+  @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+  }
 `;

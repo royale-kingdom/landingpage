@@ -4,8 +4,8 @@ export const HeaderLogo = styled.img`
   width: 110px;
   height: 48px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 82px;
-    height: 36px;
+    /* width: 82px;
+    height: 36px; */
   }
 `;
 
@@ -35,8 +35,9 @@ export const StyledHeader = styled.div`
   align-items: center;
   padding: 0 80px 0px 40px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    height: 48px;
+    /* height: 48px; */
     padding: 0;
+    padding: 0 24px 0 12px;
   }
 
   &::after {
@@ -72,5 +73,9 @@ export const StyledNavLink = styled.span`
 
   a:visited {
     color: inherit;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
   }
 `;

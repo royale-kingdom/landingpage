@@ -1,29 +1,17 @@
 import styled from "styled-components";
 
-// import GoldenHeader from "../../components/GoldenHeader";
 import { BaseButton } from "../../components/Button";
 import { Box } from "../../components/Box";
 import { Text } from "../../components/Typo/Text";
 
-// import MaleImg from "../../assets/images/landingpage/hero_male.png";
 import HeroDesktopLogo from "../../assets/images/landingpage/hero_logo_desktop.png";
-// import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop.png";
-import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop_final.png";
-// import DragonImg from "../../assets/images/landingpage/hero_dragon.png";
-// import PyramidImg from "../../assets/images/landingpage/hero_pyramid.png";
-// import SparkImg from "../../assets/images/landingpage/hero_male.png";
+import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop.jpeg";
+import HeroMobileImg from "../../assets/images/landingpage/hero_mobile.jpeg";
 import Button2 from "../../assets/images/landingpage/Button2.svg";
-// import MaleImg from "../../assets/images/intro_male.png";
 
 const Hero = () => {
   return (
     <Container>
-      {/* <GoldenHeader>Prologue</GoldenHeader> */}
-      {/* <Male />
-      <Dragon />
-
-      <Pyramid /> */}
-
       <Logo />
 
       <Box
@@ -31,6 +19,7 @@ const Hero = () => {
         transform="translate(-50%, 50%)"
         left="50%"
         bottom="20%"
+        sm={{ bottom: "unset", top: "55%" }}
       >
         <BaseButton
           style={{
@@ -45,10 +34,15 @@ const Hero = () => {
           }}
           fontSize="24px"
           padding="25px 40px"
-          sm={{ fontSize: "1.8rem", padding: "2rem 1rem" }}
+          sm={{
+            fontSize: "1.8rem",
+            padding: "0 1rem",
+            width: "236px",
+            height: "74px"
+          }}
           color="rgba(245, 237, 222, 1)"
         >
-          <Text fontWeight="bold" padding="0 16px" sm={{ fontSize: "10px" }}>
+          <Text fontWeight="bold" padding="0 16px" sm={{ fontSize: "14px" }}>
             ENTER MY KINGDOM
           </Text>
         </BaseButton>
@@ -57,7 +51,7 @@ const Hero = () => {
             fontWeight="bold"
             padding="0 16px"
             justify="center"
-            sm={{ fontSize: "10px" }}
+            sm={{ fontSize: "14px" }}
           >
             <a href="https://marketplace-dev.royalekingdom.com/marketplace">
               Go to Marketplace
@@ -82,6 +76,10 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 20%;
+  @media (max-width: 768px) {
+    background-image: url("${HeroMobileImg}");
+    height: 100vh;
+  }
 `;
 
 const Logo = styled.div`
@@ -95,4 +93,9 @@ const Logo = styled.div`
   background-image: url("${HeroDesktopLogo}");
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: 768px) {
+    width: 380px;
+    height: 172px;
+    top: 35%;
+  }
 `;

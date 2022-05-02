@@ -16,7 +16,7 @@ import background from "../../assets/images/landingpage/unique-nft-assets_backgr
 const UniqueNFTAssets = () => {
   return (
     <Container>
-      <Box paddingTop="272px">
+      <Box paddingTop="180px">
         <GoldenHeader>Unique NFT Assets</GoldenHeader>
         <Flex justifyContent="center">
           <Box width="524px" paddingBottom="80px">
@@ -26,7 +26,7 @@ const UniqueNFTAssets = () => {
             </Text>
           </Box>
         </Flex>
-        <Flex justifyContent="center">
+        {/* <Flex justifyContent="center">
           <UniqueProperties>
             <GoldenText fontSize="20px">Unique Properties</GoldenText>
             <Text
@@ -62,7 +62,7 @@ const UniqueNFTAssets = () => {
               Lead kingdom to victory by tactical decisions in every turn
             </Text>
           </UniqueWar>
-        </Flex>
+        </Flex> */}
       </Box>
     </Container>
   );
@@ -90,6 +90,9 @@ const Container = styled.div`
       black 30%,
       rgba(0, 0, 0, 0) 100%
     );
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: 100vh;
   }
 `;
 
