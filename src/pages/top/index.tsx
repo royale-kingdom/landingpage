@@ -23,12 +23,12 @@ const Top = () => {
       <Hero />
       <Prologue />
       <UniqueNFTAssets />
-      {/* <Simulation /> */}
-      {/* <WarMode /> */}
-      {/* <TokenUtilities /> */}
-      {/* <Tokenmetric /> */}
-      {/* <Roadmap /> */}
-      {/* <OurTeam /> */}
+      <Simulation />
+      <WarMode />
+      <TokenUtilities />
+      <Tokenmetric />
+      <Roadmap />
+      <OurTeam />
     </Box>
   );
 };

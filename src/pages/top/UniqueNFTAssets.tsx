@@ -26,7 +26,7 @@ const UniqueNFTAssets = () => {
             </Text>
           </Box>
         </Flex>
-        {/* <Flex justifyContent="center">
+        <Flex justifyContent="center">
           <UniqueProperties>
             <GoldenText fontSize="20px">Unique Properties</GoldenText>
             <Text
@@ -62,7 +62,7 @@ const UniqueNFTAssets = () => {
               Lead kingdom to victory by tactical decisions in every turn
             </Text>
           </UniqueWar>
-        </Flex> */}
+        </Flex>
       </Box>
     </Container>
   );
