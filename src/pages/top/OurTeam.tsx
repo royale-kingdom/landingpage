@@ -39,7 +39,12 @@ const OurTeam = () => (
       <Flex justifyContent="center">
         <Box margin="0 32px">
           <Box>
-            <img src={LongNguyen} alt="Long Nguyen" />
+            <img
+              src={LongNguyen}
+              alt="Long Nguyen"
+              width="232px"
+              height="232px"
+            />
           </Box>
           <Box>
             <Text
@@ -64,7 +69,12 @@ const OurTeam = () => (
         </Box>
         <Box margin="0 32px">
           <Box>
-            <img src={NhatNguyen} alt="Nhat Nguyen" />
+            <img
+              src={NhatNguyen}
+              alt="Nhat Nguyen"
+              width="232px"
+              height="232px"
+            />
           </Box>
           <Box>
             <Text
@@ -89,7 +99,7 @@ const OurTeam = () => (
         </Box>
         <Box margin="0 32px">
           <Box>
-            <img src={AnNguyen} alt="An Nguyen" />
+            <img src={AnNguyen} alt="An Nguyen" width="232px" height="232px" />
           </Box>
           <Box>
             <Text

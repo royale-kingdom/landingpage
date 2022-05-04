@@ -8,7 +8,7 @@ import styled from "styled-components/macro";
 import { BasePadding, BasePaddingProps } from "../Styles/Padding";
 import { BaseMargin, BaseMarginProps } from "../Styles/Margin";
 
-interface Styled extends BasePaddingProps, BaseMarginProps {
+interface BaseProps extends BasePaddingProps, BaseMarginProps {
   width?: string;
   height?: string;
   display?: "block" | "inline-block" | "flex";
@@ -17,15 +17,20 @@ interface Styled extends BasePaddingProps, BaseMarginProps {
   direction?: "column" | "row";
 }
 
-interface Props extends Styled {
+interface Props extends BaseProps {
   children: React.ReactNode;
+  sm?: BaseProps;
 }
 
 export function Flex(props: Props) {
   return <Div {...props}>{props.children}</Div>;
 }
 
-const Div = styled.div<Styled>`
+interface StyledProps extends BaseProps {
+  sm?: BaseProps;
+}
+
+const Div = styled.div<StyledProps>`
   ${BaseMargin};
   ${BasePadding};
   box-sizing: border-box;
@@ -35,4 +40,8 @@ const Div = styled.div<Styled>`
   justify-content: ${({ justifyContent }) => justifyContent || "flex-start"};
   width: ${({ width }) => width || "initial"};
   height: ${({ height }) => height || "initial"};
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: ${({ sm }) => sm?.direction};
+  }
 `;
