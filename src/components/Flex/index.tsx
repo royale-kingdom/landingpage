@@ -43,5 +43,7 @@ const Div = styled.div<StyledProps>`
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: ${({ sm }) => sm?.direction};
+    align-items: ${({ sm }) => sm?.alignItem};
+    justify-content: ${({ sm }) => sm?.justifyContent};
   }
 `;

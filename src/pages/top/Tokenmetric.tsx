@@ -323,14 +323,20 @@ const Tokenmetric = () => {
                   backgroundPosition: "center center",
                   backgroundSize: "contain",
                   margin: "0 0 20px 0",
-                  fontFamily: "Judson"
+                  width: "243px",
+                  height: "58px"
                 }}
                 padding="25px 40px"
                 fontSize="24px"
-                sm={{ fontSize: "1.8rem", padding: "2rem 3rem" }}
+                sm={{
+                  fontSize: "1.8rem",
+                  padding: "2rem 3rem"
+                }}
                 color="rgba(245, 237, 222, 1)"
               >
-                Download Whitepaper
+                <Text fontSize="18px" lineHeight="32px">
+                  Download Whitepaper
+                </Text>
               </BaseButton>
             </Flex>
           </FlexItem>
@@ -354,6 +360,11 @@ const Tokenmetric = () => {
                           lineHeight={"28px"}
                           fontWeight="700"
                           color="rgba(238, 226, 204, 1)"
+                          sm={{
+                            fontSize: "16px",
+                            lineHeight: "26px",
+                            fontWeight: "600"
+                          }}
                         >
                           {item.label}
                         </Text>
@@ -368,6 +379,11 @@ const Tokenmetric = () => {
                           justify={"center"}
                           fontWeight="700"
                           color="rgba(238, 226, 204, 0.52)"
+                          sm={{
+                            fontSize: "16px",
+                            lineHeight: "26px",
+                            fontWeight: "600"
+                          }}
                         >
                           {item.percent}
                         </Text>
@@ -382,6 +398,11 @@ const Tokenmetric = () => {
                           display={"inline-block"}
                           fontWeight="700"
                           color="rgba(238, 226, 204, 1)"
+                          sm={{
+                            fontSize: "16px",
+                            lineHeight: "26px",
+                            fontWeight: "600"
+                          }}
                         >
                           {item.amount}
                         </Text>

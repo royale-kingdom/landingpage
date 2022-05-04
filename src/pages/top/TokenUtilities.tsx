@@ -13,50 +13,52 @@ import CloudImage from "../../assets/images/landingpage/cloud_image.png";
 import { TOKEN_UTILITIES } from "../../constant/landingPageSection";
 import GoldenHeader from "../../components/GoldenHeader";
 
-const TokenUtilities = () => (
-  <TokenomicContainer id={TOKEN_UTILITIES}>
-    <Box sm={{ padding: "50vw 0 0 0" }} zIndex={2}>
-      <Box
-        height="23vw"
-        width="23vw"
-        margin="0 auto"
-        sm={{ height: "50vw", width: "50vw" }}
-      >
-        <StyledImage
-          src={TokenomicCover}
-          width={"100%"}
-          height={"100%"}
-          alt="tokenomic"
-        />
-      </Box>
-      <Box width="70vw" margin="0 auto" sm={{ width: "100vw" }}>
-        <GoldenHeader>Token Utilities</GoldenHeader>
-        <Text
-          margin="auto"
-          fontWeight="500"
-          fontSize={"18px"}
-          lineHeight={"28px"}
-          sm={{
-            fontSize: "14px",
-            lineHeight: "20px",
-            justify: "justify",
-            padding: "0 20px"
-          }}
-          color="rgba(238, 226, 204, 0.82)"
-          style={{ textAlign: "center", maxWidth: "600px" }}
+const TokenUtilities = () => {
+  return (
+    <TokenomicContainer id={TOKEN_UTILITIES}>
+      <Box sm={{ padding: "10% 0 0 0" }} zIndex={2}>
+        <Box
+          height="23vw"
+          width="23vw"
+          margin="0 auto"
+          sm={{ height: "50vw", width: "50vw" }}
         >
-          RYK is the main token that will be used on the marketplace. You can
-          exchange characters, weapons, armors and lands too. Also, RYK can be
-          used to ake part in adjusting the world through DAO.
-          <br />
-          Also, RYK will be used as your rewards for Play2earn features. That's
-          right, only 1 token used for everything, no other token.
-        </Text>
+          <StyledImage
+            src={TokenomicCover}
+            width={"100%"}
+            height={"100%"}
+            alt="tokenomic"
+          />
+        </Box>
+        <Box width="70vw" margin="0 auto" sm={{ width: "100vw" }}>
+          <GoldenHeader>Token Utilities</GoldenHeader>
+          <Text
+            margin="auto"
+            fontWeight="500"
+            fontSize={"18px"}
+            lineHeight={"28px"}
+            sm={{
+              fontSize: "14px",
+              lineHeight: "20px",
+              justify: "justify",
+              padding: "0 20px"
+            }}
+            color="rgba(238, 226, 204, 0.82)"
+            style={{ textAlign: "center", maxWidth: "600px" }}
+          >
+            RYK is the main token that will be used on the marketplace. You can
+            exchange characters, weapons, armors and lands too. Also, RYK can be
+            used to ake part in adjusting the world through DAO.
+            <br />
+            Also, RYK will be used as your rewards for Play2earn features.
+            That's right, only 1 token used for everything, no other token.
+          </Text>
+        </Box>
       </Box>
-    </Box>
-    <GoldCloud />
-  </TokenomicContainer>
-);
+      <GoldCloud />
+    </TokenomicContainer>
+  );
+};
 
 export default TokenUtilities;
 
@@ -70,6 +72,12 @@ const GoldCloud = styled.div`
   background: url(${CloudImage}) no-repeat;
   background-size: contain;
   mix-blend-mode: difference;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 173vw;
+    height: 84vw;
+    bottom: 5%;
+    left: -26%;
+  }
 `;
 
 const TokenomicContainer = styled.div`
@@ -79,6 +87,7 @@ const TokenomicContainer = styled.div`
   z-index: 1;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 210vw;
+    padding: ;
   }
   &::before {
     content: "";

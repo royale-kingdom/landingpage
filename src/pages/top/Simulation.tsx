@@ -20,7 +20,12 @@ const Simulation = () => {
           margin="0 auto"
           width="628px"
           justify="center"
-          sm={{ width: "auto", fontSize: "16px", lineHeight: "26px" }}
+          sm={{
+            width: "auto",
+            fontSize: "16px",
+            lineHeight: "26px",
+            margin: "0 24px"
+          }}
         >
           A new king had to swear an oath to fulfill the responsibilities of a
           monarch. The details of this oath varied from one land to another, but
@@ -31,7 +36,7 @@ const Simulation = () => {
           <img
             src={isMobileView ? resourceMobile : resource}
             alt="resource"
-            width={isMobileView ? "100%" : "772px"}
+            width={isMobileView ? "100%" : "100%"}
           />
         </Box>
       </Content>
@@ -62,7 +67,7 @@ const Container = styled.div`
     }
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding: 32px 24px;
+    padding: 32px 0;
   }
 `;
 
@@ -73,6 +78,6 @@ const Content = styled.div`
   width: 722px;
   margin: 0 auto;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
+    width: 100vw;
   }
 `;

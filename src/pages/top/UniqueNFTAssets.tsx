@@ -4,7 +4,6 @@ import { Flex } from "../../components/Flex";
 import GoldenHeader from "../../components/GoldenHeader";
 import { Text } from "../../components/Typo/Text";
 import { GoldenText } from "../../components/GoldenText";
-import { useIsMobileView } from "../../hooks/useIsMobileView";
 
 import UniquePropertiesPC from "../../assets/images/unique-nft-assets/unique-properties.svg";
 import UniquePropertiesMobile from "../../assets/images/unique-nft-assets/unique-properties-mobile.svg";
@@ -16,34 +15,57 @@ import UniqueWarMobile from "../../assets/images/unique-nft-assets/unique-war-mo
 import background from "../../assets/images/landingpage/unique-nft-assets_background.jpeg";
 
 const UniqueNFTAssets = () => {
-  const isMobileView = useIsMobileView();
-
   const uniqueAssets = (
-    <Flex justifyContent="center" sm={{ direction: "column" }}>
+    <Flex
+      justifyContent="center"
+      sm={{
+        direction: "column",
+        alignItem: "center",
+        justifyContent: "center"
+      }}
+    >
       <UniqueProperties>
-        <GoldenText fontSize="20px">Unique Properties</GoldenText>
+        <GoldenText
+          fontSize="20px"
+          lineHeight="26px"
+          sm={{ margin: "0 0 0 143px" }}
+        >
+          Unique Properties
+        </GoldenText>
         <Text
           justify="center"
           fontSize="16px"
           lineHeight="26px"
           margin="0 12px"
+          sm={{ margin: "0 0 0 143px", justify: "left" }}
         >
           Build kingdoms from scratch with unique people under your command
         </Text>
       </UniqueProperties>
       <UniqueEquipment>
-        <GoldenText fontSize="20px">Unique Equipment</GoldenText>
+        <GoldenText
+          fontSize="20px"
+          lineHeight="26px"
+          sm={{ margin: "0 0 0 143px" }}
+        >
+          Unique Equipment
+        </GoldenText>
         <Text
           justify="center"
           fontSize="16px"
           lineHeight="26px"
           margin="0 12px"
+          sm={{ margin: "0 0 0 143px", justify: "left" }}
         >
           Forge equipment with talent blacksmiths and explore your kingdom
         </Text>
       </UniqueEquipment>
       <UniqueWar>
-        <GoldenText fontSize="20px" font="Titillium Web">
+        <GoldenText
+          fontSize="20px"
+          lineHeight="26px"
+          sm={{ margin: "0 0 0 143px" }}
+        >
           Unique War
         </GoldenText>
         <Text
@@ -51,6 +73,7 @@ const UniqueNFTAssets = () => {
           fontSize="16px"
           lineHeight="26px"
           margin="0 12px"
+          sm={{ margin: "0 0 0 143px", justify: "left" }}
         >
           Lead kingdom to victory by tactical decisions in every turn
         </Text>
@@ -70,14 +93,19 @@ const UniqueNFTAssets = () => {
           >
             <Text
               justify="center"
-              sm={{ fontSize: "16px", lineHeight: "26px" }}
+              sm={{
+                fontSize: "16px",
+                lineHeight: "26px",
+                margin: "0 0 86px 0"
+              }}
             >
               An immersive, intense turn based strategy game with player driven
               choices. Empower by blockchain and NFT technology.
             </Text>
           </Box>
         </Flex>
-        {isMobileView ? null : uniqueAssets}
+        {/* {isMobileView ? null : uniqueAssets} */}
+        {uniqueAssets}
       </Box>
     </Container>
   );
@@ -116,7 +144,6 @@ const Container = styled.div`
 `;
 
 const BaseUniqueCard = styled(Flex)`
-  background-size: cover;
   width: 333px;
   height: 423px;
   padding: 16px;
@@ -125,33 +152,33 @@ const BaseUniqueCard = styled(Flex)`
   flex-direction: column;
   padding-bottom: 45px;
   z-index: 1;
-  /* @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 90vw;
-    height: auto;
-    padding: 0 24px;
-    /* height: 151px; */
-    align-items: flex-end;
-    justify-content: center;
-  } */
+  background-size: cover;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 366px;
+    height: 151px;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+  }
 `;
 
 const UniqueProperties = styled(BaseUniqueCard)`
   background-image: url(${UniquePropertiesPC});
-  /* @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     background-image: url(${UniquePropertiesMobile});
-  } */
+  }
 `;
 
 const UniqueEquipment = styled(BaseUniqueCard)`
   background-image: url(${UniqueEquipmentPC});
-  /* @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     background-image: url(${UniqueEquipmentMobile});
-  } */
+  }
 `;
 
 const UniqueWar = styled(BaseUniqueCard)`
   background-image: url(${UniqueWarPC});
-  /* @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     background-image: url(${UniqueWarMobile});
-  } */
+  }
 `;

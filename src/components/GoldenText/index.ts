@@ -1,7 +1,15 @@
 import styled from "styled-components";
 import { Text } from "../Typo/Text";
 
-export const GoldenText = styled(Text)`
+interface BaseProps {
+  margin?: string;
+}
+
+interface Props extends BaseProps {
+  sm?: BaseProps;
+}
+
+export const GoldenText = styled(Text)<Props>`
   /* font-family: "Judson"; */
   font-style: normal;
   font-weight: bold;
@@ -16,4 +24,8 @@ export const GoldenText = styled(Text)`
   text-shadow: 0px 1px 2px rgba(186, 134, 35, 0.12);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: ${({ margin }) => margin};
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin: ${({ sm }) => sm?.margin};
+  }
 `;
