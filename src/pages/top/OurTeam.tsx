@@ -19,7 +19,7 @@ import GoldenHeader from "../../components/GoldenHeader";
 
 const OurTeam = () => (
   <OurTeamContainer id={OUR_TEAM}>
-    <Box paddingTop="100px" sm={{ padding: "120px 0 40px 0" }}>
+    <Box paddingTop="100px">
       <GoldenHeader>Our Team</GoldenHeader>
       {/* <Text
         fontSize={"18px"}
@@ -35,16 +35,11 @@ const OurTeam = () => (
       </Text> */}
     </Box>
 
-    <Box marginTop="64px" sm={{ margin: "32px 0 0 0" }}>
+    <Box marginTop="64px" sm={{ margin: "32px 0 72px 0" }}>
       <Flex justifyContent="center">
         <Box margin="0 32px">
-          <Box>
-            <img
-              src={LongNguyen}
-              alt="Long Nguyen"
-              width="232px"
-              height="232px"
-            />
+          <Box width="232px" sm={{ width: "184px" }}>
+            <img src={LongNguyen} alt="Long Nguyen" width="100%" />
           </Box>
           <Box>
             <Text
@@ -68,13 +63,8 @@ const OurTeam = () => (
           </Box>
         </Box>
         <Box margin="0 32px">
-          <Box>
-            <img
-              src={NhatNguyen}
-              alt="Nhat Nguyen"
-              width="232px"
-              height="232px"
-            />
+          <Box width="232px" sm={{ width: "184px" }}>
+            <img src={NhatNguyen} alt="Nhat Nguyen" width="100%" />
           </Box>
           <Box>
             <Text
@@ -98,8 +88,8 @@ const OurTeam = () => (
           </Box>
         </Box>
         <Box margin="0 32px">
-          <Box>
-            <img src={AnNguyen} alt="An Nguyen" width="232px" height="232px" />
+          <Box width="232px" sm={{ width: "184px" }}>
+            <img src={AnNguyen} alt="An Nguyen" width="100%" />
           </Box>
           <Box>
             <Text
@@ -183,7 +173,7 @@ const OurTeamContainer = styled.div`
   position: relative;
   overflow: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    height: 115vh;
+    height: auto;
   }
 
   /*  &::after {

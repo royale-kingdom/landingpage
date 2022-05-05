@@ -5,7 +5,7 @@ import { Img } from "../../components/Img";
 import { Box } from "../../components/Box";
 import { Text } from "../../components/Typo/Text";
 // import { Heading } from "../../components/Typo/Heading";
-import { Container, Flex } from "../../components/Grid";
+import { Container, Flex, FlexItem } from "../../components/Grid";
 import { RoadMapLine } from "../../components/RoadMapLine";
 import { GoldenText } from "../../components/GoldenText";
 
@@ -23,6 +23,7 @@ import RoadMapBackground from "../../assets/images/landingpage/road_map_backgrou
 
 import { ROADMAP } from "../../constant/landingPageSection";
 import GoldenHeader from "../../components/GoldenHeader";
+import { useIsMobileView } from "../../hooks/useIsMobileView";
 
 const nextPlan = [
   {
@@ -102,45 +103,45 @@ const MileStonePC = () => {
   );
 };
 
-const OtherMileStoneMobile = () => {
-  return (
-    <>
-      {nextPlan.map(({ quarter, events }, idx) => (
-        <Box key={idx} height="auto" width="100%" margin="12px 0">
-          <Flex justifyContent="flex-start" alginItem="start">
-            <Box>
-              <Box height="78px" width="78px" margin="auto">
-                {idx === 0 ? <OpenedTreasure /> : <ClosedTreasure />}
-              </Box>
-            </Box>
-            <Box margin="34px 0 0 32px">
-              <Box height="18px" width="18px" margin="auto">
-                <Img src={xSword} height="100%" width="100%" />
-              </Box>
-            </Box>
-            <Box margin="34px 0 0 6px">
-              <GoldenText fontSize="14px" lineHeight="20px" justify="center">
-                {quarter}
-              </GoldenText>
-            </Box>
-            <Box margin="30px 0 0 16px">
-              {events.map((event, idx) => (
-                <Text
-                  key={idx}
-                  font="Titillium Web"
-                  fontSize="14px"
-                  lineHeight="26px"
-                >
-                  {event}
-                </Text>
-              ))}
-            </Box>
-          </Flex>
-        </Box>
-      ))}
-    </>
-  );
-};
+// const OtherMileStoneMobile = () => {
+//   return (
+//     <>
+//       {nextPlan.map(({ quarter, events }, idx) => (
+//         <Box key={idx} height="auto" width="100%" margin="12px 0">
+//           <Flex justifyContent="flex-start" alginItem="start">
+//             <Box>
+//               <Box height="78px" width="78px" margin="auto">
+//                 {idx === 0 ? <OpenedTreasure /> : <ClosedTreasure />}
+//               </Box>
+//             </Box>
+//             <Box margin="34px 0 0 32px">
+//               <Box height="18px" width="18px" margin="auto">
+//                 <Img src={xSword} height="100%" width="100%" />
+//               </Box>
+//             </Box>
+//             <Box margin="34px 0 0 6px">
+//               <GoldenText fontSize="14px" lineHeight="20px" justify="center">
+//                 {quarter}
+//               </GoldenText>
+//             </Box>
+//             <Box margin="30px 0 0 16px">
+//               {events.map((event, idx) => (
+//                 <Text
+//                   key={idx}
+//                   font="Titillium Web"
+//                   fontSize="14px"
+//                   lineHeight="26px"
+//                 >
+//                   {event}
+//                 </Text>
+//               ))}
+//             </Box>
+//           </Flex>
+//         </Box>
+//       ))}
+//     </>
+//   );
+// };
 
 /**
  * display on PC
@@ -176,29 +177,106 @@ const StartedMileStonePC = () => (
  * @returns
  */
 const StartedMileStoneMobile = () => (
-  <Box width="100%" margin="12px 0">
-    <Flex justifyContent="flex-start" alginItem="center">
-      <Box>
-        <GoldenText fontSize="14px" lineHeight="20px" justify="center">
-          {"STARTED"}
-        </GoldenText>
+  <Box
+    position="relative"
+    width="100%"
+    margin="52px 0 0 0"
+    padding="0 0 52px 0"
+  >
+    <Box position="absolute" height="50%" left="50.5%" bottom="0" zIndex={-1}>
+      <Box width="100%">
+        <CenterLight />
       </Box>
-      <Box margin="0 0 0 44px">
-        <Box height="18px" width="18px" margin="auto">
-          <Img src={xSword} height="100%" width="100%" />
-        </Box>
+    </Box>
+    <Box>
+      <Box height="25px" width="25px" margin="auto">
+        <Img src={xSword} height="100%" width="100%" />
       </Box>
-      <Box margin="0 0 0 6px">
-        <GoldenText fontSize="14px" lineHeight="20px" justify="center">
-          {"Q1/2022"}
-        </GoldenText>
+    </Box>
+    <Box margin="0 0 0 6px">
+      <GoldenText fontSize="20px" lineHeight="32px" justify="center">
+        {"Q2/2022"}
+      </GoldenText>
+    </Box>
+    <Box marginBottom="24px">
+      <Box height="112px" width="112px" margin="auto">
+        <img src={start} alt="start" width="112px" height="112px" />
       </Box>
-    </Flex>
+    </Box>
   </Box>
 );
 
+const MobileLeftRoadMap = ({
+  quarter,
+  events
+}: {
+  quarter: string;
+  events: string[];
+}) => (
+  <>
+    <Box padding="32px 16px 0 0">
+      <Flex justifyContent="flex-end">
+        <Box height="25px" width="25px">
+          <Img src={xSword} height="100%" width="100%" />
+        </Box>
+      </Flex>
+      <Box margin="0 0 0 6px">
+        <GoldenText fontSize="20px" lineHeight="32px" justify="right">
+          {quarter}
+        </GoldenText>
+      </Box>
+      {events.map((event, idx) => (
+        <Text
+          key={idx}
+          font="Titillium Web"
+          fontSize="14px"
+          lineHeight="26px"
+          justify="right"
+          margin="0 0 12px 0"
+        >
+          {event}
+        </Text>
+      ))}
+    </Box>
+  </>
+);
+
+const MobileRightRoadMap = ({
+  quarter,
+  events
+}: {
+  quarter: string;
+  events: string[];
+}) => (
+  <>
+    <Box padding="32px 0 0 24px">
+      <Flex justifyContent="flex-start">
+        <Box height="25px" width="25px">
+          <Img src={xSword} height="100%" width="100%" />
+        </Box>
+      </Flex>
+      <Box>
+        <GoldenText fontSize="20px" lineHeight="32px">
+          {quarter}
+        </GoldenText>
+      </Box>
+      {events.map((event, idx) => (
+        <Text
+          key={idx}
+          font="Titillium Web"
+          fontSize="14px"
+          lineHeight="26px"
+          margin="0 0 12px 0"
+        >
+          {event}
+        </Text>
+      ))}
+    </Box>
+  </>
+);
+
 const RoadMap = () => {
-  const { innerWidth } = window;
+  const isMobileView = useIsMobileView();
 
   return (
     <RoadmapContainer id={ROADMAP}>
@@ -220,7 +298,7 @@ const RoadMap = () => {
       </Container>
 
       {/* show on PC only */}
-      {innerWidth > 768 && (
+      {!isMobileView && (
         <Box margin="64px 80px" position="relative">
           <Box
             height="8px"
@@ -242,7 +320,7 @@ const RoadMap = () => {
       )}
 
       {/* show on mobile only */}
-      {innerWidth <= 768 && (
+      {/* {innerWidth <= 768 && (
         <Box margin="64px 18px" position="relative">
           <Box
             height="100%"
@@ -260,6 +338,43 @@ const RoadMap = () => {
             </Flex>
           </Box>
         </Box>
+      )} */}
+
+      {isMobileView && (
+        <>
+          <StartedMileStoneMobile />
+          {nextPlan.map((item, idx) => (
+            <Box key={idx}>
+              <Box position="relative" zIndex={0}>
+                <CenterLight />
+                <Flex alginItem="start">
+                  <FlexItem flex="1">
+                    {/* display info in the left */}
+                    {idx === 0 ||
+                      (idx % 2 === 1 && (
+                        <MobileLeftRoadMap
+                          quarter={item.quarter}
+                          events={item.events}
+                        />
+                      ))}
+                  </FlexItem>
+                  <Box height="68px" width="68px">
+                    {idx === 0 ? <OpenedTreasure /> : <ClosedTreasure />}
+                  </Box>
+                  <FlexItem flex="1">
+                    {/* display info in the right */}
+                    {idx % 2 === 0 && (
+                      <MobileRightRoadMap
+                        quarter={item.quarter}
+                        events={item.events}
+                      />
+                    )}
+                  </FlexItem>
+                </Flex>
+              </Box>
+            </Box>
+          ))}
+        </>
       )}
     </RoadmapContainer>
   );
@@ -274,6 +389,10 @@ const RoadmapContainer = styled.div`
   position: relative;
   /* background: black; */
   z-index: 0;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: auto;
+    margin-bottom: 90px;
+  }
   /* &::after {
     content: "";
     position: absolute;
@@ -288,6 +407,25 @@ const RoadmapContainer = styled.div`
     mix-blend-mode: difference;
     z-index: -1;
   } */
+`;
+
+const CenterLight = styled.div`
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  transform: translate(-50%, 0);
+  top: 0;
+  left: 51%;
+  background: linear-gradient(
+    180deg,
+    #aa8c4f 18.57%,
+    #faffbf 22.07%,
+    #ffd879 44.81%,
+    #de9d20 61.12%,
+    #8f8466 77.86%
+  );
+  box-shadow: 0px 0px 2px rgba(250, 255, 191, 0.8),
+    0px 0px 32px rgba(250, 255, 191, 0.25);
 `;
 
 const OpenedTreasure = styled.div`
@@ -309,14 +447,12 @@ const OpenedTreasure = styled.div`
     background-size: contain;
     @media (max-width: ${({ theme }) => theme.mobile}) {
       /* transform: scale(0.7); */
-      top: 0px;
       width: 90px;
       height: 90px;
     }
   }
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    transform: scale(0.7);
     width: 78px;
     height: 78px;
   }
@@ -344,7 +480,6 @@ const ClosedTreasure = styled.div`
     }
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    transform: scale(0.7);
     width: 78px;
     height: 78px;
   }
