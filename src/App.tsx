@@ -9,8 +9,6 @@ import { px2vw } from "./utils/px2vw";
 import { Footer } from "./components/Footer";
 import { Box } from "./components/Box";
 
-import bodyBackground from "./assets/images/landingpage/body_background.jpg";
-
 const GlobalStyle = createGlobalStyle`
 :root {
   font-size: ${px2vw(24)};
@@ -44,7 +42,6 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: url(${bodyBackground}) repeat-y;
     opacity: 0.08;
     /* mix-blend-mode: hard-light; */
     z-index: -2;

@@ -56,7 +56,7 @@ const WarMode = () => {
       <Box
         position="absolute"
         width="100%"
-        bottom="-40vw"
+        bottom="-60vw"
         overflow="hidden"
         sm={{ bottom: "-60%" }}
       >

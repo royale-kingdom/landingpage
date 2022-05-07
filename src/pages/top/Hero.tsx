@@ -5,8 +5,8 @@ import { Box } from "../../components/Box";
 import { Text } from "../../components/Typo/Text";
 
 import HeroDesktopLogo from "../../assets/images/landingpage/hero_logo_desktop.png";
-import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop.jpeg";
-import HeroMobileImg from "../../assets/images/landingpage/hero_mobile.jpeg";
+import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop.png";
+import HeroMobileImg from "../../assets/images/landingpage/hero_mobile.png";
 import Button2 from "../../assets/images/landingpage/Button2.svg";
 
 const Hero = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
         position={"absolute"}
         transform="translate(-50%, 50%)"
         left="50%"
-        bottom="20%"
+        bottom="30%"
         sm={{ bottom: "unset", top: "55%" }}
       >
         <BaseButton
@@ -69,13 +69,14 @@ export default Hero;
 const Container = styled.div`
   width: 100vw;
   height: 48vw;
+  min-height: 820px;
   position: relative;
   z-index: 0;
   /* background: green; */
   background-image: url("${HeroDesktopImg}");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 20%;
+  background-position: 0 70%;
   @media (max-width: 768px) {
     background-image: url("${HeroMobileImg}");
     height: 100vh;
@@ -87,7 +88,7 @@ const Logo = styled.div`
   z-index: 2;
   width: 43.8vw;
   height: 19.6vw;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, 0);
   background-image: url("${HeroDesktopLogo}");

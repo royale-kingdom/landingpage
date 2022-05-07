@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 import { StyledImage } from "./styled";
 import { Text } from "../../components/Typo/Text";
-// import { Heading } from "../../components/Typo/Heading";
 import { Box } from "../../components/Box";
+import GoldenHeader from "../../components/GoldenHeader";
 
 import TokenomicCover from "../../assets/images/landingpage/token-util.png";
+// import TokenomicCover from "../../assets/images/landingpage/token-utilities_cloud.png";
 import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
 // import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
-import CloudImage from "../../assets/images/landingpage/cloud_image.png";
+import CloudImage from "../../assets/images/landingpage/token-utilities_cloud.png";
 
 import { TOKEN_UTILITIES } from "../../constant/landingPageSection";
-import GoldenHeader from "../../components/GoldenHeader";
 
 const TokenUtilities = () => {
   return (
@@ -70,7 +70,7 @@ const GoldCloud = styled.div`
   left: 0;
   z-index: -1;
   background: url(${CloudImage}) no-repeat;
-  background-size: contain;
+  background-size: cover;
   mix-blend-mode: difference;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 173vw;
@@ -98,9 +98,6 @@ const TokenomicContainer = styled.div`
     top: 0;
     z-index: -1;
     background: rgb(20, 20, 25);
-    /* background: url(${StarBackground}) no-repeat; */
-    /* background-size: contain; */
-    /* mix-blend-mode: difference; */
     opacity: 0.08;
   }
   &::after {

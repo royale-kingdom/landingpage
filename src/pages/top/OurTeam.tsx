@@ -8,20 +8,23 @@ import { Box } from "../../components/Box";
 import { Flex } from "../../components/Grid";
 // import Member from "../../components/Member";
 import { Img } from "../../components/Img";
+import { useIsMobileView } from "../../hooks/useIsMobileView";
+
 import background from "../../assets/images/landingpage/team_background.png";
-// import shootingStar from "../../assets/images/landingpage/our_team_shooting_star.png";
-import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
+import backgroundMobile from "../../assets/images/landingpage/team_background-mobile.png";
 import LongNguyen from "../../assets/images/landingpage/our-team_longnguyen.png";
 import NhatNguyen from "../../assets/images/landingpage/our-team_nhatnguyen.png";
 import AnNguyen from "../../assets/images/landingpage/our-team_annguyen.png";
 import { OUR_TEAM } from "../../constant/landingPageSection";
 import GoldenHeader from "../../components/GoldenHeader";
 
-const OurTeam = () => (
-  <OurTeamContainer id={OUR_TEAM}>
-    <Box paddingTop="100px">
-      <GoldenHeader>Our Team</GoldenHeader>
-      {/* <Text
+const OurTeam = () => {
+  const isMobileView = useIsMobileView();
+  return (
+    <OurTeamContainer id={OUR_TEAM}>
+      <Box paddingTop="100px">
+        <GoldenHeader>Our Team</GoldenHeader>
+        {/* <Text
         fontSize={"18px"}
         lineHeight={"28px"}
         justify={"center"}
@@ -33,86 +36,86 @@ const OurTeam = () => (
         If it’s not something you would want to read/look at/use then why
         fucking bother? Form follows fucking function.
       </Text> */}
-    </Box>
+      </Box>
 
-    <Box marginTop="64px" sm={{ margin: "32px 0 72px 0" }}>
-      <Flex justifyContent="center">
-        <Box margin="0 32px">
-          <Box width="232px" sm={{ width: "184px" }}>
-            <img src={LongNguyen} alt="Long Nguyen" width="100%" />
+      <Box marginTop="64px" sm={{ margin: "32px 0 72px 0" }}>
+        <Flex justifyContent="center">
+          <Box margin="0 32px">
+            <Box width="232px" sm={{ width: "184px" }}>
+              <img src={LongNguyen} alt="Long Nguyen" width="100%" />
+            </Box>
+            <Box>
+              <Text
+                justify="center"
+                color="rgba(250, 250, 252, 0.52)"
+                fontSize="20px"
+                lineHeight="32px"
+              >
+                Chief of Operation
+              </Text>
+              <Text
+                font="Red rose"
+                fontWeight="400"
+                justify="center"
+                color="white"
+                fontSize="20px"
+                lineHeight="32px"
+              >
+                Long Nguyen
+              </Text>
+            </Box>
           </Box>
-          <Box>
-            <Text
-              justify="center"
-              color="rgba(250, 250, 252, 0.52)"
-              fontSize="20px"
-              lineHeight="32px"
-            >
-              Chief of Operation
-            </Text>
-            <Text
-              font="Red rose"
-              fontWeight="400"
-              justify="center"
-              color="white"
-              fontSize="20px"
-              lineHeight="32px"
-            >
-              Long Nguyen
-            </Text>
+          <Box margin="0 32px">
+            <Box width="232px" sm={{ width: "184px" }}>
+              <img src={NhatNguyen} alt="Nhat Nguyen" width="100%" />
+            </Box>
+            <Box>
+              <Text
+                justify="center"
+                color="rgba(250, 250, 252, 0.52)"
+                fontSize="20px"
+                lineHeight="32px"
+              >
+                Chief of Tech
+              </Text>
+              <Text
+                font="Red rose"
+                fontWeight="400"
+                justify="center"
+                color="white"
+                fontSize="20px"
+                lineHeight="32px"
+              >
+                Nhat Nguyen
+              </Text>
+            </Box>
           </Box>
-        </Box>
-        <Box margin="0 32px">
-          <Box width="232px" sm={{ width: "184px" }}>
-            <img src={NhatNguyen} alt="Nhat Nguyen" width="100%" />
+          <Box margin="0 32px">
+            <Box width="232px" sm={{ width: "184px" }}>
+              <img src={AnNguyen} alt="An Nguyen" width="100%" />
+            </Box>
+            <Box>
+              <Text
+                justify="center"
+                color="rgba(250, 250, 252, 0.52)"
+                fontSize="20px"
+                lineHeight="32px"
+              >
+                Art Director
+              </Text>
+              <Text
+                font="Red rose"
+                fontWeight="400"
+                justify="center"
+                color="white"
+                fontSize="20px"
+                lineHeight="32px"
+              >
+                An Nguyen
+              </Text>
+            </Box>
           </Box>
-          <Box>
-            <Text
-              justify="center"
-              color="rgba(250, 250, 252, 0.52)"
-              fontSize="20px"
-              lineHeight="32px"
-            >
-              Chief of Tech
-            </Text>
-            <Text
-              font="Red rose"
-              fontWeight="400"
-              justify="center"
-              color="white"
-              fontSize="20px"
-              lineHeight="32px"
-            >
-              Nhat Nguyen
-            </Text>
-          </Box>
-        </Box>
-        <Box margin="0 32px">
-          <Box width="232px" sm={{ width: "184px" }}>
-            <img src={AnNguyen} alt="An Nguyen" width="100%" />
-          </Box>
-          <Box>
-            <Text
-              justify="center"
-              color="rgba(250, 250, 252, 0.52)"
-              fontSize="20px"
-              lineHeight="32px"
-            >
-              Art Director
-            </Text>
-            <Text
-              font="Red rose"
-              fontWeight="400"
-              justify="center"
-              color="white"
-              fontSize="20px"
-              lineHeight="32px"
-            >
-              An Nguyen
-            </Text>
-          </Box>
-        </Box>
-        {/* <Member
+          {/* <Member
           fullName="Long Nguyen"
           title="CHIEF OF OPERATION"
           avatar={LongNguyen}
@@ -123,15 +126,15 @@ const OurTeam = () => (
           avatar={NhatNguyen}
         />
         <Member fullName="An Nguyen" title="ART DIRECTOR" avatar={AnNguyen} /> */}
-      </Flex>
-      {/* <Flex justifyContent="center">
+        </Flex>
+        {/* <Flex justifyContent="center">
         <Member fullName="Hang Nguyen" title="2D ARTIST" />
         <Member fullName="Phuong Lou" title="2D ARTIST" />
         <Member fullName="Hang Ung" title="F.E DEVELOPER" />
         <Member fullName="Louis Do" title="SMC DEVELOPER" />
       </Flex> */}
-    </Box>
-    {/* <Box
+      </Box>
+      {/* <Box
       position="absolute"
       width="500px"
       height="420px"
@@ -147,11 +150,16 @@ const OurTeam = () => (
         style={{ mixBlendMode: "screen" }}
       />
     </Box> */}
-    <BottomImg>
-      <Img src={background} width="100%" height="100%" />
-    </BottomImg>
-  </OurTeamContainer>
-);
+      <BottomImg>
+        <Img
+          src={isMobileView ? backgroundMobile : background}
+          width="100%"
+          height="100%"
+        />
+      </BottomImg>
+    </OurTeamContainer>
+  );
+};
 
 export default OurTeam;
 
@@ -174,20 +182,6 @@ const OurTeamContainer = styled.div`
   overflow: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: auto;
+    padding-bottom: 80px;
   }
-
-  /*  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(${StarBackground}) no-repeat;
-    background-position: center;
-    background-size: cover;
-    mix-blend-mode: difference;
-    opacity: 0.1;
-    z-index: -5;
-  } */
 `;

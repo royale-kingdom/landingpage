@@ -11,15 +11,15 @@ import { GoldenText } from "../../components/GoldenText";
 
 // import activeSquircle from "../../assets/images/landingpage/active_Squircle.svg";
 // import squircle from "../../assets/images/landingpage/squircle.svg";
-import squircle from "../../assets/images/landingpage/roadmap_frame.svg";
 // import openedTreasure from "../../assets/images/landingpage/treasure_open.svg";
 // import closedTreasure from "../../assets/images/landingpage/treasure_close.svg";
+// import goldenColumn from "../../assets/images/landingpage/golden_column.png";
+// import RoadMapBackground from "../../assets/images/landingpage/road_map_background.svg";
+import squircle from "../../assets/images/landingpage/roadmap_frame.svg";
 import openedTreasure from "../../assets/images/landingpage/roadmap_open.png";
 import closedTreasure from "../../assets/images/landingpage/roadmap_close.png";
 import start from "../../assets/images/landingpage/roadmap_start.png";
 import xSword from "../../assets/images/landingpage/sword_x.png";
-// import goldenColumn from "../../assets/images/landingpage/golden_column.png";
-import RoadMapBackground from "../../assets/images/landingpage/road_map_background.svg";
 
 import { ROADMAP } from "../../constant/landingPageSection";
 import GoldenHeader from "../../components/GoldenHeader";
@@ -195,7 +195,7 @@ const StartedMileStoneMobile = () => (
     </Box>
     <Box margin="0 0 0 6px">
       <GoldenText fontSize="20px" lineHeight="32px" justify="center">
-        {"Q2/2022"}
+        {"Q1/2022"}
       </GoldenText>
     </Box>
     <Box marginBottom="24px">
@@ -393,20 +393,6 @@ const RoadmapContainer = styled.div`
     height: auto;
     margin-bottom: 90px;
   }
-  /* &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(${RoadMapBackground}) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    opacity: 0.08;
-    mix-blend-mode: difference;
-    z-index: -1;
-  } */
 `;
 
 const CenterLight = styled.div`

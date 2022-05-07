@@ -140,6 +140,7 @@ const Container = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 100vh;
+    min-height: 820px; // 900px trừ cho 84px của header
   }
 `;
 

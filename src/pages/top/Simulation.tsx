@@ -68,6 +68,8 @@ const Container = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 32px 0;
+    padding-bottom: 80px;
+    min-height: 900px;
   }
 `;
 
