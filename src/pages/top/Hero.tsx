@@ -68,8 +68,8 @@ export default Hero;
 // Ratio height: 900px; width: 1440px
 const Container = styled.div`
   width: 100vw;
-  height: 48vw;
-  min-height: 820px;
+  height: 55vw;
+  /* min-height: 820px; */
   position: relative;
   z-index: 0;
   /* background: green; */
