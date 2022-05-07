@@ -9,14 +9,14 @@ import TokenomicCover from "../../assets/images/landingpage/token-util.png";
 // import TokenomicCover from "../../assets/images/landingpage/token-utilities_cloud.png";
 // import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
 // import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
-// import CloudImage from "../../assets/images/landingpage/token-utilities_cloud.png";
-import CloudImage from "../../assets/images/landingpage/cloud_image.png";
+import CloudImage from "../../assets/images/landingpage/token-utilities_cloud.png";
+// import CloudImage from "../../assets/images/landingpage/cloud_image.png";
 
 import { TOKEN_UTILITIES } from "../../constant/landingPageSection";
 
 const TokenUtilities = () => {
   return (
-    <TokenomicContainer id={TOKEN_UTILITIES}>
+    <Container id={TOKEN_UTILITIES}>
       <Box sm={{ padding: "10% 0 0 0" }} zIndex={2}>
         <Box
           height="23vw"
@@ -57,7 +57,7 @@ const TokenUtilities = () => {
         </Box>
       </Box>
       <GoldCloud />
-    </TokenomicContainer>
+    </Container>
   );
 };
 
@@ -65,28 +65,28 @@ export default TokenUtilities;
 
 const GoldCloud = styled.div`
   position: absolute;
-  width: 100vw;
-  height: 50vw;
-  bottom: -10%;
+  width: 100vw; // 2880 x 2162
+  height: 75vw;
+  bottom: -150px;
   left: 0;
-  z-index: -1;
+  z-index: 3;
   background: url(${CloudImage}) no-repeat;
   background-size: cover;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 173vw;
-    height: 84vw;
+    width: 200vw;
+    height: 100vw;
     bottom: 5%;
-    left: -26%;
+    left: -43%%;
+    background-position: 0% 60%;
   }
 `;
 
-const TokenomicContainer = styled.div`
+const Container = styled.div`
   width: 100vw; // 1440px
   height: 80vw;
   position: relative;
   z-index: 1;
-  overflow: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 210vw;
     padding: ;
