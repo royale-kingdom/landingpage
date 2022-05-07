@@ -87,6 +87,7 @@ const Container = styled.div`
   height: 80vw;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 210vw;
     padding: ;
