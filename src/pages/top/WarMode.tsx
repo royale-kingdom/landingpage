@@ -70,9 +70,9 @@ const WarMode = () => {
       {/* Description */}
       <Box
         position="absolute"
-        width="572px"
+        width="520px"
         top={"45%"}
-        right={"90px"}
+        right={"72px"}
         sm={{ width: "90vw", left: "5vw", top: "unset", bottom: "10%" }}
       >
         <GoldenHeader align="left">War Mode</GoldenHeader>
@@ -81,7 +81,7 @@ const WarMode = () => {
           fontSize={"20px"}
           lineHeight={"32px"}
           sm={{ fontSize: "14px", lineHeight: "20px" }}
-          color="rgba(238, 226, 204, 0.82)"
+          color="rgba(250, 250, 252, 0.82)"
         >
           War and conquest were considered to be the divine mission of the
           kings, whose duty was to allocate more resources and people into their

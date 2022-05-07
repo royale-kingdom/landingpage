@@ -7,9 +7,13 @@ import { Text } from "../../components/Typo/Text";
 import HeroDesktopLogo from "../../assets/images/landingpage/hero_logo_desktop.png";
 import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop.png";
 import HeroMobileImg from "../../assets/images/landingpage/hero_mobile.png";
-import Button2 from "../../assets/images/landingpage/Button2.svg";
+import HeroButton from "../../assets/images/landingpage/hero_button.svg";
+import HeroGoToMarket from "../../assets/images/landingpage/hero_go-to-market.svg";
+import { useIsMobileView } from "../../hooks/useIsMobileView";
 
 const Hero = () => {
+  const isMobileView = useIsMobileView();
+
   return (
     <Container>
       <Logo />
@@ -18,12 +22,14 @@ const Hero = () => {
         position={"absolute"}
         transform="translate(-50%, 50%)"
         left="50%"
-        bottom="30%"
+        top="58%"
         sm={{ bottom: "unset", top: "55%" }}
       >
         <BaseButton
           style={{
-            backgroundImage: `url(${Button2})`,
+            width: "315px",
+            height: "100px",
+            backgroundImage: `url(${HeroButton})`,
             backgroundRepeat: "no-repeat",
             fontWeight: "bold",
             display: "flex",
@@ -33,7 +39,7 @@ const Hero = () => {
             backgroundSize: "contain"
           }}
           fontSize="24px"
-          padding="25px 40px"
+          // padding="25px 40px"
           sm={{
             fontSize: "1.8rem",
             padding: "0 1rem",
@@ -41,20 +47,16 @@ const Hero = () => {
             height: "74px"
           }}
           color="rgba(245, 237, 222, 1)"
-        >
-          <Text fontWeight="bold" padding="0 16px" sm={{ fontSize: "14px" }}>
-            ENTER MY KINGDOM
-          </Text>
-        </BaseButton>
-        <Box>
-          <Text
-            fontWeight="bold"
-            padding="0 16px"
-            justify="center"
-            sm={{ fontSize: "14px" }}
-          >
+        />
+        <Box margin="0 auto">
+          <Text padding="0 16px" justify="center">
             <a href="https://marketplace-dev.royalekingdom.com/marketplace">
-              Go to Marketplace
+              <img
+                src={HeroGoToMarket}
+                alt="go to marketplace"
+                width={isMobileView ? "138px" : "141px"}
+                height={isMobileView ? "26px" : "28px"}
+              />
             </a>
           </Text>
         </Box>

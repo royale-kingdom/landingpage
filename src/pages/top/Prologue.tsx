@@ -1,39 +1,54 @@
 import styled from "styled-components";
 import GoldenHeader from "../../components/GoldenHeader";
 import { Text } from "../../components/Typo/Text";
+import { GoldenLine } from "../../components/GoldlenLine";
+import { Box } from "../../components/Box";
 
 import SparkImg from "../../assets/images/landingpage/prologue_spark.png";
 import SparkMobile from "../../assets/images/landingpage/prologue_spark-mobile.png";
-import { Box } from "../../components/Box";
-import { GoldenLine } from "../../components/GoldlenLine";
+import PrologueText from "../../assets/images/landingpage/Prologue.svg";
+// import PrologueTextMobile from "../../assets/images/landingpage/Prologue_mobile.svg";
+import { useIsMobileView } from "../../hooks/useIsMobileView";
 
 const Prologue = () => {
+  // const isMobileView = useIsMobileView();
   return (
     <Container>
       <BlackGradient />
       <Content>
-        <Box>
+        <Box margin="0 auto">
+          {/* <img
+            src={PrologueText}
+            alt="prologue"
+            height="84px"
+            width={"auto"}
+            style={{ display: "block", margin: "0 auto" }}
+          /> */}
           <GoldenHeader align="center">Prologue</GoldenHeader>
         </Box>
-        <Box marginBottom="32px" sm={{ margin: "0 0 32px 0" }}>
+        <Box marginBottom="48px" sm={{ margin: "0 0 32px 0" }}>
           <GoldenLine />
         </Box>
         <Box>
           <Text
+            color="rgba(250, 250, 252, 0.82)"
             fontSize="20px"
             lineHeight="32px"
+            fontWeight="600"
             justify="center"
-            margin="0 0 32px 0"
+            margin="0 0 40px 0"
             sm={{ fontSize: "16px", lineHeight: "26px" }}
           >
             A new king had to swear an oath to fulfill the responsibilities of a
             monarch.
           </Text>
           <Text
+            color="rgba(250, 250, 252, 0.82)"
             fontSize="20px"
             lineHeight="32px"
+            fontWeight="600"
             justify="center"
-            margin="0 0 32px 0"
+            margin="0 0 40px 0"
             sm={{ fontSize: "16px", lineHeight: "26px" }}
           >
             Set in Europe during the Middle Ages, with traditions of monsters,
@@ -42,8 +57,10 @@ const Prologue = () => {
             creatures.
           </Text>
           <Text
+            color="rgba(250, 250, 252, 0.82)"
             fontSize="20px"
             lineHeight="32px"
+            fontWeight="600"
             justify="center"
             sm={{ fontSize: "16px", lineHeight: "26px" }}
           >
@@ -78,8 +95,8 @@ const BlackGradient = styled.div`
 
 const Container = styled.div`
   width: 100vw;
-  height: 50vw;
   height: 55.5vw;
+  min-height: 800px;
   position: relative;
   z-index: 0;
   background: black;
@@ -91,7 +108,8 @@ const Container = styled.div`
 
 const Content = styled.div`
   padding: 10% 0%;
-  margin: 0 20%;
+  max-width: 841px;
+  margin: 0 auto;
   z-index: 2;
 
   @media (max-width: 768px) {

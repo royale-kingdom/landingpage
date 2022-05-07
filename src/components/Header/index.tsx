@@ -37,21 +37,27 @@ const menu: { label: string; id?: string }[] = [
   { label: "Team Members", id: TEAM_MEMBERS }
 ];
 
-const menuItems = menu.map((item, idx) => (
-  <StyledNavLink key={`menu-${idx}`}>
-    <Link to={`#${item.id}`}>
-      <Text font="Titillium Web" fontSize="18px" lineHeight="28px">
-        {item.label}
-      </Text>
-    </Link>
-  </StyledNavLink>
-));
-
 const Header = () => {
   const isMobileView = useIsMobileView();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [selected, setSelected] = useState<number>();
 
-  console.log(isDrawerOpen);
+  console.log(selected);
+
+  const menuItems = menu.map((item, idx) => (
+    <StyledNavLink key={`menu-${idx}`}>
+      <Link to={`#${item.id}`} onClick={() => setSelected(idx)}>
+        <Text
+          font="Titillium Web"
+          fontSize="18px"
+          lineHeight="28px"
+          color={selected === idx ? " #E2C89A" : "white"}
+        >
+          {item.label}
+        </Text>
+      </Link>
+    </StyledNavLink>
+  ));
 
   return (
     <StyledHeader>
