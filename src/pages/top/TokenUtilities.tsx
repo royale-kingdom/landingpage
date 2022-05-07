@@ -7,9 +7,10 @@ import GoldenHeader from "../../components/GoldenHeader";
 
 import TokenomicCover from "../../assets/images/landingpage/token-util.png";
 // import TokenomicCover from "../../assets/images/landingpage/token-utilities_cloud.png";
-import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
+// import StarBackground from "../../assets/images/landingpage/stars_background_1.png";
 // import CloudImage from "../../assets/images/landingpage/cloud_image.svg";
-import CloudImage from "../../assets/images/landingpage/token-utilities_cloud.png";
+// import CloudImage from "../../assets/images/landingpage/token-utilities_cloud.png";
+import CloudImage from "../../assets/images/landingpage/cloud_image.png";
 
 import { TOKEN_UTILITIES } from "../../constant/landingPageSection";
 
