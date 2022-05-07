@@ -6,9 +6,9 @@ import { Box } from "../../components/Box";
 
 import SparkImg from "../../assets/images/landingpage/prologue_spark.png";
 import SparkMobile from "../../assets/images/landingpage/prologue_spark-mobile.png";
-import PrologueText from "../../assets/images/landingpage/Prologue.svg";
+// import PrologueText from "../../assets/images/landingpage/Prologue.svg";
 // import PrologueTextMobile from "../../assets/images/landingpage/Prologue_mobile.svg";
-import { useIsMobileView } from "../../hooks/useIsMobileView";
+// import { useIsMobileView } from "../../hooks/useIsMobileView";
 
 const Prologue = () => {
   // const isMobileView = useIsMobileView();
