@@ -20,17 +20,18 @@ import { Box } from "../Box";
 import headerLogo from "../../assets/images/landingpage/logo_header.png";
 import burgerButton from "../../assets/images/shape/burger_button.svg";
 import close from "../../assets/images/icons/close.svg";
-
-const MY_KINGDOM = "my_kingdom";
-const SIMULAION_MODE = "simulation_mode";
-const WAR_MODE = "war_mode";
-const TOKENOMIC = "tokenomic";
-const ROADMAP = "roadmap";
-const TEAM_MEMBERS = "team_members";
+import {
+  MY_KINGDOM,
+  ROADMAP,
+  SIMULATION_MODE,
+  TEAM_MEMBERS,
+  TOKENOMIC,
+  WAR_MODE
+} from "../../constant/landingPageSection";
 
 const menu: { label: string; id?: string }[] = [
   { label: "My Kingdom", id: MY_KINGDOM },
-  { label: "Simulation Mode", id: SIMULAION_MODE },
+  { label: "Simulation Mode", id: SIMULATION_MODE },
   { label: "War Mode", id: WAR_MODE },
   { label: "Tokenomic", id: TOKENOMIC },
   { label: "Roadmap", id: ROADMAP },
@@ -46,7 +47,7 @@ const Header = () => {
 
   const menuItems = menu.map((item, idx) => (
     <StyledNavLink key={`menu-${idx}`}>
-      <Link to={`#${item.id}`} onClick={() => setSelected(idx)}>
+      <a href={`#${item.id}`} onClick={() => setSelected(idx)}>
         <Text
           font="Titillium Web"
           fontSize="18px"
@@ -55,7 +56,7 @@ const Header = () => {
         >
           {item.label}
         </Text>
-      </Link>
+      </a>
     </StyledNavLink>
   ));
 

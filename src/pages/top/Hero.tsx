@@ -10,12 +10,13 @@ import HeroMobileImg from "../../assets/images/landingpage/hero_mobile.png";
 import HeroButton from "../../assets/images/landingpage/hero_button.svg";
 import HeroGoToMarket from "../../assets/images/landingpage/hero_go-to-market.svg";
 import { useIsMobileView } from "../../hooks/useIsMobileView";
+import { MY_KINGDOM } from "../../constant/landingPageSection";
 
 const Hero = () => {
   const isMobileView = useIsMobileView();
 
   return (
-    <Container>
+    <Container id={MY_KINGDOM}>
       <Logo />
 
       <Box

@@ -12,11 +12,20 @@ import TokenomicCover from "../../assets/images/landingpage/token-util.png";
 import CloudImage from "../../assets/images/landingpage/token-utilities_cloud.png";
 // import CloudImage from "../../assets/images/landingpage/cloud_image.png";
 
-import { TOKEN_UTILITIES } from "../../constant/landingPageSection";
+import { TOKENOMIC } from "../../constant/landingPageSection";
 
 const TokenUtilities = () => {
   return (
-    <Container id={TOKEN_UTILITIES}>
+    // id scroll của section này đặt cuối warmode section phía trên nó
+    <Container>
+      <Box
+        id={TOKENOMIC}
+        position="absolute"
+        width="100vw"
+        height="2px"
+        top="-145px"
+      />
+
       <Box sm={{ padding: "10% 0 0 0" }} zIndex={2}>
         <Box
           height="23vw"
@@ -67,9 +76,9 @@ const GoldCloud = styled.div`
   position: absolute;
   width: 100vw; // 2880 x 2162
   height: 75vw;
-  bottom: -150px;
+  bottom: -10%;
   left: 0;
-  z-index: 3;
+  z-index: -1;
   background: url(${CloudImage}) no-repeat;
   background-size: cover;
   /* mix-blend-mode: difference; */
@@ -85,9 +94,10 @@ const GoldCloud = styled.div`
 const Container = styled.div`
   width: 100vw; // 1440px
   height: 80vw;
+  min-height: 900px;
   position: relative;
   z-index: 1;
-  overflow-x: hidden;
+  overflow: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 210vw;
     padding: ;

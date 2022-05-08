@@ -15,13 +15,22 @@ import backgroundMobile from "../../assets/images/landingpage/team_background-mo
 import LongNguyen from "../../assets/images/landingpage/our-team_longnguyen.png";
 import NhatNguyen from "../../assets/images/landingpage/our-team_nhatnguyen.png";
 import AnNguyen from "../../assets/images/landingpage/our-team_annguyen.png";
-import { OUR_TEAM } from "../../constant/landingPageSection";
+import { TEAM_MEMBERS } from "../../constant/landingPageSection";
 import GoldenHeader from "../../components/GoldenHeader";
 
 const OurTeam = () => {
   const isMobileView = useIsMobileView();
   return (
-    <OurTeamContainer id={OUR_TEAM}>
+    <OurTeamContainer>
+      <Box
+        id={TEAM_MEMBERS}
+        position="absolute"
+        top="0"
+        width="100vw"
+        height="2px"
+        sm={{ top: "-100px" }}
+      />
+
       <Box paddingTop="100px">
         <GoldenHeader>Our Team</GoldenHeader>
         {/* <Text
@@ -51,7 +60,7 @@ const OurTeam = () => {
                 fontSize="20px"
                 lineHeight="32px"
               >
-                Chief of Operation
+                Chief Executive Officer
               </Text>
               <Text
                 font="Red rose"
@@ -76,7 +85,7 @@ const OurTeam = () => {
                 fontSize="20px"
                 lineHeight="32px"
               >
-                Chief of Tech
+                Chief Technology Officer
               </Text>
               <Text
                 font="Red rose"

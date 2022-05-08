@@ -13,6 +13,7 @@ import UniqueWarPC from "../../assets/images/unique-nft-assets/unique-war.svg";
 import UniqueWarMobile from "../../assets/images/unique-nft-assets/unique-war-mobile.svg";
 
 import background from "../../assets/images/landingpage/unique-nft-assets_background.jpeg";
+import { NFT_ASSETS } from "../../constant/landingPageSection";
 
 const UniqueNFTAssets = () => {
   const uniqueAssets = (
@@ -83,6 +84,14 @@ const UniqueNFTAssets = () => {
 
   return (
     <Container>
+      <Box
+        id={NFT_ASSETS}
+        position="absolute"
+        top="0"
+        width="100vw"
+        height="2px"
+        sm={{ top: "-100px" }}
+      />
       <Box paddingTop="180px" position="relative" zIndex={1}>
         <GoldenHeader>Unique NFT Assets</GoldenHeader>
         <Flex justifyContent="center">

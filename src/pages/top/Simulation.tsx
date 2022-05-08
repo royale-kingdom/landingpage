@@ -8,12 +8,21 @@ import { useIsMobileView } from "../../hooks/useIsMobileView";
 import resource from "../../assets/images/landingpage/simulation_resource.png";
 import resourceMobile from "../../assets/images/landingpage/simulation_resource-mobile.png";
 import blackGradient from "../../assets/images/landingpage/simulation_black-gradient.png";
+import { SIMULATION_MODE } from "../../constant/landingPageSection";
 
 const Simulation = () => {
   const isMobileView = useIsMobileView();
-  console.log(isMobileView);
   return (
     <Container>
+      {/* scroll to this section */}
+      <Box
+        id={SIMULATION_MODE}
+        position="absolute"
+        width="100vw"
+        height="2px"
+        top="-120px"
+        sm={{ top: "-50px" }}
+      />
       <Content>
         <GoldenHeader>Simulation Mode</GoldenHeader>
         <Text
@@ -49,7 +58,7 @@ export default Simulation;
 const Container = styled.div`
   position: relative;
   background: rgb(20, 20, 25);
-  padding: 32px;
+  /* margin: 32px; */
   z-index: 0;
   &::before {
     content: "";

@@ -12,7 +12,7 @@ import UniqueProperty from "../../assets/images/landingpage/unique-property.png"
 import UniqueEquipment from "../../assets/images/landingpage/unique-equipment.png";
 import BG2RoyaleKingdom from "../../assets/images/landingpage/BG2 Royale Kingdom.png";
 
-import { BUILD_UNIQUE_WORLD } from "../../constant/landingPageSection";
+import { MY_KINGDOM } from "../../constant/landingPageSection";
 
 const UniqueItem = ({
   img,
@@ -61,7 +61,7 @@ const UniqueItem = ({
 };
 
 const BuildUniqueWorld = () => (
-  <UniqueAssetContainer id={BUILD_UNIQUE_WORLD}>
+  <UniqueAssetContainer id={MY_KINGDOM}>
     {/* relate to 1440px width screen, height:width ratio = 490 : 1440px */}
     <MaskedBox>
       <Box

@@ -33,7 +33,7 @@ export const Text = styled.p<TextProps>`
   width: ${({ width }) => width || "initial"};
   display: ${({ display }) => display || "inherit"};
   font-family: ${({ font }) => font || "Titillium Web"};
-  color: ${({ color }) => color || "rgba(238, 226, 204, 0.82)"};
+  color: ${({ color }) => color || "rgba(250, 250, 252, 0.82)"};
   margin: ${({ margin }) => margin || "initial"};
   padding: ${({ padding }) => padding || "initial"};
   box-sizing: border-box;

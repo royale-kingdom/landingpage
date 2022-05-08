@@ -20,9 +20,17 @@ const WarMode = () => {
   const isMobileView = useIsMobileView();
   return (
     <WarModeContainer>
-      {/* dragon */}
+      {/* scroll to section */}
       <Box
         id={WAR_MODE}
+        position="absolute"
+        width="100vw"
+        height="2px"
+        top="120px"
+      />
+
+      {/* dragon */}
+      <Box
         position="absolute"
         width="100%"
         height="auto"
@@ -81,7 +89,6 @@ const WarMode = () => {
           fontSize={"20px"}
           lineHeight={"32px"}
           sm={{ fontSize: "14px", lineHeight: "20px" }}
-          color="rgba(250, 250, 252, 0.82)"
         >
           War and conquest were considered to be the divine mission of the
           kings, whose duty was to allocate more resources and people into their
@@ -92,7 +99,6 @@ const WarMode = () => {
           lineHeight={"32px"}
           margin={"2rem 0"}
           sm={{ fontSize: "14px", lineHeight: "20px" }}
-          color="rgba(238, 226, 204, 0.82)"
         >
           In order to protect kingdoms, you would need to expand and conquer
           areas of perceived threat. War was also the primary means of economic

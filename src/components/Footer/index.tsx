@@ -11,24 +11,25 @@ import youtube from "../../assets/images/landingpage/icon_youtube.png";
 import twitter from "../../assets/images/landingpage/icon_twitter.png";
 
 import {
-  BUILD_UNIQUE_WORLD,
+  MY_KINGDOM,
   SIMULATION_MODE,
   WAR_MODE,
   TOKENMETRIC,
-  TOKEN_UTILITIES,
+  TOKENOMIC,
   ROADMAP,
-  OUR_TEAM
+  TEAM_MEMBERS,
+  NFT_ASSETS
 } from "../../constant/landingPageSection";
 
 const royaleKingdom = [
   { label: "Home", href: "/" },
-  { label: "NFT Assets", href: `#${BUILD_UNIQUE_WORLD}` },
-  { label: "Farming", href: `#${SIMULATION_MODE}` },
-  { label: "PVE", href: `#${WAR_MODE}` },
-  { label: "Tokenomic", href: `#${TOKEN_UTILITIES}` },
+  { label: "NFT Assets", href: `#${NFT_ASSETS}` },
+  { label: "Simulation mode", href: `#${SIMULATION_MODE}` },
+  { label: "War Mode", href: `#${WAR_MODE}` },
+  { label: "Tokenomic", href: `#${TOKENOMIC}` },
   { label: "Tokenmetric", href: `#${TOKENMETRIC}` },
   { label: "Roadmap", href: `#${ROADMAP}` },
-  { label: "Team", href: `#${OUR_TEAM}` }
+  { label: "Team", href: `#${TEAM_MEMBERS}` }
 ];
 
 export function Footer() {
