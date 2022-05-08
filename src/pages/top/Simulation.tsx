@@ -29,6 +29,9 @@ const Simulation = () => {
           margin="0 auto"
           width="628px"
           justify="center"
+          fontSize="20px"
+          lineHeight="32px"
+          fontWeight="400"
           sm={{
             width: "auto",
             fontSize: "16px",
@@ -65,9 +68,9 @@ const Container = styled.div`
     position: absolute;
     width: 100vw;
     height: 32vw;
-    top: 0;
+    top: -0;
     left: 0;
-    transform: translate(0, -50%);
+    transform: translate(0, -60%);
     z-index: 1;
     background: url("${blackGradient}") no-repeat;
     background-size: cover;

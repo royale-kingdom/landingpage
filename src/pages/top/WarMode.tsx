@@ -86,19 +86,21 @@ const WarMode = () => {
         <GoldenHeader align="left">War Mode</GoldenHeader>
 
         <Text
-          fontSize={"20px"}
-          lineHeight={"32px"}
-          sm={{ fontSize: "14px", lineHeight: "20px" }}
+          fontSize="20px"
+          lineHeight="32px"
+          fontWeight="400"
+          sm={{ fontSize: "16px", lineHeight: "26px" }}
         >
           War and conquest were considered to be the divine mission of the
           kings, whose duty was to allocate more resources and people into their
           domain.
         </Text>
         <Text
-          fontSize={"20px"}
-          lineHeight={"32px"}
+          fontSize="20px"
+          lineHeight="32px"
+          fontWeight="400"
           margin={"2rem 0"}
-          sm={{ fontSize: "14px", lineHeight: "20px" }}
+          sm={{ fontSize: "16px", lineHeight: "26px" }}
         >
           In order to protect kingdoms, you would need to expand and conquer
           areas of perceived threat. War was also the primary means of economic

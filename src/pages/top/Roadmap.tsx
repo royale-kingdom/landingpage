@@ -235,7 +235,7 @@ const MobileLeftRoadMap = ({
         <Text
           key={idx}
           font="Titillium Web"
-          fontSize="14px"
+          fontSize="16px"
           lineHeight="26px"
           justify="right"
           margin="0 0 12px 0"
@@ -270,7 +270,7 @@ const MobileRightRoadMap = ({
         <Text
           key={idx}
           font="Titillium Web"
-          fontSize="14px"
+          fontSize="16px"
           lineHeight="26px"
           margin="0 0 12px 0"
         >
@@ -291,13 +291,14 @@ const RoadMap = () => {
       </Box>
       <Container margin={"2rem 0"}>
         <Text
-          fontSize={"18px"}
-          lineHeight={"28px"}
+          fontSize="20px"
+          lineHeight="32px"
+          fontWeight="400"
           justify={"center"}
           width={"40vw"}
           margin={"0 auto"}
           font="Titillium Web"
-          sm={{ fontSize: "14px", lineHeight: "20px", width: "80vw" }}
+          sm={{ fontSize: "16px", lineHeight: "26px", width: "80vw" }}
         >
           Awaiting for new world mysteries
         </Text>

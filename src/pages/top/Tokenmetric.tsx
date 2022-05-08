@@ -328,18 +328,12 @@ const Tokenmetric = () => {
                   width: "243px",
                   height: "58px"
                 }}
-                padding="25px 40px"
-                fontSize="24px"
                 sm={{
                   fontSize: "1.8rem",
                   padding: "2rem 3rem"
                 }}
                 color="rgba(245, 237, 222, 1)"
-              >
-                <Text fontSize="18px" lineHeight="32px">
-                  Download Whitepaper
-                </Text>
-              </BaseButton>
+              ></BaseButton>
             </Flex>
           </FlexItem>
           <FlexItem flex={"1"} width={"100%"}>
@@ -355,7 +349,7 @@ const Tokenmetric = () => {
                       onMouseOver={() => setSelectedIndex(index)}
                       onMouseLeave={() => setSelectedIndex(-1)}
                     >
-                      <td width="40%">
+                      <td width="45%">
                         <Text
                           font="Red rose"
                           fontSize="20px"
@@ -389,7 +383,7 @@ const Tokenmetric = () => {
                           {item.percent}
                         </Text>
                       </td>
-                      <td width="40%">
+                      <td width="35%">
                         <Text
                           font="Titillium Web"
                           fontSize="20px"
@@ -420,8 +414,7 @@ const Tokenmetric = () => {
                         font="Red rose"
                         fontSize="24px"
                         lineHeight={"38px"}
-                        fontWeight="700"
-                        color="rgba(238, 226, 204, 1)"
+                        fontWeight="400"
                       >
                         TOTAL
                       </Text>
@@ -431,11 +424,10 @@ const Tokenmetric = () => {
                         width={"100%"}
                         display={"inline-block"}
                         justify={"right"}
-                        fontSize={"40px"}
-                        lineHeight={"64px"}
-                        fontWeight={"700"}
+                        fontSize={"24px"}
+                        lineHeight={"38px"}
+                        fontWeight={"400"}
                         sm={{ fontSize: "24px" }}
-                        color="rgba(238, 226, 204, 1)"
                         font="Red rose"
                       >
                         200.000.000

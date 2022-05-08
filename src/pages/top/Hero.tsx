@@ -24,12 +24,10 @@ const Hero = () => {
         transform="translate(-50%, 50%)"
         left="50%"
         top="58%"
-        sm={{ bottom: "unset", top: "55%" }}
+        sm={{ bottom: "unset", top: "53%" }}
       >
         <BaseButton
           style={{
-            width: "315px",
-            height: "100px",
             backgroundImage: `url(${HeroButton})`,
             backgroundRepeat: "no-repeat",
             fontWeight: "bold",
@@ -41,6 +39,8 @@ const Hero = () => {
           }}
           fontSize="24px"
           // padding="25px 40px"
+          width="315px"
+          height="100px"
           sm={{
             fontSize: "1.8rem",
             padding: "0 1rem",

@@ -44,12 +44,12 @@ const TokenUtilities = () => {
           <GoldenHeader>Token Utilities</GoldenHeader>
           <Text
             margin="auto"
-            fontWeight="500"
-            fontSize={"18px"}
-            lineHeight={"28px"}
+            fontSize="20px"
+            lineHeight="32px"
+            fontWeight="400"
             sm={{
-              fontSize: "14px",
-              lineHeight: "20px",
+              fontSize: "16px",
+              lineHeight: "26px",
               justify: "justify",
               padding: "0 20px"
             }}

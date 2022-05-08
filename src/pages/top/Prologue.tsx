@@ -14,7 +14,6 @@ const Prologue = () => {
   // const isMobileView = useIsMobileView();
   return (
     <Container>
-      <BlackGradient />
       <Content>
         <Box margin="0 auto">
           {/* <img
@@ -34,7 +33,7 @@ const Prologue = () => {
             color="rgba(250, 250, 252, 0.82)"
             fontSize="20px"
             lineHeight="32px"
-            fontWeight="600"
+            fontWeight="400"
             justify="center"
             margin="0 0 40px 0"
             sm={{ fontSize: "16px", lineHeight: "26px" }}
@@ -46,7 +45,7 @@ const Prologue = () => {
             color="rgba(250, 250, 252, 0.82)"
             fontSize="20px"
             lineHeight="32px"
-            fontWeight="600"
+            fontWeight="400"
             justify="center"
             margin="0 0 40px 0"
             sm={{ fontSize: "16px", lineHeight: "26px" }}
@@ -60,7 +59,7 @@ const Prologue = () => {
             color="rgba(250, 250, 252, 0.82)"
             fontSize="20px"
             lineHeight="32px"
-            fontWeight="600"
+            fontWeight="400"
             justify="center"
             sm={{ fontSize: "16px", lineHeight: "26px" }}
           >
@@ -77,32 +76,16 @@ const Prologue = () => {
 
 export default Prologue;
 
-const BlackGradient = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  background-image: linear-gradient(
-    to top,
-    black 10%,
-
-    rgba(0, 0, 0, 0) 100%
-  );
-  transform: translate(0, -100%);
-  top: 0;
-  left: 0;
-  z-index: 1;
-`;
-
 const Container = styled.div`
   width: 100vw;
   height: 55.5vw;
   min-height: 800px;
   position: relative;
   z-index: 0;
-  background: black;
   @media (max-width: 768px) {
-    height: 95vh;
+    height: 85vh;
     padding-top: 64px;
+    min-height: 750px;
   }
 `;
 

@@ -102,6 +102,9 @@ const UniqueNFTAssets = () => {
           >
             <Text
               justify="center"
+              fontSize="20px"
+              lineHeight="32px"
+              fontWeight="400"
               sm={{
                 fontSize: "16px",
                 lineHeight: "26px",
@@ -129,7 +132,7 @@ const Container = styled.div`
   background: url("${background}") no-repeat;
   background-size: cover;
   z-index: 0;
-  &::after {
+  /* &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -146,7 +149,7 @@ const Container = styled.div`
     @media (max-width: ${({ theme }) => theme.mobile}) {
       height: 100px;
     }
-  }
+  } */
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 100vh;
     min-height: 820px; // 900px trừ cho 84px của header

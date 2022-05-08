@@ -18,7 +18,7 @@ import { Flex } from "../Flex";
 import { Box } from "../Box";
 
 import headerLogo from "../../assets/images/landingpage/logo_header.png";
-import burgerButton from "../../assets/images/shape/burger_button.svg";
+import burgerButton from "../../assets/images/shape/burger_button.png";
 import close from "../../assets/images/icons/close.svg";
 import {
   MY_KINGDOM,
@@ -48,14 +48,11 @@ const Header = () => {
   const menuItems = menu.map((item, idx) => (
     <StyledNavLink key={`menu-${idx}`}>
       <a href={`#${item.id}`} onClick={() => setSelected(idx)}>
-        <Text
-          font="Titillium Web"
-          fontSize="18px"
-          lineHeight="28px"
-          color={selected === idx ? " #E2C89A" : "white"}
+        <MenuText
+          color={selected === idx ? " #E2C89A" : "rgba(250, 250, 252, 0.52)"}
         >
           {item.label}
-        </Text>
+        </MenuText>
       </a>
     </StyledNavLink>
   ));
@@ -140,4 +137,10 @@ const DrawerContainer = styled.div`
   top: 0;
   right: 0;
   background: rgb(20, 20, 25);
+`;
+
+const MenuText = styled(Text)`
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
 `;
