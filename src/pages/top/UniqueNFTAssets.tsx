@@ -156,7 +156,7 @@ const Container = styled.div`
 const BaseUniqueCard = styled(Flex)`
   width: 333px;
   height: 423px;
-  padding: 16px;
+  padding: 52px 24px;
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;

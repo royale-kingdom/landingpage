@@ -53,7 +53,6 @@ const TokenUtilities = () => {
               justify: "justify",
               padding: "0 20px"
             }}
-            color="rgba(238, 226, 204, 0.82)"
             style={{ textAlign: "center", maxWidth: "600px" }}
           >
             RYK is the main token that will be used on the marketplace. You can

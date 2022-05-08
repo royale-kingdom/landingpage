@@ -11,7 +11,6 @@ import youtube from "../../assets/images/landingpage/icon_youtube.png";
 import twitter from "../../assets/images/landingpage/icon_twitter.png";
 
 import {
-  MY_KINGDOM,
   SIMULATION_MODE,
   WAR_MODE,
   TOKENMETRIC,

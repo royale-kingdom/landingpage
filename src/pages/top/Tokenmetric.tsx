@@ -31,7 +31,7 @@ const TokenmetricTable = styled.table`
     tr {
       border-radius: 8px;
       td {
-        width: calc(100% / 3);
+        /* width: calc(100% / 3); */
         padding: calc(1rem + 1px) 1rem;
       }
       &.active {
@@ -59,9 +59,11 @@ const TokenmetricTable = styled.table`
 const tableDump: any[] = [
   { label: "Play to earn", percent: "30%", amount: "60,000,000" },
   { label: "Reserve funds", percent: "18%", amount: "36,000,000" },
-  { label: "Team, advisor", percent: "16%", amount: "32,000,000" },
-  { label: "Operation funds", percent: "16%", amount: "32,000,000" },
+  { label: "Team & advisor", percent: "16%", amount: "32,000,000" },
+  { label: "Operation Funds", percent: "16%", amount: "32,000,000" },
   { label: "Private Sale", percent: "8%", amount: "16,000,000" },
+  { label: "IDO/IFO/ICO", percent: "7%", amount: "14,000,000" },
+  { label: "Partner Funds", percent: "4%", amount: "8,000,000" },
   { label: "Airdrop", percent: "1%", amount: "2,000,000" }
 ];
 
@@ -294,7 +296,7 @@ const Tokenmetric = () => {
               sm={{
                 width: "95%"
               }}
-              width="70%"
+              width="90%"
               alginItem="center"
               justifyContent="center"
               margin="0 auto"
@@ -353,13 +355,12 @@ const Tokenmetric = () => {
                       onMouseOver={() => setSelectedIndex(index)}
                       onMouseLeave={() => setSelectedIndex(-1)}
                     >
-                      <td>
+                      <td width="40%">
                         <Text
                           font="Red rose"
-                          fontSize="18px"
-                          lineHeight={"28px"}
-                          fontWeight="700"
-                          color="rgba(238, 226, 204, 1)"
+                          fontSize="20px"
+                          lineHeight={"32px"}
+                          fontWeight="400"
                           sm={{
                             fontSize: "16px",
                             lineHeight: "26px",
@@ -369,16 +370,16 @@ const Tokenmetric = () => {
                           {item.label}
                         </Text>
                       </td>
-                      <td>
+                      <td width="20%">
                         <Text
                           font="Titillium Web"
-                          fontSize="18px"
-                          lineHeight={"28px"}
+                          fontSize="20px"
+                          lineHeight={"32px"}
                           width={"100%"}
                           display={"inline-block"}
                           justify={"center"}
-                          fontWeight="700"
-                          color="rgba(238, 226, 204, 0.52)"
+                          fontWeight="600"
+                          color="rgba(255, 255, 255, 0.52)"
                           sm={{
                             fontSize: "16px",
                             lineHeight: "26px",
@@ -388,16 +389,15 @@ const Tokenmetric = () => {
                           {item.percent}
                         </Text>
                       </td>
-                      <td>
+                      <td width="40%">
                         <Text
                           font="Titillium Web"
-                          fontSize="18px"
-                          lineHeight={"28px"}
+                          fontSize="20px"
+                          lineHeight={"32px"}
                           width={"100%"}
                           justify={"right"}
                           display={"inline-block"}
-                          fontWeight="700"
-                          color="rgba(238, 226, 204, 1)"
+                          fontWeight="600"
                           sm={{
                             fontSize: "16px",
                             lineHeight: "26px",

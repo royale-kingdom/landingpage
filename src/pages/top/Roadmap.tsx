@@ -165,7 +165,13 @@ const StartedMileStonePC = () => (
       </GoldenText>
     </Box>
     <Box>
-      <Text font="Red rose" justify="center" fontSize="20px" lineHeight="26px">
+      <Text
+        font="Red rose"
+        justify="center"
+        fontSize="20px"
+        lineHeight="26px"
+        color="rgba(209, 170, 99, 1)"
+      >
         STARTED
       </Text>
     </Box>

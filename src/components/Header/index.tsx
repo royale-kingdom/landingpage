@@ -41,7 +41,7 @@ const menu: { label: string; id?: string }[] = [
 const Header = () => {
   const isMobileView = useIsMobileView();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [selected, setSelected] = useState<number>();
+  const [selected, setSelected] = useState<number>(0);
 
   console.log(selected);
 
@@ -99,7 +99,10 @@ const Header = () => {
                   {menu.map((item, idx) => (
                     <Box key={`menu-${idx}`} padding="12px 0">
                       <StyledNavLink>
-                        <Link to={`#${item.id}`}>
+                        <a
+                          href={`#${item.id}`}
+                          onClick={() => setIsDrawerOpen(false)}
+                        >
                           <Text
                             font="Titillium Web"
                             fontSize="18px"
@@ -108,7 +111,7 @@ const Header = () => {
                           >
                             {item.label}
                           </Text>
-                        </Link>
+                        </a>
                       </StyledNavLink>
                     </Box>
                   ))}
