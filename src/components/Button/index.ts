@@ -22,6 +22,8 @@ export const BaseButton = styled.div<ButtonProps>`
   font-size: ${({ fontSize }) => fontSize || "1rem"};
   display: inline-block;
   padding: ${({ padding }) => padding || null};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   @media (max-width: ${({ theme }) => theme.mobile}) {
     font-size: ${({ sm }) => sm?.fontSize || "1rem"};
     padding: ${({ sm }) => sm?.padding || null};
