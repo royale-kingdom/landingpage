@@ -33,27 +33,23 @@ const TokenmetricTable = styled.table`
       td {
         /* width: calc(100% / 3); */
         padding: calc(1rem + 1px) 1rem;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        &:first-child {
-          border-top-left-radius: 8px;
-          border-bottom-left-radius: 8px;
-          border-left: 1px solid;
-          border-color: transparent;
-        }
-        &:last-child {
-          border-top-right-radius: 8px;
-          border-bottom-right-radius: 8px;
-          border-right: 1px solid;
-          border-color: transparent;
-        }
-        border-color: transparent;
       }
       &.active {
         background-color: rgba(134, 101, 39, 0.64);
         cursor: pointer;
         td {
-          border-color: #FFF;
+          border-top: 1px solid;
+          border-bottom: 1px solid;
+          &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-left: 1px solid;
+          }
+          &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-right: 1px solid;
+          }
         }
       }
     }
