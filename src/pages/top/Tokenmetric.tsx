@@ -103,6 +103,18 @@ const pieChartData = [
     amount: "16,000,000"
   },
   {
+    title: "IDO/IFO/ICO",
+    value: 8,
+    color: defaultColor,
+    amount: "14,000,000"
+  },
+  {
+    title: "Partner Funds",
+    value: 4,
+    color: defaultColor,
+    amount: "8,000,000"
+  },
+  {
     title: "Airdrop",
     value: 1,
     color: defaultColor,
@@ -214,7 +226,7 @@ const PieChart2 = (props: any) => {
       triggerHover(chart.current, index);
       triggerTooltip(chart.current, index);
     }
-  }, [index]);
+  }, [index, chart]);
   return (
     <Doughnut
       ref={chart}
