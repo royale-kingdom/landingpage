@@ -93,7 +93,7 @@ const UniqueNFTAssets = () => {
         sm={{ top: "-100px" }}
       />
       <Box paddingTop="180px" position="relative" zIndex={1}>
-        <GoldenHeader>Unique NFT Assets</GoldenHeader>
+        <GoldenHeader margin="12px auto">Unique NFT Assets</GoldenHeader>
         <Flex justifyContent="center">
           <Box
             width="524px"

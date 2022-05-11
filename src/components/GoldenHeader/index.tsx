@@ -5,8 +5,12 @@ interface Props extends BaseStyleProps {
   children: ReactNode;
 }
 
-const GoldenHeader = ({ children, align }: Props) => {
-  return <H1 align={align || "center"}>{children}</H1>;
+const GoldenHeader = ({ children, align, margin }: Props) => {
+  return (
+    <H1 align={align || "center"} margin={margin}>
+      {children}
+    </H1>
+  );
 };
 
 export default GoldenHeader;
