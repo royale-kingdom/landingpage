@@ -28,8 +28,8 @@ const TokenUtilities = () => {
 
       <Box sm={{ padding: "10% 0 0 0" }} zIndex={2}>
         <Box
-          height="23vw"
-          width="23vw"
+          height="25vw"
+          width="25vw"
           margin="0 auto"
           sm={{ height: "50vw", width: "50vw" }}
         >
@@ -40,10 +40,11 @@ const TokenUtilities = () => {
             alt="tokenomic"
           />
         </Box>
-        <Box width="70vw" margin="0 auto" sm={{ width: "100vw" }}>
+        <Box width="846px" margin="0 auto" sm={{ width: "100vw" }}>
           <GoldenHeader>Token Utilities</GoldenHeader>
           <Text
             margin="auto"
+            width="100%"
             fontSize="20px"
             lineHeight="32px"
             fontWeight="400"
