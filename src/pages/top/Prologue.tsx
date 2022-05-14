@@ -36,7 +36,7 @@ const Prologue = () => {
             fontWeight="400"
             justify="center"
             margin="0 0 40px 0"
-            sm={{ fontSize: "16px", lineHeight: "26px" }}
+            sm={{ fontSize: "16px", lineHeight: "26px", fontWeight: "600" }}
           >
             A new king had to swear an oath to fulfill the responsibilities of a
             monarch.
@@ -48,7 +48,7 @@ const Prologue = () => {
             fontWeight="400"
             justify="center"
             margin="0 0 40px 0"
-            sm={{ fontSize: "16px", lineHeight: "26px" }}
+            sm={{ fontSize: "16px", lineHeight: "26px", fontWeight: "600" }}
           >
             Set in Europe during the Middle Ages, with traditions of monsters,
             dragons, and witches. Players will take on the role of the ruler to
@@ -61,7 +61,7 @@ const Prologue = () => {
             lineHeight="32px"
             fontWeight="400"
             justify="center"
-            sm={{ fontSize: "16px", lineHeight: "26px" }}
+            sm={{ fontSize: "16px", lineHeight: "26px", fontWeight: "600" }}
           >
             During gameplay, all game elements may be manufactured in accordance
             to players decisions pondering the destiny of unique equipments,

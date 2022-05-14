@@ -5,15 +5,74 @@ import GoldenHeader from "../../components/GoldenHeader";
 import { Text } from "../../components/Typo/Text";
 import { GoldenText } from "../../components/GoldenText";
 
-import UniquePropertiesPC from "../../assets/images/unique-nft-assets/unique-properties.svg";
-import UniquePropertiesMobile from "../../assets/images/unique-nft-assets/unique-properties-mobile.svg";
-import UniqueEquipmentPC from "../../assets/images/unique-nft-assets/unique-equipment.svg";
-import UniqueEquipmentMobile from "../../assets/images/unique-nft-assets/unique-equipment-mobile.svg";
-import UniqueWarPC from "../../assets/images/unique-nft-assets/unique-war.svg";
-import UniqueWarMobile from "../../assets/images/unique-nft-assets/unique-war-mobile.svg";
+import UniquePropertiesPC from "../../assets/images/unique-nft-assets/unique-properties.png";
+import UniquePropertiesMobile from "../../assets/images/unique-nft-assets/unique-properties-mobile.png";
+import UniqueEquipmentPC from "../../assets/images/unique-nft-assets/unique-equipment.png";
+import UniqueEquipmentMobile from "../../assets/images/unique-nft-assets/unique-equipment-mobile.png";
+import UniqueWarPC from "../../assets/images/unique-nft-assets/unique-war.png";
+import UniqueWarMobile from "../../assets/images/unique-nft-assets/unique-war-mobile.png";
 
 import background from "../../assets/images/landingpage/unique-nft-assets_background.jpeg";
 import { NFT_ASSETS } from "../../constant/landingPageSection";
+import { useIsMobileView } from "../../hooks/useIsMobileView";
+
+interface AssetProps {
+  title: string;
+  content: string;
+  PCBackground: any;
+  MobileBackground: any;
+}
+
+const assetData: AssetProps[] = [
+  {
+    title: "Unique Properties",
+    content:
+      "Build kingdoms from scratch with unique people under your command",
+      PCBackground: UniquePropertiesPC,
+      MobileBackground: UniquePropertiesMobile
+  },
+  {
+    title: "Unique Equipment",
+    content: "Forge equipment with talent blacksmiths and explore your kingdom",
+    PCBackground: UniqueEquipmentPC,
+    MobileBackground: UniqueEquipmentMobile
+  },
+  {
+    title: "Unique War",
+    content: "Lead kingdom to victory by tactical decisions in every turn",
+    PCBackground: UniqueWarPC,
+    MobileBackground: UniqueWarMobile
+  }
+];
+
+const Asset = ({
+  title,
+  content,
+  PCBackground,
+  MobileBackground
+}: AssetProps) => {
+  const isMobileView = useIsMobileView();
+  return (
+    <BaseUniqueCard imgSrc={isMobileView ? MobileBackground : PCBackground}>
+      <GoldenText
+        fontSize="20px"
+        lineHeight="26px"
+        sm={{ margin: "0 0 0 143px" }}
+      >
+        {title}
+      </GoldenText>
+      <Text
+        justify="center"
+        fontSize="16px"
+        lineHeight="26px"
+        margin="0 12px"
+        sm={{ margin: "0 0 0 143px", justify: "left" }}
+      >
+        {content}
+      </Text>
+    </BaseUniqueCard>
+  );
+};
 
 const UniqueNFTAssets = () => {
   const uniqueAssets = (
@@ -25,60 +84,9 @@ const UniqueNFTAssets = () => {
         justifyContent: "center"
       }}
     >
-      <UniqueProperties>
-        <GoldenText
-          fontSize="20px"
-          lineHeight="26px"
-          sm={{ margin: "0 0 0 143px" }}
-        >
-          Unique Properties
-        </GoldenText>
-        <Text
-          justify="center"
-          fontSize="16px"
-          lineHeight="26px"
-          margin="0 12px"
-          sm={{ margin: "0 0 0 143px", justify: "left" }}
-        >
-          Build kingdoms from scratch with unique people under your command
-        </Text>
-      </UniqueProperties>
-      <UniqueEquipment>
-        <GoldenText
-          fontSize="20px"
-          lineHeight="26px"
-          sm={{ margin: "0 0 0 143px" }}
-        >
-          Unique Equipment
-        </GoldenText>
-        <Text
-          justify="center"
-          fontSize="16px"
-          lineHeight="26px"
-          margin="0 12px"
-          sm={{ margin: "0 0 0 143px", justify: "left" }}
-        >
-          Forge equipment with talent blacksmiths and explore your kingdom
-        </Text>
-      </UniqueEquipment>
-      <UniqueWar>
-        <GoldenText
-          fontSize="20px"
-          lineHeight="26px"
-          sm={{ margin: "0 0 0 143px" }}
-        >
-          Unique War
-        </GoldenText>
-        <Text
-          justify="center"
-          fontSize="16px"
-          lineHeight="26px"
-          margin="0 12px"
-          sm={{ margin: "0 0 0 143px", justify: "left" }}
-        >
-          Lead kingdom to victory by tactical decisions in every turn
-        </Text>
-      </UniqueWar>
+      {assetData.map((item, idx) => (
+        <Asset key={`uniq asset item - ${idx}`} {...item} />
+      ))}
     </Flex>
   );
 
@@ -108,7 +116,8 @@ const UniqueNFTAssets = () => {
               sm={{
                 fontSize: "16px",
                 lineHeight: "26px",
-                margin: "0 0 86px 0"
+                margin: "0 0 86px 0",
+                fontWeight: "600"
               }}
             >
               An immersive, intense turn based strategy game with player driven
@@ -156,9 +165,10 @@ const Container = styled.div`
   }
 `;
 
-const BaseUniqueCard = styled(Flex)`
+const BaseUniqueCard = styled(Flex)<{ imgSrc?: any }>`
   width: 333px;
   height: 423px;
+  margin: 0 24px;
   padding: 52px 24px;
   align-items: center;
   justify-content: flex-end;
@@ -166,32 +176,12 @@ const BaseUniqueCard = styled(Flex)`
   padding-bottom: 45px;
   z-index: 1;
   background-size: cover;
+  background-image: ${({ imgSrc }) => `url(${imgSrc})`};
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 366px;
     height: 151px;
     align-items: flex-start;
     margin-bottom: 32px;
     padding-bottom: 24px;
-  }
-`;
-
-const UniqueProperties = styled(BaseUniqueCard)`
-  background-image: url(${UniquePropertiesPC});
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    background-image: url(${UniquePropertiesMobile});
-  }
-`;
-
-const UniqueEquipment = styled(BaseUniqueCard)`
-  background-image: url(${UniqueEquipmentPC});
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    background-image: url(${UniqueEquipmentMobile});
-  }
-`;
-
-const UniqueWar = styled(BaseUniqueCard)`
-  background-image: url(${UniqueWarPC});
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    background-image: url(${UniqueWarMobile});
   }
 `;

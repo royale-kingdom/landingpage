@@ -7,13 +7,14 @@ import { Text } from "../../components/Typo/Text";
 import HeroDesktopLogo from "../../assets/images/landingpage/hero_logo_desktop.png";
 import HeroDesktopImg from "../../assets/images/landingpage/hero_desktop.png";
 import HeroMobileImg from "../../assets/images/landingpage/hero_mobile.png";
-import HeroButton from "../../assets/images/landingpage/hero_button.svg";
-import HeroGoToMarket from "../../assets/images/landingpage/hero_go-to-market.svg";
+import HeroButton from "../../assets/images/landingpage/hero_button.png";
+import HeroGoToMarket from "../../assets/images/landingpage/hero_go-to-market.png";
 import { useIsMobileView } from "../../hooks/useIsMobileView";
 import { MY_KINGDOM } from "../../constant/landingPageSection";
 
 const Hero = () => {
   const isMobileView = useIsMobileView();
+  console.log(isMobileView)
 
   return (
     <Container id={MY_KINGDOM}>
@@ -49,14 +50,15 @@ const Hero = () => {
           }}
           color="rgba(245, 237, 222, 1)"
         />
-        <Box margin="0 auto">
+        <Box margin="16px auto">
           <Text padding="0 16px" justify="center">
             <a href="https://marketplace-dev.royalekingdom.com/marketplace">
               <img
                 src={HeroGoToMarket}
                 alt="go to marketplace"
+                style={{ display: "inline-block" }}
                 width={isMobileView ? "138px" : "141px"}
-                height={isMobileView ? "26px" : "28px"}
+                height={isMobileView ? "20px" : "22px"}
               />
             </a>
           </Text>

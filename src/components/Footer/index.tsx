@@ -20,6 +20,7 @@ import {
   TEAM_MEMBERS,
   NFT_ASSETS
 } from "../../constant/landingPageSection";
+import { useIsMobileView } from "../../hooks/useIsMobileView";
 
 const royaleKingdom = [
   { label: "Home", href: "/" },
@@ -33,6 +34,23 @@ const royaleKingdom = [
 ];
 
 export function Footer() {
+  const isMobileView = useIsMobileView();
+
+  const allRight = (
+    <Box>
+      <Text
+        // margin="40px 0 0 0"
+        fontSize="16px"
+        lineHeight="26px"
+        fontWeight="400"
+        font="Titillium Web"
+        color="rgba(255, 255, 255, 0.52)"
+      >
+        © 2022 Royale Kingdom. All Rights Reserved.
+      </Text>
+    </Box>
+  );
+
   return (
     <FooterContainer>
       <Flex
@@ -62,18 +80,7 @@ export function Footer() {
               </Text>
             </Box>
             <FlexItem flex="1" />
-            <Box>
-              <Text
-                // margin="40px 0 0 0"
-                fontSize="16px"
-                lineHeight="26px"
-                fontWeight="400"
-                font="Titillium Web"
-                color="rgba(255, 255, 255, 0.52)"
-              >
-                © 2022 Royale Kingdom. All Rights Reserved.
-              </Text>
-            </Box>
+            {!isMobileView && allRight}
           </Flex>
         </Box>
         <Box
@@ -94,7 +101,7 @@ export function Footer() {
           >
             Royale Kingdom
           </Text>
-          <Box width={"100%"} sm={{ width: "240px" }}>
+          <Box width={"100%"} sm={{ width: "100%" }}>
             <Flex justifyContent="space-between">
               {royaleKingdom.map((item, idx) => (
                 <a href={item.href} key={idx}>
@@ -176,13 +183,13 @@ export function Footer() {
             </Text>
           </Box>
           <Flex justifyContent="flex-start">
-            <Box marginRight="24px">
+            <Box marginRight="24px" sm={{margin: '0 16px 0 0'}}>
               <Img width="16px" height="16px" src={facebookIcon} />
             </Box>
-            <Box marginRight="24px">
+            <Box marginRight="24px" sm={{margin: '0 16px 0 0'}}>
               <Img width="16px" height="16px" src={youtubeIcon} />
             </Box>
-            <Box marginRight="24px">
+            <Box marginRight="24px" sm={{margin: '0 16px 0 0'}}>
               <Img width="16px" height="16px" src={twitterIcon} />
             </Box>
             <Box>
@@ -191,6 +198,7 @@ export function Footer() {
           </Flex>
         </Box>
       </Flex>
+      {isMobileView && allRight}
     </FooterContainer>
   );
 }

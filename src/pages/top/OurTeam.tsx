@@ -48,9 +48,9 @@ const OurTeam = () => {
       </Box>
 
       <Box marginTop="64px" sm={{ margin: "32px 0 72px 0" }}>
-        <Flex justifyContent="center">
-          <Box margin="0 16px">
-            <Box width="262px" sm={{ width: "184px" }}>
+        <Flex justifyContent="center" >
+          <Box margin="0 16px" sm={{ margin: "24px 0", width: '100%' }}>
+            <Box width="262px" sm={{ width: "184px", margin: '0 auto' }}>
               <img src={LongNguyen} alt="Long Nguyen" width="100%" />
             </Box>
             <Box>
@@ -74,8 +74,8 @@ const OurTeam = () => {
               </Text>
             </Box>
           </Box>
-          <Box margin="0 16px">
-            <Box width="262px" sm={{ width: "184px" }}>
+          <Box margin="0 16px" sm={{ margin: "24px 0", width: '100%' }}>
+            <Box width="262px" sm={{  width: "184px", margin: '0 auto' }}>
               <img src={NhatNguyen} alt="Nhat Nguyen" width="100%" />
             </Box>
             <Box>
@@ -99,8 +99,8 @@ const OurTeam = () => {
               </Text>
             </Box>
           </Box>
-          <Box margin="0 16px">
-            <Box width="262px" sm={{ width: "184px" }}>
+          <Box margin="0 16px" sm={{ margin: "24px 0", width: '100%' }}>
+            <Box width="262px" sm={{  width: "184px", margin: '0 auto' }}>
               <img src={AnNguyen} alt="An Nguyen" width="100%" />
             </Box>
             <Box>
