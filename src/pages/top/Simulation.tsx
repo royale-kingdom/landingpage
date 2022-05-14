@@ -48,7 +48,7 @@ const Simulation = () => {
           <img
             src={isMobileView ? resourceMobile : resource}
             alt="resource"
-            width={isMobileView ? "100%" : "100%"}
+            width={isMobileView ? "100%" : "772px"}
           />
         </Box>
       </Content>

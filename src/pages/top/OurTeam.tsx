@@ -49,7 +49,7 @@ const OurTeam = () => {
 
       <Box marginTop="64px" sm={{ margin: "32px 0 72px 0" }}>
         <Flex justifyContent="center">
-          <Box margin="0 24px">
+          <Box margin="0 16px">
             <Box width="262px" sm={{ width: "184px" }}>
               <img src={LongNguyen} alt="Long Nguyen" width="100%" />
             </Box>
@@ -74,7 +74,7 @@ const OurTeam = () => {
               </Text>
             </Box>
           </Box>
-          <Box margin="0 24px">
+          <Box margin="0 16px">
             <Box width="262px" sm={{ width: "184px" }}>
               <img src={NhatNguyen} alt="Nhat Nguyen" width="100%" />
             </Box>
@@ -99,7 +99,7 @@ const OurTeam = () => {
               </Text>
             </Box>
           </Box>
-          <Box margin="0 24px">
+          <Box margin="0 16px">
             <Box width="262px" sm={{ width: "184px" }}>
               <img src={AnNguyen} alt="An Nguyen" width="100%" />
             </Box>
@@ -124,41 +124,9 @@ const OurTeam = () => {
               </Text>
             </Box>
           </Box>
-          {/* <Member
-          fullName="Long Nguyen"
-          title="CHIEF OF OPERATION"
-          avatar={LongNguyen}
-        />
-        <Member
-          fullName="Nhat Nguyen"
-          title="CHIEF OF TECH"
-          avatar={NhatNguyen}
-        />
-        <Member fullName="An Nguyen" title="ART DIRECTOR" avatar={AnNguyen} /> */}
         </Flex>
-        {/* <Flex justifyContent="center">
-        <Member fullName="Hang Nguyen" title="2D ARTIST" />
-        <Member fullName="Phuong Lou" title="2D ARTIST" />
-        <Member fullName="Hang Ung" title="F.E DEVELOPER" />
-        <Member fullName="Louis Do" title="SMC DEVELOPER" />
-      </Flex> */}
       </Box>
-      {/* <Box
-      position="absolute"
-      width="500px"
-      height="420px"
-      right="5%"
-      bottom="10%"
-      zIndex={-2}
-      sm={{ width: "50vw", height: "auto", bottom: "5%", right: "0" }}
-    >
-      <Img
-        src={shootingStar}
-        width={"100%"}
-        height={"100%"}
-        style={{ mixBlendMode: "screen" }}
-      />
-    </Box> */}
+
       <BottomImg>
         <Img
           src={isMobileView ? backgroundMobile : background}
@@ -187,6 +155,7 @@ const BottomImg = styled.div`
 
 const OurTeamContainer = styled.div`
   height: 100vh;
+  height: 766px;
   position: relative;
   overflow: hidden;
   @media (max-width: ${({ theme }) => theme.mobile}) {

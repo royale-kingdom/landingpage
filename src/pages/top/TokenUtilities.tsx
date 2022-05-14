@@ -28,8 +28,8 @@ const TokenUtilities = () => {
 
       <Box sm={{ padding: "10% 0 0 0" }} zIndex={2}>
         <Box
-          height="25vw"
-          width="25vw"
+          height="27vw"
+          width="27vw"
           margin="0 auto"
           sm={{ height: "50vw", width: "50vw" }}
         >
@@ -54,7 +54,7 @@ const TokenUtilities = () => {
               justify: "justify",
               padding: "0 20px"
             }}
-            style={{ textAlign: "center", maxWidth: "600px" }}
+            style={{ textAlign: "center"}}
           >
             RYK is the main token that will be used on the marketplace. You can
             exchange characters, weapons, armors and lands too. Also, RYK can be

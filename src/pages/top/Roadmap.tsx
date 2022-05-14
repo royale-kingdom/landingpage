@@ -9,17 +9,12 @@ import { Container, Flex, FlexItem } from "../../components/Grid";
 import { RoadMapLine } from "../../components/RoadMapLine";
 import { GoldenText } from "../../components/GoldenText";
 
-// import activeSquircle from "../../assets/images/landingpage/active_Squircle.svg";
-// import squircle from "../../assets/images/landingpage/squircle.svg";
-// import openedTreasure from "../../assets/images/landingpage/treasure_open.svg";
-// import closedTreasure from "../../assets/images/landingpage/treasure_close.svg";
-// import goldenColumn from "../../assets/images/landingpage/golden_column.png";
-// import RoadMapBackground from "../../assets/images/landingpage/road_map_background.svg";
-import squircle from "../../assets/images/landingpage/roadmap_frame.svg";
-import openedTreasure from "../../assets/images/landingpage/roadmap_open.png";
-import closedTreasure from "../../assets/images/landingpage/roadmap_close.png";
-import start from "../../assets/images/landingpage/roadmap_start.png";
-import xSword from "../../assets/images/landingpage/sword_x.png";
+import squircle from "../../assets/images/roadmap/roadmap_frame.svg";
+import openedTreasure from "../../assets/images/roadmap/roadmap_open.png";
+import closedTreasure from "../../assets/images/roadmap/roadmap_close.png";
+// import closedTreasure from "../../assets/images/roadmap/roadmap_treasure-closed.png";
+import start from "../../assets/images/roadmap/roadmap_start.png";
+import xSword from "../../assets/images/roadmap/roadmap_cross-sword.png";
 
 import { ROADMAP } from "../../constant/landingPageSection";
 import GoldenHeader from "../../components/GoldenHeader";
@@ -28,7 +23,13 @@ import { useIsMobileView } from "../../hooks/useIsMobileView";
 const nextPlan = [
   {
     quarter: "Q2/2022",
-    events: ["Landing Page", "IDO Event", "MarketPlace", "Simulation Mode"]
+    events: [
+      "Landing Page",
+      "IDO Event",
+      "MarketPlace",
+      "Simulation Mode",
+      "Explorer Mode"
+    ]
   },
 
   {
@@ -75,26 +76,28 @@ const MileStonePC = () => {
             </Box>
           </Box> */}
           <Box marginTop="24px">
-            <Box height="24px" width="24px" margin="auto">
+            <Box height="24px" width="27px" margin="auto">
               <Img src={xSword} height="100%" width="100%" />
             </Box>
           </Box>
-          <Box>
+          <Box margin="8px 0">
             <GoldenText fontSize="24px" lineHeight="38px" justify="center">
               {quarter}
             </GoldenText>
           </Box>
           <Box>
             {events.map((event, idx) => (
-              <Text
-                key={idx}
-                font="Titillium Web"
-                justify="center"
-                fontSize="16px"
-                lineHeight="26px"
-              >
-                {event}
-              </Text>
+              <Box key={idx} margin="4px 0">
+                <Text
+                  font="Titillium Web"
+                  justify="center"
+                  fontWeight="600"
+                  fontSize="16px"
+                  lineHeight="26px"
+                >
+                  {event}
+                </Text>
+              </Box>
             ))}
           </Box>
         </Box>
@@ -155,11 +158,11 @@ const StartedMileStonePC = () => (
       </Box>
     </Box>
     <Box>
-      <Box height="24px" width="24px" margin="auto">
+      <Box height="24px" width="26px" margin="auto">
         <Img src={xSword} height="100%" width="100%" />
       </Box>
     </Box>
-    <Box>
+    <Box margin="8px 0">
       <GoldenText fontSize="24px" lineHeight="38px" justify="center">
         Q1/2022
       </GoldenText>
@@ -191,7 +194,7 @@ const StartedMileStoneMobile = () => (
   >
     <Box position="absolute" height="50%" left="50.5%" bottom="0" zIndex={-1}>
       <Box width="100%">
-        <CenterLight />
+        <MobileCenterLight />
       </Box>
     </Box>
     <Box>
@@ -308,7 +311,7 @@ const RoadMap = () => {
       {!isMobileView && (
         <Box margin="64px 80px" position="relative">
           <Box
-            height="8px"
+            height="4px"
             width="85%"
             position="absolute"
             top="15%"
@@ -353,7 +356,7 @@ const RoadMap = () => {
           {nextPlan.map((item, idx) => (
             <Box key={idx}>
               <Box position="relative" zIndex={0}>
-                <CenterLight />
+                <MobileCenterLight />
                 <Flex alginItem="start">
                   <FlexItem flex="1">
                     {/* display info in the left */}
@@ -402,7 +405,7 @@ const RoadmapContainer = styled.div`
   }
 `;
 
-const CenterLight = styled.div`
+const MobileCenterLight = styled.div`
   position: absolute;
   width: 4px;
   height: 100%;
@@ -430,10 +433,10 @@ const OpenedTreasure = styled.div`
   position: relative;
   &::after {
     content: "";
-    width: 112px;
-    height: 112px;
+    width: 134px;
+    height: 134px;
     position: absolute;
-    top: 45%;
+    top: 37%;
     left: 45%;
     transform: translate(-50%, -50%);
     background: url(${openedTreasure}) no-repeat;
@@ -459,10 +462,10 @@ const ClosedTreasure = styled.div`
   position: relative;
   &::after {
     content: "";
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     position: absolute;
-    top: 45%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url(${closedTreasure}) no-repeat;

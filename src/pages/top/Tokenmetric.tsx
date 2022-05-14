@@ -363,6 +363,7 @@ const Tokenmetric = () => {
                     >
                       <td width="45%">
                         <Text
+                          color="#FFF"
                           font="Red rose"
                           fontSize="20px"
                           lineHeight={"32px"}
@@ -397,6 +398,7 @@ const Tokenmetric = () => {
                       </td>
                       <td width="35%">
                         <Text
+                          color="#FFF"
                           font="Titillium Web"
                           fontSize="20px"
                           lineHeight={"32px"}
@@ -423,6 +425,7 @@ const Tokenmetric = () => {
                   <tr>
                     <td>
                       <Text
+                        color="#FFF"
                         font="Red rose"
                         fontSize="24px"
                         lineHeight={"38px"}
@@ -433,6 +436,7 @@ const Tokenmetric = () => {
                     </td>
                     <td colSpan={2}>
                       <Text
+                        color="#FFF"
                         width={"100%"}
                         display={"inline-block"}
                         justify={"right"}

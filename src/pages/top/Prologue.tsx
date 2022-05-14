@@ -78,8 +78,8 @@ export default Prologue;
 
 const Container = styled.div`
   width: 100vw;
-  height: 55.5vw;
-  min-height: 800px;
+  height: 48vw;
+  min-height: 780px;
   position: relative;
   z-index: 0;
   @media (max-width: 768px) {
