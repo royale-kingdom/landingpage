@@ -45,11 +45,11 @@ const Simulation = () => {
           uphold the law.
         </Text>
         <Box>
-          <img
-            src={isMobileView ? resourceMobile : resource}
-            alt="resource"
-            width={isMobileView ? "100%" : "772px"}
-          />
+          {isMobileView ? (
+            <img src={resourceMobile} alt="resource" width={"100%"} />
+          ) : (
+            <img src={resource} alt="resource" width={"766px"} />
+          )}
         </Box>
       </Content>
     </Container>

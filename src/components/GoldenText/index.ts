@@ -11,13 +11,18 @@ interface Props extends BaseProps {
 
 export const GoldenText = styled(Text)<Props>`
   /* font-family: "Judson"; */
-  font-family: 'Titillium Web';
+  font-family: "Titillium Web";
   font-size: 25px;
   line-height: 41px;
   font-style: normal;
   font-weight: 600;
   /* background: linear-gradient(to bottom, #fff9d7, #e5c87f, #ba8623, #8f8466); */
-  background: linear-gradient(180deg, #FFFAD0 15.32%, #FFE1A6 34.9%, #BC824D 89.01%);
+  background: linear-gradient(
+    180deg,
+    #fffad0 15.32%,
+    #ffe1a6 34.9%,
+    #bc824d 89.01%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -25,5 +30,6 @@ export const GoldenText = styled(Text)<Props>`
   margin: ${({ margin }) => margin};
   @media (max-width: ${({ theme }) => theme.mobile}) {
     margin: ${({ sm }) => sm?.margin};
+    font-size: ${({ sm, fontSize }) => sm?.fontSize};
   }
 `;

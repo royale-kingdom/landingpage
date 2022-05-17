@@ -28,8 +28,8 @@ const assetData: AssetProps[] = [
     title: "Unique Properties",
     content:
       "Build kingdoms from scratch with unique people under your command",
-      PCBackground: UniquePropertiesPC,
-      MobileBackground: UniquePropertiesMobile
+    PCBackground: UniquePropertiesPC,
+    MobileBackground: UniquePropertiesMobile
   },
   {
     title: "Unique Equipment",
@@ -57,7 +57,7 @@ const Asset = ({
       <GoldenText
         fontSize="20px"
         lineHeight="26px"
-        sm={{ margin: "0 0 0 143px" }}
+        sm={{ margin: "0 0 0 132px", fontSize: "20px" }}
       >
         {title}
       </GoldenText>
@@ -66,7 +66,7 @@ const Asset = ({
         fontSize="16px"
         lineHeight="26px"
         margin="0 12px"
-        sm={{ margin: "0 0 0 143px", justify: "left" }}
+        sm={{ margin: "0 0 0 132px", justify: "left" }}
       >
         {content}
       </Text>
