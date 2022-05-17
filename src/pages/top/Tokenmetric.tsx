@@ -5,19 +5,21 @@ import styled from "styled-components";
 
 import { Box } from "../../components/Box";
 import { Flex, FlexItem } from "../../components/Grid";
-import { Heading } from "../../components/Typo/Heading";
+// import { Heading } from "../../components/Typo/Heading";
 import { Text } from "../../components/Typo/Text";
-import { Img } from "../../components/Img";
+// import { Img } from "../../components/Img";
 import classNames from "classnames";
-import SeparatorImage from "../../assets/images/landingpage/separator.png";
+// import SeparatorImage from "../../assets/images/landingpage/separator.png";
 import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { BaseButton } from "../../components/Button";
-import Button2 from "../../assets/images/landingpage/Button2.svg";
+import buttonImg from "../../assets/images/landingpage/tokenmetric_button.png";
 import TokenmetricBackground from "../../assets/images/landingpage/tokenmetric_background.svg";
 // import StarBackground from "../../assets/images/landingpage/stars_background_1.jpeg";
 
 import { TOKENMETRIC } from "../../constant/landingPageSection";
+import { GoldenLine } from "../../components/GoldlenLine";
+import GoldenHeader from "../../components/GoldenHeader";
 
 ChartJS.register(ArcElement, Tooltip);
 
@@ -29,7 +31,7 @@ const TokenmetricTable = styled.table`
     tr {
       border-radius: 8px;
       td {
-        width: calc(100% / 3);
+        /* width: calc(100% / 3); */
         padding: calc(1rem + 1px) 1rem;
       }
       &.active {
@@ -57,9 +59,11 @@ const TokenmetricTable = styled.table`
 const tableDump: any[] = [
   { label: "Play to earn", percent: "30%", amount: "60,000,000" },
   { label: "Reserve funds", percent: "18%", amount: "36,000,000" },
-  { label: "Team, advisor", percent: "16%", amount: "32,000,000" },
-  { label: "Operation funds", percent: "16%", amount: "32,000,000" },
+  { label: "Team & advisor", percent: "16%", amount: "32,000,000" },
+  { label: "Operation Funds", percent: "16%", amount: "32,000,000" },
   { label: "Private Sale", percent: "8%", amount: "16,000,000" },
+  { label: "IDO/IFO/ICO", percent: "7%", amount: "14,000,000" },
+  { label: "Partner Funds", percent: "4%", amount: "8,000,000" },
   { label: "Airdrop", percent: "1%", amount: "2,000,000" }
 ];
 
@@ -97,6 +101,18 @@ const pieChartData = [
     value: 8,
     color: defaultColor,
     amount: "16,000,000"
+  },
+  {
+    title: "IDO/IFO/ICO",
+    value: 8,
+    color: defaultColor,
+    amount: "14,000,000"
+  },
+  {
+    title: "Partner Funds",
+    value: 4,
+    color: defaultColor,
+    amount: "8,000,000"
   },
   {
     title: "Airdrop",
@@ -210,7 +226,7 @@ const PieChart2 = (props: any) => {
       triggerHover(chart.current, index);
       triggerTooltip(chart.current, index);
     }
-  }, [index]);
+  }, [index, chart]);
   return (
     <Doughnut
       ref={chart}
@@ -279,19 +295,10 @@ const Tokenmetric = () => {
     <>
       <div id={TOKENMETRIC} />
       <TokenmetricContainer>
-        <Box padding="24px 0">
-          <Heading
-            margin="0"
-            font={"Judson"}
-            size={"40px"}
-            lineHeight={"64px"}
-            align={"center"}
-            sm={{ size: "24px", lineHeight: "36px" }}
-            fontWeight="700"
-            background="linear-gradient(27.48deg, #8F6B2D 4.87%, #F6C65C 32.49%, #C2933A 47.27%, #FDCC5F 62.04%)"
-          >
+        <Box>
+          <GoldenHeader margin="0" align="center">
             Tokenmetric
-          </Heading>
+          </GoldenHeader>
         </Box>
 
         <Flex alginItem={"center"} sm={{ flexDirection: "column" }}>
@@ -301,7 +308,7 @@ const Tokenmetric = () => {
               sm={{
                 width: "95%"
               }}
-              width="70%"
+              width="90%"
               alginItem="center"
               justifyContent="center"
               margin="0 auto"
@@ -321,7 +328,7 @@ const Tokenmetric = () => {
                   )
                 }
                 style={{
-                  backgroundImage: `url(${Button2})`,
+                  backgroundImage: `url(${buttonImg})`,
                   backgroundRepeat: "no-repeat",
                   fontWeight: "bold",
                   display: "flex",
@@ -330,15 +337,15 @@ const Tokenmetric = () => {
                   backgroundPosition: "center center",
                   backgroundSize: "contain",
                   margin: "0 0 20px 0",
-                  fontFamily: "Judson"
+                  width: "243px",
+                  height: "58px"
                 }}
-                padding="25px 40px"
-                fontSize="24px"
-                sm={{ fontSize: "1.8rem", padding: "2rem 3rem" }}
+                sm={{
+                  fontSize: "1.8rem",
+                  padding: "2rem 3rem"
+                }}
                 color="rgba(245, 237, 222, 1)"
-              >
-                Download Whitepaper
-              </BaseButton>
+              ></BaseButton>
             </Flex>
           </FlexItem>
           <FlexItem flex={"1"} width={"100%"}>
@@ -354,41 +361,56 @@ const Tokenmetric = () => {
                       onMouseOver={() => setSelectedIndex(index)}
                       onMouseLeave={() => setSelectedIndex(-1)}
                     >
-                      <td>
+                      <td width="45%">
                         <Text
-                          font="Lato"
-                          fontSize="18px"
-                          lineHeight={"28px"}
-                          fontWeight="700"
-                          color="rgba(238, 226, 204, 1)"
+                          color="#FFF"
+                          font="Red rose"
+                          fontSize="20px"
+                          lineHeight={"32px"}
+                          fontWeight="400"
+                          sm={{
+                            fontSize: "16px",
+                            lineHeight: "26px",
+                            fontWeight: "600"
+                          }}
                         >
                           {item.label}
                         </Text>
                       </td>
-                      <td>
+                      <td width="20%">
                         <Text
-                          font="Lato"
-                          fontSize="18px"
-                          lineHeight={"28px"}
+                          font="Titillium Web"
+                          fontSize="20px"
+                          lineHeight={"32px"}
                           width={"100%"}
                           display={"inline-block"}
                           justify={"center"}
-                          fontWeight="700"
-                          color="rgba(238, 226, 204, 0.52)"
+                          fontWeight="600"
+                          color="rgba(255, 255, 255, 0.52)"
+                          sm={{
+                            fontSize: "16px",
+                            lineHeight: "26px",
+                            fontWeight: "600"
+                          }}
                         >
                           {item.percent}
                         </Text>
                       </td>
-                      <td>
+                      <td width="35%">
                         <Text
-                          font="Lato"
-                          fontSize="18px"
-                          lineHeight={"28px"}
+                          color="#FFF"
+                          font="Titillium Web"
+                          fontSize="20px"
+                          lineHeight={"32px"}
                           width={"100%"}
                           justify={"right"}
                           display={"inline-block"}
-                          fontWeight="700"
-                          color="rgba(238, 226, 204, 1)"
+                          fontWeight="600"
+                          sm={{
+                            fontSize: "16px",
+                            lineHeight: "26px",
+                            fontWeight: "600"
+                          }}
                         >
                           {item.amount}
                         </Text>
@@ -396,28 +418,33 @@ const Tokenmetric = () => {
                     </tr>
                   ))}
                   <tr>
+                    <td colSpan={3}>
+                      <GoldenLine />
+                    </td>
+                  </tr>
+                  <tr>
                     <td>
                       <Text
-                        font="Judson"
+                        color="#FFF"
+                        font="Red rose"
                         fontSize="24px"
                         lineHeight={"38px"}
-                        fontWeight="700"
-                        color="rgba(238, 226, 204, 1)"
+                        fontWeight="400"
                       >
                         TOTAL
                       </Text>
                     </td>
                     <td colSpan={2}>
                       <Text
+                        color="#FFF"
                         width={"100%"}
                         display={"inline-block"}
                         justify={"right"}
-                        fontSize={"40px"}
-                        lineHeight={"64px"}
-                        fontWeight={"700"}
+                        fontSize={"24px"}
+                        lineHeight={"38px"}
+                        fontWeight={"400"}
                         sm={{ fontSize: "24px" }}
-                        color="rgba(238, 226, 204, 1)"
-                        font="Judson"
+                        font="Red rose"
                       >
                         200.000.000
                       </Text>
@@ -425,7 +452,7 @@ const Tokenmetric = () => {
                   </tr>
                 </tbody>
               </TokenmetricTable>
-              <div
+              {/* <div
                 style={{
                   display: "flex",
                   justifyContent: "center"
@@ -438,7 +465,7 @@ const Tokenmetric = () => {
                   alt="Royale Kingdom"
                   sm={{ width: "90vw", height: "auto" }}
                 />
-              </div>
+              </div> */}
             </Box>
           </FlexItem>
         </Flex>
@@ -449,12 +476,11 @@ const Tokenmetric = () => {
 export default Tokenmetric;
 
 const TokenmetricContainer = styled.div`
-  padding: 4rem 0;
+  padding: 0;
   box-sizing: border-box;
   position: relative;
-  background: black;
   z-index: 0;
-  &::after {
+  /* &::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -467,5 +493,5 @@ const TokenmetricContainer = styled.div`
     opacity: 0.08;
     mix-blend-mode: difference;
     z-index: -1;
-  }
+  } */
 `;
