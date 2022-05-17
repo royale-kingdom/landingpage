@@ -30,6 +30,6 @@ export const GoldenText = styled(Text)<Props>`
   margin: ${({ margin }) => margin};
   @media (max-width: ${({ theme }) => theme.mobile}) {
     margin: ${({ sm }) => sm?.margin};
-    font-size: ${({ sm, fontSize }) => sm?.fontSize};
+    font-size: ${({ sm }) => sm?.fontSize};
   }
 `;
